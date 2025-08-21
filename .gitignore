@@ -1,7 +1,8 @@
 __pycache__
 output
-ffmpeg
+executables
 build
 dist
-*_hours.txt
+local_storage
 */*.DS_Store
+.DS_Store
