@@ -1,0 +1,38 @@
+[
+    {
+        "file": "../default_input/background_fill.dat",
+        "checked": false,
+        "bcolor": "none",
+        "fcolor": "paleturquoise"
+    },
+    {
+        "file": "../default_input/Plate_Polygons.gpml",
+        "checked": true,
+        "bcolor": "brown",
+        "fcolor": "navajowhite"
+    },
+    {
+        "file": "../default_input/Coastlines&Political_Boundaries.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none"
+    },
+    {
+        "file": "../default_input/Just_Coastlines.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none"
+    },
+    {
+        "file": "../default_input/United_States.gpml",
+        "checked": false,
+        "bcolor": "red",
+        "fcolor": "none"
+    },
+    {
+        "file": "../default_input/5_degree_tics.gpml",
+        "checked": false,
+        "bcolor": "darkgrey",
+        "fcolor": "none"
+    }
+]

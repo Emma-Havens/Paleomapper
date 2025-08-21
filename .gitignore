@@ -1,0 +1,7 @@
+__pycache__
+output
+ffmpeg
+build
+dist
+*_hours.txt
+*/*.DS_Store

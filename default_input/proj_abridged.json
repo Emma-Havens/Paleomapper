@@ -1,0 +1,20 @@
+[
+    {
+        "file": "background_fill.dat",
+        "checked": false,
+        "bcolor": "none",
+        "fcolor": "azure"
+    },
+    {
+        "file": "Plate_Polygons.gpml",
+        "checked": true,
+        "bcolor": "brown",
+        "fcolor": "khaki"
+    },
+    {
+        "file": "Just_Coastlines.gpml",
+        "checked": false,
+        "bcolor": "lightcoral",
+        "fcolor": "none"
+    }
+]
