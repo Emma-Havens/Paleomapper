@@ -43,19 +43,14 @@ class PlateTrackerApp(QMainWindow):
         self.progress_bar = QProgressBar()
         self.progress_bar.setMaximum(5)
 
-
         # Geographic file input
         file_controls_layout = QHBoxLayout()
-        self.load_project_button = QPushButton("Load Project")
-        self.load_project_button.clicked.connect(self.load_project)
-        self.save_project_button = QPushButton("Save Project")
         self.add_file_button = QPushButton("Add File")
         self.add_file_button.clicked.connect(self.add_geo_file)
         self.remove_file_button = QPushButton("Remove File")
         self.remove_file_button.clicked.connect(self.remove_selected_file)
         file_controls_layout.addWidget(QLabel("Geographic Files:"))
-        file_controls_layout.addWidget(self.load_project_button)
-        file_controls_layout.addWidget(self.save_project_button)
+        file_controls_layout.addStretch()
         file_controls_layout.addWidget(self.add_file_button)
         file_controls_layout.addWidget(self.remove_file_button)
 
@@ -84,6 +79,25 @@ class PlateTrackerApp(QMainWindow):
         rotation_layout.addWidget(rotation_file_label)
         rotation_layout.addWidget(rotation_file_button)
         rotation_layout.addWidget(self.rotation_file_entry) 
+
+         # Project Selection widgets
+        project_controls_layout = QHBoxLayout()
+        self.project_label = QLabel(os.path.basename(self.file_model.proj_file))
+        bolded_font = self.project_label.font()
+        bolded_font.setBold(True)
+        self.project_label.setFont(bolded_font)
+        self.load_project_button = QPushButton("Load Project")
+        self.load_project_button.clicked.connect(self.load_project)
+        self.save_project_button = QPushButton("Save (Current)")
+        self.save_project_button.clicked.connect(self.save_project)
+        self.new_project_button = QPushButton("Save (New)")
+        self.new_project_button.clicked.connect(self.new_project)
+        project_controls_layout.addWidget(QLabel("Current project:"))
+        project_controls_layout.addWidget(self.project_label)
+        project_controls_layout.addStretch()
+        project_controls_layout.addWidget(self.load_project_button)
+        project_controls_layout.addWidget(self.save_project_button)
+        project_controls_layout.addWidget(self.new_project_button)
 
         # Fixed plate option
         fixed_plate_layout = QHBoxLayout()
@@ -144,6 +158,7 @@ class PlateTrackerApp(QMainWindow):
 
         # Add widgets to layout
         self.layout.addLayout(rotation_layout)
+        self.layout.addLayout(project_controls_layout)
         self.layout.addLayout(file_controls_layout)
         self.layout.addWidget(self.file_table)
         self.layout.addLayout(fixed_plate_layout)
@@ -159,6 +174,23 @@ class PlateTrackerApp(QMainWindow):
             self, "Select Project File", "", "Project Files (*.json)"
         )
         self.file_model.change_project_file(proj_file)
+        self.rotation_file_entry.setText(self.file_model.rot_file)
+        self.project_label.setText(os.path.basename(self.file_model.proj_file))
+        self.status_bar.showMessage(f"Loaded project {os.path.basename(self.file_model.proj_file)}", 3000)
+
+    def new_project(self):
+        proj_file, _ = QFileDialog.getSaveFileName(
+            self, "Enter Project File Name", "", "Project Files (*.json)"
+        )
+        self.file_model.save_project(proj_file)
+        self.rotation_file_entry.setText(self.file_model.rot_file)
+        self.project_label.setText(os.path.basename(self.file_model.proj_file))
+        self.status_bar.showMessage(f"Saved project {os.path.basename(self.file_model.proj_file)}", 3000)
+
+    def save_project(self):
+        self.file_model.save_project("", True)
+        self.rotation_file_entry.setText(self.file_model.rot_file)
+        self.status_bar.showMessage(f"Saved project {os.path.basename(self.file_model.proj_file)}", 3000)
     
     def add_geo_file(self):
         files_to_add, _ = QFileDialog.getOpenFileNames(
@@ -182,6 +214,7 @@ class PlateTrackerApp(QMainWindow):
         file, _ = QFileDialog.getOpenFileName(self, "Select Rotation File", "", "ROT Files (*.rot)")
         if file:
             self.rotation_file_entry.setText(file)
+            self.file_model.rot_file = file
 
     def handle_stop(self):
         self.should_stop = True
@@ -406,6 +439,7 @@ class PlateTrackerApp(QMainWindow):
             self.should_stop = False
             self.stop_button.setEnabled(True)
             self.run_button.setEnabled(False)
+            self.status_bar.clearMessage()
             self.status_bar.addWidget(self.progress_bar)
             self.progress_bar.setValue(0)
             self.progress_bar.show()

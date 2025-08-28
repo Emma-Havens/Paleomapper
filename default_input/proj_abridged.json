@@ -1,5 +1,8 @@
 [
     {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
         "file": "background_fill.dat",
         "checked": false,
         "bcolor": "none",

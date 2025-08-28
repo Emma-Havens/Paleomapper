@@ -1,0 +1,41 @@
+[
+    {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
+        "file": "background_fill.dat",
+        "checked": false,
+        "bcolor": "none",
+        "fcolor": "paleturquoise"
+    },
+    {
+        "file": "Plate_Polygons.gpml",
+        "checked": true,
+        "bcolor": "brown",
+        "fcolor": "navajowhite"
+    },
+    {
+        "file": "Coastlines&Political_Boundaries.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none"
+    },
+    {
+        "file": "Just_Coastlines.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none"
+    },
+    {
+        "file": "United_States.gpml",
+        "checked": false,
+        "bcolor": "red",
+        "fcolor": "none"
+    },
+    {
+        "file": "5_degree_tics.gpml",
+        "checked": false,
+        "bcolor": "darkgrey",
+        "fcolor": "none"
+    }
+]

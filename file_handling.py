@@ -167,18 +167,8 @@ def read_file_in_chunks(filename, bcolor, fcolor):
             if len(h1) == 8:
                 label = h1[2]
                 symbol = h1[3] if h1[3] in symbols.Shapes else "none"
-                if is_color_like(h1[4]):
-                    border_color = h1[4]
-                elif h1[4] == "multicolor":
-                    border_color = "multicolor"
-                else:
-                    border_color = "black"
-                if is_color_like(h1[5]):
-                    fill_color = h1[5]
-                elif h1[5] == "multicolor":
-                    fill_color = "multicolor"
-                else:
-                    fill_color = "none"
+                border_color = h1[4]
+                fill_color = h1[5]
                 try: 
                     size = float(h1[6])
                 except ValueError: 

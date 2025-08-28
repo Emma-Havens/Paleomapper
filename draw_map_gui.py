@@ -7,12 +7,13 @@ from matplotlib.path import Path
 from matplotlib.patches import PathPatch
 from matplotlib.collections import PatchCollection
 from matplotlib.gridspec import GridSpec
-from matplotlib.colors import is_color_like, CSS4_COLORS, Normalize
+from matplotlib.colors import is_color_like, CSS4_COLORS, Normalize, to_rgb
 from matplotlib.animation import FFMpegWriter
 from matplotlib import rcParams as mplrcParams
 import matplotlib.cm as mplcm
 import shapely.geometry
 import shapely.ops as ops
+import colorsys
 import os
 import sys
 
@@ -157,21 +158,26 @@ class Figure:
         self.fig.tight_layout()
 
     def set_color_list(self):
-       light_colors = [ "whitesmoke", "white", "snow", "mistyrose", "seashell", "linen", "bisque",
+        light_colors = [ "whitesmoke", "white", "snow", "mistyrose", "seashell", "linen", "bisque",
                         "antiquewhite", "navajowhite", "blanchedalmond", "papayawhip", "moccasin", "wheat",
-                         "oldlace", "floralwhite", "cornsilk", "lemonchiffon", "ivory", "beige", "lightyellow",
-                         "lightgoldenrodyellow", "honeydew", "mintcream", "azure", "lightcyan", "aliceblue", 
-                         "ghostwhite", "lavender", "lavenderblush" ]
-       all_colors = list(CSS4_COLORS)
-       self.color_list = [color for color in all_colors if color not in light_colors]
-       
-       self.ocean_age_norm = Normalize(0, 250)
-       self.ocean_age_cmap = mplcm.rainbow_r
-       self.ocean_age_colorbar = False
-       
-       self.geo_age_norm = tcc.smallest_division_norm
-       self.geo_age_cmap = tcc.smallest_division
-       self.geo_age_colorbar = False
+                            "oldlace", "floralwhite", "cornsilk", "lemonchiffon", "ivory", "beige", "lightyellow",
+                            "lightgoldenrodyellow", "honeydew", "mintcream", "azure", "lightcyan", "aliceblue", 
+                            "ghostwhite", "lavender", "lavenderblush" ]
+        all_colors = list(CSS4_COLORS)
+        self.color_list = [color for color in all_colors if color not in light_colors]
+        
+        self.ocean_age_norm = Normalize(0, 250)
+        self.ocean_age_cmap = mplcm.rainbow_r
+        self.ocean_age_colorbar = False
+        
+        self.geo_age_norm = tcc.smallest_division_norm
+        self.geo_age_cmap = tcc.smallest_division
+        self.geo_age_mask = tcc.smallest_division_mask
+        self.geo_age_colorbar = False
+
+        self.plateid_color_list = ["white", "red", "mediumpurple", "limegreen", "darkgoldenrod", 
+                                    "orchid", "royalblue", "tan", "turquoise", "gray"]
+        self.plateid_color_lightness = [.35, .40, .45, .50, .55, .60, .65, .70, .75, .80]
 
     def check_if_special_color(self, color, age, plateid):
         if color == "multicolor":
@@ -184,15 +190,24 @@ class Figure:
             chunk_age = age - self.plot_time
             color = self.ocean_age_cmap(self.ocean_age_norm(chunk_age))
             self.ocean_age_colorbar = True
+        elif color == "byPlateId":
+            region = int(plateid / 100)
+            subregion = plateid % 10
+            rgb_base_color = to_rgb(self.plateid_color_list[region])
+            hls_base_color = colorsys.rgb_to_hls(rgb_base_color[0], rgb_base_color[1], rgb_base_color[2])
+            # print(f"h: {hls_c[0]} l: {hls_c[1]} s: {hls_c[2]}")
+            color = colorsys.hls_to_rgb(hls_base_color[0], 
+                                        self.plateid_color_lightness[subregion], 
+                                        hls_base_color[2])
 
         return color
     
     def add_colorbars(self):
         colorbars = []
         if self.geo_age_colorbar:
-            colorbars.append((self.geo_age_norm, self.geo_age_cmap))
+            colorbars.append((self.geo_age_norm, self.geo_age_cmap, self.geo_age_mask))
         if self.ocean_age_colorbar:
-            colorbars.append((self.ocean_age_norm, self.ocean_age_cmap))
+            colorbars.append((self.ocean_age_norm, self.ocean_age_cmap, None))
         
         if not colorbars:
             return  # No colorbars to add
@@ -212,16 +227,21 @@ class Figure:
             ax.set_subplotspec(self.gs[0])
         
         # Add colorbars in the remaining grid slots
-        for i, (norm, cmap) in enumerate(colorbars, 1):
+        for i, (norm, cmap, mask) in enumerate(colorbars, 1):
             cb_ax = self.fig.add_subplot(self.gs[i])
-            self.fig.colorbar(
+            cb = self.fig.colorbar(
                 mplcm.ScalarMappable(norm=norm, cmap=cmap),
                 cax=cb_ax, 
                 orientation='horizontal', 
                 extend='neither', 
                 spacing='proportional'
             )
-            # cb_ax.set_ylabel(name)
+
+            if mask:
+                cb.set_ticks(norm.boundaries)
+                ticklabels = [str(int(x)) if mask[i] else "" for i, x in enumerate(norm.boundaries)]
+                cb.set_ticklabels(ticklabels)
+                # cb_ax.set_ylabel(name)
         
         # Adjust layout to prevent overlap
         self.fig.tight_layout()

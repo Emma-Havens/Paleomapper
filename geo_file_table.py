@@ -1,12 +1,13 @@
 from PySide6.QtWidgets import (
-    QStyledItemDelegate, QApplication, QStyle, QStyleOptionButton, QStyleOption
+    QStyledItemDelegate, QApplication, QStyle, QStyleOptionButton, QStyleOption, QMessageBox
     )
 from PySide6.QtCore import Qt, QAbstractTableModel, QModelIndex, QEvent, QRect, QSize
-from PySide6.QtGui import QPainter, QPen, QBrush
+from PySide6.QtGui import QPainter
 import os.path
 import glob
 import sys
 import json
+import shutil
 
 class ArrowDelegate(QStyledItemDelegate):
     def __init__(self, parent=None):
@@ -146,20 +147,20 @@ class FileTableModel(QAbstractTableModel):
         self.headers = ["", "", "File Path", "Border Color", "Fill Color"]
         self.file_index = 2
         self.rot_file = ""
+        self.proj_file = ""
 
         self.upload_files(input_dir)
               
     def upload_files(self, input_dir):
         if getattr(sys, 'frozen', False):
             exec_dir = os.path.dirname(sys.executable)
-            input_dir = exec_dir + "/" + input_dir
+            input_dir = os.path.join(exec_dir, input_dir)
             print(input_dir)
         
         if not os.path.isdir(input_dir):
             return
 
         files_to_add = []
-        proj_file = None
         files = glob.iglob(input_dir + '/**/*.*', recursive=True)
         print("Adding files:")
         for file in files:
@@ -167,12 +168,12 @@ class FileTableModel(QAbstractTableModel):
             if os.path.splitext(file)[1] in [".gpml", ".dat", ".csv"]:
                 files_to_add.append(file)
             elif os.path.splitext(file)[1] == ".json":
-                proj_file = file
+                self.proj_file = file
             elif os.path.splitext(file)[1] == ".rot":
                 self.rot_file = file
                 print("rot found")
 
-        if proj_file: self.change_project_file(proj_file)
+        if os.path.exists(self.proj_file): self.change_project_file(self.proj_file)
         
         # add files not defined by a project
         for file in files_to_add:
@@ -184,19 +185,28 @@ class FileTableModel(QAbstractTableModel):
             else:
                 print(f"skipping file {file}")
     
-    def change_project_file(self, proj_file):
+    def change_project_file(self, proj_path):
+        self.proj_file = proj_path
+
         # remove all current files
         num_files = len(self.files)
         for _ in range(num_files):
             self.remove_row(0)
+        self.rot_file = ""
 
         # add files in project file
-        file_list = json.load(open(proj_file, 'r'))
+        file_list = json.load(open(self.proj_file, 'r'))
         
         for file in file_list:
-            json_path = os.path.dirname(proj_file)
-            file_path = json_path + "/" + file["file"]
+            json_path = os.path.dirname(self.proj_file)
+            file_path = os.path.join(json_path, file["file"])
             try:
+                # add rot file in project to gui
+                if os.path.splitext(file_path)[1] == ".rot":
+                    if os.path.exists(file_path):
+                        self.rot_file = file_path
+                    continue
+
                 # add files defined in project to gui
                 self.add_file(file_path, file["checked"], file["bcolor"], file["fcolor"])
                 json_file = file["file"]
@@ -205,6 +215,38 @@ class FileTableModel(QAbstractTableModel):
             except FileNotFoundError:
                 print(f"Could not find {file_path}")
                 continue
+
+    def save_project(self, proj_path, save_to_current=False):
+        if not save_to_current:
+            self.proj_file = proj_path
+
+        files_to_write = self.files.copy()
+        files_to_write.reverse()
+        dict = []
+        if self.rot_file:
+            dict.append({"file": os.path.basename(self.rot_file)})
+        for file in files_to_write:
+            entry = {}
+            entry["file"] = os.path.basename(file[self.file_index])
+            entry["checked"] = file[0]
+            entry["bcolor"] = file[3]
+            entry["fcolor"] = file[4]
+            dict.append(entry)
+
+        with open(self.proj_file, 'w') as outfile:
+            json.dump(dict, outfile, indent=4)
+
+        files_to_save = [ file[self.file_index] for file in self.files ]
+        files_to_save.append(self.rot_file)
+        print(files_to_save)
+        
+        for source_file in files_to_save:
+            dest_file = os.path.join(os.path.dirname(self.proj_file), os.path.basename(source_file))            
+            if not os.path.exists(dest_file):
+                shutil.copy2(source_file, dest_file)
+
+        self.change_project_file(self.proj_file)
+
     
     def rowCount(self, parent=None):
         return len(self.files)

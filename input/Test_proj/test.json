@@ -1,0 +1,23 @@
+[
+    {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
+        "file": "background_fill.dat",
+        "checked": false,
+        "bcolor": "none",
+        "fcolor": "azure"
+    },
+    {
+        "file": "Cont_Ocean_Polygons_v3a.gpml",
+        "checked": true,
+        "bcolor": "none",
+        "fcolor": "byGeoAge"
+    },
+    {
+        "file": "Plate_Polygons.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": ""
+    }
+]

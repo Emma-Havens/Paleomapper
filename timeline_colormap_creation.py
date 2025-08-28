@@ -11,6 +11,14 @@ class ColorbarType(Enum):
     GEO_BAR = 2,
     PLATE_BAR = 3
 
+holocene = (254, 235, 210)
+pleistocene = (255, 239, 175)
+pliocene = (255, 255, 153)
+miocene = (255, 255, 0)
+oligocene = (253, 192, 122)
+eocene = (253, 180, 108)
+paleocene = (253, 167, 95)
+
 quaternary = (249, 249, 127)
 neogene = (255, 230, 25)
 paleogene = (253, 154, 82)
@@ -98,11 +106,19 @@ def zip_time_and_color(color_list, time_list):
 
 rgb_norm = Normalize(0, 255)
 
+holocene = (254, 235, 210)
+pleistocene = (255, 239, 175)
+pliocene = (255, 255, 153)
+miocene = (255, 255, 0)
+oligocene = (253, 192, 122)
+eocene = (253, 180, 108)
+paleocene
+
 # colors for colormaps defined in RGB scale 0-255
-smallest_division_colors_unnorm = [quaternary, neogene, paleogene, cretaceous, jurassic, triassic, permian,
-        carboniferous, devonian, silurian, ordovician, cambrian, ediacaran, cryogenian, tonian, stenian, 
-        ectasian, calymmian, statherian, orosirian, rhyacian, siderian, neoarchean, mesoarchean, paleoarchean, 
-        eoarchean, hadean]
+smallest_division_colors_unnorm = [holocene, pleistocene, pliocene, miocene, oligocene, eocene, paleocene, 
+        cretaceous, jurassic, triassic, permian, carboniferous, devonian, silurian, ordovician, cambrian, 
+        ediacaran, cryogenian, tonian, stenian, ectasian, calymmian, statherian, orosirian, rhyacian, siderian, 
+        neoarchean, mesoarchean, paleoarchean, eoarchean, hadean]
 phan_focused_unnorm = [quaternary, neogene, paleogene, cretaceous, jurassic, triassic, permian, carboniferous,
         devonian, silurian, ordovician, cambrian, proterozoic, archean, hadean ]
 big_picture_unnorm = [ cenozoic, mesozoic, paleozoic, proterozoic, archean, hadean ]
@@ -113,7 +129,7 @@ phan_focused_colors = [ rgb_norm(color) for color in phan_focused_unnorm ]
 big_picture_colors = [ rgb_norm(color) for color in big_picture_unnorm ]
 
 # intervals for colors for each colormap
-smallest_division_time = [ 0, 2, 23, 66, 143, 201, 252, 299, 359, 420, 443, 487, 539, 635, 720, 1000, 1200, 
+smallest_division_time = [ 0, 0.0117, 2.58, 5.33, 23, 34, 56, 66, 143, 201, 252, 299, 359, 420, 443, 487, 539, 635, 720, 1000, 1200, 
         1400, 1600, 1800, 2050, 2300, 2500, 2800, 3200, 3600, 4031, 4567 ]
 phan_focused_time = [ 0, 2, 23, 66, 143, 201, 252, 299, 359, 420, 443, 487, 539, 2500, 4031, 4567 ]
 big_picture_time = [ 0, 66, 252, 539, 2500, 4031, 4567 ]
@@ -122,22 +138,24 @@ big_picture_time = [ 0, 66, 252, 539, 2500, 4031, 4567 ]
 smallest_division = ListedColormap(smallest_division_colors)
 phan_focused = ListedColormap(phan_focused_colors)
 big_picture = ListedColormap(big_picture_colors)
-phanerozoic = ListedColormap(smallest_division_colors[:12])
+phanerozoic = ListedColormap(smallest_division_colors[:16])
 
 # label masks for colorbar plotting
-smallest_division_mask = [ 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, # phanerozoic labels
+smallest_division_mask = [ 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, # phanerozoic labels
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 phan_focused_mask = [ 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1 ]
 big_picture_mask = [ 1, 1, 1, 1, 1, 1, 1 ]
-phanerozoic_mask = [ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+phanerozoic_mask = [ 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 
 # plot colorbars
 # plot_colorbars([smallest_division, phan_focused, big_picture, phanerozoic], 
-#                [smallest_division_time, phan_focused_time, big_picture_time, smallest_division_time[:13]], 
+#                [smallest_division_time, phan_focused_time, big_picture_time, smallest_division_time[:17]], 
 #                [smallest_division_mask, phan_focused_mask, big_picture_mask, phanerozoic_mask],
 #                ["Smallest Division", "Phan Focused", "Big Picture", "Phanerozoic"])
 
-# bounds for colormaps used in draw_map_gui
+# norms and masks for colormaps used in draw_map_gui
 smallest_division_norm = BoundaryNorm(smallest_division_time, smallest_division.N)
+smallest_division_mask = [ 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, # phanerozoic labels
+        0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1 ]
 
 # geo_age_array = zip_time_and_color(smallest_division_colors, smallest_division_time)

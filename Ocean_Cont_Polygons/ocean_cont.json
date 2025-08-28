@@ -1,0 +1,17 @@
+[
+    {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
+        "file": "Ocean_Poly_Only_v25199.gpml",
+        "checked": true,
+        "bcolor": "none",
+        "fcolor": "byOceanAge"
+    },
+    {
+        "file": "Continent_Polygons_Only_25199.gpml",
+        "checked": true,
+        "bcolor": "black",
+        "fcolor": "byGeoAge"
+    }
+]
