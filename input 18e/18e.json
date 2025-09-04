@@ -1,0 +1,17 @@
+[
+    {
+        "file": "m17v2d3__v18e_combined_v7a.rot"
+    },
+    {
+        "file": "08_PALEOMAP_PoliticalBoundaries_Medi_v15v1c.gpml",
+        "checked": true,
+        "bcolor": "grey",
+        "fcolor": ""
+    },
+    {
+        "file": "14_PALEOMAP_PlatePolygons_Medi_15v3d.gpml",
+        "checked": true,
+        "bcolor": "black",
+        "fcolor": "byPlateId"
+    }
+]

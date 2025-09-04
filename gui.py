@@ -36,7 +36,8 @@ class PlateTrackerApp(QMainWindow):
         # Window icon and status bar
         self.status_bar = QStatusBar()
         self.setStatusBar(self.status_bar)
-        pm_icon_light = QIcon('PM_icon_lightbg.png')
+        # pm_icon_light = QIcon('PM_icon_lightbg.png')
+        pm_icon_light = QIcon('ai_owl_logo.png')
         icon_light = QLabel()
         icon_light.setPixmap(pm_icon_light.pixmap(25, 25))
         self.status_bar.addPermanentWidget(icon_light)

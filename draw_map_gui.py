@@ -175,8 +175,8 @@ class Figure:
         self.geo_age_mask = tcc.smallest_division_mask
         self.geo_age_colorbar = False
 
-        self.plateid_color_list = ["white", "red", "mediumpurple", "limegreen", "darkgoldenrod", 
-                                    "orchid", "royalblue", "tan", "turquoise", "gray"]
+        self.plateid_color_list = ["white", "red", "mediumpurple", "limegreen", "orange", 
+                                    "orchid", "royalblue", "beige", "turquoise", "gray"]
         self.plateid_color_lightness = [.35, .40, .45, .50, .55, .60, .65, .70, .75, .80]
 
     def check_if_special_color(self, color, age, plateid):
@@ -191,7 +191,7 @@ class Figure:
             color = self.ocean_age_cmap(self.ocean_age_norm(chunk_age))
             self.ocean_age_colorbar = True
         elif color == "byPlateId":
-            region = int(plateid / 100)
+            region = int(str(plateid)[0])
             subregion = plateid % 10
             rgb_base_color = to_rgb(self.plateid_color_list[region])
             hls_base_color = colorsys.rgb_to_hls(rgb_base_color[0], rgb_base_color[1], rgb_base_color[2])
