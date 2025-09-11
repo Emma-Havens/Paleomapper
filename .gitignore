@@ -6,3 +6,6 @@ dist
 local_storage
 */*.DS_Store
 .DS_Store
+Rasters
+shapefiles
+*/Cont_Ocean_Polygons_v3a.gpml

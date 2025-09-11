@@ -41,7 +41,7 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor):
     if getattr(sys, 'frozen', False):
         bundle_dir = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
         shape_library = bundle_dir + "/" + shape_library
-        print(shape_library)
+        # print(shape_library)
     symbols.load_shape_library(shape_library)
 
     with open(csv_file, "r") as infile:
@@ -153,9 +153,6 @@ def sanitize_dat(filename, plot_time):
 
 
 def read_file_in_chunks(filename, bcolor, fcolor):
-    """
-    Generator that reads the file in plate sized chunks, yielding one chunk at a time.
-    """
     with open(filename, "r") as infile:
         while True:           
             # Read the first header
@@ -189,7 +186,7 @@ def read_file_in_chunks(filename, bcolor, fcolor):
             header2 = infile.readline()
             if not header2:
                 break  # End of file
-            h2 = header2.split()
+            h2 = header2.strip().split()
             
             file_type = "DAT"
             plateid = int(h2[0])
@@ -244,13 +241,12 @@ def assign_feature_type(gpml_feature):
         case _:
             return "UN" # Put GN somewhere
 
-def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor):
+def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, file_type="GPML"):
 
     col = pygplates.FeatureCollection(filename)
 
     for feature in col:
 
-        file_type = "GPML"
         plateid = int(feature.get_reconstruction_plate_id())
         valid_time = feature.get_valid_time()
         appears = valid_time[0] if valid_time else 0.0
@@ -312,4 +308,7 @@ def read_files(files, plot_time):
                     yield chunk
             case ".gpml":
                 for chunk in read_gpml_in_chunks(file, plot_time, border_color, fill_color):
+                    yield chunk
+            case ".shp":
+                for chunk in read_gpml_in_chunks(file, plot_time, border_color, fill_color, "SHP"):
                     yield chunk

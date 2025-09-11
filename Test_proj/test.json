@@ -17,7 +17,7 @@
     {
         "file": "Plate_Polygons.gpml",
         "checked": true,
-        "bcolor": "none",
-        "fcolor": "byPlateId"
+        "bcolor": "black",
+        "fcolor": "none"
     }
 ]

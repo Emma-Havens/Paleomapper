@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import (
-    QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QLineEdit, QPushButton,
     QFileDialog, QMessageBox, QComboBox, QRadioButton, QButtonGroup, QTableView,
-    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar
+    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter
     )
 from PySide6.QtGui import QIntValidator, QDoubleValidator, QIcon
 from PySide6.QtCore import Qt
@@ -13,10 +13,11 @@ import numpy as np
 
 import file_handling
 import matplotlib.pyplot as plt
-from geo_file_table import CheckBoxDelegate, ArrowDelegate, FileTableModel
+from geo_file_table import CheckBoxDelegate, ArrowDelegate, FileTableModel, RasterTableModel
 from draw_map_gui import Figure
 from create_kml import saveKML
 from create_dat import saveDAT
+from create_output import saveFile
 from rotation_engine_class import RotationEngine
 
 class UserInterrupt(Exception):
@@ -26,7 +27,7 @@ class PlateTrackerApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("PaleoMapper")
-        self.setGeometry(100, 100, 400, 700)
+        self.setGeometry(100, 0, 650, 900)
 
         # Main widget and layout
         self.main_widget = QWidget()
@@ -47,7 +48,7 @@ class PlateTrackerApp(QMainWindow):
         # Geographic file input
         file_controls_layout = QHBoxLayout()
         self.add_file_button = QPushButton("Add File")
-        self.add_file_button.clicked.connect(self.add_geo_file)
+        self.add_file_button.clicked.connect(self.add_file)
         self.remove_file_button = QPushButton("Remove File")
         self.remove_file_button.clicked.connect(self.remove_selected_file)
         file_controls_layout.addWidget(QLabel("Geographic Files:"))
@@ -55,9 +56,25 @@ class PlateTrackerApp(QMainWindow):
         file_controls_layout.addWidget(self.add_file_button)
         file_controls_layout.addWidget(self.remove_file_button)
 
-        # Create table view
+        # Create raster table
+        self.raster_table = QTableView()
+        self.raster_model = RasterTableModel()
+        self.raster_table.setModel(self.raster_model)
+        self._arrow_delegate_raster = ArrowDelegate()  # Store as instance attribute
+        self._checkbox_delegate_raster = CheckBoxDelegate()
+        self.raster_table.setItemDelegateForColumn(1, self._arrow_delegate_raster)
+        self.raster_table.setItemDelegateForColumn(0, self._checkbox_delegate_raster)
+        self.raster_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.raster_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
+        self.raster_table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
+        self.raster_table.horizontalHeader().setSectionResizeMode(2, QHeaderView.Stretch)
+        self.raster_table.horizontalHeader().resizeSection(3, 130)
+        self.raster_table.horizontalHeader().resizeSection(4, 70)
+        self.raster_table.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.EditKeyPressed) 
+
+        # Create file table
         self.file_table = QTableView()
-        self.file_model = FileTableModel()
+        self.file_model = FileTableModel(self.raster_model)
         self.file_table.setModel(self.file_model)
         self._arrow_delegate = ArrowDelegate()  # Store as instance attribute
         self._checkbox_delegate = CheckBoxDelegate()
@@ -68,6 +85,14 @@ class PlateTrackerApp(QMainWindow):
         self.file_table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
         self.file_table.horizontalHeader().setSectionResizeMode(2, QHeaderView.Stretch)
         self.file_table.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.EditKeyPressed) 
+
+        # Create splitter
+        self.table_splitter = QSplitter(Qt.Vertical)
+        self.table_splitter.addWidget(self.file_table)
+        self.table_splitter.addWidget(self.raster_table)
+        self.table_splitter.setSizes([400, 200]) 
+        self.table_splitter.setChildrenCollapsible(True) 
+        self.table_splitter.setHandleWidth(5) 
 
         # Rotation file input
         rotation_layout = QHBoxLayout()
@@ -136,11 +161,17 @@ class PlateTrackerApp(QMainWindow):
         self.outputs.addButton(QCheckBox("Plot to Screen"), 0)
         self.outputs.addButton(QCheckBox("Save as PDF"), 1)
         self.outputs.addButton(QCheckBox("Save as Animation (MP4)"), 2)
+        self.outputs.addButton(QCheckBox("Save as SVG"), 7)
+        self.outputs.addButton(QCheckBox("Save as GPML"), 5)
+        self.outputs.addButton(QCheckBox("Save as SHP"), 6)
         self.outputs.addButton(QCheckBox("Save as DAT"), 3)
         self.outputs.addButton(QCheckBox("Save as KML"), 4)
         self.outputs.button(0).setChecked(True)
-        outputs_checkbox_layout = QHBoxLayout()
-        for button in self.outputs.buttons(): outputs_checkbox_layout.addWidget(button)
+        outputs_checkbox_layout = QGridLayout()
+        num_in_row = 4
+        column_count = 4
+        for i, button in enumerate(self.outputs.buttons()):
+            outputs_checkbox_layout.addWidget(button, int(i / num_in_row), i % column_count)
         self.output_inputs_layout = QVBoxLayout()
         self.outputs.buttonClicked.connect(self.toggle_output_inputs)
         self.toggle_output_inputs()
@@ -161,7 +192,9 @@ class PlateTrackerApp(QMainWindow):
         self.layout.addLayout(rotation_layout)
         self.layout.addLayout(project_controls_layout)
         self.layout.addLayout(file_controls_layout)
-        self.layout.addWidget(self.file_table)
+        # self.layout.addWidget(self.file_table)
+        # self.layout.addWidget(self.raster_table)
+        self.layout.addWidget(self.table_splitter)
         self.layout.addLayout(fixed_plate_layout)
         self.layout.addWidget(time_label)
         self.layout.addLayout(time_layout)
@@ -177,6 +210,7 @@ class PlateTrackerApp(QMainWindow):
         self.file_model.change_project_file(proj_file)
         self.rotation_file_entry.setText(self.file_model.rot_file)
         self.project_label.setText(os.path.basename(self.file_model.proj_file))
+        self.update_raster_table_visibility()
         self.status_bar.showMessage(f"Loaded project {os.path.basename(self.file_model.proj_file)}", 3000)
 
     def new_project(self):
@@ -193,20 +227,36 @@ class PlateTrackerApp(QMainWindow):
         self.rotation_file_entry.setText(self.file_model.rot_file)
         self.status_bar.showMessage(f"Saved project {os.path.basename(self.file_model.proj_file)}", 3000)
     
-    def add_geo_file(self):
+    def add_file(self):
         files_to_add, _ = QFileDialog.getOpenFileNames(
-            self, "Select Geographic Files", "", "Geo Files (*.dat *.gpml *.csv)"
+            self, "Select Geographic Files", "", "Geo Files (*.dat *.gpml *.csv *.shp *.jpg *.jpeg *.png)"
         )
         for file in files_to_add:
-            self.file_model.add_file(file)
+            if os.path.splitext(file)[1] in self.file_model.accepted_extensions:
+                self.file_model.add_file(file)
+            else:
+                self.raster_model.add_file(file)
+        self.update_raster_table_visibility()
     
     def remove_selected_file(self):
         selected = self.file_table.selectionModel().selectedRows()
         for index in sorted(selected, reverse=True):
             self.file_model.remove_row(index.row())
+        selected = self.raster_table.selectionModel().selectedRows()
+        for index in sorted(selected, reverse=True):
+            self.raster_model.remove_row(index.row())
+        self.update_raster_table_visibility()
 
     def get_geo_files(self):
         files = self.file_model.files
+        print(files)
+        checked_files = list(filter(lambda file: file[0], files)) # file[0] is boolean of checked box
+        checked_files.reverse() # respects proper plotting order
+        return checked_files
+    
+    def get_raster_files(self):
+        files = self.raster_model.files
+        print(files)
         checked_files = list(filter(lambda file: file[0], files)) # file[0] is boolean of checked box
         checked_files.reverse() # respects proper plotting order
         return checked_files
@@ -225,6 +275,17 @@ class PlateTrackerApp(QMainWindow):
         
         # Close any active matplotlib figures
         plt.close('all')
+    
+    def update_raster_table_visibility(self):
+        if self.raster_model.rowCount() > 0:
+            if self.table_splitter.sizes()[1] == 0:
+                self.table_splitter.setSizes([400, 200]) 
+        else:
+            if self.table_splitter.sizes()[1] > 0:
+                self.table_splitter.setSizes([600, 0])
+            
+        self.table_splitter.updateGeometry()
+        QApplication.processEvents()
     
     def clear_layout(self, layout):
         """Recursively clear all widgets and layouts from the given layout."""
@@ -247,7 +308,7 @@ class PlateTrackerApp(QMainWindow):
          
         output_options = [self.outputs.id(button) for button in self.outputs.buttons() if button.isChecked()]
         
-        if 0 in output_options or 1 in output_options or 2 in output_options: # Screen output
+        if 0 in output_options or 1 in output_options or 2 in output_options or 7 in output_options: # Screen output
             projection_layout = QHBoxLayout()
             projection_label = QLabel("Map Projection:")
             self.projection_combo = QComboBox()
@@ -294,7 +355,7 @@ class PlateTrackerApp(QMainWindow):
             self.output_inputs_layout.addLayout(latlon_layout)
             self.output_inputs_layout.addLayout(self.additional_inputs_layout)
 
-            self.save_fig = {"plot": False, "save": False, "anim": False}
+            self.save_fig = {"plot": False, "pdf": False, "anim": False, "svg": False}
             if 0 in output_options:
                 self.save_fig["plot"] = True
             if 1 in output_options:
@@ -322,6 +383,15 @@ class PlateTrackerApp(QMainWindow):
                 mp4_layout.addWidget(fps_label)
                 mp4_layout.addWidget(self.fps_entry)
                 self.output_inputs_layout.addLayout(mp4_layout)
+            if 7 in output_options:
+                svg_file_label = QLabel("Output .svg file name:")
+                self.svg_file_entry = QLineEdit()
+                self.svg_file_entry.setText("output.svg")
+
+                svg_layout = QHBoxLayout()
+                svg_layout.addWidget(svg_file_label)
+                svg_layout.addWidget(self.svg_file_entry)
+                self.output_inputs_layout.addLayout(svg_layout)
         
         if 3 in output_options:    # DAT file
             dat_file_label = QLabel("Output .dat file name:")
@@ -344,6 +414,28 @@ class PlateTrackerApp(QMainWindow):
             kml_layout.addWidget(self.kml_file_entry)
 
             self.output_inputs_layout.addLayout(kml_layout)
+
+        if 5 in output_options:    # GPML file
+            gpml_file_label = QLabel("Output .gpml file name:")
+            self.gpml_file_entry = QLineEdit()
+            self.gpml_file_entry.setText("output.gpml")
+
+            gpml_layout = QHBoxLayout()
+            gpml_layout.addWidget(gpml_file_label)
+            gpml_layout.addWidget(self.gpml_file_entry)
+
+            self.output_inputs_layout.addLayout(gpml_layout)
+
+        if 6 in output_options:    # SHP file
+            shp_file_label = QLabel("Output .shp file name:")
+            self.shp_file_entry = QLineEdit()
+            self.shp_file_entry.setText("output.shp")
+
+            shp_layout = QHBoxLayout()
+            shp_layout.addWidget(shp_file_label)
+            shp_layout.addWidget(self.shp_file_entry)
+
+            self.output_inputs_layout.addLayout(shp_layout)
 
     def toggle_projection_inputs(self):
         """Show or hide additional inputs based on the selected projection."""
@@ -528,18 +620,47 @@ class PlateTrackerApp(QMainWindow):
                         QMessageBox.warning(self, "An Error occurred:", str(e))
                         self.print_error_to_terminal(e)
 
-                if 0 in output_options or 1 in output_options or 2 in output_options:  # Plot to Screen
+                if 5 in output_options:    # Save GPML
+                    try:
+                        gpml_name = output_folder + self.gpml_file_entry.text()
+                        gpml_file = saveFile(gpml_name, ".gpml")
+                        processed_plate_generator = gpml_file.save_to_file(processed_plate_generator, time)
+                        print("save to gpml")
+                        QMessageBox.about(self, "Success", f"GPML output saved to {os.path.basename(gpml_name)}")
+                    except Exception as e:
+                        QMessageBox.warning(self, "An Error occurred:", str(e))
+                        self.print_error_to_terminal(e)
+
+                if 6 in output_options:    # Save SHP
+                    try:
+                        shp_name = output_folder + self.shp_file_entry.text()
+                        shp_file = saveFile(shp_name, ".shp")
+                        processed_plate_generator = shp_file.save_to_file(processed_plate_generator, time)
+                        print("save to shp")
+                        QMessageBox.about(self, "Success", f"SHP output saved to {os.path.basename(shp_name)}")
+                    except Exception as e:
+                        QMessageBox.warning(self, "An Error occurred:", str(e))
+                        self.print_error_to_terminal(e)
+
+                if 0 in output_options or 1 in output_options or 2 in output_options or 7 in output_options:  # Plot to Screen
                     # different file name
                     if 1 in output_options:
                         pdf_file = output_folder + self.pdf_file_entry.text()
-                        if pdf_file[-4:] == ".pdf": pdf_file = pdf_file[:-4]    # remove file extension, if any
+                        pdf_file = os.path.splitext(pdf_file)[0]    # remove file extension, if any
                         if len(time_array) > 1:
-                            self.save_fig["save"] = pdf_file + "_" + str(time)
+                            self.save_fig["pdf"] = pdf_file + "_" + str(time)
                         else:
-                            self.save_fig["save"] = pdf_file
+                            self.save_fig["pdf"] = pdf_file
+                    if 7 in output_options:
+                        svg_file = output_folder + self.svg_file_entry.text()
+                        svg_file = os.path.splitext(svg_file)[0]
+                        if len(time_array) > 1:
+                            self.save_fig["svg"] = svg_file + "_" + str(time)
+                        else:
+                            self.save_fig["svg"] = svg_file
 
                     try:
-                        figure.update_plot_vars(self.save_fig, time)
+                        figure.update_plot_vars(self.save_fig, time, self.get_raster_files())
                         processed_plate_generator = figure.plot_to_screen(processed_plate_generator)
                         print("plot to screen")
                         if 1 in output_options and len(time_array) == 1:
