@@ -6,18 +6,21 @@
         "file": "background_fill.dat",
         "checked": false,
         "bcolor": "none",
-        "fcolor": "azure"
+        "fcolor": "azure",
+        "alpha": 1.0
     },
     {
         "file": "Cont_Ocean_Polygons_v3a.gpml",
         "checked": false,
         "bcolor": "none",
-        "fcolor": "byPlateId"
+        "fcolor": "byPlateId",
+        "alpha": 1.0
     },
     {
         "file": "Plate_Polygons.gpml",
         "checked": true,
         "bcolor": "black",
-        "fcolor": "none"
+        "fcolor": "none",
+        "alpha": 1.0
     }
 ]

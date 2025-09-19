@@ -145,8 +145,8 @@ class FileTableModel(QAbstractTableModel):
         super().__init__(parent)
         self.raster_table = raster_table
         self.accepted_extensions = [".dat", ".gpml", ".csv", ".shp"]
-        self.files = []  # Each item is [checked, arrows, path, param1, param2]
-        self.headers = ["", "", "File Path", "Border Color", "Fill Color"]
+        self.files = []  # Each item is [checked, arrows, path, bcolor, fcolor, alpha]
+        self.headers = ["", "", "File Path", "Border Color", "Fill Color", "Alpha"]
         self.file_index = 2
         self.rot_file = ""
         self.proj_file = ""
@@ -216,7 +216,7 @@ class FileTableModel(QAbstractTableModel):
 
                 # add files defined in project to gui
                 if os.path.splitext(file_path)[1] in self.accepted_extensions:
-                    self.add_file(file_path, file["checked"], file["bcolor"], file["fcolor"])
+                    self.add_file(file_path, file["checked"], file["bcolor"], file["fcolor"], file["alpha"])
                 elif os.path.splitext(file_path)[1] in self.raster_table.accepted_extensions:
                     self.raster_table.add_file(file_path, file["checked"], file["extent"], file["alpha"])
 
@@ -241,6 +241,7 @@ class FileTableModel(QAbstractTableModel):
             if os.path.splitext(file[self.file_index])[1] in self.accepted_extensions:
                 entry["bcolor"] = file[3]
                 entry["fcolor"] = file[4]
+                entry["alpha"] = file[5]
             else:
                 entry["extent"] = file[3]
                 entry["alpha"] = file[4]
@@ -261,6 +262,8 @@ class FileTableModel(QAbstractTableModel):
 
         self.change_project_file(self.proj_file)
 
+    def get_proj_name(self):
+        return os.path.splitext(os.path.basename(self.proj_file))[0]
     
     def rowCount(self, parent=None):
         return len(self.files)
@@ -286,6 +289,9 @@ class FileTableModel(QAbstractTableModel):
         elif col == 2:      # File path column
             if role == Qt.DisplayRole or role == Qt.EditRole:
                 return os.path.basename(self.files[row][2])
+        elif col == 5:  # Alpha columns
+            if role == Qt.DisplayRole or role == Qt.EditRole:
+                return str(self.files[row][col])
         else:  # Other columns
             if role == Qt.DisplayRole or role == Qt.EditRole:
                 return self.files[row][col]
@@ -304,6 +310,11 @@ class FileTableModel(QAbstractTableModel):
             return True
         elif col == 1:
             return False
+        elif role == Qt.EditRole and col == 5:
+            try: self.files[row][col] = float(value)
+            except ValueError: return False
+            self.dataChanged.emit(index, index)
+            return True
         elif role == Qt.EditRole and col > 0:
             self.files[row][col] = value
             self.dataChanged.emit(index, index)
@@ -326,15 +337,22 @@ class FileTableModel(QAbstractTableModel):
             flags |= Qt.ItemIsEditable | Qt.ItemIsEnabled | Qt.ItemIsSelectable
         return flags
     
-    def add_file(self, file_path, checked=True, border_color="black", fill_color=""):
+    def add_file(self, file_path, checked=True, border_color="default", fill_color="default", alpha=1.0):
         if not os.path.exists(file_path):
             raise FileNotFoundError
-        
-        self.beginInsertRows(QModelIndex(), len(self.files), len(self.files))
         extension = os.path.splitext(file_path)[1]
-        if extension == ".csv":
-            border_color = fill_color = "infile" 
-        self.files.insert(0, [checked, False, file_path, border_color, fill_color])
+        if border_color == "default":
+            if extension == ".csv":
+                border_color = "infile" 
+            else:
+                border_color = "black"
+        if fill_color == "default":
+            if extension == ".csv":
+                fill_color = "infile" 
+            else:
+                fill_color = ""
+        self.beginInsertRows(QModelIndex(), len(self.files), len(self.files))
+        self.files.insert(0, [checked, False, file_path, border_color, fill_color, alpha])
         self.endInsertRows()
     
     def remove_row(self, row):

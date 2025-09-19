@@ -1,0 +1,14 @@
+﻿<strong>Why is the program so slow?</strong><br>
+It should, on average, take less than 10 seconds to plot a map. However, if it takes much longer than that, try plotting fewer map layers. The best layers to start with are “Plate_Polygons” and “Just_Coastlines”.<br><br>
+<strong>Several layers, though they are checked, don’t appear in the final map. What is going on?</strong><br>
+The order of the layers (top to bottom) is important. Some of the layers, such as “background_fill” and “Plate_Polygons” are filled with solid shading and will “cover” layers that lie below. Make sure that “background color” is at the bottom of the stack and that “Plate Polygons” lies below the coastline and data points.<br><br>
+<strong>The background is filled in and only some of my polygons are plotted. What happened?</strong><br>
+In some cases, most often in map projections with squished edges (like Orthographic), polygons are broken or inverted while plotting. This causes the screen to be partially or entirely filled, covering up polygons that were plotted before the error. Although it is inconvenient, the best solution is to change the input parameters. Consider using a different projection, or adjusting the central latitude/longitude if possible. If the problem persists, the problem layers should be plotted with a fill color of "none" to prevent polygon filling.<br><br>
+<strong>I input a color, but it's still plotting with the previous value/the default value. What's wrong?</strong><br>
+The program is sensitive to capitalizations and extra spaces. Make sure the color input appears exactly as it does in the "Color Options" tab. Also be sure to click away from the box before running the program. If the program is run while your cursor is still active in the cell, then the program doesn't have a chance to properly read in what you entered.<br><br>
+<strong>How do I plot my data points on the maps?</strong><br>
+You can plot user-defined data on the maps by creating a comma-delimited file in Excel (or a text processor) with a list of the data localities in the format of the file “PlateID.csv”. You need to specify the modern latitude and longitude, and symbol type. You can also add descriptive text strings to the map or numeric labels. For more detailed instructions see the PaleoMapper User Manual.<br><br>
+<strong>How do I choose a project to autoload on startup?</strong><br>
+Anything that is in the "input" folder is loaded on startup. The "input" folder should be in the same directory as the program. If there is a project in the "input" folder it will load the project, and everything else will be loaded with default values. If there are multiple projects, it will load the one that is alphabetically first.<br><br>
+<strong>Where are my files saving to?</strong><br>
+All output files, regardless of the specified name, are saved to the "output" folder in the same directory as the program.

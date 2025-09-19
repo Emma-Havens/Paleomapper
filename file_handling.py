@@ -32,9 +32,10 @@ class Chunk:
     symbol: str
     size: float
     azimuth: float
+    alpha: float
     records: List[Record]
 
-def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor):
+def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
 
     # load symbols in memory
     shape_library = "shape_library.csv"
@@ -62,7 +63,7 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor):
             lat = float(row[3])
             lon = float(row[4])
             symbol = row[5]
-            size = float(row[6])
+            size = float(row[6]) if float(row[6]) > 0 else 0.1
             azimuth = float(row[7])
             border_color = row[10]
             fill_color = row[11]
@@ -71,7 +72,7 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor):
             if fcolor: fill_color = fcolor
 
             chunk = Chunk(file_type, plateid, start_time, end_time, "DP", 0, plateid, 
-                          border_color, fill_color, urn, label, symbol, size, azimuth, [])
+                          border_color, fill_color, urn, label, symbol, size, azimuth, alpha, [])
             
             match symbol:
                 case "circle":
@@ -88,7 +89,7 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor):
             for i in range(len(path.vertices)):
                 point = path.vertices[i]
                 code = path.codes[i]
-                if code in [0, 79]: # legacy ignored codes
+                if code == 0: # legacy ignored codes
                     continue
                 elif code == 1:     # MOVETO
                     pen = 3
@@ -152,7 +153,7 @@ def sanitize_dat(filename, plot_time):
     return geo_reduced_outfile
 
 
-def read_file_in_chunks(filename, bcolor, fcolor):
+def read_file_in_chunks(filename, bcolor, fcolor, alpha):
     with open(filename, "r") as infile:
         while True:           
             # Read the first header
@@ -203,7 +204,7 @@ def read_file_in_chunks(filename, bcolor, fcolor):
             # print(f"{label}: {border_color}, {fill_color}")
             
             chunk = Chunk(file_type, plateid, appears, disappears, feature_type, feature_type_mod, plateid2, 
-                          border_color, fill_color, record_number, label, symbol, size, azimuth, [])
+                          border_color, fill_color, record_number, label, symbol, size, azimuth, alpha, [])
 
             
             # Read records until end of section (alat = 99)
@@ -241,7 +242,7 @@ def assign_feature_type(gpml_feature):
         case _:
             return "UN" # Put GN somewhere
 
-def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, file_type="GPML"):
+def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, alpha, file_type="GPML"):
 
     col = pygplates.FeatureCollection(filename)
 
@@ -257,15 +258,9 @@ def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, file_type="GPML"):
 
         if not ((appears >= plot_time or appears >= 999) and (disappears <= plot_time or disappears <= -999)):
             continue
-
-        chunk = {"data_type": file_type, 
-                     "headers": {"plateid": plateid, "appears": appears, "disappears": disappears, 
-                                 "feature_type": feature_type, "feature_type_mod": 0, 
-                                 "plateid2": plateid2, "border_color": bcolor, "fill_color": fcolor, "record_number": 0},
-                     "records": []}
         
         chunk = Chunk(file_type, plateid, appears, disappears, feature_type, 0, plateid2, 
-                          bcolor, fcolor, 0, "nolabel", "none", 1, 0, [])
+                          bcolor, fcolor, 0, "nolabel", "none", 1, 0, alpha, [])
 
         geometry = feature.get_geometries()
         if geometry:
@@ -294,21 +289,21 @@ def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, file_type="GPML"):
 
 def read_files(files, plot_time):
     for total_file in files:
-        _, _, file, border_color, fill_color = total_file
+        _, _, file, border_color, fill_color, alpha = total_file
         if border_color == "infile": border_color = ""
         if fill_color == "infile": fill_color = ""
         extension = os.path.splitext(file)[1]
         match extension:
             case ".csv":
-                for chunk in read_csv_in_chunks(file, plot_time, border_color, fill_color):
+                for chunk in read_csv_in_chunks(file, plot_time, border_color, fill_color, alpha):
                     yield chunk
             case ".dat":
                 dat = sanitize_dat(file, plot_time)
-                for chunk in read_file_in_chunks(dat, border_color, fill_color):
+                for chunk in read_file_in_chunks(dat, border_color, fill_color, alpha):
                     yield chunk
             case ".gpml":
-                for chunk in read_gpml_in_chunks(file, plot_time, border_color, fill_color):
+                for chunk in read_gpml_in_chunks(file, plot_time, border_color, fill_color, alpha):
                     yield chunk
             case ".shp":
-                for chunk in read_gpml_in_chunks(file, plot_time, border_color, fill_color, "SHP"):
+                for chunk in read_gpml_in_chunks(file, plot_time, border_color, fill_color, alpha, "SHP"):
                     yield chunk

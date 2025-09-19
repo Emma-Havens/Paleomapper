@@ -26,30 +26,30 @@
     },
     {
         "file": "background_fill.dat",
-        "checked": false,
+        "checked": true,
         "bcolor": "none",
-        "fcolor": "paleturquoise",
+        "fcolor": "azure",
         "alpha": 1.0
     },
     {
         "file": "Plate_Polygons.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "brown",
-        "fcolor": "navajowhite",
+        "fcolor": "blue",
         "alpha": 0.9
     },
     {
         "file": "Coastlines&Political_Boundaries.gpml",
         "checked": false,
         "bcolor": "black",
-        "fcolor": "none",
+        "fcolor": "jelly",
         "alpha": 1.0
     },
     {
         "file": "Just_Coastlines.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "black",
-        "fcolor": "none",
+        "fcolor": "bumpkin",
         "alpha": 1.0
     },
     {
@@ -64,13 +64,6 @@
         "checked": false,
         "bcolor": "darkgrey",
         "fcolor": "none",
-        "alpha": 1.0
-    },
-    {
-        "file": "Vdvtest01sym.csv",
-        "checked": true,
-        "bcolor": "infile",
-        "fcolor": "white",
         "alpha": 1.0
     }
 ]

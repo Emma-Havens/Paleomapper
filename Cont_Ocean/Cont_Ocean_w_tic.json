@@ -6,18 +6,21 @@
         "file": "Ocean_Poly_Only_v25199.gpml",
         "checked": true,
         "bcolor": "none",
-        "fcolor": "byOceanAge"
+        "fcolor": "byOceanAge",
+        "alpha": 1.0
     },
     {
         "file": "Continent_Polygons_Only_25199.gpml",
         "checked": true,
         "bcolor": "black",
-        "fcolor": "byGeoAge"
+        "fcolor": "byGeoAge",
+        "alpha": 1.0
     },
     {
         "file": "5_degree_tics.gpml",
         "checked": true,
         "bcolor": "grey",
-        "fcolor": ""
+        "fcolor": "",
+        "alpha": 1.0
     }
 ]

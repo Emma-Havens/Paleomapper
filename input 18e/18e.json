@@ -6,12 +6,14 @@
         "file": "08_PALEOMAP_PoliticalBoundaries_Medi_v15v1c.gpml",
         "checked": true,
         "bcolor": "grey",
-        "fcolor": ""
+        "fcolor": "",
+        "alpha": 1.0
     },
     {
         "file": "14_PALEOMAP_PlatePolygons_Medi_15v3d.gpml",
         "checked": true,
         "bcolor": "black",
-        "fcolor": "byPlateId"
+        "fcolor": "byPlateId",
+        "alpha": 1.0
     }
 ]

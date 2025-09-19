@@ -6,6 +6,7 @@
         "file": "polygons_Merdith_et_al.gpml",
         "checked": true,
         "bcolor": "black",
-        "fcolor": "multicolor"
+        "fcolor": "multicolor",
+        "alpha": 1.0
     }
 ]

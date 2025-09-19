@@ -1,9 +1,9 @@
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QLineEdit, QPushButton,
     QFileDialog, QMessageBox, QComboBox, QRadioButton, QButtonGroup, QTableView,
-    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter
+    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter, QMenuBar
     )
-from PySide6.QtGui import QIntValidator, QDoubleValidator, QIcon
+from PySide6.QtGui import QIntValidator, QDoubleValidator, QIcon, QAction
 from PySide6.QtCore import Qt
 
 import os
@@ -11,6 +11,7 @@ import traceback
 import sys
 import numpy as np
 
+import main_menu
 import file_handling
 import matplotlib.pyplot as plt
 from geo_file_table import CheckBoxDelegate, ArrowDelegate, FileTableModel, RasterTableModel
@@ -27,12 +28,30 @@ class PlateTrackerApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("PaleoMapper")
+        QApplication.setApplicationDisplayName("PaleoMapper")
+        QApplication.setApplicationName("PaleoMapper")
         self.setGeometry(100, 0, 650, 900)
 
         # Main widget and layout
         self.main_widget = QWidget()
         self.setCentralWidget(self.main_widget)
         self.layout = QVBoxLayout(self.main_widget)
+
+        # Menu Bar
+        top_menu = self.menuBar()
+        general_menu = top_menu.addMenu("General")
+        about_action = QAction("About Paleomapper", self)
+        about_action.setMenuRole(QAction.MenuRole.NoRole)
+        about_action.triggered.connect(main_menu.show_about_window)
+        general_menu.addAction(about_action)
+        faq_action = QAction("FAQ", self)
+        faq_action.triggered.connect(main_menu.show_faq_window)
+        general_menu.addAction(faq_action)
+        general_menu.addSeparator()
+        color_options_action = QAction("Color Options", self)
+        color_options_action.triggered.connect(main_menu.show_color_options_window)
+        general_menu.addAction(color_options_action)
+        
 
         # Window icon and status bar
         self.status_bar = QStatusBar()
@@ -84,6 +103,7 @@ class PlateTrackerApp(QMainWindow):
         self.file_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
         self.file_table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
         self.file_table.horizontalHeader().setSectionResizeMode(2, QHeaderView.Stretch)
+        self.file_table.horizontalHeader().resizeSection(5, 70)
         self.file_table.setEditTriggers(QAbstractItemView.DoubleClicked | QAbstractItemView.EditKeyPressed) 
 
         # Create splitter
@@ -307,6 +327,8 @@ class PlateTrackerApp(QMainWindow):
         self.clear_layout(self.output_inputs_layout)
          
         output_options = [self.outputs.id(button) for button in self.outputs.buttons() if button.isChecked()]
+
+        proj_name = self.file_model.get_proj_name() if self.file_model.get_proj_name() else "output"
         
         if 0 in output_options or 1 in output_options or 2 in output_options or 7 in output_options: # Screen output
             projection_layout = QHBoxLayout()
@@ -337,7 +359,7 @@ class PlateTrackerApp(QMainWindow):
             self.lon_spacing = QLineEdit()
             self.lon_spacing.setValidator(QIntValidator())
             self.lon_spacing.setText("60")
-            self.no_graticule_checkbox = QCheckBox("No Graticules")
+            self.no_graticule_checkbox = QCheckBox("No Graticule")
 
             latlon_layout = QHBoxLayout()
             latlon_layout.addWidget(lat_label)
@@ -361,7 +383,7 @@ class PlateTrackerApp(QMainWindow):
             if 1 in output_options:
                 pdf_file_label = QLabel("Output .pdf file name:")
                 self.pdf_file_entry = QLineEdit()
-                self.pdf_file_entry.setText("output.pdf")
+                self.pdf_file_entry.setText(f"{proj_name}.pdf")
 
                 pdf_layout = QHBoxLayout()
                 pdf_layout.addWidget(pdf_file_label)
@@ -371,7 +393,7 @@ class PlateTrackerApp(QMainWindow):
                 self.save_fig["anim"] = True
                 mp4_file_label = QLabel("Output .mp4 file name:")
                 self.mp4_file_entry = QLineEdit()
-                self.mp4_file_entry.setText("output.mp4")
+                self.mp4_file_entry.setText(f"{proj_name}.mp4")
                 fps_label = QLabel("Frames per second:")
                 self.fps_entry = QLineEdit()
                 self.fps_entry.setValidator(QIntValidator())
@@ -386,7 +408,7 @@ class PlateTrackerApp(QMainWindow):
             if 7 in output_options:
                 svg_file_label = QLabel("Output .svg file name:")
                 self.svg_file_entry = QLineEdit()
-                self.svg_file_entry.setText("output.svg")
+                self.svg_file_entry.setText(f"{proj_name}.svg")
 
                 svg_layout = QHBoxLayout()
                 svg_layout.addWidget(svg_file_label)
@@ -396,7 +418,7 @@ class PlateTrackerApp(QMainWindow):
         if 3 in output_options:    # DAT file
             dat_file_label = QLabel("Output .dat file name:")
             self.dat_file_entry = QLineEdit()
-            self.dat_file_entry.setText("output.dat")
+            self.dat_file_entry.setText(f"{proj_name}.dat")
 
             dat_layout = QHBoxLayout()
             dat_layout.addWidget(dat_file_label)
@@ -407,7 +429,7 @@ class PlateTrackerApp(QMainWindow):
         if 4 in output_options:    # KML file
             kml_file_label = QLabel("Output .kml file name:")
             self.kml_file_entry = QLineEdit()
-            self.kml_file_entry.setText("output.kml")
+            self.kml_file_entry.setText(f"{proj_name}.kml")
 
             kml_layout = QHBoxLayout()
             kml_layout.addWidget(kml_file_label)
@@ -418,7 +440,7 @@ class PlateTrackerApp(QMainWindow):
         if 5 in output_options:    # GPML file
             gpml_file_label = QLabel("Output .gpml file name:")
             self.gpml_file_entry = QLineEdit()
-            self.gpml_file_entry.setText("output.gpml")
+            self.gpml_file_entry.setText(f"{proj_name}.gpml")
 
             gpml_layout = QHBoxLayout()
             gpml_layout.addWidget(gpml_file_label)
@@ -429,7 +451,7 @@ class PlateTrackerApp(QMainWindow):
         if 6 in output_options:    # SHP file
             shp_file_label = QLabel("Output .shp file name:")
             self.shp_file_entry = QLineEdit()
-            self.shp_file_entry.setText("output.shp")
+            self.shp_file_entry.setText(f"{proj_name}.shp")
 
             shp_layout = QHBoxLayout()
             shp_layout.addWidget(shp_file_label)
