@@ -40,16 +40,25 @@ class PlateTrackerApp(QMainWindow):
         # Menu Bar
         top_menu = self.menuBar()
         general_menu = top_menu.addMenu("General")
+        preferences_action = QAction("Preferences", self)
+        preferences_action.triggered.connect(main_menu.show_preferences_window)
+        general_menu.addAction(preferences_action)
+        
+        self.about_dialog = main_menu.AboutDialog()
         about_action = QAction("About Paleomapper", self)
         about_action.setMenuRole(QAction.MenuRole.NoRole)
-        about_action.triggered.connect(main_menu.show_about_window)
+        about_action.triggered.connect(self.about_dialog.show_window)
         general_menu.addAction(about_action)
+        
+        self.faq_dialog = main_menu.FAQDialog()
         faq_action = QAction("FAQ", self)
-        faq_action.triggered.connect(main_menu.show_faq_window)
+        faq_action.triggered.connect(self.faq_dialog.show_window)
         general_menu.addAction(faq_action)
         general_menu.addSeparator()
+        
+        self.color_dialog = main_menu.ColorDialog()
         color_options_action = QAction("Color Options", self)
-        color_options_action.triggered.connect(main_menu.show_color_options_window)
+        color_options_action.triggered.connect(self.color_dialog.show_window)
         general_menu.addAction(color_options_action)
         
 
@@ -212,12 +221,10 @@ class PlateTrackerApp(QMainWindow):
         self.layout.addLayout(rotation_layout)
         self.layout.addLayout(project_controls_layout)
         self.layout.addLayout(file_controls_layout)
-        # self.layout.addWidget(self.file_table)
-        # self.layout.addWidget(self.raster_table)
         self.layout.addWidget(self.table_splitter)
-        self.layout.addLayout(fixed_plate_layout)
         self.layout.addWidget(time_label)
         self.layout.addLayout(time_layout)
+        self.layout.addLayout(fixed_plate_layout)
         self.layout.addWidget(output_label)
         self.layout.addLayout(outputs_checkbox_layout)
         self.layout.addLayout(self.output_inputs_layout)
