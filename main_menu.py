@@ -1,11 +1,14 @@
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (QLabel, QDialog, QVBoxLayout, QHBoxLayout, 
                                QSpacerItem, QSizePolicy, QTextBrowser, QAbstractScrollArea)
+from PySide6.QtCore import Qt
 
 from matplotlib.backends.backend_qtagg import FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib.colors as mcolors
 from matplotlib.patches import Rectangle
+
+from pyqtconfig import ConfigManager, ConfigDialog
 
 import math
 
@@ -76,7 +79,7 @@ class ColorDialog:
         layout.addWidget(title)
         preamble = QLabel("The following are key words that can be used as border and fill colors. " \
                 "Paleomapper can also utilize any formats allowed by Matplotlib, aside from RGB tuples (see " \
-                "the \"Specifying Colors\" tutorial at matplotlib.org for more information). Notably, this includes " \
+                "the \"Specifying Colors\" tutorial at matplotlib.org for more information). Notably, Paleomapper supports " \
                 "hexcode RGB (#0f0f0f) and 'none'.")
         preamble.setWordWrap(True)
         layout.addWidget(preamble)
@@ -149,17 +152,30 @@ class ColorDialog:
     def show_window(self):
         self.dialog.show()
 
-def show_preferences_window():
-    dialog = QDialog(None)
-    dialog.setSizeGripEnabled(True)
-    layout = QVBoxLayout()
-    title = QLabel("Preferences")
-    title_font = title.font()
-    title_font.setPointSize(40)
-    title.setFont(title_font)
-    layout.addWidget(title)
+class PreferenceDialog:
+    def __init__(self):
+        default_settings = {
+            "Default project": "default/default.json",
+            "Use most recent project?": True,
+            "most_recent_path": "default/default.json"
+        }
+        default_metadata = {
+            "most_recent_path": {
+                "prefer_hidden": True
+            }
+        }
 
-    
-    
-    dialog.setLayout(layout)
-    dialog.exec()
+        self.config = ConfigManager(default_settings, filename=".config_settings.json")
+        self.config.set_many_metadata(default_metadata)
+
+        self.dialog = ConfigDialog(self.config, cols=1, f=Qt.WindowCloseButtonHint)
+        self.dialog.setWindowTitle("Settings")
+        # self.dialog.setMaximumWidth(100)
+        self.dialog.accepted.connect(self.update_config)
+
+    def update_config(self):
+        self.config.set_many(self.dialog.config.as_dict())
+        self.config.save()
+
+    def show_window(self):
+        self.dialog.exec()

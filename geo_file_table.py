@@ -141,7 +141,7 @@ class CheckBoxDelegate(QStyledItemDelegate):
         return False
 
 class FileTableModel(QAbstractTableModel):
-    def __init__(self, raster_table, input_dir="input", parent=None):
+    def __init__(self, raster_table, proj_path, parent=None):
         super().__init__(parent)
         self.raster_table = raster_table
         self.accepted_extensions = [".dat", ".gpml", ".csv", ".shp"]
@@ -151,7 +151,7 @@ class FileTableModel(QAbstractTableModel):
         self.rot_file = ""
         self.proj_file = ""
 
-        self.upload_files(input_dir)
+        if os.path.exists(proj_path): self.load_project(proj_path)
               
     def upload_files(self, input_dir):
         if getattr(sys, 'frozen', False):
@@ -176,7 +176,7 @@ class FileTableModel(QAbstractTableModel):
                 self.rot_file = file
                 # print("rot found")
 
-        if os.path.exists(self.proj_file): self.change_project_file(self.proj_file)
+        if os.path.exists(self.proj_file): self.load_project(self.proj_file)
         
         # add files not defined by a project
         all_files = self.files + self.raster_table.files
@@ -189,7 +189,7 @@ class FileTableModel(QAbstractTableModel):
                 else:
                     self.raster_table.add_file(file, False)
     
-    def change_project_file(self, proj_path):
+    def load_project(self, proj_path):
         self.proj_file = proj_path
 
         # remove all current files
@@ -260,7 +260,7 @@ class FileTableModel(QAbstractTableModel):
             if not os.path.exists(dest_file):
                 shutil.copy2(source_file, dest_file)
 
-        self.change_project_file(self.proj_file)
+        self.load_project(self.proj_file)
 
     def get_proj_name(self):
         return os.path.splitext(os.path.basename(self.proj_file))[0]

@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('QtAgg')
 from matplotlib import pyplot as plt
 from matplotlib import rc_context as mplrc_context
 import numpy as np
@@ -7,7 +9,7 @@ from matplotlib.path import Path
 from matplotlib.patches import PathPatch
 from matplotlib.collections import PatchCollection
 from matplotlib.gridspec import GridSpec
-from matplotlib.colors import is_color_like, CSS4_COLORS, Normalize, to_rgb
+from matplotlib.colors import is_color_like, CSS4_COLORS, Normalize, to_rgb, ListedColormap
 from matplotlib.animation import FFMpegWriter
 from matplotlib import rcParams as mplrcParams
 import matplotlib.cm as mplcm
@@ -16,6 +18,9 @@ import shapely.ops as ops
 import colorsys
 import os
 import sys
+
+from PySide6.QtWidgets import QWidget
+from PySide6.QtCore import Qt
 
 import timeline_colormap_creation as tcc
 
@@ -54,13 +59,24 @@ class Figure:
             case 8:     # Stereographic projection
                 self.set_Stereographic(lat_space, lon_space, kwargs)
         
+        # try to prevent cursor toolbar segfault
+        toolbar = self.fig.canvas.manager.toolbar if hasattr(self.fig.canvas, 'manager') else None
+        if toolbar:
+            print('fixing toolbar')
+            toolbar.unsetCursor()
+            toolbar.setAttribute(Qt.WA_NoMousePropagation, True)
+            
+            for child in toolbar.findChildren(QWidget):
+                child.unsetCursor()
+                child.setAttribute(Qt.WA_NoMousePropagation, True)
+        
         self.fig.set_size_inches(15, 10)
         self.fig.tight_layout()
         self.fig.canvas.draw()
         logo = plt.imread('ai_owl_logo.png')
-        logo_ax = self.fig.add_axes([0.95, 0.01, .05, .05])
-        logo_ax.imshow(logo)
-        logo_ax.axis('off')
+        self.logo_ax = self.fig.add_axes([0.95, 0.01, .05, .05])
+        self.logo_ax.imshow(logo)
+        self.logo_ax.axis('off')
         self.bg = self.fig.canvas.copy_from_bbox(self.fig.bbox)
 
     def set_Mollweide(self, lat_space, lon_space, kwargs):
@@ -154,7 +170,7 @@ class Figure:
         self.output = output_tuple
         self.plot_time = plot_time
         self.ax.set_title(f"{plot_time}Ma", loc="left", pad=40, size='xx-large')
-        self.fig.tight_layout()
+        # self.fig.tight_layout()
         self.rasters = rasters      # Each item is [checked, arrows, path, [w,e,s,n], alpha]
 
     def set_color_list(self):
@@ -167,7 +183,8 @@ class Figure:
         self.color_list = [color for color in all_colors if color not in light_colors]
         
         self.ocean_age_norm = Normalize(0, 250)
-        self.ocean_age_cmap = mplcm.rainbow_r
+        extended_cmap = mplcm.jet_r
+        self.ocean_age_cmap = ListedColormap(extended_cmap(np.linspace(0.1, 0.9, 204)))
         self.ocean_age_colorbar = False
         
         self.geo_age_norm = tcc.smallest_division_norm
@@ -215,17 +232,21 @@ class Figure:
         
         # Calculate new figure height (original height + space for colorbars)
         fig_dim = self.fig.get_size_inches()
-        new_height = fig_dim[1] + 0.5 * len(colorbars)  # 0.5 inches per colorbar
+        new_height = fig_dim[1] + 0.5 * len(colorbars) + (fig_dim[1] * 0.05)  # 0.5 inches per colorbar
         self.fig.set_size_inches(fig_dim[0], new_height)
         
         # Create GridSpec with space for main content and colorbars
-        self.gs = self.fig.add_gridspec(nrows=1 + len(colorbars), ncols=1, 
-                                height_ratios=[fig_dim[1]] + [0.5]*len(colorbars))
+        self.gs = self.fig.add_gridspec(nrows=2 + len(colorbars), ncols=1, 
+                                height_ratios=[fig_dim[1]] + [0.5]*len(colorbars) + [fig_dim[1] * 0.05])
         
         # Move all existing axes to the top grid slot
-        existing_axes = self.fig.axes
-        for ax in existing_axes:
-            ax.set_subplotspec(self.gs[0])
+        # existing_axes = self.fig.axes
+        # for ax in existing_axes:
+        #     ax.set_subplotspec(self.gs[0])
+        self.ax.set_subplotspec(self.gs[0])
+        # logo_gridspec = self.gs[-1].add_gridspec(nrows=1, ncols=2, 
+        #                                          width_ratios=[fig_dim[0] - (fig_dim[0] * 0.05)] + [fig_dim[0] * 0.05])
+        self.logo_ax.set_subplotspec(self.gs[-1])
         
         # Add colorbars in the remaining grid slots
         for i, (norm, cmap, mask) in enumerate(colorbars, 1):
@@ -521,6 +542,7 @@ class Figure:
             # pass
         if not hasattr(self, 'gs'):
             self.add_colorbars()
+            self.fig.tight_layout()
     
     #region Troubleshooting
     #     path1 = Path([(-160, 30), (-180, 30), (-180, 60), (-160, 60), (-160, 30)])

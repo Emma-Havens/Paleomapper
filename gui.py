@@ -40,9 +40,14 @@ class PlateTrackerApp(QMainWindow):
         # Menu Bar
         top_menu = self.menuBar()
         general_menu = top_menu.addMenu("General")
+        self.preferences = main_menu.PreferenceDialog()
         preferences_action = QAction("Preferences", self)
-        preferences_action.triggered.connect(main_menu.show_preferences_window)
+        preferences_action.triggered.connect(self.preferences.show_window)
         general_menu.addAction(preferences_action)
+        if self.preferences.config.get("Use most recent project?"):
+            project_to_open = self.preferences.config.get("most_recent_path")
+        else:
+            project_to_open = self.preferences.config.get("Default project")
         
         self.about_dialog = main_menu.AboutDialog()
         about_action = QAction("About Paleomapper", self)
@@ -60,7 +65,6 @@ class PlateTrackerApp(QMainWindow):
         color_options_action = QAction("Color Options", self)
         color_options_action.triggered.connect(self.color_dialog.show_window)
         general_menu.addAction(color_options_action)
-        
 
         # Window icon and status bar
         self.status_bar = QStatusBar()
@@ -102,7 +106,7 @@ class PlateTrackerApp(QMainWindow):
 
         # Create file table
         self.file_table = QTableView()
-        self.file_model = FileTableModel(self.raster_model)
+        self.file_model = FileTableModel(self.raster_model, project_to_open)
         self.file_table.setModel(self.file_model)
         self._arrow_delegate = ArrowDelegate()  # Store as instance attribute
         self._checkbox_delegate = CheckBoxDelegate()
@@ -234,9 +238,11 @@ class PlateTrackerApp(QMainWindow):
         proj_file, _ = QFileDialog.getOpenFileName(
             self, "Select Project File", "", "Project Files (*.json)"
         )
-        self.file_model.change_project_file(proj_file)
+        self.file_model.load_project(proj_file)
         self.rotation_file_entry.setText(self.file_model.rot_file)
         self.project_label.setText(os.path.basename(self.file_model.proj_file))
+        self.preferences.config.set("most_recent_path", self.file_model.proj_file)
+        self.preferences.config.save()
         self.update_raster_table_visibility()
         self.status_bar.showMessage(f"Loaded project {os.path.basename(self.file_model.proj_file)}", 3000)
 
@@ -247,6 +253,8 @@ class PlateTrackerApp(QMainWindow):
         self.file_model.save_project(proj_file)
         self.rotation_file_entry.setText(self.file_model.rot_file)
         self.project_label.setText(os.path.basename(self.file_model.proj_file))
+        self.preferences.config.set("most_recent_path", self.file_model.proj_file)
+        self.preferences.config.save()
         self.status_bar.showMessage(f"Saved project {os.path.basename(self.file_model.proj_file)}", 3000)
 
     def save_project(self):
@@ -597,10 +605,10 @@ class PlateTrackerApp(QMainWindow):
             QApplication.processEvents()
             
             # Set output path
-            output_folder = "output/"
+            output_folder = os.path.dirname(self.file_model.proj_file)
             if getattr(sys, 'frozen', False):
                 exec_dir = os.path.dirname(sys.executable)
-                output_folder = exec_dir + "/" + output_folder
+                output_folder = os.path.join(exec_dir, output_folder)
                 print(output_folder)
             
             # generate each figure
@@ -629,7 +637,7 @@ class PlateTrackerApp(QMainWindow):
                 # Handle output
                 if 3 in output_options:    # Save DAT
                     try:
-                        dat_name = output_folder + self.dat_file_entry.text()
+                        dat_name = os.path.join(output_folder, self.dat_file_entry.text())
                         dat_file = saveDAT(dat_name)
                         processed_plate_generator = dat_file.save_to_dat(processed_plate_generator, time)
                         print("save to dat")
@@ -640,7 +648,7 @@ class PlateTrackerApp(QMainWindow):
                 
                 if 4 in output_options:    # Save KML
                     try:
-                        kml_name = output_folder + self.kml_file_entry.text()
+                        kml_name = os.path.join(output_folder, self.kml_file_entry.text())
                         kml_file = saveKML(kml_name)
                         processed_plate_generator = kml_file.save_to_kml(processed_plate_generator)
                         print("save to kml")
@@ -651,7 +659,7 @@ class PlateTrackerApp(QMainWindow):
 
                 if 5 in output_options:    # Save GPML
                     try:
-                        gpml_name = output_folder + self.gpml_file_entry.text()
+                        gpml_name = os.path.join(output_folder, self.gpml_file_entry.text())
                         gpml_file = saveFile(gpml_name, ".gpml")
                         processed_plate_generator = gpml_file.save_to_file(processed_plate_generator, time)
                         print("save to gpml")
@@ -662,7 +670,7 @@ class PlateTrackerApp(QMainWindow):
 
                 if 6 in output_options:    # Save SHP
                     try:
-                        shp_name = output_folder + self.shp_file_entry.text()
+                        shp_name = os.path.join(output_folder, self.shp_file_entry.text())
                         shp_file = saveFile(shp_name, ".shp")
                         processed_plate_generator = shp_file.save_to_file(processed_plate_generator, time)
                         print("save to shp")
@@ -674,14 +682,14 @@ class PlateTrackerApp(QMainWindow):
                 if 0 in output_options or 1 in output_options or 2 in output_options or 7 in output_options:  # Plot to Screen
                     # different file name
                     if 1 in output_options:
-                        pdf_file = output_folder + self.pdf_file_entry.text()
+                        pdf_file = os.path.join(output_folder, self.pdf_file_entry.text())
                         pdf_file = os.path.splitext(pdf_file)[0]    # remove file extension, if any
                         if len(time_array) > 1:
                             self.save_fig["pdf"] = pdf_file + "_" + str(time)
                         else:
                             self.save_fig["pdf"] = pdf_file
                     if 7 in output_options:
-                        svg_file = output_folder + self.svg_file_entry.text()
+                        svg_file = os.path.join(output_folder, self.svg_file_entry.text())
                         svg_file = os.path.splitext(svg_file)[0]
                         if len(time_array) > 1:
                             self.save_fig["svg"] = svg_file + "_" + str(time)
@@ -710,7 +718,7 @@ class PlateTrackerApp(QMainWindow):
             # if making animation, assemble now
             if 2 in output_options:
                 try:
-                    mp4_file = output_folder + self.mp4_file_entry.text()
+                    mp4_file = os.path.join(output_folder, self.mp4_file_entry.text())
                     if mp4_file[-4:] != ".mp4": mp4_file = mp4_file + ".mp4"    # add mp4 extension
                     fps = self.fps_entry.text() if self.fps_entry.text() else 6
                     figure.make_animation(mp4_file, fps)

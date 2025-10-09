@@ -11,14 +11,14 @@
     },
     {
         "file": "Cont_Ocean_Polygons_v3a.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "none",
-        "fcolor": "byPlateId",
+        "fcolor": "byOceanAge",
         "alpha": 1.0
     },
     {
         "file": "Plate_Polygons.gpml",
-        "checked": true,
+        "checked": false,
         "bcolor": "black",
         "fcolor": "none",
         "alpha": 1.0

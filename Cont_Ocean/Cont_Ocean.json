@@ -5,15 +5,15 @@
     {
         "file": "Ocean_Poly_Only_v25199.gpml",
         "checked": true,
-        "bcolor": "none",
+        "bcolor": "byOceanAge",
         "fcolor": "byOceanAge",
-        "alpha": 1.0
+        "alpha": 0.5
     },
     {
         "file": "Continent_Polygons_Only_25199.gpml",
         "checked": true,
         "bcolor": "black",
-        "fcolor": "byGeoAge",
+        "fcolor": "wheat",
         "alpha": 1.0
     }
 ]

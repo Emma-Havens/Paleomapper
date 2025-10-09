@@ -106,14 +106,6 @@ def zip_time_and_color(color_list, time_list):
 
 rgb_norm = Normalize(0, 255)
 
-holocene = (254, 235, 210)
-pleistocene = (255, 239, 175)
-pliocene = (255, 255, 153)
-miocene = (255, 255, 0)
-oligocene = (253, 192, 122)
-eocene = (253, 180, 108)
-paleocene
-
 # colors for colormaps defined in RGB scale 0-255
 smallest_division_colors_unnorm = [holocene, pleistocene, pliocene, miocene, oligocene, eocene, paleocene, 
         cretaceous, jurassic, triassic, permian, carboniferous, devonian, silurian, ordovician, cambrian, 
