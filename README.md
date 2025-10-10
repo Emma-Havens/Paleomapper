@@ -2,7 +2,7 @@
  
 1.	**Install conga-forge** *(If you already have conda installed, follow all environment building instructions in Step 1.5 instead.)* Follow all on-screen instructions and prompts. Some are repeated here for clarity.	
 	- Go to https://conda-forge.org/download/ and download the proper installer for your machine
-	- The release downloaded from the miniforge page is a .sh file. As found under the Installation instructions, to install mini forge, open Terminal and run ‘bash <path-to-sh-file>’ where <path-to-sh-file> is the path to the .sh file you downloaded, likely located in your Downloads folder.	
+	- The release downloaded from the miniforge page is a .sh file. As found under the Installation instructions, to install mini forge, open Terminal and run ‘bash \<path-to-sh-file\>’ where \<path-to-sh-file\> is the path to the .sh file you downloaded, likely located in your Downloads folder.	
 	- Type ‘yes’ to accept the license agreement, or hit Enter until you are prompted to type ‘yes’	
 	- Recommended: answer ‘yes’ to initialize conda on start up. Otherwise, make sure to note the start up command that conda provides in the print-out.	
 	- Close and relaunch the terminal to activate conda
