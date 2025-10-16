@@ -8,9 +8,12 @@ from matplotlib.figure import Figure
 import matplotlib.colors as mcolors
 from matplotlib.patches import Rectangle
 
-from pyqtconfig import ConfigManager, ConfigDialog
-
 import math
+import sys
+import os.path
+
+from pyqtconfig import ConfigManager, ConfigDialog
+import global_vars
 
 class AboutDialog:
     def __init__(self):
@@ -18,9 +21,9 @@ class AboutDialog:
         layout = QVBoxLayout()
         header = QHBoxLayout()
 
-        pm_icon_light = QIcon('ai_owl_logo.png')
+        pm_icon_light = QIcon(global_vars.logo_path)
         icon_light = QLabel()
-        icon_light.setPixmap(pm_icon_light.pixmap(50, 50))
+        icon_light.setPixmap(pm_icon_light.pixmap(80, 80))
         title = QLabel("PaleoMapper")
         title_font = title.font()
         title_font.setPointSize(40)
@@ -31,7 +34,11 @@ class AboutDialog:
         header.addStretch()
         layout.addLayout(header)
 
-        with open('About.txt', 'r') as abt:
+        about_file = "About.txt"
+        if getattr(sys, 'frozen', False):
+            bundle_dir = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+            about_file = os.path.join(bundle_dir, about_file)
+        with open(about_file, 'r') as abt:
             for paragraph in abt:
                 body = QLabel(paragraph)
                 body.setWordWrap(True)
@@ -56,7 +63,11 @@ class FAQDialog:
         layout.addWidget(title)
 
         text_browser = QTextBrowser()
-        with open('faq.html', 'r') as faq:
+        faq_file = "faq.html"
+        if getattr(sys, 'frozen', False):
+            bundle_dir = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+            faq_file = os.path.join(bundle_dir, faq_file)
+        with open(faq_file, 'r') as faq:
             text_browser.setHtml(faq.read())
         
         text_browser.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)

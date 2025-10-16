@@ -4,12 +4,14 @@ from PySide6.QtGui import QIcon
 import faulthandler
 faulthandler.enable()
 
+import global_vars
+
 if __name__ == "__main__":
     
     # Check for existing QApplication
     app = QApplication(sys.argv)
     # pm_icon = QIcon('PM_icon_darkbg.png')
-    pm_icon = QIcon('ai_owl_logo.png')
+    pm_icon = QIcon(global_vars.logo_path)
     app.setWindowIcon(pm_icon)
 
     # DO NOT MOVE IMPORT: pygplates (loaded implicitly) will cause segfault

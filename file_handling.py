@@ -41,7 +41,7 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
     shape_library = "shape_library.csv"
     if getattr(sys, 'frozen', False):
         bundle_dir = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
-        shape_library = bundle_dir + "/" + shape_library
+        shape_library = os.path.join(bundle_dir, shape_library)
         # print(shape_library)
     symbols.load_shape_library(shape_library)
 

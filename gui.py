@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QLineEdit, QPushButton,
     QFileDialog, QMessageBox, QComboBox, QRadioButton, QButtonGroup, QTableView,
-    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter, QMenuBar
+    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter, QFrame
     )
 from PySide6.QtGui import QIntValidator, QDoubleValidator, QIcon, QAction
 from PySide6.QtCore import Qt
@@ -11,6 +11,7 @@ import traceback
 import sys
 import numpy as np
 
+import global_vars
 import main_menu
 import file_handling
 import matplotlib.pyplot as plt
@@ -70,7 +71,7 @@ class PlateTrackerApp(QMainWindow):
         self.status_bar = QStatusBar()
         self.setStatusBar(self.status_bar)
         # pm_icon_light = QIcon('PM_icon_lightbg.png')
-        pm_icon_light = QIcon('ai_owl_logo.png')
+        pm_icon_light = QIcon(global_vars.logo_path)
         icon_light = QLabel()
         icon_light.setPixmap(pm_icon_light.pixmap(25, 25))
         self.status_bar.addPermanentWidget(icon_light)
@@ -139,7 +140,11 @@ class PlateTrackerApp(QMainWindow):
         rotation_layout.addWidget(rotation_file_button)
         rotation_layout.addWidget(self.rotation_file_entry) 
 
-         # Project Selection widgets
+        # Project Selection widgets
+        project_controls_frame = QFrame(self)
+        project_controls_frame.setFrameShadow(QFrame.Shadow.Raised)
+        project_controls_frame.setFrameShape(QFrame.Shape.Panel)
+        project_controls_frame.setStyleSheet("""QFrame {background-color: #F5F5F5;}""")
         project_controls_layout = QHBoxLayout()
         self.project_label = QLabel(os.path.basename(self.file_model.proj_file))
         bolded_font = self.project_label.font()
@@ -157,6 +162,7 @@ class PlateTrackerApp(QMainWindow):
         project_controls_layout.addWidget(self.load_project_button)
         project_controls_layout.addWidget(self.save_project_button)
         project_controls_layout.addWidget(self.new_project_button)
+        project_controls_frame.setLayout(project_controls_layout)
 
         # Fixed plate option
         fixed_plate_layout = QHBoxLayout()
@@ -222,8 +228,8 @@ class PlateTrackerApp(QMainWindow):
         exec_layout.addWidget(self.stop_button)
 
         # Add widgets to layout
+        self.layout.addWidget(project_controls_frame)
         self.layout.addLayout(rotation_layout)
-        self.layout.addLayout(project_controls_layout)
         self.layout.addLayout(file_controls_layout)
         self.layout.addWidget(self.table_splitter)
         self.layout.addWidget(time_label)
@@ -233,6 +239,8 @@ class PlateTrackerApp(QMainWindow):
         self.layout.addLayout(outputs_checkbox_layout)
         self.layout.addLayout(self.output_inputs_layout)
         self.layout.addLayout(exec_layout)
+
+        self.start_time_entry.setFocus()
 
     def load_project(self):
         proj_file, _ = QFileDialog.getOpenFileName(

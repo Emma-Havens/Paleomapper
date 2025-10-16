@@ -23,6 +23,7 @@ from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import Qt
 
 import timeline_colormap_creation as tcc
+import global_vars
 
 class Figure:
 
@@ -73,7 +74,7 @@ class Figure:
         self.fig.set_size_inches(15, 10)
         self.fig.tight_layout()
         self.fig.canvas.draw()
-        logo = plt.imread('ai_owl_logo.png')
+        logo = plt.imread(global_vars.logo_path)
         self.logo_ax = self.fig.add_axes([0.95, 0.01, .05, .05])
         self.logo_ax.imshow(logo)
         self.logo_ax.axis('off')

@@ -10,13 +10,13 @@ def get_resource_path(relative_path):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
-input_files = [('shape_library.csv', '.')]
+input_files = [('shape_library.csv', '.'), ('about.txt', '.'), ('faq.html', '.'), ('Emmas_owl_logo.png', '.')]
 
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[('/Users/emmahavens/opt/anaconda3/envs/geoenv/lib/libpython3.10.dylib', '.'),
-        ('/Users/emmahavens/Documents/PlateTracker/ffmpeg', '.')],
+        ('/Users/emmahavens/Documents/Paleomapper/ffmpeg', '.')],
     datas=collect_data_files('matplotlib') + input_files,  # Collect matplotlib data files
     hiddenimports=[
         'matplotlib.backends.backend_pdf',
@@ -25,7 +25,7 @@ a = Analysis(
         'scipy.special._cdflib',
         *[m for m in collect_submodules('PySide6') if 'QtAsyncio' not in m],
     ],
-    hookspath=['/Users/emmahavens/Documents/PlateTracker/hook-matplotlib.py'],
+    hookspath=['/Users/emmahavens/Documents/Paleomapper/hook-matplotlib.py'],
     hooksconfig={},
     runtime_hooks=['fix-libpython.py'],
     excludes=[],

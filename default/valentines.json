@@ -26,21 +26,21 @@
     },
     {
         "file": "background_fill.dat",
-        "checked": false,
+        "checked": true,
         "bcolor": "none",
-        "fcolor": "paleturquoise",
-        "alpha": 1.0
+        "fcolor": "lavender",
+        "alpha": 0.3
     },
     {
         "file": "Plate_Polygons.gpml",
         "checked": true,
-        "bcolor": "brown",
-        "fcolor": "byGeoAge",
+        "bcolor": "hotpink",
+        "fcolor": "mistyrose",
         "alpha": 1.0
     },
     {
         "file": "Coastlines&Political_Boundaries.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "black",
         "fcolor": "none",
         "alpha": 1.0
@@ -54,15 +54,15 @@
     },
     {
         "file": "United_States.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "red",
         "fcolor": "none",
         "alpha": 1.0
     },
     {
         "file": "5_degree_tics.gpml",
-        "checked": false,
-        "bcolor": "darkgrey",
+        "checked": true,
+        "bcolor": "white",
         "fcolor": "none",
         "alpha": 1.0
     }
