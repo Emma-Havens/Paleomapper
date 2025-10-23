@@ -26,16 +26,16 @@
     },
     {
         "file": "background_fill.dat",
-        "checked": false,
+        "checked": true,
         "bcolor": "none",
-        "fcolor": "paleturquoise",
+        "fcolor": "aliceblue",
         "alpha": 1.0
     },
     {
         "file": "Plate_Polygons.gpml",
         "checked": true,
-        "bcolor": "brown",
-        "fcolor": "byGeoAge",
+        "bcolor": "black",
+        "fcolor": "oldlace",
         "alpha": 1.0
     },
     {

@@ -45,7 +45,20 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
         # print(shape_library)
     symbols.load_shape_library(shape_library)
 
-    with open(csv_file, "r") as infile:
+    csv_wplateid = os.path.splitext(csv_file)[0] + "_wplateid.csv"
+    unpartitioned = symbols.assign_plate_ids(csv_file, csv_wplateid)
+    if unpartitioned == False:
+        csv_wplateid = csv_file
+    elif unpartitioned != []:
+        with open('unpartitioned.csv', mode='w') as outfile:
+            writer = csv.writer(outfile)
+            writer.writerow(['Lat', 'Lon', 'Plate id'])
+            for point in unpartitioned:
+                lat, lon = point.get_geometry().to_lat_lon_list()[0]
+                plateid = point.get_reconstruction_plate_id()
+                writer.writerow([lat, lon, plateid])
+
+    with open(csv_wplateid, "r") as infile:
         reader = csv.reader(infile)
         next(reader)    # throw away header
         for line in enumerate(reader):

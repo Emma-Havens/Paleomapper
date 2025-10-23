@@ -1,0 +1,27 @@
+﻿URN,label,PlateID,Latitude,Longitude,SymbolorNumber,Size,Azimuth,Start,End,Border color,Fill color
+1,a,201,0,120,label,2,90,999,-999,blue,lightblue
+2,b,201,0,110,label,2,90,999,-999,blue,lightblue
+3,c,201,0,100,label,2,90,999,-999,blue,lightblue
+4,d,201,0,90,label,2,90,999,-999,blue,lightblue
+5,e,201,0,80,label,2,90,999,-999,blue,lightblue
+6,f,201,0,70,label,2,90,999,-999,blue,lightblue
+7,g,201,0,60,label,2,90,999,-999,blue,lightblue
+8,h,201,0,50,label,2,90,999,-999,blue,lightblue
+9,i,201,0,40,label,2,90,999,-999,blue,lightblue
+10,j,201,0,30,label,2,90,999,-999,blue,lightblue
+11,k,201,0,20,label,2,90,999,-999,blue,lightblue
+12,l,201,0,10,label,2,90,999,-999,blue,lightblue
+13,m,201,0,0,label,2,90,999,-999,blue,lightblue
+14,n,201,0,-10,label,2,90,999,-999,blue,lightblue
+15,o,201,0,-20,label,2,90,999,-999,blue,lightblue
+16,p,201,0,-30,label,2,90,999,-999,blue,lightblue
+17,q,201,0,-40,label,2,90,999,-999,blue,lightblue
+18,r,201,0,-50,label,2,90,999,-999,blue,lightblue
+19,s,201,0,-60,label,2,90,999,-999,blue,lightblue
+20,t,201,0,-70,label,2,90,999,-999,blue,lightblue
+21,u,201,0,-80,label,2,90,999,-999,blue,lightblue
+22,v,201,0,-90,label,2,90,999,-999,blue,lightblue
+23,w,201,0,-100,label,2,90,999,-999,blue,lightblue
+24,x,201,0,-110,label,2,90,999,-999,blue,lightblue
+25,y,201,0,-120,label,2,90,999,-999,blue,lightblue
+26,z,201,0,-130,label,2,90,999,-999,blue,lightblue

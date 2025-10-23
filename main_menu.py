@@ -12,7 +12,7 @@ import math
 import sys
 import os.path
 
-from pyqtconfig import ConfigManager, ConfigDialog
+from pyqtconfig import ConfigDialog
 import global_vars
 
 class AboutDialog:
@@ -165,28 +165,13 @@ class ColorDialog:
 
 class PreferenceDialog:
     def __init__(self):
-        default_settings = {
-            "Default project": "default/default.json",
-            "Use most recent project?": True,
-            "most_recent_path": "default/default.json"
-        }
-        default_metadata = {
-            "most_recent_path": {
-                "prefer_hidden": True
-            }
-        }
-
-        self.config = ConfigManager(default_settings, filename=".config_settings.json")
-        self.config.set_many_metadata(default_metadata)
-
-        self.dialog = ConfigDialog(self.config, cols=1, f=Qt.WindowCloseButtonHint)
+        self.dialog = ConfigDialog(global_vars.configs, cols=1, f=Qt.WindowCloseButtonHint)
         self.dialog.setWindowTitle("Settings")
-        # self.dialog.setMaximumWidth(100)
+        self.dialog.setMinimumWidth(600)
         self.dialog.accepted.connect(self.update_config)
 
     def update_config(self):
-        self.config.set_many(self.dialog.config.as_dict())
-        self.config.save()
+        global_vars.update_config(self.dialog.config.as_dict())
 
     def show_window(self):
         self.dialog.exec()

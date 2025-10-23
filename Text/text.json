@@ -1,0 +1,19 @@
+[
+    {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
+        "file": "alphabet.csv",
+        "checked": true,
+        "bcolor": "infile",
+        "fcolor": "infile",
+        "alpha": 1.0
+    },
+    {
+        "file": "pole_text_test.csv",
+        "checked": false,
+        "bcolor": "infile",
+        "fcolor": "infile",
+        "alpha": 1.0
+    }
+]

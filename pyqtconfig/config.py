@@ -639,7 +639,9 @@ HOOKS = {
 default_metadata = {
     "prefer_hidden": False,
     "preferred_handler": None,
-    "preferred_map_dict": None
+    "preferred_map_dict": None,
+    "use_key_name": True,
+    "display_name": "enter name"
 }
 
 
@@ -1249,6 +1251,7 @@ def build_config_layout(config, cols=2):
     h_layout = QtWidgets.QHBoxLayout()
     forms = [QtWidgets.QFormLayout() for _ in range(cols)]
     for form in forms:
+        form.setFieldGrowthPolicy(QtWidgets.QFormLayout.ExpandingFieldsGrow)
         h_layout.addLayout(form)
 
     num_items = len(config.get_visible_keys())
@@ -1272,8 +1275,9 @@ def build_config_layout(config, cols=2):
                 continue
             else:
                 input_widget = config.handlers[key]
-
-        label = QtWidgets.QLabel(key)
+        
+        
+        label = QtWidgets.QLabel(key) if config.get_metadata(key)["use_key_name"] else config.get_metadata(key)["display_name"]
         forms[f_index].addRow(label, input_widget)
 
     return h_layout

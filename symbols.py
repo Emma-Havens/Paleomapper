@@ -1,13 +1,15 @@
 import csv
 import math
+import os
 import shapely.geometry as shapegeo
-import numpy as np
 from matplotlib.path import Path
 from cartopy.mpl.patch import geos_to_path
 from matplotlib.text import TextPath
 from matplotlib.transforms import Affine2D
 from numpy import deg2rad
+import pygplates
 
+import global_vars
 
 Shapes = [  "urn",
             "label",
@@ -178,3 +180,110 @@ def rotate_point(alat,along,rotlat,rotlo, rotan):
                 anlong=anlong-360.0
         
         return anlong, anlat
+
+
+def assign_plate_ids(csv_data_file, output_file):
+    rot_file = ".dud_rot.rot"
+    open(rot_file, 'w')
+    rotation_model = pygplates.RotationModel(rot_file)
+    polygon_file = global_vars.configs.get("inout_polygon_path")
+
+    point_features = []
+    with open(csv_data_file, "r") as infile:
+        infile.readline() # throw away header
+        line = infile.readline()
+        i = 0
+        while line:
+            datapoint = line.split(",")
+            i += 1
+            try:
+                int(datapoint[2])   # if plateid is already assigned, don't reassign it
+                line = infile.readline()
+            except ValueError:
+                lat = float(datapoint[3])
+                lon = float(datapoint[4])
+
+                point_feature = pygplates.Feature()
+                point_feature.set_geometry(pygplates.PointOnSphere(lat, lon))
+                point_feature.set_name(str(i))  # +1 to accommodate header
+                point_features.append(point_feature)
+
+                line = infile.readline()
+
+    if not point_features: return False
+
+    partitioned_features, unpartitioned_features = pygplates.partition_into_plates(
+        polygon_file,
+        rotation_model,
+        point_features,
+        properties_to_copy = [
+            pygplates.PartitionProperty.reconstruction_plate_id],
+        partition_return = pygplates.PartitionReturn.separate_partitioned_and_unpartitioned)
+
+    print(f"Partitioned: {len(partitioned_features)}, Unpartitioned: {len(unpartitioned_features)}")
+
+    if unpartitioned_features:
+        print(f"Warning: {len(unpartitioned_features)} were not partitioned")
+        for point in unpartitioned_features:
+            lat, lon = point.get_geometry().to_lat_lon_list()[0]
+            plateid = point.get_reconstruction_plate_id()
+            print(f"    Point at {lat}, {lon}, id: {plateid}")
+
+    with open(csv_data_file, mode='r', newline='\n') as infile:
+        rows = list(csv.reader(infile))  # Read all rows into a list
+
+    for feature in partitioned_features:
+        row_num = int(feature.get_name())   # the name for each feature was set as the row it came from
+        rows[row_num][2] = feature.get_reconstruction_plate_id()
+
+    with open(output_file, mode='w', newline='') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerows(rows)
+
+    return unpartitioned_features
+
+def assign_plate_ids_in_place(chunks, coords):
+    rot_file = ".dud_rot.rot"
+    open(rot_file, 'w')
+    rotation_model = pygplates.RotationModel(rot_file)
+    polygon_file = global_vars.configs.get("inout_polygon_path")
+
+    point_features = []
+    i = 0
+    for lat, lon in coords:
+        point_feature = pygplates.Feature()
+        point_feature.set_geometry(pygplates.PointOnSphere(lat, lon))
+        point_feature.set_name(str(i))
+        point_features.append(point_feature)
+        i += 1
+
+    partitioned_features, unpartitioned_features = pygplates.partition_into_plates(
+        polygon_file,
+        rotation_model,
+        point_features,
+        properties_to_copy = [
+            pygplates.PartitionProperty.reconstruction_plate_id],
+        partition_return = pygplates.PartitionReturn.separate_partitioned_and_unpartitioned)
+    
+    if unpartitioned_features:
+        indices_to_remove = []
+        print(f"Warning: {len(unpartitioned_features)} were not partitioned")
+        for point in unpartitioned_features:
+            lat, lon = point.get_geometry().to_lat_lon_list()[0]
+            print(f"    Point at {lat}, {lon}")
+            indices_to_remove.append(int(feature.get_name()))
+
+    for feature in partitioned_features:
+        # the name for each feature was set as the index
+        index = int(feature.get_name())
+        plateid = feature.get_reconstruction_plate_id()
+        chunks[index].plateid = plateid
+
+    chunks_to_remove = []
+    for index in indices_to_remove:
+        chunks_to_remove.append(chunks[index])
+    chunks_to_return = [ chunk for chunk in chunks if chunk not in chunks_to_remove ]
+
+    os.remove(rot_file)
+
+    return chunks_to_return

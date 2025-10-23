@@ -45,10 +45,10 @@ class PlateTrackerApp(QMainWindow):
         preferences_action = QAction("Preferences", self)
         preferences_action.triggered.connect(self.preferences.show_window)
         general_menu.addAction(preferences_action)
-        if self.preferences.config.get("Use most recent project?"):
-            project_to_open = self.preferences.config.get("most_recent_path")
+        if global_vars.configs.get("use_recent_proj"):
+            project_to_open = global_vars.configs.get("most_recent_path")
         else:
-            project_to_open = self.preferences.config.get("Default project")
+            project_to_open = global_vars.configs.get("default_proj")
         
         self.about_dialog = main_menu.AboutDialog()
         about_action = QAction("About Paleomapper", self)
@@ -84,10 +84,13 @@ class PlateTrackerApp(QMainWindow):
         self.add_file_button.clicked.connect(self.add_file)
         self.remove_file_button = QPushButton("Remove File")
         self.remove_file_button.clicked.connect(self.remove_selected_file)
+        self.clear_table_button = QPushButton("Clear Table")
+        self.clear_table_button.clicked.connect(self.clear_table)
         file_controls_layout.addWidget(QLabel("Geographic Files:"))
         file_controls_layout.addStretch()
         file_controls_layout.addWidget(self.add_file_button)
         file_controls_layout.addWidget(self.remove_file_button)
+        file_controls_layout.addWidget(self.clear_table_button)
 
         # Create raster table
         self.raster_table = QTableView()
@@ -249,8 +252,8 @@ class PlateTrackerApp(QMainWindow):
         self.file_model.load_project(proj_file)
         self.rotation_file_entry.setText(self.file_model.rot_file)
         self.project_label.setText(os.path.basename(self.file_model.proj_file))
-        self.preferences.config.set("most_recent_path", self.file_model.proj_file)
-        self.preferences.config.save()
+        global_vars.configs.set("most_recent_path", self.file_model.proj_file)
+        global_vars.configs.save()
         self.update_raster_table_visibility()
         self.status_bar.showMessage(f"Loaded project {os.path.basename(self.file_model.proj_file)}", 3000)
 
@@ -261,8 +264,8 @@ class PlateTrackerApp(QMainWindow):
         self.file_model.save_project(proj_file)
         self.rotation_file_entry.setText(self.file_model.rot_file)
         self.project_label.setText(os.path.basename(self.file_model.proj_file))
-        self.preferences.config.set("most_recent_path", self.file_model.proj_file)
-        self.preferences.config.save()
+        global_vars.configs.set("most_recent_path", self.file_model.proj_file)
+        global_vars.configs.save()
         self.status_bar.showMessage(f"Saved project {os.path.basename(self.file_model.proj_file)}", 3000)
 
     def save_project(self):
@@ -288,6 +291,13 @@ class PlateTrackerApp(QMainWindow):
         selected = self.raster_table.selectionModel().selectedRows()
         for index in sorted(selected, reverse=True):
             self.raster_model.remove_row(index.row())
+        self.update_raster_table_visibility()
+
+    def clear_table(self):
+        for _ in range(self.file_model.rowCount()):
+            self.file_model.remove_row(0)
+        for _ in range(self.raster_model.rowCount()):
+            self.raster_model.remove_row(0)
         self.update_raster_table_visibility()
 
     def get_geo_files(self):
@@ -344,6 +354,11 @@ class PlateTrackerApp(QMainWindow):
                 if sub_layout:
                     self.clear_layout(sub_layout)
     
+    def default_output_file_name(self):
+        proj_name = self.file_model.get_proj_name() if self.file_model.get_proj_name() else "output"
+        time = self.start_time_entry.text()
+        return time + "Ma_" + proj_name
+    
     def toggle_output_inputs(self):
 
         # Clear all existing widgets and layouts
@@ -351,7 +366,7 @@ class PlateTrackerApp(QMainWindow):
          
         output_options = [self.outputs.id(button) for button in self.outputs.buttons() if button.isChecked()]
 
-        proj_name = self.file_model.get_proj_name() if self.file_model.get_proj_name() else "output"
+        outfile_name = self.default_output_file_name()
         
         if 0 in output_options or 1 in output_options or 2 in output_options or 7 in output_options: # Screen output
             projection_layout = QHBoxLayout()
@@ -406,7 +421,7 @@ class PlateTrackerApp(QMainWindow):
             if 1 in output_options:
                 pdf_file_label = QLabel("Output .pdf file name:")
                 self.pdf_file_entry = QLineEdit()
-                self.pdf_file_entry.setText(f"{proj_name}.pdf")
+                self.pdf_file_entry.setText(f"{outfile_name}.pdf")
 
                 pdf_layout = QHBoxLayout()
                 pdf_layout.addWidget(pdf_file_label)
@@ -416,7 +431,7 @@ class PlateTrackerApp(QMainWindow):
                 self.save_fig["anim"] = True
                 mp4_file_label = QLabel("Output .mp4 file name:")
                 self.mp4_file_entry = QLineEdit()
-                self.mp4_file_entry.setText(f"{proj_name}.mp4")
+                self.mp4_file_entry.setText(f"{outfile_name}.mp4")
                 fps_label = QLabel("Frames per second:")
                 self.fps_entry = QLineEdit()
                 self.fps_entry.setValidator(QIntValidator())
@@ -431,7 +446,7 @@ class PlateTrackerApp(QMainWindow):
             if 7 in output_options:
                 svg_file_label = QLabel("Output .svg file name:")
                 self.svg_file_entry = QLineEdit()
-                self.svg_file_entry.setText(f"{proj_name}.svg")
+                self.svg_file_entry.setText(f"{outfile_name}.svg")
 
                 svg_layout = QHBoxLayout()
                 svg_layout.addWidget(svg_file_label)
@@ -441,7 +456,7 @@ class PlateTrackerApp(QMainWindow):
         if 3 in output_options:    # DAT file
             dat_file_label = QLabel("Output .dat file name:")
             self.dat_file_entry = QLineEdit()
-            self.dat_file_entry.setText(f"{proj_name}.dat")
+            self.dat_file_entry.setText(f"{outfile_name}.dat")
 
             dat_layout = QHBoxLayout()
             dat_layout.addWidget(dat_file_label)
@@ -452,7 +467,7 @@ class PlateTrackerApp(QMainWindow):
         if 4 in output_options:    # KML file
             kml_file_label = QLabel("Output .kml file name:")
             self.kml_file_entry = QLineEdit()
-            self.kml_file_entry.setText(f"{proj_name}.kml")
+            self.kml_file_entry.setText(f"{outfile_name}.kml")
 
             kml_layout = QHBoxLayout()
             kml_layout.addWidget(kml_file_label)
@@ -463,7 +478,7 @@ class PlateTrackerApp(QMainWindow):
         if 5 in output_options:    # GPML file
             gpml_file_label = QLabel("Output .gpml file name:")
             self.gpml_file_entry = QLineEdit()
-            self.gpml_file_entry.setText(f"{proj_name}.gpml")
+            self.gpml_file_entry.setText(f"{outfile_name}.gpml")
 
             gpml_layout = QHBoxLayout()
             gpml_layout.addWidget(gpml_file_label)
@@ -474,7 +489,7 @@ class PlateTrackerApp(QMainWindow):
         if 6 in output_options:    # SHP file
             shp_file_label = QLabel("Output .shp file name:")
             self.shp_file_entry = QLineEdit()
-            self.shp_file_entry.setText(f"{proj_name}.shp")
+            self.shp_file_entry.setText(f"{outfile_name}.shp")
 
             shp_layout = QHBoxLayout()
             shp_layout.addWidget(shp_file_label)

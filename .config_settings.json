@@ -1,5 +1,6 @@
 {
-    "Default project": "default/default.json",
-    "Use most recent project?": false,
-    "most_recent_path": "/Users/emmahavens/Documents/Paleomapper/default/default.json"
+    "default_proj": "default/default.json",
+    "use_recent_proj": true,
+    "most_recent_path": "/Users/emmahavens/Documents/Paleomapper/Text/text.json",
+    "inout_polygon_path": "Scotese_2016a_Plate_Polygons.gpml"
 }

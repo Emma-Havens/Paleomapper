@@ -1,4 +1,9 @@
+# def set_pyproj_path(proj_path):
+#     from pyproj import datadir
+#     datadir.set_data_dir(proj_path)
+# set_pyproj_path("/Users/emmahavens/opt/anaconda3/pkgs/proj-9.3.1-h81faed2_0/share/proj/proj.db")
 import pyproj
+# print(pyproj.datadir.get_data_dir())
 import shapely
 import shapely.ops
 import numpy as np
@@ -17,7 +22,7 @@ def transform(points):
     x, y, z = transformer.transform(lons, lats, heights)
     coords = list(zip(x, y, z))
     r_coords = [ [round(x, 2), round(y, 2), round(z, 2)] for x, y, z in coords ]
-    print(f"coordinates:\n {np.array(r_coords)}")
+    # print(f"coordinates:\n {np.array(r_coords)}")
 
     return r_coords
 
@@ -25,14 +30,35 @@ def transform_back(cartesian_polys):
     polys = []
     for cartesian_poly in cartesian_polys:
         ext_coords = np.array(cartesian_poly.exterior.coords)
-        print(f"results:\n {ext_coords}")
+        # print(f"results:\n {ext_coords}")
         # print(ext_coords[:,2])
         transformer = pyproj.Transformer.from_crs("EPSG:4978", "EPSG:4326", always_xy=True)
         lons, lats, _ = transformer.transform(ext_coords[:,0], ext_coords[:,1], ext_coords[:,2])
-        coords = list(zip(lons, lats))
+        coords = fix_coords(list(zip(lons, lats)))
         polys.append(shapely.Polygon(coords))
     return polys
 
+
+def fix_coords(coords):
+    # figure out if pos or neg poly
+    print("\nbefore:")
+    print(coords)
+    for lon, _ in coords:
+        found_solution = True
+        if lon not in [180, -180, 0]:
+            poly_is_pos = lon > 0
+            break
+        found_solution = False
+    if not found_solution: return
+    if poly_is_pos: fixed_coords = [ (abs(lon), lat) for lon, lat in coords ]
+    else: fixed_coords = [(-abs(lon), lat) for lon, lat in coords ]
+    print("fixed:")
+    print(fixed_coords)
+
+    # add pole points
+
+    return fixed_coords
+    
 
 def make_poly(coords):
     cartesian_poly = shapely.Polygon(coords)
@@ -76,7 +102,7 @@ superdate = Path([(-170, 35), (170, 35), (170, 20), (-175, 20), (-175, 15), (170
 # print(polys)
 
 # fig, ax = plt.subplots(subplot_kw={'projection': ccrs.Mollweide(central_longitude=0)})
-# # fig, ax = plt.subplots(subplot_kw={'projection': ccrs.NorthPolarStereo(central_longitude=180)})
+# # # fig, ax = plt.subplots(subplot_kw={'projection': ccrs.NorthPolarStereo(central_longitude=180)})
 
 # ax.add_geometries(polys, crs=ccrs.PlateCarree(),  # what about at the pole?
 #                             facecolor=['blue', 'red', 'pink', 'yellow'], edgecolor='pink', linewidth=1)
@@ -91,7 +117,10 @@ superdate = Path([(-170, 35), (170, 35), (170, 20), (-175, 20), (-175, 15), (170
 # Problems:
 # - Shapely doesn't do computations in 3d space.
 #     - A nonissue with the current goal but it's still stupid
-# - When pyproj back converts to coordinates, it doesn't respect the proper sign(+/-) for creating projectable polygons
+# - When pyproj back converts to coordinates, it doesn't respect the proper sign(+/-) 
+#   for creating projectable polygons
+#     - Possibly solved
 # - When dividing the polygons, it doesn't add points across the pole
 # - It interprets the polygons as 'flat' instead of curving to the globe
-#     - This might be a nonissue given the conversion to coordinates
+#     - Seems to be a serious issue. Coordinates did not re-project well and seem distorted
+
