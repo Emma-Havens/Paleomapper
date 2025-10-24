@@ -23,7 +23,7 @@ To learn more about PaleoMapper and see some examples, visit [earthhistory.com](
 2.	**Create the ‘geoenv’ conda environment** This is creating an isolated environment on your machine so that nothing else you have installed interferes with the program and its dependencies, and vice versa. Creating a separate environment to run PaleoMapper in greatly reduces risk of errors. Run the following commands:
 	- conda create -n geoenv python=3.10
 	- conda activate geoenv
-	- conda install cartopy=0.24.0 ffmpeg=7.1.1 matplotlib=3.8.4 numpy=1.26.4 pygplates=1.0.0 pyside6=6.9.0 simplekml=1.3.6
+	- conda install cartopy=0.24.0 ffmpeg=7.1.1 matplotlib=3.8.4 numpy=1.26.4 pygplates=1.0.0 pyside6=6.9.0 simplekml=1.3.6 pandas=2.3.3
 
 3.	**Install VSCode** *(This is an optional step if you do not have a coding environment you otherwise prefer. If you do not want to use VSCode, make sure you switch your python interpreter to the Python3.10 that is in the geoenv so the program can find all of its dependencies.)*
 	- Go to https://code.visualstudio.com and download the application
