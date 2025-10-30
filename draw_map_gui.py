@@ -139,6 +139,12 @@ class Figure:
             self.ax.set_extent([-180, 180, -90, kwargs["min_lat"]], crs=ccrs.PlateCarree())
     
         # Draw gridlines
+        theta = np.linspace(0, 2*np.pi, 100)
+        center, radius = [0.5, 0.5], 0.5
+        verts = np.vstack([np.sin(theta), np.cos(theta)]).T
+        circle = Path(verts * radius + center)
+
+        self.ax.set_boundary(circle, transform=self.ax.transAxes)
         self.draw_gridlines(lat_space, lon_space, 'stereo')
 
     
@@ -156,7 +162,7 @@ class Figure:
         elif projection in ['stereo', 'trans']:
             gl = self.ax.gridlines(xlocs=meridians, ylocs=[], draw_labels=True, rotate_labels=False,
                 linestyle='--', color='gray')
-            self.ax.gridlines(xlocs=[], ylocs=parallels, draw_labels=False, 
+            self.ax.gridlines(xlocs=[], ylocs=parallels, draw_labels=True, 
                 linestyle='--', color='gray')
             
             gl.top_labels
