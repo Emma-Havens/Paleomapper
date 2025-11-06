@@ -83,9 +83,6 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
 
             if bcolor: border_color = bcolor
             if fcolor: fill_color = fcolor
-
-            chunk = Chunk(file_type, plateid, start_time, end_time, "DP", 0, plateid, 
-                          border_color, fill_color, urn, label, symbol, size, azimuth, alpha, [])
             
             match symbol:
                 case "circle":
@@ -97,12 +94,22 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
                 case "label":
                     path = symbols.create_text(lat, lon, size, azimuth, label)
                 case _:
-                    path = symbols.create_symbol(lat, lon, size, azimuth, symbol)
+                    if symbol in symbols.Shapes:
+                        path = symbols.create_symbol(lat, lon, size, azimuth, symbol)
+                    else: # if symbol is not part of symbol set, print the text
+                        path = symbols.create_text(lat, lon, size, azimuth, symbol)
+                        symbol = "label"
+            
+            if symbol in ["urn", "label"]: file_type = "TEXT"
+            chunk = Chunk(file_type, plateid, start_time, end_time, "DP", 0, plateid, 
+                          border_color, fill_color, urn, label, symbol, size, azimuth, alpha, [])
             
             for i in range(len(path.vertices)):
                 point = path.vertices[i]
                 code = path.codes[i]
-                if code == 0: # legacy ignored codes
+                if symbol in ["urn", "label"]:  # text retains codes so it can get turned back into a path
+                    pen = code
+                elif code == 0: # legacy ignored codes
                     continue
                 elif code == 1:     # MOVETO
                     pen = 3

@@ -11,7 +11,7 @@
     },
     {
         "file": "Plate_Polygons.gpml",
-        "checked": true,
+        "checked": false,
         "bcolor": "black",
         "fcolor": "oldlace",
         "alpha": 1.0
@@ -25,7 +25,7 @@
     },
     {
         "file": "Vdv12a_symform_pseudoQ.csv",
-        "checked": true,
+        "checked": false,
         "bcolor": "infile",
         "fcolor": "infile",
         "alpha": 1.0
@@ -60,7 +60,7 @@
     },
     {
         "file": "CitieswithLabels.csv",
-        "checked": false,
+        "checked": true,
         "bcolor": "infile",
         "fcolor": "infile",
         "alpha": 1.0

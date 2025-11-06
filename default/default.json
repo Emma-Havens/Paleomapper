@@ -34,7 +34,7 @@
     {
         "file": "Plate_Polygons.gpml",
         "checked": true,
-        "bcolor": "black",
+        "bcolor": "burlywood",
         "fcolor": "oldlace",
         "alpha": 1.0
     },
@@ -64,6 +64,13 @@
         "checked": false,
         "bcolor": "darkgrey",
         "fcolor": "none",
+        "alpha": 1.0
+    },
+    {
+        "file": "cities_testv2_wplateid.csv",
+        "checked": true,
+        "bcolor": "infile",
+        "fcolor": "infile",
         "alpha": 1.0
     }
 ]

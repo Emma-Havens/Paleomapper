@@ -10,6 +10,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 from matplotlib.path import Path
+from matplotlib.text import TextPath
+import matplotlib.patches as patches
+import cartopy.mpl.patch as cmp
 
 from file_handling import Record
 
@@ -101,12 +104,19 @@ superdate = Path([(-170, 35), (170, 35), (170, 20), (-175, 20), (-175, 15), (170
 # polys = divide(path_to_records(superdate))
 # print(polys)
 
-# fig, ax = plt.subplots(subplot_kw={'projection': ccrs.Mollweide(central_longitude=0)})
+fig, ax = plt.subplots(subplot_kw={'projection': ccrs.Mollweide(central_longitude=0)})
 # # # fig, ax = plt.subplots(subplot_kw={'projection': ccrs.NorthPolarStereo(central_longitude=180)})
 
 # ax.add_geometries(polys, crs=ccrs.PlateCarree(),  # what about at the pole?
 #                             facecolor=['blue', 'red', 'pink', 'yellow'], edgecolor='pink', linewidth=1)
-# plt.show()
+
+# ax.text(0,0,"a")
+ax.set_global()
+patha = TextPath((0,0), "a")
+cartopatch = cmp.path_to_geos(Path(patha.vertices, patha.codes))
+ax.add_patch(patches.PathPatch(patha, transform=ccrs.PlateCarree(), facecolor='blue', edgecolor='pink', linewidth=1))
+# ax.add_geometries(cartopatch, crs=ccrs.PlateCarree(), facecolor=['blue', 'red', 'pink', 'yellow'], edgecolor='pink', linewidth=1)
+plt.show()
 
 # test_plane = shapely.Polygon([(1,1,0),(1,-1,0),(-1,-1,0),(-1, 1,0)])
 # test_line = shapely.LineString([(0,0,1),(0,0,-1)])

@@ -61,15 +61,16 @@ class Figure:
                 self.set_Stereographic(lat_space, lon_space, kwargs)
         
         # try to prevent cursor toolbar segfault
-        toolbar = self.fig.canvas.manager.toolbar if hasattr(self.fig.canvas, 'manager') else None
-        if toolbar:
-            print('fixing toolbar')
-            toolbar.unsetCursor()
-            toolbar.setAttribute(Qt.WA_NoMousePropagation, True)
+        # toolbar = self.fig.canvas.manager.toolbar if hasattr(self.fig.canvas, 'manager') else None
+        # if toolbar:
+        #     print('fixing toolbar')
+        #     toolbar.unsetCursor()
+        #     toolbar.setAttribute(Qt.WA_NoMousePropagation, True)
             
-            for child in toolbar.findChildren(QWidget):
-                child.unsetCursor()
-                child.setAttribute(Qt.WA_NoMousePropagation, True)
+        #     for child in toolbar.findChildren(QWidget):
+        #         child.unsetCursor()
+        #         child.setAttribute(Qt.WA_NoMousePropagation, True)
+
         
         self.fig.set_size_inches(15, 10)
         self.fig.tight_layout()
@@ -285,6 +286,42 @@ class Figure:
                            origin = 'upper',
                            alpha = raster_alpha)
     
+    def process_text(self, records):
+        lats = [ record.alat for record in records ]
+        lons = [ record.along for record in records ]
+        codes = [ record.pen for record in records ]    # original path codes were retained
+        
+        # if no dateline cross, return
+        neg_lon = any(lon < -170 for lon in lons)
+        pos_lon = any(lon > 170 for lon in lons)
+        if not (neg_lon and pos_lon):
+            vertices = list(zip(lons, lats))
+            return vertices, codes 
+
+        # if path crosses the dateline, shift it
+        max_neg_lon = max([ lon for lon in lons if lon < 0 ])
+        min_pos_lon = min([ lon for lon in lons if lon > 0 ])
+
+        # shift path so all positive
+        if abs(max_neg_lon) > min_pos_lon:
+            offset_for_pos = -(180 + max_neg_lon)
+            offset_for_neg = 180 + abs(max_neg_lon)
+            new_lons = []
+            for lon in lons:
+                if lon > 0: new_lons.append(lon + offset_for_pos)
+                else: new_lons.append(lon + offset_for_neg)
+        # shift path so all negative
+        else:
+            offset_for_neg = abs(min_pos_lon - 180)
+            offset_for_pos = -180 - min_pos_lon
+            new_lons = []
+            for lon in lons:
+                if lon > 0: new_lons.append(lon + offset_for_pos)
+                else: new_lons.append(lon + offset_for_neg)
+
+        vertices = list(zip(new_lons, lats))
+        return vertices, codes  
+    
     def process_records(self, records):
         # Build path with anti-meridian handling
         vertices = []
@@ -458,6 +495,7 @@ class Figure:
         shapes = []
         collectable = True
         first_loop = True
+        plotting_text = False
         border_color = "none"
         fill_color = "none"
         alpha = 1.0
@@ -484,7 +522,8 @@ class Figure:
             opacity = chunk.alpha
 
             # determine collectability
-            if bcolor != border_color or fcolor != fill_color or opacity != alpha:
+            # not collectable if border/fill color is different from last chunk, or if next chunk is text
+            if bcolor != border_color or fcolor != fill_color or opacity != alpha or chunk.data_type == "TEXT":
                 if first_loop: 
                     first_loop = False
                     border_color = bcolor
@@ -495,7 +534,12 @@ class Figure:
 
             # if it is not collectable anymore, plot everything collected and start over
             if not collectable and shapes: # len(shapes) > 50
-                self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, edgecolor=border_color, alpha=alpha)
+                if plotting_text:
+                    self.ax.add_patch(PathPatch(Path(vertices, codes), transform=ccrs.PlateCarree(), 
+                                            facecolor=fill_color, edgecolor=border_color, zorder=10))
+                else:
+                    self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
+                                        edgecolor=border_color, alpha=alpha)
                 border_color = bcolor
                 fill_color = fcolor
                 alpha = opacity
@@ -509,9 +553,15 @@ class Figure:
                 # reset variables
                 shapes.clear()
                 collectable = True
+                plotting_text = False
             
             # finish creating next shape
-            if fill_color != "none":
+            if chunk.data_type == "TEXT":
+                vertices, codes = self.process_text(chunk.records)
+                # text should be plotted 'immediately', one by one
+                collectable = False
+                plotting_text = True
+            elif fill_color != "none":
                 polygon_list = self.process_polygons(chunk.records)
                 try:
                     shape_list = [ shapely.Polygon(poly) for poly in polygon_list ]
@@ -522,8 +572,8 @@ class Figure:
             else:
                 vertices, codes = self.process_records(chunk.records)
                 shape_list = cmp.path_to_geos(Path(vertices, codes))
-
-            # Add shape to list
+                
+            # add shape to queue    
             [ shapes.append(shape) for shape in shape_list ]
 
             yield chunk
@@ -533,7 +583,8 @@ class Figure:
                 print("next iter")
                 vertices, codes = self.process_records(chunk.records)
                 path = Path(vertices, codes)
-                self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, edgecolor=border_color, alpha=alpha)
+                self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
+                                       edgecolor=border_color, alpha=alpha)
                 print("PATH")
                 print(path)
                 plt.draw()  # Force immediate render
@@ -545,7 +596,8 @@ class Figure:
 
         # plot everything that hasn't been plotted
         if shapes:
-            self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, edgecolor=border_color, alpha=alpha)
+            self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
+                                   edgecolor=border_color, alpha=alpha)
             # pass
         if not hasattr(self, 'gs'):
             self.add_colorbars()
