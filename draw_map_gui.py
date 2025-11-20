@@ -533,7 +533,7 @@ class Figure:
                     collectable = False
 
             # if it is not collectable anymore, plot everything collected and start over
-            if not collectable and shapes: # len(shapes) > 50
+            if not collectable and (shapes or plotting_text): # len(shapes) > 50
                 if plotting_text:
                     self.ax.add_patch(PathPatch(Path(vertices, codes), transform=ccrs.PlateCarree(), 
                                             facecolor=fill_color, edgecolor=border_color, zorder=10))
@@ -561,6 +561,7 @@ class Figure:
                 # text should be plotted 'immediately', one by one
                 collectable = False
                 plotting_text = True
+                # cannot add shape to shape_list because PathPatch needs color defined
             elif fill_color != "none":
                 polygon_list = self.process_polygons(chunk.records)
                 try:
@@ -569,12 +570,14 @@ class Figure:
                     print("unresolvable polygon, trying again as lines")
                     vertices, codes = self.process_records(chunk.records)
                     shape_list = cmp.path_to_geos(Path(vertices, codes))
+                finally:
+                    # add shape to queue    
+                    [ shapes.append(shape) for shape in shape_list ]
             else:
                 vertices, codes = self.process_records(chunk.records)
                 shape_list = cmp.path_to_geos(Path(vertices, codes))
-                
-            # add shape to queue    
-            [ shapes.append(shape) for shape in shape_list ]
+                # add shape to queue    
+                [ shapes.append(shape) for shape in shape_list ]
 
             yield chunk
             
@@ -595,9 +598,13 @@ class Figure:
                 shapes.clear()
 
         # plot everything that hasn't been plotted
-        if shapes:
-            self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
-                                   edgecolor=border_color, alpha=alpha)
+        if shapes or plotting_text:
+            if plotting_text:
+                self.ax.add_patch(PathPatch(Path(vertices, codes), transform=ccrs.PlateCarree(), 
+                                        facecolor=fill_color, edgecolor=border_color, zorder=10))
+            else:
+                self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
+                                    edgecolor=border_color, alpha=alpha)
             # pass
         if not hasattr(self, 'gs'):
             self.add_colorbars()

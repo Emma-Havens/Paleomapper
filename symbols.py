@@ -102,31 +102,29 @@ def create_symbol(lat, lon, size, azimuth, symbol):
     return symbol_path
 
 def create_text(lat, lon, size, azimuth, text):
-
-    # find boundaries of text box
+    # generate text
     text_size = size * 1.3
     init_text = TextPath((0, 0), text, size=text_size)
 
-    rad = deg2rad(azimuth)
-    rotation = Affine2D().rotate_around(0, 0, rad)
-    rotated_text = init_text.transformed(rotation)
-
-    bbox = rotated_text.get_extents()
+    # place text so center is over 0, 0
+    bbox = init_text.get_extents()
     y_length = abs(bbox.ymax - bbox.ymin)
     x_length = abs(bbox.xmax - bbox.xmin)
-
-    # find center point of text
-    # y = lat - float(y_length / 2)
-    # x = lon - float(x_length / 2)
     y = -float(y_length / 2)
     x = -float(x_length / 2)
-
-    # return text placed at lat/lon
     transform = Affine2D().translate(x, y)
-    text_path = rotated_text.transformed(transform)
-    text_path.vertices = rotate(text_path.vertices, lat, lon)
-    return text_path
+    text_path = init_text.transformed(transform)
 
+    # rotate text, if necessary
+    rad = deg2rad(azimuth)
+    rotation = Affine2D().rotate_around(0, 0, rad)
+    rotated_text = text_path.transformed(rotation)
+
+    # translate text to proper position and return
+    rotated_text.vertices = rotate(rotated_text.vertices, lat, lon)
+    return rotated_text
+
+# conduct translation by making two rotations
 def rotate(unrotated_list, dest_lat, dest_lon):
     first_rotation = [ rotate_point(lat, lon, 90, 0, dest_lon) for lon, lat in unrotated_list ]
     second_rotation = [ rotate_point(lat, lon, 0, 90 + dest_lon, -dest_lat) for lon, lat in first_rotation ]

@@ -68,7 +68,7 @@
     },
     {
         "file": "cities_testv2_wplateid.csv",
-        "checked": true,
+        "checked": false,
         "bcolor": "infile",
         "fcolor": "infile",
         "alpha": 1.0
