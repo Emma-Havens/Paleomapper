@@ -28,10 +28,10 @@ To learn more about PaleoMapper and see some examples, visit [earthhistory.com](
 3. **Download PaleoMapper**
    - On this page, scroll to the top and locate the green button that says '<> Code'. Click on it and select 'Download ZIP' from the dropdown. A folder titled 'Paleomapper-main' should appear in your Downloads. If the .zip file does not automatically unpack into a folder, double click to unpack it into a folder. You may rename it to PaleoMapper and relocate it if you wish. 
 
-4.	**Install VSCode** *(This is an optional step if you do not have a coding environment you otherwise prefer. If you do not want to use VSCode, make sure you switch your python interpreter to the Python3.10 that is in the geoenv so the program can find all of its dependencies.)*
+4.	**Install VSCode** *(If you have a coding environment you otherwise prefer and do not want to use VSCode, make sure you switch your python interpreter to the Python3.10 that is in the geoenv so the program can find all of its dependencies.)*
 	- Go to https://code.visualstudio.com and download the application
 	- Open the program and go to File > Open Folder… and open the PaleoMapper folder
-	- Open main.py
-	- Optional: VSCode may prompt you to install the Python extension, which will help you locate errors if there are issues running the code. Click ‘yes’
-	- Change the python interpreter to our Python3.10 (geoenv). In the bottom-right corner on the toolbar, click where you see something like 3.X.X (base), which should bring up a dropdown menu in the top center of the screen. Select Python 3.10.X (geoenv) from the list. The bottom-right corner should now show the information for the geoenv interpreter, rather than the base.
+	- Double click on main.py found in the left sidebar to open it
+	- Optional: VSCode may prompt you to install the Python extension with a popup in the bottom right corner. The extension will help you locate errors if there are issues running the code. Click ‘yes’
+	- Change the python interpreter to our Python3.10 (geoenv). In the very bottom-right corner on the toolbar, click where you see something like 3.X.X (base), which should bring up a dropdown menu in the top center of the screen. Select Python 3.10.X (geoenv) from the list. The bottom-right corner should now show the information for the geoenv interpreter, rather than the base.
 	- Click the Run button in the top-right while in the main.py tab. Happy mapping!
