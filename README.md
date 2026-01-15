@@ -25,7 +25,10 @@ To learn more about PaleoMapper and see some examples, visit [earthhistory.com](
 	- conda activate geoenv
 	- conda install cartopy=0.24.0 ffmpeg=7.1.1 matplotlib=3.8.4 numpy=1.26.4 pygplates=1.0.0 pyside6=6.9.0 simplekml=1.3.6 pandas=2.3.3
 
-3.	**Install VSCode** *(This is an optional step if you do not have a coding environment you otherwise prefer. If you do not want to use VSCode, make sure you switch your python interpreter to the Python3.10 that is in the geoenv so the program can find all of its dependencies.)*
+3. **Download PaleoMapper**
+   - On this page, scroll to the top and locate the green button that says 'Code'. Click on it and select 'Download zip' from the dropdown. A folder titled 'PaleoMapper-main' should appear in your Downloads. You may rename it to PaleoMapper and relocate it if you wish. 
+
+4.	**Install VSCode** *(This is an optional step if you do not have a coding environment you otherwise prefer. If you do not want to use VSCode, make sure you switch your python interpreter to the Python3.10 that is in the geoenv so the program can find all of its dependencies.)*
 	- Go to https://code.visualstudio.com and download the application
 	- Open the program and go to File > Open Folder… and open the PaleoMapper folder
 	- Open main.py
