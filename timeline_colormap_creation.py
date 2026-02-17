@@ -147,6 +147,8 @@ phanerozoic_mask = [ 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 
 # norms and masks for colormaps used in draw_map_gui
 smallest_division_norm = BoundaryNorm(smallest_division_time, smallest_division.N)
+def c(value):
+    return smallest_division(smallest_division_norm(value))
 smallest_division_mask = [ 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, # phanerozoic labels
         0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1 ]
 

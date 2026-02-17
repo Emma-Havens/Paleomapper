@@ -47,7 +47,7 @@
     },
     {
         "file": "Just_Coastlines.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "black",
         "fcolor": "none",
         "alpha": 1.0
@@ -68,7 +68,7 @@
     },
     {
         "file": "cities_testv2_wplateid.csv",
-        "checked": false,
+        "checked": true,
         "bcolor": "infile",
         "fcolor": "infile",
         "alpha": 1.0
