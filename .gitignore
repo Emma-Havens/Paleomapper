@@ -1,11 +1,8 @@
 __pycache__
-output
-executables
-build
-dist
+Executables
 local_storage
 */*.DS_Store
 .DS_Store
-Rasters
-shapefiles
+Data_Archive/shapefiles
+working
 */Cont_Ocean_Polygons_v3a.gpml

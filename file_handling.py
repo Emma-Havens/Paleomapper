@@ -35,7 +35,7 @@ class Chunk:
     alpha: float
     records: List[Record]
 
-def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
+def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, total_alpha):
 
     # load symbols in memory
     shape_library = "shape_library.csv"
@@ -80,15 +80,17 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, alpha):
             azimuth = float(row[7])
             border_color = row[10]
             fill_color = row[11]
+            alpha = float(row[12])
 
             if bcolor: border_color = bcolor
             if fcolor: fill_color = fcolor
+            if total_alpha: alpha = total_alpha
             
             match symbol:
                 case "circle":
                     path = symbols.create_circle(lat, lon, size)
-                case "dot":
-                    path = symbols.create_circle(lat, lon, 0.1)
+                # case "dot":
+                #     path = symbols.create_circle(lat, lon, 0.1)
                 case "urn":
                     path = symbols.create_text(lat, lon, size, azimuth, str(urn))
                 case "label":
@@ -312,6 +314,7 @@ def read_files(files, plot_time):
         _, _, file, border_color, fill_color, alpha = total_file
         if border_color == "infile": border_color = ""
         if fill_color == "infile": fill_color = ""
+        if alpha == "infile": alpha = ""
         extension = os.path.splitext(file)[1]
         match extension:
             case ".csv":

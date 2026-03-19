@@ -1,0 +1,25 @@
+﻿URN,label,plateID,latitude,longitude,symbol,size,azi,Old ,Young,line,fill
+2,Kentucky E,101,38,-85.5,star,3,0,420,390,black,black
+3,Ohio E,101,40,-83,star,3,0,420,390,black,black
+4,Michigan E,101,43,-83.5,star,3,0,420,390,black,black
+5,S Ontario E,101,40,-81,star,3,0,420,390,black,black
+6,New York L  E,101,43,-76,star,3,0,420,390,black,black
+10,Nevada E,131,39,-117,star,3,0,420,390,black,black
+14,E Alaska E,121,65,-150.5,star,3,0,420,390,black,black
+15,Arctic Canada L. E,103,75,-100,star,3,0,420,390,black,black
+18,Kolyma Basin E,401,59.57,150.83,star,3,0,420,390,black,black
+19,Ulachan-Sis Range P  E,401,70.45,70.5,star,3,0,420,390,black,black
+20,NE Siberia L  E,301,62,62,star,3,0,420,390,black,black
+21,SW Siberia L  E,301,57,57,star,3,0,420,390,black,black
+25,Kuznetsk Basin L  E,401,54.33,86,star,3,0,420,390,black,black
+31,S Spain E,304,37,-5,star,3,0,420,390,black,black
+32,N Spain L  P  E,304,43,-5,star,3,0,420,390,black,black
+34,Czech Republic P  E,305,50,15,star,3,0,420,390,black,black
+35,Austria E,307,47.5,15,star,3,0,420,390,black,black
+36,Afghanistan E,507,32.5,62.5,star,3,0,420,390,black,black
+37,Vietnam P  E,615,15,107,star,3,0,420,390,black,black
+39,Guangxi E,611,23,108,star,3,0,420,390,black,black
+41,Inner Mongolia E,604,41,110,star,3,0,420,390,black,black
+42,N Queensland L  E,801,-20,145,star,3,0,420,390,black,black
+43,New South Wales L  P  E,801,-33,148,star,3,0,420,390,black,black
+44,Victoria P  E,801,-37,145,star,3,0,420,390,black,black

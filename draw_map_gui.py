@@ -71,8 +71,9 @@ class Figure:
         #         child.unsetCursor()
         #         child.setAttribute(Qt.WA_NoMousePropagation, True)
 
-        
-        self.fig.set_size_inches(15, 10)
+        # self.fig.set_dpi(100)
+        # self.fig.set_size_inches(15, 10)
+        self.fig.set_size_inches(30, 20)
         self.fig.tight_layout()
         self.fig.canvas.draw()
         logo = plt.imread(global_vars.logo_path)
@@ -103,7 +104,7 @@ class Figure:
     
     def set_Rectilinear(self, lat_space, lon_space, kwargs):
         self.fig, self.ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()})
-        self.ax.set_extent(kwargs["map_bounds"])
+        self.ax.set_extent(kwargs["map_bounds"], crs=ccrs.PlateCarree())
         self.draw_gridlines(lat_space, lon_space, 'cyl')
 
     def set_Orthographic(self, lat_space, lon_space, kwargs):
@@ -120,6 +121,7 @@ class Figure:
         self.fig, self.ax = plt.subplots(
             subplot_kw={'projection': ccrs.AzimuthalEquidistant(central_longitude=center_lon, central_latitude=center_lat)})
         self.ax.set_global()
+        # self.ax.set_extent([-180, 180, 60, 90], crs=ccrs.PlateCarree())
         self.draw_gridlines(lat_space, lon_space, 'azim')
 
     def set_Transverse_Mercator(self, lat_space, lon_space, kwargs):
@@ -241,7 +243,7 @@ class Figure:
         # Calculate new figure height (original height + space for colorbars)
         fig_dim = self.fig.get_size_inches()
         new_height = fig_dim[1] + 0.5 * len(colorbars) + (fig_dim[1] * 0.05)  # 0.5 inches per colorbar
-        self.fig.set_size_inches(fig_dim[0], new_height)
+        # self.fig.set_size_inches(fig_dim[0], new_height)
         
         # Create GridSpec with space for main content and colorbars
         self.gs = self.fig.add_gridspec(nrows=2 + len(colorbars), ncols=1, 
@@ -536,7 +538,7 @@ class Figure:
             if not collectable and (shapes or plotting_text): # len(shapes) > 50
                 if plotting_text:
                     self.ax.add_patch(PathPatch(Path(vertices, codes), transform=ccrs.PlateCarree(), 
-                                            facecolor=fill_color, edgecolor=border_color, zorder=10))
+                                            facecolor=fill_color, edgecolor=border_color, alpha=alpha, zorder=10))
                 else:
                     self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
                                         edgecolor=border_color, alpha=alpha)
@@ -601,7 +603,7 @@ class Figure:
         if shapes or plotting_text:
             if plotting_text:
                 self.ax.add_patch(PathPatch(Path(vertices, codes), transform=ccrs.PlateCarree(), 
-                                        facecolor=fill_color, edgecolor=border_color, zorder=10))
+                                        facecolor=fill_color, edgecolor=border_color, alpha=alpha, zorder=10))
             else:
                 self.ax.add_geometries(shapes, crs=ccrs.PlateCarree(), facecolor=fill_color, 
                                     edgecolor=border_color, alpha=alpha)
@@ -1560,16 +1562,16 @@ class Figure:
             png_name = ".anim" + str(self.frame_count) + ".png"
             self.fig.savefig(png_name, bbox_inches='tight', pad_inches=0.1)
             self.frame_count += 1
+        if self.output["pdf"]:
+            pdf_name = self.output["pdf"] + ".pdf"
+            self.fig.savefig(pdf_name, format='pdf')
+        if self.output["svg"]:
+            svg_name = self.output["svg"] + ".svg"
+            self.fig.savefig(svg_name, format='svg')
         if self.output["plot"]:
             plt.draw()  # Force immediate render
             self.fig.canvas.flush_events()  # Process pending GUI events
             plt.pause(0.5)  # Allow GUI event processing
-        if self.output["pdf"]:
-            pdf_name = self.output["pdf"] + ".pdf"
-            plt.savefig(pdf_name, format='pdf')
-        if self.output["svg"]:
-            svg_name = self.output["svg"] + ".svg"
-            plt.savefig(svg_name, format='svg')
 
     def make_animation(self, anim_name, frame_rate): 
 

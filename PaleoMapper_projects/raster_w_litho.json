@@ -1,0 +1,55 @@
+[
+    {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
+        "file": "000Ma.png",
+        "checked": false,
+        "extent": [
+            -180,
+            180,
+            -90,
+            90
+        ],
+        "alpha": 0.5
+    },
+    {
+        "file": "100Ma.jpg",
+        "checked": true,
+        "extent": [
+            -180,
+            180,
+            -90,
+            90
+        ],
+        "alpha": 1.0
+    },
+    {
+        "file": "background_fill.dat",
+        "checked": false,
+        "bcolor": "none",
+        "fcolor": "whitesmoke",
+        "alpha": 1.0
+    },
+    {
+        "file": "Plate_Polygons.gpml",
+        "checked": false,
+        "bcolor": "silver",
+        "fcolor": "gainsboro",
+        "alpha": 1.0
+    },
+    {
+        "file": "Just_Coastlines.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none",
+        "alpha": 1.0
+    },
+    {
+        "file": "clast2carb_lithofacies_sum_100.csv",
+        "checked": true,
+        "bcolor": "white",
+        "fcolor": "infile",
+        "alpha": 1.0
+    }
+]

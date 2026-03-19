@@ -778,9 +778,9 @@ class PlateTrackerApp(QMainWindow):
         start = float(start_text)
         end = float(end_text)
         if not step_text: 
-            step = (end - start) / 10.0
+            step = abs((end - start) / 10.0)
         else:
-            step = float(step_text)
+            step = abs(float(step_text))
         if step == 0:
             QMessageBox.warning(self, "Invalid Step", "Interval cannot be 0")
             return False

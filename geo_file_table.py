@@ -311,7 +311,9 @@ class FileTableModel(QAbstractTableModel):
         elif col == 1:
             return False
         elif role == Qt.EditRole and col == 5:
-            try: self.files[row][col] = float(value)
+            try: 
+                if value == "infile": self.files[row][col] = value
+                else: self.files[row][col] = float(value)
             except ValueError: return False
             self.dataChanged.emit(index, index)
             return True
@@ -337,20 +339,19 @@ class FileTableModel(QAbstractTableModel):
             flags |= Qt.ItemIsEditable | Qt.ItemIsEnabled | Qt.ItemIsSelectable
         return flags
     
-    def add_file(self, file_path, checked=True, border_color="default", fill_color="default", alpha=1.0):
+    def add_file(self, file_path, checked=True, border_color="default", fill_color="default", alpha=-1.0):
         if not os.path.exists(file_path):
             raise FileNotFoundError
         extension = os.path.splitext(file_path)[1]
         if border_color == "default":
-            if extension == ".csv":
-                border_color = "infile" 
-            else:
-                border_color = "black"
+            if extension == ".csv": border_color = "infile" 
+            else: border_color = "black"
         if fill_color == "default":
-            if extension == ".csv":
-                fill_color = "infile" 
-            else:
-                fill_color = ""
+            if extension == ".csv": fill_color = "infile" 
+            else: fill_color = ""
+        if alpha == -1.0:
+            if extension == ".csv": alpha = "infile"
+            else: alpha = 1.0
         self.beginInsertRows(QModelIndex(), len(self.files), len(self.files))
         self.files.insert(0, [checked, False, file_path, border_color, fill_color, alpha])
         self.endInsertRows()

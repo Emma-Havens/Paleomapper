@@ -1,6 +1,0 @@
-URN,label,PlateID,lat,long,symbol,size,azimuth,start,end,line_color,fill
-1,Ttoopp,101,60,178,label,2,0,999,-999,black,none
-1,Next in line,101,50,179,label,2,0,999,-999,black,none
-1,Dead Middle,101,40,180,label,2,0,999,-999,black,none
-1,Almost done,101,30,-179,label,2,0,999,-999,black,none
-1,The Bottom,101,20,-178,label,2,0,999,-999,black,none
