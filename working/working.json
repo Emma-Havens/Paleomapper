@@ -1,0 +1,33 @@
+[
+    {
+        "file": "Scotese_Plate_Model_fixed.rot"
+    },
+    {
+        "file": "background_fill.dat",
+        "checked": false,
+        "bcolor": "none",
+        "fcolor": "aliceblue",
+        "alpha": 1.0
+    },
+    {
+        "file": "Plate_Polygons.gpml",
+        "checked": true,
+        "bcolor": "black",
+        "fcolor": "none",
+        "alpha": 1.0
+    },
+    {
+        "file": "Coastlines&Political_Boundaries.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none",
+        "alpha": 1.0
+    },
+    {
+        "file": "Just_Coastlines.gpml",
+        "checked": false,
+        "bcolor": "black",
+        "fcolor": "none",
+        "alpha": 1.0
+    }
+]

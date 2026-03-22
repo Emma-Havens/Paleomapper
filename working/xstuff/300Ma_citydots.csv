@@ -1,0 +1,71 @@
+URN,label,PlateID,Latitude,Longitude,Symbol,Size,Azimuth,Start,End,Border color,Fill color
+1,Chicago,101,0.02,-19.87,dot,1.5,0.0,999.0,-999.0,black,black
+2,Boston,108,-4.2,-8.41,dot,1.5,0.0,300.0,-999.0,black,black
+4,NE Siberia,405,55.03,1.7,dot,1.5,0.0,999.0,-999.0,black,black
+5,Mexico City,104,-9.85,-44.92,dot,1.5,0.0,999.0,-999.0,black,black
+6,Amazonia,201,-24.13,-32.41,dot,1.5,0.0,300.0,-999.0,black,black
+7,Rio de Janerio,201,-49.22,-23.78,dot,1.5,0.0,300.0,-999.0,black,black
+8,Terra del Fuego,291,-57.75,-83.91,dot,1.5,0.0,300.0,-999.0,black,black
+9,London,315,5.4,12.4,dot,1.5,0.0,300.0,-999.0,black,black
+10,Paris,305,2.66,14.15,dot,1.5,0.0,300.0,-999.0,black,black
+11,Rome,307,-12.39,21.71,dot,1.5,0.0,300.0,-999.0,black,black
+12,Turkey,504,-24.34,31.23,dot,1.5,0.0,300.0,-999.0,black,black
+13,Madrid,304,-5.29,11.83,dot,1.5,0.0,300.0,-999.0,black,black
+14,Oslo,301,14.54,16.19,dot,1.5,0.0,999.0,-999.0,black,black
+15,Moscow,301,17.43,30.4,dot,1.5,0.0,999.0,-999.0,black,black
+16,West Siberian Lowlands,401,41.59,30.17,dot,1.5,0.0,999.0,-999.0,black,black
+17,Siberia,401,58.33,29.13,dot,1.5,0.0,999.0,-999.0,black,black
+18,New Delhi,501,-60.07,61.93,dot,1.5,0.0,999.0,-999.0,black,black
+19,Sri Lanka,502,-72.53,18.61,dot,1.5,0.0,999.0,-999.0,black,black
+20,Beijing,604,21.6,91.28,dot,1.5,0.0,999.0,-999.0,black,black
+21,Ordos Basin,604,23.88,83.19,dot,1.5,0.0,999.0,-999.0,black,black
+22,Central China,611,-7.59,91.71,dot,1.5,0.0,999.0,-999.0,black,black
+23,Shanghai,611,-5.54,102.13,dot,1.5,0.0,999.0,-999.0,black,black
+24,Tibet,613,-48.26,86.28,dot,1.5,0.0,999.0,-999.0,black,black
+25,Tarim Basin,601,23.86,73.53,dot,1.5,0.0,999.0,-999.0,black,black
+26,Indochina,615,-18.57,105.5,dot,1.5,0.0,999.0,-999.0,black,black
+27,Malaysia,616,-29.77,125.09,dot,1.5,0.0,999.0,-999.0,black,black
+28,Cairo,715,-28.3,30.14,dot,1.5,0.0,300.0,-999.0,black,black
+29,East Africa,712,-56.26,14.68,dot,1.5,0.0,300.0,-999.0,black,black
+30,Madagascar,702,-62.14,31.27,dot,1.5,0.0,999.0,-999.0,black,black
+31,Capetown,701,-60.93,-57.68,dot,1.5,0.0,300.0,-999.0,black,black
+32,Australia,801,-55.48,134.66,dot,1.5,0.0,999.0,-999.0,black,black
+33,Sydney,801,-58.9,167.86,dot,1.5,0.0,999.0,-999.0,black,black
+34,Perth,801,-64.47,102.81,dot,1.5,0.0,999.0,-999.0,black,black
+36,East Antarctica,802,-81.62,32.12,dot,1.5,0.0,999.0,-999.0,black,black
+37,Dry Valley,802,-73.86,163.84,dot,1.5,0.0,999.0,-999.0,black,black
+41,Chicago,101,-1.77,-20.76,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+42,Boston,108,-6.14,-8.9,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+44,NE Siberia,405,56.99,1.04,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+45,Mexico City,104,-10.98,-46.6,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+46,Amazonia,201,-25.93,-33.37,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+47,Rio de Janerio,201,-51.04,-25.06,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+48,Terra del Fuego,291,-58.88,-87.06,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+49,London,315,3.42,12.74,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+50,Paris,305,0.7,14.53,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+51,Rome,307,-13.77,20.22,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+52,Turkey,504,-25.87,29.8,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+53,Madrid,304,-7.04,10.85,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+54,Oslo,301,12.64,16.83,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+55,Moscow,301,15.85,31.68,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+56,West Siberian Lowlands,401,41.77,32.84,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+57,Siberia,401,59.72,31.94,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+58,New Delhi,501,-61.5,59.06,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+59,Sri Lanka,502,-72.05,12.22,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+60,Beijing,604,19.86,90.22,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+61,Ordos Basin,604,22.2,82.0,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+62,Central China,611,-8.88,93.26,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+63,Shanghai,611,-6.67,103.79,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+64,Tibet,613,-50.24,86.73,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+65,Tarim Basin,601,22.73,71.74,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+66,Indochina,615,-19.29,107.47,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+67,Malaysia,616,-28.39,126.75,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+68,Cairo,715,-30.16,29.32,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+69,East Africa,712,-57.97,12.77,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+70,Madagascar,702,-63.81,28.85,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+71,Capetown,701,-60.76,-61.77,dot,2.0,0.0,300.0,-999.0,byPlateId,byPlateId
+72,Australia,801,-57.43,135.47,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+73,Sydney,801,-60.56,170.07,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+74,Perth,801,-66.45,102.18,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+76,East Antarctica,802,-83.61,30.83,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
+77,Dry Valley,802,-75.72,166.66,dot,2.0,0.0,999.0,-999.0,byPlateId,byPlateId
