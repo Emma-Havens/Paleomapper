@@ -1,0 +1,59 @@
+URN,Label,Plate ID,Lat,Lon,Symbol,Size,Azimuth,Start Time,End Time,Border Color,Fill Color
+1,urn,0,10,-56,dot,1,0,4500,0,black,none
+2,label,0,10,-48,dot,1,0,4500,0,black,none
+3,circle,0,10,-36,dot,1,0,4500,0,black,none
+4,dot,0,10,-32,dot,1,0,4500,0,black,none
+5,triangle,0,10,-24,dot,1,0,4500,0,black,none
+6,square,0,10,-16,dot,1,0,4500,0,black,none
+7,plus,0,10,-8,dot,1,0,4500,0,black,none
+8,cross,0,10,0,dot,1,0,4500,0,black,none
+9,storm,0,10,8,dot,1,0,4500,0,black,none
+10,asterisk,0,10,16,dot,1,0,4500,0,black,none
+11,diamond,0,10,24,dot,1,0,4500,0,black,none
+12,star,0,10,32,dot,1,0,4500,0,black,none
+13,dextral,0,10,40,dot,1,0,4500,0,black,none
+14,sinistral,0,10,48,dot,1,0,4500,0,black,none
+15,arrow01,0,10,56,dot,1,0,4500,0,black,none
+16,arrow02,0,-20,-52,dot,1,0,4500,0,black,none
+17,arrow03,0,-20,-44,dot,1,0,4500,0,black,none
+18,arrow04,0,-20,-36,dot,1,0,4500,0,black,none
+19,arrow05,0,-20,-28,dot,1,0,4500,0,black,none
+20,arrow06,0,-20,-20,dot,1,0,4500,0,black,none
+21,subduction,0,-20,-12,dot,1,0,4500,0,black,none
+22,normal,0,-20,-4,dot,1,0,4500,0,black,none
+23,conglomerate,0,-20,4,dot,1,0,4500,0,black,none
+24,sand,0,-20,12,dot,1,0,4500,0,black,none
+25,sandwmud,0,-20,20,dot,1,0,4500,0,black,none
+26,mud,0,-20,28,dot,1,0,4500,0,black,none
+27,mudwls,0,-20,36,dot,1,0,4500,0,black,none
+28,lswmud,0,-20,44,dot,1,0,4500,0,black,none
+29,limestone,0,-20,52,dot,1,0,4500,0,black,none
+1,urn          ,0,23,-56,dot,1,0,4500,0,black,none
+2,label        ,0,23,-48,dot,1,0,4500,0,black,none
+3,circle       ,0,23,-36,dot,1,0,4500,0,black,none
+4,dot          ,0,23,-32,dot,1,0,4500,0,black,none
+5,triangle     ,0,23,-24,dot,1,0,4500,0,black,none
+6,square       ,0,23,-16,dot,1,0,4500,0,black,none
+7,plus         ,0,23,-8,dot,1,0,4500,0,black,none
+8,cross        ,0,23,0,dot,1,0,4500,0,black,none
+9,storm        ,0,23,8,dot,1,0,4500,0,black,none
+10,asterisk    ,0,23,16,dot,1,0,4500,0,black,none
+11,diamond     ,0,23,24,dot,1,0,4500,0,black,none
+12,star        ,0,23,32,dot,1,0,4500,0,black,none
+13,dextral     ,0,23,40,dot,1,0,4500,0,black,none
+14,sinistral   ,0,23,48,dot,1,0,4500,0,black,none
+15,arrow01     ,0,23,56,dot,1,0,4500,0,black,none
+16,arrow02     ,0,-7,-52,dot,1,0,4500,0,black,none
+17,arrow03     ,0,-7,-44,dot,1,0,4500,0,black,none
+18,arrow04     ,0,-7,-36,dot,1,0,4500,0,black,none
+19,arrow05     ,0,-7,-28,dot,1,0,4500,0,black,none
+20,arrow06     ,0,-7,-20,dot,1,0,4500,0,black,none
+21,subduction  ,0,-7,-12,dot,1,0,4500,0,black,none
+22,normal      ,0,-7,-4,dot,1,0,4500,0,black,none
+23,conglomerate,0,-7,4,dot,1,0,4500,0,black,none
+24,sand        ,0,-7,12,dot,1,0,4500,0,black,none
+25,sandwmud    ,0,-7,20,dot,1,0,4500,0,black,none
+26,mud         ,0,-7,28,dot,1,0,4500,0,black,none
+27,mudwls      ,0,-7,36,dot,1,0,4500,0,black,none
+28,lswmud      ,0,-7,44,dot,1,0,4500,0,black,none
+29,limestone   ,0,-7,52,dot,1,0,4500,0,black,none

@@ -146,7 +146,7 @@ class FileTableModel(QAbstractTableModel):
         self.raster_table = raster_table
         self.accepted_extensions = [".dat", ".gpml", ".csv", ".shp"]
         self.files = []  # Each item is [checked, arrows, path, bcolor, fcolor, alpha]
-        self.headers = ["", "", "File Path", "Border Color", "Fill Color", "Alpha"]
+        self.headers = ["", "", "File Name", "Border Color", "Fill Color", "Alpha"]
         self.file_index = 2
         self.rot_file = ""
         self.proj_file = ""
@@ -403,7 +403,7 @@ class RasterTableModel(QAbstractTableModel):
         super().__init__(parent)
         self.accepted_extensions = [".jpg", ".jpeg", ".png"]
         self.files = []  # Each item is [checked, arrows, path, [w,e,s,n], alpha]
-        self.headers = ["", "", "File Path", "Extent", "Alpha"]
+        self.headers = ["", "", "File Name", "Extent", "Alpha"]
         self.file_index = 2
 
     def rowCount(self, parent=None):
