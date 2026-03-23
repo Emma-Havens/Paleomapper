@@ -2,6 +2,9 @@
 PaleoMapper was developed by Emma Havens and based on the plate tectonic mapping programs written by Chris Scotese (see Scotese et al., 1975) and David Walsh (Walsh and Scotese, 1993). The goal of the program is to provide users with a quick way to make paleogeographic maps and animations. Colorful maps in a variety of map projections can be used as a framework to plot user-defined data points with a variety of symbols.
 
 To learn more about PaleoMapper and see some examples, visit [earthhistory.com](https://earthhistory.com)
+
+For troubleshooting, bug reports, or feature requests, please reach out to emmahavens2023@u.northwestern.edu
+
 # Installation Instructions
 1.	**Install conga-forge** *(If you already have conda installed, follow all environment building instructions in Step 1.5 instead.)* Follow all on-screen instructions and prompts. Some are repeated here for clarity.	
 	- Go to https://conda-forge.org/download/ and download the proper installer for your machine
