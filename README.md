@@ -31,8 +31,8 @@ To learn more about PaleoMapper and see some examples, visit [earthhistory.com](
 4.	**Install VSCode** *(If you have a coding environment you otherwise prefer and do not want to use VSCode, make sure you switch your python interpreter to the Python3.10 that is in the geoenv so the program can find all of its dependencies.)*
 	- Go to https://code.visualstudio.com and download and install the application
 	- Open VSCode and go to File > Open Folder… and open the PaleoMapper folder
- 	- VSCode may prompt you to install python with a pop-up. If so, click 'close'.
+ 	- VSCode may prompt you to install python with an obstructive pop-up over the main window. If so, click 'close'.
 	- Double click on main.py found in the left sidebar to open it
 	- Optional: VSCode may prompt you to install the Python extension with a popup in the bottom right corner. The extension will help you locate errors if there are issues running the code. Click ‘Install’. When it's done, close the tab.
-	- Change the python interpreter to our Python3.10 (geoenv). In the very bottom-right corner on the toolbar, click where you see something like 3.X.X (base), which should bring up a dropdown menu in the top center of the screen. Select Python 3.10.X (geoenv) from the list. The bottom-right corner should now show the information for the geoenv interpreter, rather than the base.
-	- Click the Run button in the top-right while in the main.py tab. Happy mapping!
+	- Change the python interpreter and terminal environment to our Python3.10 (geoenv). In the very bottom-right corner on the toolbar, click where you see something like base (3.X.X) or Python (3.X.X), which should bring up a dropdown menu in the top center of the screen titled 'Select a Python Environment'. Select geoenv (3.10.X) from the list. The bottom-right corner should now show geoenv (3.10.X). Right next to it on the left, click where you see something like 3.X.X or 3.X.X (base), which should bring up a dropdown menu in the top center of the screen titled 'Select Interpreter'. Select Python 3.10.X (geoenv) from the list. The bottom-right corner should now show 3.10.X (geoenv).
+	- Click the Run button (looks like a play symbol) in the top-right while in the main.py tab. If it does not work, you may need to click it again or restart VSCode. Happy mapping!
