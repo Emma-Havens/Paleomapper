@@ -4,7 +4,7 @@
     },
     {
         "file": "background_fill.dat",
-        "checked": false,
+        "checked": true,
         "bcolor": "none",
         "fcolor": "aliceblue",
         "alpha": 1.0
@@ -12,13 +12,13 @@
     {
         "file": "Plate_Polygons.gpml",
         "checked": true,
-        "bcolor": "black",
-        "fcolor": "none",
+        "bcolor": "burlywood",
+        "fcolor": "oldlace",
         "alpha": 1.0
     },
     {
         "file": "Coastlines&Political_Boundaries.gpml",
-        "checked": false,
+        "checked": true,
         "bcolor": "black",
         "fcolor": "none",
         "alpha": 1.0
@@ -29,5 +29,12 @@
         "bcolor": "black",
         "fcolor": "none",
         "alpha": 1.0
+    },
+    {
+        "file": "symbols.csv",
+        "checked": false,
+        "bcolor": "infile",
+        "fcolor": "infile",
+        "alpha": "infile"
     }
 ]

@@ -6,7 +6,7 @@ import numpy as np
 import cartopy.crs as ccrs
 import cartopy.mpl.patch as cmp
 from matplotlib.path import Path
-from matplotlib.patches import PathPatch
+from matplotlib.patches import PathPatch, Ellipse
 from matplotlib.collections import PatchCollection
 from matplotlib.gridspec import GridSpec
 from matplotlib.colors import is_color_like, CSS4_COLORS, Normalize, to_rgb, ListedColormap
@@ -39,6 +39,14 @@ class Figure:
 
         lat_space = kwargs["lat_spacing"]
         lon_space = kwargs["lon_spacing"]
+        if kwargs["thin_lines"]: 
+            matplotlib.rcParams["lines.linewidth"] = 0.3
+            matplotlib.rcParams["patch.linewidth"] = 0.3
+            matplotlib.rcParams["grid.linewidth"] = 0.2
+        else:
+            matplotlib.rcParams["lines.linewidth"] = 1.5
+            matplotlib.rcParams["patch.linewidth"] = 1.0
+            matplotlib.rcParams["grid.linewidth"] = 0.8
 
         match self.proj:
             case 0:     # Rectilinear projection
@@ -71,14 +79,14 @@ class Figure:
         #         child.unsetCursor()
         #         child.setAttribute(Qt.WA_NoMousePropagation, True)
 
-        # self.fig.set_dpi(100)
-        # self.fig.set_size_inches(15, 10)
-        self.fig.set_size_inches(30, 20)
+        # self.fig.set_dpi(200)
+        self.fig.set_size_inches(15, 10)
+        # self.fig.set_size_inches(30, 20)
         self.fig.tight_layout()
         self.fig.canvas.draw()
         logo = plt.imread(global_vars.logo_path)
         self.logo_ax = self.fig.add_axes([0.95, 0.01, .05, .05])
-        self.logo_ax.imshow(logo)
+        self.logo_ax.imshow(logo, interpolation='none')
         self.logo_ax.axis('off')
         self.bg = self.fig.canvas.copy_from_bbox(self.fig.bbox)
 
@@ -116,12 +124,30 @@ class Figure:
         self.draw_gridlines(lat_space, lon_space, 'ortho')
 
     def set_Azimuthal(self, lat_space, lon_space, kwargs):
-        center_lon = kwargs["center_lon"]
-        center_lat = kwargs["center_lat"]
-        self.fig, self.ax = plt.subplots(
-            subplot_kw={'projection': ccrs.AzimuthalEquidistant(central_longitude=center_lon, central_latitude=center_lat)})
-        self.ax.set_global()
-        # self.ax.set_extent([-180, 180, 60, 90], crs=ccrs.PlateCarree())
+        # self.ax.set_global()
+        # # the following is an attempt to create a clip path so that aziequi can be used with any given bounds
+        # # the concept falls apart at the poles (centered on 90 with minlat 60, ellipse height is only 30)
+        # ellipse_width = kwargs["map_bounds"][1] - kwargs["map_bounds"][0] # east - west
+        # ellipse_height = kwargs["map_bounds"][3] - kwargs["map_bounds"][2] # north - south
+        # ellipse_patch = Ellipse((center_lon, center_lat), ellipse_width, ellipse_height)
+        # ellipse_path = Path(ellipse_patch.get_vertices())
+        # proj_transform = ccrs.PlateCarree()._as_mpl_transform(self.ax) - self.ax.transData
+        # boundary = proj_transform.transform_path(ellipse_path)
+        # self.ax.set_boundary(boundary)
+        # self.ax.set_extent(kwargs["map_bounds"], crs=ccrs.PlateCarree())
+        if kwargs["north_hemi"]:
+            self.fig, self.ax = plt.subplots(
+                    subplot_kw={'projection': ccrs.AzimuthalEquidistant(central_latitude=90)})
+            self.ax.set_extent([-180, 180, kwargs["min_lat"], 90], crs=ccrs.PlateCarree())
+        else:
+            self.fig, self.ax = plt.subplots(
+                    subplot_kw={'projection': ccrs.AzimuthalEquidistant(central_latitude=-90)})
+            self.ax.set_extent([-180, 180, -90, kwargs["min_lat"]], crs=ccrs.PlateCarree())
+        theta = np.linspace(0, 2*np.pi, 100)
+        center, radius = [0.5, 0.5], 0.5
+        verts = np.vstack([np.sin(theta), np.cos(theta)]).T
+        circle = Path(verts * radius + center)
+        self.ax.set_boundary(circle, transform=self.ax.transAxes)
         self.draw_gridlines(lat_space, lon_space, 'azim')
 
     def set_Transverse_Mercator(self, lat_space, lon_space, kwargs):
@@ -176,10 +202,12 @@ class Figure:
         
         # elif projection in ['merc', 'cyl']:
 
-    def update_plot_vars(self, output_tuple, plot_time, rasters):
+    def update_plot_vars(self, output_tuple, plot_time, title, rasters):
         self.output = output_tuple
         self.plot_time = plot_time
-        self.ax.set_title(f"{plot_time}Ma", loc="left", pad=40, size='xx-large')
+        print(title)
+        title = title.replace("{time}", str(plot_time))
+        self.ax.set_title(title, loc="left", pad=40, size='xx-large')
         # self.fig.tight_layout()
         self.rasters = rasters      # Each item is [checked, arrows, path, [w,e,s,n], alpha]
 
@@ -1560,7 +1588,7 @@ class Figure:
         # print(self.output)
         if self.output["anim"]:
             png_name = ".anim" + str(self.frame_count) + ".png"
-            self.fig.savefig(png_name, bbox_inches='tight', pad_inches=0.1)
+            self.fig.savefig(png_name, bbox_inches='tight', pad_inches=0.1, dpi=200)
             self.frame_count += 1
         if self.output["pdf"]:
             pdf_name = self.output["pdf"] + ".pdf"

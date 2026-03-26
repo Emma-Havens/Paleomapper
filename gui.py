@@ -345,24 +345,22 @@ class PlateTrackerApp(QMainWindow):
         self.table_splitter.updateGeometry()
         QApplication.processEvents()
     
-    def clear_layout(self, layout):
-        """Recursively clear all widgets and layouts from the given layout."""
-        while layout.count():
-            item = layout.takeAt(0)
-            widget = item.widget()
-            if widget:
-                # If the item is a widget, delete it
-                widget.deleteLater()
-            else:
-                # If the item is a layout, recursively clear it
-                sub_layout = item.layout()
-                if sub_layout:
-                    self.clear_layout(sub_layout)
-    
-    def default_output_file_name(self):
+    def set_default_output_file_name(self, time):
+        edit_list = [ [self.pdf_file_entry, ".pdf"], [self.mp4_file_entry, ".mp4"],
+                      [self.svg_file_entry, ".svg"], [self.gpml_file_entry, ".gpml"],
+                      [self.shp_file_entry, ".shp"], [self.dat_file_entry, ".dat"],
+                      [self.kml_file_entry, ".kml"] ]
         proj_name = self.file_model.get_proj_name() if self.file_model.get_proj_name() else "output"
-        time = self.start_time_entry.text()
-        return time + "Ma_" + proj_name
+        for (output_edit, extension) in edit_list:
+            # if text hasn't been set, elif still starts with "<time>Ma_"
+            if output_edit.text() == "":
+                default_output_name = time + "Ma_" + proj_name + extension
+                output_edit.setText(default_output_name)
+            elif output_edit.text().split("_")[0][-2:] == "Ma":
+                # gets everything after "<time>Ma_"
+                user_modified_name = "_".join(output_edit.text().split("_")[1:])
+                modified_output_name = time + "Ma_" + user_modified_name
+                output_edit.setText(modified_output_name)
     
     def hide_output_inputs(self, output_id):
         on_or_off = self.outputs_button_group.button(output_id).isChecked()
@@ -373,6 +371,7 @@ class PlateTrackerApp(QMainWindow):
         else: need_map_settings = False
 
         self.output_inputs_layout.setRowVisible(self.projection_layout, need_map_settings)
+        self.output_inputs_layout.setRowVisible(self.map_title_layout, need_map_settings)
         self.output_inputs_layout.setRowVisible(self.latlon_layout, need_map_settings)
         self.output_inputs_layout.setRowVisible(self.additional_inputs_layout, need_map_settings)
         
@@ -382,6 +381,7 @@ class PlateTrackerApp(QMainWindow):
             case 1: # pdf
                 self.output_inputs_layout.setRowVisible(self.pdf_file_entry, on_or_off)
             case 2: # mp4
+                self.save_fig["anim"] = on_or_off
                 self.output_inputs_layout.setRowVisible(self.mp4_layout, on_or_off)
             case 3: # dat
                 self.output_inputs_layout.setRowVisible(self.dat_file_entry, on_or_off)
@@ -398,8 +398,6 @@ class PlateTrackerApp(QMainWindow):
         self.hide_projection_inputs(projection_index)
     
     def create_output_inputs(self):
-        outfile_name = self.default_output_file_name()
-        
         # Map projection combo box
         self.projection_layout = QHBoxLayout()
         projection_combo_label = QLabel("Map Projection:")
@@ -421,6 +419,17 @@ class PlateTrackerApp(QMainWindow):
         self.projection_layout.addStretch()
         self.output_inputs_layout.addRow(self.projection_layout)
 
+        # Map title
+        self.map_title_layout = QHBoxLayout()
+        map_title_label = QLabel("Map Title:")
+        self.map_title_edit = QLineEdit()
+        self.map_title_edit.setText("{time}Ma")
+        self.line_thickness_checkbox = QCheckBox("Plot Thin Lines")
+        self.map_title_layout.addWidget(map_title_label)
+        self.map_title_layout.addWidget(self.map_title_edit)
+        self.map_title_layout.addWidget(self.line_thickness_checkbox)
+        self.output_inputs_layout.addRow(self.map_title_layout)
+
         # Lat and Lon lines
         self.latlon_layout = QHBoxLayout()
         lat_label = QLabel("Latitude Spacing:")
@@ -430,7 +439,7 @@ class PlateTrackerApp(QMainWindow):
         lon_label = QLabel("Longitude Spacing:")
         self.lon_spacing = QLineEdit()
         self.lon_spacing.setValidator(QIntValidator())
-        self.lon_spacing.setText("80")
+        self.lon_spacing.setText("60")
         self.no_graticule_checkbox = QCheckBox("No Graticule")
         self.latlon_layout.addWidget(lat_label)
         self.latlon_layout.addWidget(self.lat_spacing)
@@ -450,13 +459,11 @@ class PlateTrackerApp(QMainWindow):
         # pdf
         self.save_fig = {"plot": False, "pdf": False, "anim": False, "svg": False}
         self.pdf_file_entry = QLineEdit()
-        self.pdf_file_entry.setText(f"{outfile_name}.pdf")
         self.output_inputs_layout.addRow("Output .pdf file name:", self.pdf_file_entry)
 
         # mp4
         self.mp4_layout = QHBoxLayout()
         self.mp4_file_entry = QLineEdit()
-        self.mp4_file_entry.setText(f"{outfile_name}.mp4")
         fps_label = QLabel("Frames per second:")
         self.fps_entry = QLineEdit()
         self.fps_entry.setValidator(QIntValidator())
@@ -468,28 +475,27 @@ class PlateTrackerApp(QMainWindow):
 
         # svg
         self.svg_file_entry = QLineEdit()
-        self.svg_file_entry.setText(f"{outfile_name}.svg")
         self.output_inputs_layout.addRow("Output .svg file name:", self.svg_file_entry)
         
         # dat
         self.dat_file_entry = QLineEdit()
-        self.dat_file_entry.setText(f"{outfile_name}.dat")
         self.output_inputs_layout.addRow("Output .dat file name:", self.dat_file_entry)
 
         # kml
         self.kml_file_entry = QLineEdit()
-        self.kml_file_entry.setText(f"{outfile_name}.kml")
         self.output_inputs_layout.addRow("Output .kml file name:", self.kml_file_entry)
 
         # gpml
         self.gpml_file_entry = QLineEdit()
-        self.gpml_file_entry.setText(f"{outfile_name}.gpml")
         self.output_inputs_layout.addRow("Output .gpml file name:", self.gpml_file_entry)
 
         # shp
         self.shp_file_entry = QLineEdit()
-        self.shp_file_entry.setText(f"{outfile_name}.shp")
         self.output_inputs_layout.addRow("Output .shp file name:", self.shp_file_entry)
+
+        # set text in line edits
+        self.set_default_output_file_name("0")
+        self.start_time_entry.textChanged.connect(self.set_default_output_file_name)
 
         # hide all rows
         self.output_inputs_layout.setRowVisible(self.projection_layout, False)
@@ -509,11 +515,11 @@ class PlateTrackerApp(QMainWindow):
             self.additional_inputs_layout.setRowVisible(self.bounds_layout, True)
             self.additional_inputs_layout.setRowVisible(self.center_coord_layout, False)
             self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, False)
-        elif projection_option in [1, 7, 5]:  # Orthographic AziEqui TransMerc
+        elif projection_option in [1, 5]:  # Orthographic TransMerc
             self.additional_inputs_layout.setRowVisible(self.bounds_layout, False)
             self.additional_inputs_layout.setRowVisible(self.center_coord_layout, True)
             self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, False)
-        elif projection_option == 8:  # Stereographic Plot
+        elif projection_option in [7, 8]:  # AziEqui Stereo
             self.additional_inputs_layout.setRowVisible(self.bounds_layout, False)
             self.additional_inputs_layout.setRowVisible(self.center_coord_layout, False)
             self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, True)
@@ -727,7 +733,7 @@ class PlateTrackerApp(QMainWindow):
                             self.save_fig["svg"] = svg_file
 
                     try:
-                        figure.update_plot_vars(self.save_fig, time, self.get_raster_files())
+                        figure.update_plot_vars(self.save_fig, time, self.map_title_edit.text(), self.get_raster_files())
                         processed_plate_generator = figure.plot_to_screen(processed_plate_generator)
                         print("plot to screen")
                         if 1 in output_options and len(time_array) == 1:
@@ -814,10 +820,14 @@ class PlateTrackerApp(QMainWindow):
                 proj_kwargs["lat_spacing"] = int(self.lat_spacing.text())
                 proj_kwargs["lon_spacing"] = int(self.lon_spacing.text())
             print("collect lat/lon spacing")
+
+            if self.line_thickness_checkbox.isChecked():
+                proj_kwargs["thin_lines"] = True
+            else: proj_kwargs["thin_lines"] = False
             
             projection_option = self.projection_combo.currentIndex()
             print(projection_option)
-            if projection_option in [3, 2, 6, 4, 0]:  # Mollweide Robinson Mercator Rectilinear 
+            if projection_option in [3, 2, 6, 4, 0, 7]:  # Mollweide Robinson Mercator Rectilinear AziEqi
                 # map boundaries
                 north_bound = int(self.northern_bound.text())
                 south_bound = int(self.southern_bound.text())
@@ -832,13 +842,13 @@ class PlateTrackerApp(QMainWindow):
                 
                 proj_kwargs["map_bounds"] = [west_bound, east_bound, south_bound, north_bound]
             
-            elif projection_option in [1, 7, 5]:  # Orthographic AziEqui TransMerc
+            if projection_option in [1, 5]:  # Orthographic TransMerc
                 # central coordinates
                 proj_kwargs["center_lat"] = float(self.center_lat_entry.text())
                 proj_kwargs["center_lon"] = float(self.center_lon_entry.text())
                 print("collect center point")
             
-            elif projection_option == 8:  # Stereographic Plot
+            if projection_option in [7, 8]:  # AziEqui Stereo
                 # hemisphere selection
                 proj_kwargs["north_hemi"] = self.northern_hemisphere.isChecked()
                 proj_kwargs["min_lat"] = int(self.min_lat_entry.text())
