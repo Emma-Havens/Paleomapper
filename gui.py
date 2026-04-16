@@ -1,7 +1,8 @@
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QLineEdit, QPushButton,
     QFileDialog, QMessageBox, QComboBox, QRadioButton, QButtonGroup, QTableView,
-    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter, QFrame
+    QAbstractItemView, QHeaderView, QCheckBox, QApplication, QStatusBar, QProgressBar, QSplitter, QFrame,
+    QFormLayout
     )
 from PySide6.QtGui import QIntValidator, QDoubleValidator, QIcon, QAction
 from PySide6.QtCore import Qt
@@ -198,25 +199,29 @@ class PlateTrackerApp(QMainWindow):
 
         # Output options
         output_label = QLabel("Output Options:")
-        self.outputs = QButtonGroup()
-        self.outputs.setExclusive(False)
-        self.outputs.addButton(QCheckBox("Plot to Screen"), 0)
-        self.outputs.addButton(QCheckBox("Save as PDF"), 1)
-        self.outputs.addButton(QCheckBox("Save as Animation (MP4)"), 2)
-        self.outputs.addButton(QCheckBox("Save as SVG"), 7)
-        self.outputs.addButton(QCheckBox("Save as GPML"), 5)
-        self.outputs.addButton(QCheckBox("Save as SHP"), 6)
-        self.outputs.addButton(QCheckBox("Save as DAT"), 3)
-        self.outputs.addButton(QCheckBox("Save as KML"), 4)
-        self.outputs.button(0).setChecked(True)
+        self.outputs_button_group = QButtonGroup()
+        self.outputs_button_group.setExclusive(False)
+        self.outputs_button_group.addButton(QCheckBox("Plot to Screen"), 0)
+        self.outputs_button_group.addButton(QCheckBox("Save as PDF"), 1)
+        self.outputs_button_group.addButton(QCheckBox("Save as Animation (MP4)"), 2)
+        self.outputs_button_group.addButton(QCheckBox("Save as SVG"), 7)
+        self.outputs_button_group.addButton(QCheckBox("Save as GPML"), 5)
+        self.outputs_button_group.addButton(QCheckBox("Save as SHP"), 6)
+        self.outputs_button_group.addButton(QCheckBox("Save as DAT"), 3)
+        self.outputs_button_group.addButton(QCheckBox("Save as KML"), 4)
+        self.outputs_button_group.button(0).setChecked(True)
         outputs_checkbox_layout = QGridLayout()
         num_in_row = 4
         column_count = 4
-        for i, button in enumerate(self.outputs.buttons()):
+        for i, button in enumerate(self.outputs_button_group.buttons()):
             outputs_checkbox_layout.addWidget(button, int(i / num_in_row), i % column_count)
-        self.output_inputs_layout = QVBoxLayout()
-        self.outputs.buttonClicked.connect(self.toggle_output_inputs)
-        self.toggle_output_inputs()
+        self.output_inputs_layout = QFormLayout()
+        self.output_inputs_layout.setFieldGrowthPolicy(QFormLayout.ExpandingFieldsGrow)
+        self.output_inputs_layout.setLabelAlignment(Qt.AlignLeft)
+        self.outputs_button_group.idToggled.connect(self.hide_output_inputs)
+        self.create_output_inputs()
+        self.hide_output_inputs(0)
+        self.hide_projection_inputs(0)
 
         # Run button
         self.run_button = QPushButton("Run")
@@ -340,252 +345,260 @@ class PlateTrackerApp(QMainWindow):
         self.table_splitter.updateGeometry()
         QApplication.processEvents()
     
-    def clear_layout(self, layout):
-        """Recursively clear all widgets and layouts from the given layout."""
-        while layout.count():
-            item = layout.takeAt(0)
-            widget = item.widget()
-            if widget:
-                # If the item is a widget, delete it
-                widget.deleteLater()
-            else:
-                # If the item is a layout, recursively clear it
-                sub_layout = item.layout()
-                if sub_layout:
-                    self.clear_layout(sub_layout)
-    
-    def default_output_file_name(self):
+    def set_default_output_file_name(self, time):
+        edit_list = [ [self.pdf_file_entry, ".pdf"], [self.mp4_file_entry, ".mp4"],
+                      [self.svg_file_entry, ".svg"], [self.gpml_file_entry, ".gpml"],
+                      [self.shp_file_entry, ".shp"], [self.dat_file_entry, ".dat"],
+                      [self.kml_file_entry, ".kml"] ]
         proj_name = self.file_model.get_proj_name() if self.file_model.get_proj_name() else "output"
-        time = self.start_time_entry.text()
-        return time + "Ma_" + proj_name
+        for (output_edit, extension) in edit_list:
+            # if text hasn't been set, elif still starts with "<time>Ma_"
+            if output_edit.text() == "":
+                default_output_name = time + "Ma_" + proj_name + extension
+                output_edit.setText(default_output_name)
+            elif output_edit.text().split("_")[0][-2:] == "Ma":
+                # gets everything after "<time>Ma_"
+                user_modified_name = "_".join(output_edit.text().split("_")[1:])
+                modified_output_name = time + "Ma_" + user_modified_name
+                output_edit.setText(modified_output_name)
     
-    def toggle_output_inputs(self):
+    def hide_output_inputs(self, output_id):
+        on_or_off = self.outputs_button_group.button(output_id).isChecked()
+        self.toggled_output_options.append(output_id) if on_or_off else self.toggled_output_options.remove(output_id)
+        if (0 in self.toggled_output_options or 1 in self.toggled_output_options or 
+                2 in self.toggled_output_options or 7 in self.toggled_output_options):
+            need_map_settings = True
+        else: need_map_settings = False
 
-        # Clear all existing widgets and layouts
-        self.clear_layout(self.output_inputs_layout)
-         
-        output_options = [self.outputs.id(button) for button in self.outputs.buttons() if button.isChecked()]
-
-        outfile_name = self.default_output_file_name()
+        self.output_inputs_layout.setRowVisible(self.projection_layout, need_map_settings)
+        self.output_inputs_layout.setRowVisible(self.map_title_layout, need_map_settings)
+        self.output_inputs_layout.setRowVisible(self.latlon_layout, need_map_settings)
+        self.output_inputs_layout.setRowVisible(self.additional_inputs_layout, need_map_settings)
         
-        if 0 in output_options or 1 in output_options or 2 in output_options or 7 in output_options: # Screen output
-            projection_layout = QHBoxLayout()
-            projection_label = QLabel("Map Projection:")
-            self.projection_combo = QComboBox()
-            self.projection_combo.addItems([
-                "Rectilinear",
-                "Orthographic",
-                "Robinson",
-                "Mollweide",
-                "Mercator",
-                "Transverse Mercator",
-                "Miller",
-                "Azimuthal Equidistant",
-                "Stereographic"
-            ])
-            self.projection_combo.setMaximumWidth(200)
-            projection_layout.addWidget(projection_label)
-            projection_layout.addWidget(self.projection_combo)
-            projection_layout.addStretch()
+        match output_id:
+            case 0: # plot to screen
+                self.save_fig["plot"] = on_or_off
+            case 1: # pdf
+                self.output_inputs_layout.setRowVisible(self.pdf_file_entry, on_or_off)
+            case 2: # mp4
+                self.save_fig["anim"] = on_or_off
+                self.output_inputs_layout.setRowVisible(self.mp4_layout, on_or_off)
+            case 3: # dat
+                self.output_inputs_layout.setRowVisible(self.dat_file_entry, on_or_off)
+            case 4: # kml
+                self.output_inputs_layout.setRowVisible(self.kml_file_entry, on_or_off)
+            case 5: # gpml
+                self.output_inputs_layout.setRowVisible(self.gpml_file_entry, on_or_off)
+            case 6: # shp
+                self.output_inputs_layout.setRowVisible(self.shp_file_entry, on_or_off)
+            case 7: # svg
+                self.output_inputs_layout.setRowVisible(self.svg_file_entry, on_or_off)
 
-            # Lat and Lon lines
-            lat_label = QLabel("Latitude Spacing:")
-            self.lat_spacing = QLineEdit()
-            self.lat_spacing.setValidator(QIntValidator())
-            self.lat_spacing.setText("30")
-            lon_label = QLabel("Longitude Spacing:")
-            self.lon_spacing = QLineEdit()
-            self.lon_spacing.setValidator(QIntValidator())
-            self.lon_spacing.setText("60")
-            self.no_graticule_checkbox = QCheckBox("No Graticule")
+        projection_index = self.projection_combo.currentIndex() if need_map_settings else -1
+        self.hide_projection_inputs(projection_index)
+    
+    def create_output_inputs(self):
+        # Map projection combo box
+        self.projection_layout = QHBoxLayout()
+        projection_combo_label = QLabel("Map Projection:")
+        self.projection_combo = QComboBox()
+        self.projection_combo.addItems([
+            "Rectilinear",
+            "Orthographic",
+            "Robinson",
+            "Mollweide",
+            "Mercator",
+            "Transverse Mercator",
+            "Miller",
+            "Azimuthal Equidistant",
+            "Stereographic"
+        ])
+        self.projection_combo.setMaximumWidth(200)
+        self.projection_layout.addWidget(projection_combo_label)
+        self.projection_layout.addWidget(self.projection_combo)
+        self.projection_layout.addStretch()
+        self.output_inputs_layout.addRow(self.projection_layout)
 
-            latlon_layout = QHBoxLayout()
-            latlon_layout.addWidget(lat_label)
-            latlon_layout.addWidget(self.lat_spacing)
-            latlon_layout.addWidget(lon_label)
-            latlon_layout.addWidget(self.lon_spacing)
-            latlon_layout.addWidget(self.no_graticule_checkbox)
+        # Map title
+        self.map_title_layout = QHBoxLayout()
+        map_title_label = QLabel("Map Title:")
+        self.map_title_edit = QLineEdit()
+        self.map_title_edit.setText("{time}Ma")
+        self.line_thickness_checkbox = QCheckBox("Plot Thin Lines")
+        self.map_title_layout.addWidget(map_title_label)
+        self.map_title_layout.addWidget(self.map_title_edit)
+        self.map_title_layout.addWidget(self.line_thickness_checkbox)
+        self.output_inputs_layout.addRow(self.map_title_layout)
 
-            # Additional inputs for specific projections
-            self.additional_inputs_layout = QVBoxLayout()
-            self.projection_combo.currentIndexChanged.connect(self.toggle_projection_inputs)
-            self.toggle_projection_inputs()
+        # Lat and Lon lines
+        self.latlon_layout = QHBoxLayout()
+        lat_label = QLabel("Latitude Spacing:")
+        self.lat_spacing = QLineEdit()
+        self.lat_spacing.setValidator(QIntValidator())
+        self.lat_spacing.setText("30")
+        lon_label = QLabel("Longitude Spacing:")
+        self.lon_spacing = QLineEdit()
+        self.lon_spacing.setValidator(QIntValidator())
+        self.lon_spacing.setText("60")
+        self.no_graticule_checkbox = QCheckBox("No Graticule")
+        self.latlon_layout.addWidget(lat_label)
+        self.latlon_layout.addWidget(self.lat_spacing)
+        self.latlon_layout.addWidget(lon_label)
+        self.latlon_layout.addWidget(self.lon_spacing)
+        self.latlon_layout.addWidget(self.no_graticule_checkbox)
+        self.output_inputs_layout.addRow(self.latlon_layout)
 
-            self.output_inputs_layout.addLayout(projection_layout)
-            self.output_inputs_layout.addLayout(latlon_layout)
-            self.output_inputs_layout.addLayout(self.additional_inputs_layout)
+        # Additional inputs for specific projections
+        self.additional_inputs_layout = QFormLayout()
+        self.additional_inputs_layout.setFieldGrowthPolicy(QFormLayout.ExpandingFieldsGrow)
+        self.additional_inputs_layout.setLabelAlignment(Qt.AlignLeft)
+        self.projection_combo.currentIndexChanged.connect(self.hide_projection_inputs)
+        self.create_projection_inputs()
+        self.output_inputs_layout.addRow(self.additional_inputs_layout)
 
-            self.save_fig = {"plot": False, "pdf": False, "anim": False, "svg": False}
-            if 0 in output_options:
-                self.save_fig["plot"] = True
-            if 1 in output_options:
-                pdf_file_label = QLabel("Output .pdf file name:")
-                self.pdf_file_entry = QLineEdit()
-                self.pdf_file_entry.setText(f"{outfile_name}.pdf")
+        # pdf
+        self.save_fig = {"plot": False, "pdf": False, "anim": False, "svg": False}
+        self.pdf_file_entry = QLineEdit()
+        self.output_inputs_layout.addRow("Output .pdf file name:", self.pdf_file_entry)
 
-                pdf_layout = QHBoxLayout()
-                pdf_layout.addWidget(pdf_file_label)
-                pdf_layout.addWidget(self.pdf_file_entry)
-                self.output_inputs_layout.addLayout(pdf_layout)
-            if 2 in output_options:
-                self.save_fig["anim"] = True
-                mp4_file_label = QLabel("Output .mp4 file name:")
-                self.mp4_file_entry = QLineEdit()
-                self.mp4_file_entry.setText(f"{outfile_name}.mp4")
-                fps_label = QLabel("Frames per second:")
-                self.fps_entry = QLineEdit()
-                self.fps_entry.setValidator(QIntValidator())
-                self.fps_entry.setText("6")
+        # mp4
+        self.mp4_layout = QHBoxLayout()
+        self.mp4_file_entry = QLineEdit()
+        fps_label = QLabel("Frames per second:")
+        self.fps_entry = QLineEdit()
+        self.fps_entry.setValidator(QIntValidator())
+        self.fps_entry.setText("6")
+        self.mp4_layout.addWidget(self.mp4_file_entry)
+        self.mp4_layout.addWidget(fps_label)
+        self.mp4_layout.addWidget(self.fps_entry)
+        self.output_inputs_layout.addRow("Output .mp4 file name:", self.mp4_layout)
 
-                mp4_layout = QHBoxLayout()
-                mp4_layout.addWidget(mp4_file_label)
-                mp4_layout.addWidget(self.mp4_file_entry)
-                mp4_layout.addWidget(fps_label)
-                mp4_layout.addWidget(self.fps_entry)
-                self.output_inputs_layout.addLayout(mp4_layout)
-            if 7 in output_options:
-                svg_file_label = QLabel("Output .svg file name:")
-                self.svg_file_entry = QLineEdit()
-                self.svg_file_entry.setText(f"{outfile_name}.svg")
-
-                svg_layout = QHBoxLayout()
-                svg_layout.addWidget(svg_file_label)
-                svg_layout.addWidget(self.svg_file_entry)
-                self.output_inputs_layout.addLayout(svg_layout)
+        # svg
+        self.svg_file_entry = QLineEdit()
+        self.output_inputs_layout.addRow("Output .svg file name:", self.svg_file_entry)
         
-        if 3 in output_options:    # DAT file
-            dat_file_label = QLabel("Output .dat file name:")
-            self.dat_file_entry = QLineEdit()
-            self.dat_file_entry.setText(f"{outfile_name}.dat")
+        # dat
+        self.dat_file_entry = QLineEdit()
+        self.output_inputs_layout.addRow("Output .dat file name:", self.dat_file_entry)
 
-            dat_layout = QHBoxLayout()
-            dat_layout.addWidget(dat_file_label)
-            dat_layout.addWidget(self.dat_file_entry)
+        # kml
+        self.kml_file_entry = QLineEdit()
+        self.output_inputs_layout.addRow("Output .kml file name:", self.kml_file_entry)
 
-            self.output_inputs_layout.addLayout(dat_layout)
+        # gpml
+        self.gpml_file_entry = QLineEdit()
+        self.output_inputs_layout.addRow("Output .gpml file name:", self.gpml_file_entry)
 
-        if 4 in output_options:    # KML file
-            kml_file_label = QLabel("Output .kml file name:")
-            self.kml_file_entry = QLineEdit()
-            self.kml_file_entry.setText(f"{outfile_name}.kml")
+        # shp
+        self.shp_file_entry = QLineEdit()
+        self.output_inputs_layout.addRow("Output .shp file name:", self.shp_file_entry)
 
-            kml_layout = QHBoxLayout()
-            kml_layout.addWidget(kml_file_label)
-            kml_layout.addWidget(self.kml_file_entry)
+        # set text in line edits
+        self.set_default_output_file_name("0")
+        self.start_time_entry.textChanged.connect(self.set_default_output_file_name)
 
-            self.output_inputs_layout.addLayout(kml_layout)
+        # hide all rows
+        self.output_inputs_layout.setRowVisible(self.projection_layout, False)
+        self.output_inputs_layout.setRowVisible(self.latlon_layout, False)
+        self.output_inputs_layout.setRowVisible(self.additional_inputs_layout, False)
+        self.output_inputs_layout.setRowVisible(self.pdf_file_entry, False)
+        self.output_inputs_layout.setRowVisible(self.mp4_layout, False)
+        self.output_inputs_layout.setRowVisible(self.svg_file_entry, False)
+        self.output_inputs_layout.setRowVisible(self.gpml_file_entry, False)
+        self.output_inputs_layout.setRowVisible(self.shp_file_entry, False)
+        self.output_inputs_layout.setRowVisible(self.dat_file_entry, False)
+        self.output_inputs_layout.setRowVisible(self.kml_file_entry, False)
+        self.toggled_output_options = []
 
-        if 5 in output_options:    # GPML file
-            gpml_file_label = QLabel("Output .gpml file name:")
-            self.gpml_file_entry = QLineEdit()
-            self.gpml_file_entry.setText(f"{outfile_name}.gpml")
-
-            gpml_layout = QHBoxLayout()
-            gpml_layout.addWidget(gpml_file_label)
-            gpml_layout.addWidget(self.gpml_file_entry)
-
-            self.output_inputs_layout.addLayout(gpml_layout)
-
-        if 6 in output_options:    # SHP file
-            shp_file_label = QLabel("Output .shp file name:")
-            self.shp_file_entry = QLineEdit()
-            self.shp_file_entry.setText(f"{outfile_name}.shp")
-
-            shp_layout = QHBoxLayout()
-            shp_layout.addWidget(shp_file_label)
-            shp_layout.addWidget(self.shp_file_entry)
-
-            self.output_inputs_layout.addLayout(shp_layout)
-
-    def toggle_projection_inputs(self):
-        """Show or hide additional inputs based on the selected projection."""
-        # Clear all existing widgets and layouts
-        self.clear_layout(self.additional_inputs_layout)
-
-        # Add inputs for specific projections
-        projection_option = self.projection_combo.currentIndex()
+    def hide_projection_inputs(self, projection_option):
         if projection_option in [3, 2, 6, 4, 0]: # Mollweide Robinson Miller Mercator Rectilinear
+            self.additional_inputs_layout.setRowVisible(self.bounds_layout, True)
+            self.additional_inputs_layout.setRowVisible(self.center_coord_layout, False)
+            self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, False)
+        elif projection_option in [1, 5]:  # Orthographic TransMerc
+            self.additional_inputs_layout.setRowVisible(self.bounds_layout, False)
+            self.additional_inputs_layout.setRowVisible(self.center_coord_layout, True)
+            self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, False)
+        elif projection_option in [7, 8]:  # AziEqui Stereo
+            self.additional_inputs_layout.setRowVisible(self.bounds_layout, False)
+            self.additional_inputs_layout.setRowVisible(self.center_coord_layout, False)
+            self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, True)
+        elif projection_option == -1:  # display no map settings
+            self.additional_inputs_layout.setRowVisible(self.bounds_layout, False)
+            self.additional_inputs_layout.setRowVisible(self.center_coord_layout, False)
+            self.additional_inputs_layout.setRowVisible(self.hemisphere_layout, False)
+    
+    def create_projection_inputs(self):
+        # map boundaries
+        self.bounds_layout = QVBoxLayout()
+        bounds_label = QLabel("Map Bounds:")
+        
+        northern_label = QLabel("Northern:")
+        self.northern_bound = QLineEdit()
+        self.northern_bound.setValidator(QIntValidator())
+        self.northern_bound.setText("90") 
+        southern_label = QLabel("Southern:")
+        self.southern_bound = QLineEdit()
+        self.southern_bound.setValidator(QIntValidator())
+        self.southern_bound.setText("-90")
+        eastern_label = QLabel("Eastern:")
+        self.eastern_bound = QLineEdit()
+        self.eastern_bound.setValidator(QIntValidator())
+        self.eastern_bound.setText("180")
+        western_label = QLabel("Western:")
+        self.western_bound = QLineEdit()
+        self.western_bound.setValidator(QIntValidator())
+        self.western_bound.setText("-180")
 
-            # map boundaries
-            bounds_label = QLabel("Map Bounds:")
-            
-            northern_label = QLabel("Northern:")
-            self.northern_bound = QLineEdit()
-            self.northern_bound.setValidator(QIntValidator())
-            self.northern_bound.setText("90")
-            
-            southern_label = QLabel("Southern:")
-            self.southern_bound = QLineEdit()
-            self.southern_bound.setValidator(QIntValidator())
-            self.southern_bound.setText("-90")
-            
-            eastern_label = QLabel("Eastern:")
-            self.eastern_bound = QLineEdit()
-            self.eastern_bound.setValidator(QIntValidator())
-            self.eastern_bound.setText("180")
-            
-            western_label = QLabel("Western:")
-            self.western_bound = QLineEdit()
-            self.western_bound.setValidator(QIntValidator())
-            self.western_bound.setText("-180")
+        sub_bounds_layout = QHBoxLayout()
+        sub_bounds_layout.addWidget(northern_label)
+        sub_bounds_layout.addWidget(self.northern_bound)
+        sub_bounds_layout.addWidget(southern_label)
+        sub_bounds_layout.addWidget(self.southern_bound)
+        sub_bounds_layout.addWidget(eastern_label)
+        sub_bounds_layout.addWidget(self.eastern_bound)
+        sub_bounds_layout.addWidget(western_label)
+        sub_bounds_layout.addWidget(self.western_bound) 
 
-            bounds_layout = QHBoxLayout()
-            bounds_layout.addWidget(northern_label)
-            bounds_layout.addWidget(self.northern_bound)
-            bounds_layout.addWidget(southern_label)
-            bounds_layout.addWidget(self.southern_bound)
-            bounds_layout.addWidget(eastern_label)
-            bounds_layout.addWidget(self.eastern_bound)
-            bounds_layout.addWidget(western_label)
-            bounds_layout.addWidget(self.western_bound) 
+        self.bounds_layout.addWidget(bounds_label)
+        self.bounds_layout.addLayout(sub_bounds_layout)
+        self.additional_inputs_layout.addRow(self.bounds_layout)
 
-            self.additional_inputs_layout.addWidget(bounds_label)
-            self.additional_inputs_layout.addLayout(bounds_layout)          
+        # center coordinates
+        self.center_coord_layout = QHBoxLayout()
+        center_lat_label = QLabel("Center Latitude:")
+        self.center_lat_entry = QLineEdit()
+        self.center_lat_entry.setValidator(QIntValidator())
+        self.center_lat_entry.setText("0")
+        center_lon_label = QLabel("Center Longitude:")
+        self.center_lon_entry = QLineEdit()
+        self.center_lon_entry.setValidator(QIntValidator())
+        self.center_lon_entry.setText("0")
+        self.center_coord_layout.addWidget(center_lat_label)
+        self.center_coord_layout.addWidget(self.center_lat_entry)
+        self.center_coord_layout.addWidget(center_lon_label)
+        self.center_coord_layout.addWidget(self.center_lon_entry)
+        self.additional_inputs_layout.addRow(self.center_coord_layout)
 
-        elif projection_option in [1, 7, 5]:  # Orthographic AziEqui TransMerc
-
-            # center coordinates
-            latlon_layout = QHBoxLayout()
-            center_lat_label = QLabel("Center Latitude:")
-            self.center_lat_entry = QLineEdit()
-            self.center_lat_entry.setValidator(QIntValidator())
-            self.center_lat_entry.setText("0")
-            center_lon_label = QLabel("Center Longitude:")
-            self.center_lon_entry = QLineEdit()
-            self.center_lon_entry.setValidator(QIntValidator())
-            self.center_lon_entry.setText("0")
-
-            latlon_layout.addWidget(center_lat_label)
-            latlon_layout.addWidget(self.center_lat_entry)
-            latlon_layout.addWidget(center_lon_label)
-            latlon_layout.addWidget(self.center_lon_entry)
-            self.additional_inputs_layout.addLayout(latlon_layout)
-
-        elif projection_option == 8:  # Stereographic Plot
-
-            # hemisphere selection
-            hemisphere_layout = QHBoxLayout()
-            hemisphere_label = QLabel("Hemisphere:")
-            hemisphere_group = QButtonGroup(self)
-            self.northern_hemisphere = QRadioButton("Northern")
-            southern_hemisphere = QRadioButton("Southern")
-            self.northern_hemisphere.setChecked(True)  # Default to Northern Hemisphere
-            hemisphere_group.addButton(self.northern_hemisphere)
-            hemisphere_group.addButton(southern_hemisphere)
-
-            # Minimum Latitude selection
-            min_lat_label = QLabel("Minimum Latitude:")
-            self.min_lat_entry = QLineEdit()
-            self.min_lat_entry.setValidator(QIntValidator())
-            self.min_lat_entry.setText("60")
-
-            hemisphere_layout.addWidget(hemisphere_label)
-            hemisphere_layout.addWidget(self.northern_hemisphere)
-            hemisphere_layout.addWidget(southern_hemisphere)
-            hemisphere_layout.addWidget(min_lat_label)
-            hemisphere_layout.addWidget(self.min_lat_entry)
-
-            self.additional_inputs_layout.addLayout(hemisphere_layout)
+        # hemisphere selection
+        self.hemisphere_layout = QHBoxLayout()
+        hemisphere_label = QLabel("Hemisphere:")
+        hemisphere_group = QButtonGroup(self)
+        self.northern_hemisphere = QRadioButton("Northern")
+        southern_hemisphere = QRadioButton("Southern")
+        self.northern_hemisphere.setChecked(True)
+        hemisphere_group.addButton(self.northern_hemisphere)
+        hemisphere_group.addButton(southern_hemisphere)
+        min_lat_label = QLabel("Minimum Latitude:")
+        self.min_lat_entry = QLineEdit()
+        self.min_lat_entry.setValidator(QIntValidator())
+        self.min_lat_entry.setText("60")
+        self.hemisphere_layout.addWidget(hemisphere_label)
+        self.hemisphere_layout.addWidget(self.northern_hemisphere)
+        self.hemisphere_layout.addWidget(southern_hemisphere)
+        self.hemisphere_layout.addWidget(min_lat_label)
+        self.hemisphere_layout.addWidget(self.min_lat_entry)
+        self.additional_inputs_layout.addRow(self.hemisphere_layout)
 
     def run(self):
         try:
@@ -604,7 +617,7 @@ class PlateTrackerApp(QMainWindow):
             time_array = self.get_time_bounds(self.start_time_entry.text(), 
                                               self.end_time_entry.text(), self.step_time_entry.text())
             fixed_plate = self.fixed_plate_entry.text()
-            output_options = [self.outputs.id(button) for button in self.outputs.buttons() if button.isChecked()]
+            output_options = [self.outputs_button_group.id(button) for button in self.outputs_button_group.buttons() if button.isChecked()]
             if not os.path.isdir("output"): os.mkdir("output")
             print("read in files", flush=True)
 
@@ -720,7 +733,7 @@ class PlateTrackerApp(QMainWindow):
                             self.save_fig["svg"] = svg_file
 
                     try:
-                        figure.update_plot_vars(self.save_fig, time, self.get_raster_files())
+                        figure.update_plot_vars(self.save_fig, time, self.map_title_edit.text(), self.get_raster_files())
                         processed_plate_generator = figure.plot_to_screen(processed_plate_generator)
                         print("plot to screen")
                         if 1 in output_options and len(time_array) == 1:
@@ -807,10 +820,14 @@ class PlateTrackerApp(QMainWindow):
                 proj_kwargs["lat_spacing"] = int(self.lat_spacing.text())
                 proj_kwargs["lon_spacing"] = int(self.lon_spacing.text())
             print("collect lat/lon spacing")
+
+            if self.line_thickness_checkbox.isChecked():
+                proj_kwargs["thin_lines"] = True
+            else: proj_kwargs["thin_lines"] = False
             
             projection_option = self.projection_combo.currentIndex()
             print(projection_option)
-            if projection_option in [3, 2, 6, 4, 0]:  # Mollweide Robinson Mercator Rectilinear 
+            if projection_option in [3, 2, 6, 4, 0]:  # Mollweide Robinson Mercator Rectilinear
                 # map boundaries
                 north_bound = int(self.northern_bound.text())
                 south_bound = int(self.southern_bound.text())
@@ -825,13 +842,13 @@ class PlateTrackerApp(QMainWindow):
                 
                 proj_kwargs["map_bounds"] = [west_bound, east_bound, south_bound, north_bound]
             
-            elif projection_option in [1, 7, 5]:  # Orthographic AziEqui TransMerc
+            if projection_option in [1, 5]:  # Orthographic TransMerc
                 # central coordinates
                 proj_kwargs["center_lat"] = float(self.center_lat_entry.text())
                 proj_kwargs["center_lon"] = float(self.center_lon_entry.text())
                 print("collect center point")
             
-            elif projection_option == 8:  # Stereographic Plot
+            if projection_option in [7, 8]:  # AziEqui Stereo
                 # hemisphere selection
                 proj_kwargs["north_hemi"] = self.northern_hemisphere.isChecked()
                 proj_kwargs["min_lat"] = int(self.min_lat_entry.text())
