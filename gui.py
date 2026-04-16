@@ -827,7 +827,7 @@ class PlateTrackerApp(QMainWindow):
             
             projection_option = self.projection_combo.currentIndex()
             print(projection_option)
-            if projection_option in [3, 2, 6, 4, 0, 7]:  # Mollweide Robinson Mercator Rectilinear AziEqi
+            if projection_option in [3, 2, 6, 4, 0]:  # Mollweide Robinson Mercator Rectilinear
                 # map boundaries
                 north_bound = int(self.northern_bound.text())
                 south_bound = int(self.southern_bound.text())

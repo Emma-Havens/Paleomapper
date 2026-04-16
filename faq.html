@@ -1,5 +1,7 @@
 ﻿<strong>Why is the program so slow?</strong><br>
 It should, on average, take less than 10 seconds to plot a map. However, if it takes much longer than that, try plotting fewer map layers. The best layers to start with are “Plate_Polygons” and “Just_Coastlines”.<br><br>
+<strong>Why is the program crashing?</strong><br>
+The crashing is a known problem that we are working on. It is caused by some conflicts between PaleoMapper's dependencies, so we are working with the developers of those libraries to resolve the bug. They are actively working on the issue and should release the solution in a couple of months (as of April 2026). When they do, it will require users to repeat some of the PaleoMapper installation steps because the fix will be a change to the environment, not the PaleoMapper code itself. Until then, our recommendation is to regularly save your progress via projects.<br><br>
 <strong>Several layers, though they are checked, don’t appear in the final map. What is going on?</strong><br>
 The order of the layers (top to bottom) is important. Some of the layers, such as “background_fill” and “Plate_Polygons” are filled with solid shading and will “cover” layers that lie below. Make sure that “background color” is at the bottom of the stack and that “Plate Polygons” lies below the coastline and data points.<br><br>
 <strong>The background is filled in and only some of my polygons are plotted. What happened?</strong><br>
@@ -9,4 +11,6 @@ The program is sensitive to capitalizations and extra spaces. Make sure the colo
 <strong>How do I plot my data points on the maps?</strong><br>
 You can plot user-defined data on the maps by creating a comma-delimited file in Excel (or a text processor) with a list of the data localities in the format of the file “Major_cities.csv”. You need to specify the modern latitude and longitude, and symbol type. You can also add descriptive text strings to the map or numeric labels. For more detailed instructions see the PaleoMapper User Manual.<br><br>
 <strong>Where are my files saving to?</strong><br>
-All output files, regardless of the specified name, are saved to the folder where the active project file is located.
+All output files, regardless of the specified name, are saved to the folder where the active project file is located.<br><br>
+<strong>What if this FAQ didn't solve my problem?</strong><br>
+To report a bug or get further assistance, the developer can be reached at emmahavens2023@u.northwestern.edu. Please don't hesitate to reach out—I don't mind emails.
