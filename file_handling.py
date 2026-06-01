@@ -66,7 +66,7 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, total_alpha):
 
             start_time = float(row[8])
             end_time = float(row[9])
-            if not ((start_time >= plot_time or start_time >= 999) and (end_time <= plot_time or end_time <= -999)):
+            if not ((start_time >= plot_time) and (end_time <= plot_time)):
                 continue
 
             file_type = "CSV"
@@ -146,7 +146,7 @@ def sanitize_dat(filename, plot_time):
         appears = float(record_list[1])
         disappears = float(record_list[2])
 
-        if (((appears >= young_time) and (disappears <= old_time)) or ((appears >= 999.0) and (disappears <= -999.0))):
+        if ((appears >= young_time) and (disappears <= old_time)):
             valid_time = True
             while valid_time == True:
                 out_file.write(header1)
@@ -278,7 +278,7 @@ def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, alpha, file_type="G
         plateid2 = int(feature.get_conjugate_plate_id())
         # record_number = int(feature.get_feature_id())
 
-        if not ((appears >= plot_time or appears >= 999) and (disappears <= plot_time or disappears <= -999)):
+        if not ((appears >= plot_time) and (disappears <= plot_time)):
             continue
         
         chunk = Chunk(file_type, plateid, appears, disappears, feature_type, 0, plateid2, 

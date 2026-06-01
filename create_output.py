@@ -30,10 +30,10 @@ class saveFile:
         features = []
         for chunk in chunk_generator:
             
-            if not chunk.appears >= 999.0:
-                chunk.appears = chunk.appears - plot_time
-            if not chunk.disappears <= -999.0:
-                chunk.disappears = max(chunk.disappears - plot_time, -999.0)
+            # if not chunk.appears >= 999.0:
+            chunk.appears = chunk.appears - plot_time
+            # if not chunk.disappears <= -999.0:
+            chunk.disappears = chunk.disappears - plot_time
             valid_time = (chunk.appears, chunk.disappears)
             feature_type = self.assign_feature_type(chunk.feature_type)
             recon_plateid = chunk.plateid
