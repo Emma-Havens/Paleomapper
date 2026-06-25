@@ -1,7 +1,0 @@
-URN,label,PlateID,lat,long,symbol,size,azimuth,start,end,line_color,fill,alpha
-0,0Ma,0,50,-95,label,3,0,0,0,black,black,1
-1,100Ma,0,42,-40,label,3,0,0,0,black,black,1
-2,200Ma,0,23,-30,label,3,0,0,0,black,black,1
-3,300Ma,0,5,-14,label,3,0,0,0,black,black,1
-4,400Ma,0,-29,-29,label,3,0,0,0,black,black,1
-5,500Ma,0,-18,-72,label,3,0,0,0,black,black,1
