@@ -1,0 +1,1897 @@
+﻿URN,Description,PlateID,PoleLatitude,PoleLongitude,symbol,pseudoQ,azi,OldAge,YoungAge,border,fill,psuedoQ
+3,18 432 17.6 282 Powermanetal(2013) Nyuya Lena River sediments,401,17.6,282,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+3,18 432 17.6 282 Powermanetal(2013) Nyuya Lena River sediments,401,-17.6,102,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+4,31 432 60.1 339 Huangetal(2000)a Zhaohuajing Hanxia groups,604,60.1,339,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+4,31 432 60.1 339 Huangetal(2000)a Zhaohuajing Hanxia groups,604,-60.1,159,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+5,39 432 14.9 196.1 Huangetal(2000)b Silurian sediments,611,14.9,196.1,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+5,39 432 14.9 196.1 Huangetal(2000)b Silurian sediments,611,-14.9,16.1,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+6,40 432 4.9 194.7 Opdykeetal(1987) Silurian sediments,611,4.9,194.7,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+6,40 432 4.9 194.7 Opdykeetal(1987) Silurian sediments,611,-4.9,14.7,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+7,47 432 12.1 158.4 Fangetal(1996) Silurian sediments,601,12.1,158.4,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+7,47 432 12.1 158.4 Fangetal(1996) Silurian sediments,601,-12.1,-21.6,circle,3.4117,0,442,422,black,byPlateId,0.798422392
+8,19 433 18.6 281.9 Shatsilloetal(2007) Nyuya Lena River sediments,401,18.6,281.9,circle,3.4117,0,443,423,black,byPlateId,0.798422392
+8,19 433 18.6 281.9 Shatsilloetal(2007) Nyuya Lena River sediments,401,-18.6,101.9,circle,3.4117,0,443,423,black,byPlateId,0.798422392
+9,1 444 14 304 Cocks&Torsvik(2007) Moyero River sediments,401,14,304,circle,3.4117,0,454,434,black,byPlateId,0.798422392
+9,1 444 14 304 Cocks&Torsvik(2007) Moyero River sediments,401,-14,124,circle,3.4117,0,454,434,black,byPlateId,0.798422392
+10,20 449 21 289 Cocks&Torsvik(2007) Lena River sediments,401,21,289,circle,3.4117,0,459,439,black,byPlateId,0.798422392
+10,20 449 21 289 Cocks&Torsvik(2007) Lena River sediments,401,-21,109,circle,3.4117,0,459,439,black,byPlateId,0.798422392
+11,21 451 31.3 309.5 Powermanetal(2013) Nyuya River sediments,401,31.3,309.5,circle,3.4117,0,461,441,black,byPlateId,0.798422392
+11,21 451 31.3 309.5 Powermanetal(2013) Nyuya River sediments,401,-31.3,129.5,circle,3.4117,0,461,441,black,byPlateId,0.798422392
+12,2 455 29.5 320.2 Pavlovetal(2012) Angara River sediments,401,29.5,320.2,circle,3.4117,0,465,445,black,byPlateId,0.798422392
+12,2 455 29.5 320.2 Pavlovetal(2012) Angara River sediments,401,-29.5,140.2,circle,3.4117,0,465,445,black,byPlateId,0.798422392
+13,41 456 -45.8 191.3 Hanetal(2015) Pagoda fm  Sichuan Province,611,-45.8,191.3,circle,3.4117,0,466,446,black,byPlateId,0.798422392
+13,41 456 -45.8 191.3 Hanetal(2015) Pagoda fm  Sichuan Province,611,45.8,11.3,circle,3.4117,0,466,446,black,byPlateId,0.798422392
+14,48 458 -40.7 183.3 Sun&Huang(2009)Aksu Kalpin Bachu area sediments,601,-40.7,183.3,circle,3.4117,0,468,448,black,byPlateId,0.798422392
+14,48 458 -40.7 183.3 Sun&Huang(2009)Aksu Kalpin Bachu area sediments,601,40.7,3.3,circle,3.4117,0,468,448,black,byPlateId,0.798422392
+15,51 458 -10.1 212 Metelkinetal(2005) Stroininskay Ozerninskaya fms,401,-10.1,212,circle,3.4117,0,468,448,black,byPlateId,0.798422392
+15,51 458 -10.1 212 Metelkinetal(2005) Stroininskay Ozerninskaya fms,401,10.1,32,circle,3.4117,0,468,448,black,byPlateId,0.798422392
+16,3 461 24.1 332.4 Pavlovetal(2008) Kulumbe section,401,24.1,332.4,circle,3.4117,0,471,451,black,byPlateId,0.798422392
+16,3 461 24.1 332.4 Pavlovetal(2008) Kulumbe section,401,-24.1,152.4,circle,3.4117,0,471,451,black,byPlateId,0.798422392
+17,4 461 22 338 Cocks&Torsvik(2007) Stolobovaya section,401,22,338,circle,3.4117,0,471,451,black,byPlateId,0.798422392
+17,4 461 22 338 Cocks&Torsvik(2007) Stolobovaya section,401,-22,158,circle,3.4117,0,471,451,black,byPlateId,0.798422392
+18,22 461 21.1 323.4 Pavlovetal(2008) Kudrino section,401,21.1,323.4,circle,3.4117,0,471,451,black,byPlateId,0.798422392
+18,22 461 21.1 323.4 Pavlovetal(2008) Kudrino section,401,-21.1,143.4,circle,3.4117,0,471,451,black,byPlateId,0.798422392
+19,5 463 23 338 Cocks&Torsvik(2007) Moyero River sediments,401,23,338,circle,3.4117,0,473,453,black,byPlateId,0.798422392
+19,5 463 23 338 Cocks&Torsvik(2007) Moyero River sediments,401,-23,158,circle,3.4117,0,473,453,black,byPlateId,0.798422392
+20,23 464 25.6 297.9 Cocks&Torsvik(2007) Krivaya Luka fm,401,25.6,297.9,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+20,23 464 25.6 297.9 Cocks&Torsvik(2007) Krivaya Luka fm,401,-25.6,117.9,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+21,24 464 28.2 307.1 Cocks&Torsvik(2007) Krivaya Luka fm,401,28.2,307.1,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+21,24 464 28.2 307.1 Cocks&Torsvik(2007) Krivaya Luka fm,401,-28.2,127.1,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+22,32 464 31.5 327.7 Huangetal(1999)b middle Ordovician carbonates,604,31.5,327.7,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+22,32 464 31.5 327.7 Huangetal(1999)b middle Ordovician carbonates,604,-31.5,147.7,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+23,42 464 -38.9 235.7 Fangetal(1990)  Hongshiya fm Yunnan Province,611,-38.9,235.7,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+23,42 464 -38.9 235.7 Fangetal(1990)  Hongshiya fm Yunnan Province,611,38.9,55.7,circle,3.4117,0,474,454,black,byPlateId,0.798422392
+24,25 465 32.6 317 Rodionov etal(2003)Krivolutsky Suite,401,32.6,317,circle,3.4117,0,475,455,black,byPlateId,0.798422392
+24,25 465 32.6 317 Rodionov etal(2003)Krivolutsky Suite,401,-32.6,137,circle,3.4117,0,475,455,black,byPlateId,0.798422392
+25,6 468 35.2 333.2 Pavlovetal(2012) Angara River sediments,401,35.2,333.2,circle,3.4117,0,478,458,black,byPlateId,0.798422392
+25,6 468 35.2 333.2 Pavlovetal(2012) Angara River sediments,401,-35.2,153.2,circle,3.4117,0,478,458,black,byPlateId,0.798422392
+26,26 468 32 319 Cocks&Torsvik(2007) Lena River sediments,401,32,319,circle,3.4117,0,478,458,black,byPlateId,0.798422392
+26,26 468 32 319 Cocks&Torsvik(2007) Lena River sediments,401,-32,139,circle,3.4117,0,478,458,black,byPlateId,0.798422392
+27,7 469 30 337 Cocks&Torsvik(2007) Moyero River sediments,401,30,337,circle,3.4117,0,479,459,black,byPlateId,0.798422392
+27,7 469 30 337 Cocks&Torsvik(2007) Moyero River sediments,401,-30,157,circle,3.4117,0,479,459,black,byPlateId,0.798422392
+28,8 470 30.9 332.7 Cocks&Torsvik(2007) Guragir fm,401,30.9,332.7,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+28,8 470 30.9 332.7 Cocks&Torsvik(2007) Guragir fm,401,-30.9,152.7,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+29,27 470 25 317 Cocks&Torsvik(2007) Lena River red beds,401,25,317,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+29,27 470 25 317 Cocks&Torsvik(2007) Lena River red beds,401,-25,137,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+30,33 470 31.8 326.5 Hunagetal(1999)a Tianjinshan Miboshan fm,604,31.8,326.5,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+30,33 470 31.8 326.5 Hunagetal(1999)a Tianjinshan Miboshan fm,604,-31.8,146.5,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+31,43 470 -38.4 154.9 Hanningetal(1998) Xingshan Zigui section Hubei Province,611,-38.4,154.9,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+31,43 470 -38.4 154.9 Hanningetal(1998) Xingshan Zigui section Hubei Province,611,38.4,-25.1,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+32,9 475 36.4 338.2 Pavlovetal(2012) Angara River sediments,401,36.4,338.2,circle,3.4117,0,485,465,black,byPlateId,0.798422392
+32,9 475 36.4 338.2 Pavlovetal(2012) Angara River sediments,401,-36.4,158.2,circle,3.4117,0,485,465,black,byPlateId,0.798422392
+33,10 478 33.9 331.7 Cocks&Torsvik(2007) Moyero River sediments,401,33.9,331.7,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+33,10 478 33.9 331.7 Cocks&Torsvik(2007) Moyero River sediments,401,-33.9,151.7,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+34,34 478 28.8 310.9 Zhaoetal(1992) Late Cambrian - Ordovician carbonates,604,28.8,310.9,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+34,34 478 28.8 310.9 Zhaoetal(1992) Late Cambrian - Ordovician carbonates,604,-28.8,130.9,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+35,35 478 37.4 324.3 Huangetal(1999)b  Early Ordovician carbonates,604,37.4,324.3,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+35,35 478 37.4 324.3 Huangetal(1999)b  Early Ordovician carbonates,604,-37.4,144.3,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+36,49 478 -20.4 180.6 Fangetal(1996) Ordovician limestones,601,-20.4,180.6,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+36,49 478 -20.4 180.6 Fangetal(1996) Ordovician limestones,601,20.4,0.6,circle,3.4117,0,488,468,black,byPlateId,0.798422392
+37,28 480 42.2 308.1 Cocks&Torsvik(2007) Surinsk fm,401,42.2,308.1,circle,3.4117,0,490,470,black,byPlateId,0.798422392
+37,28 480 42.2 308.1 Cocks&Torsvik(2007) Surinsk fm,401,-42.2,128.1,circle,3.4117,0,490,470,black,byPlateId,0.798422392
+38,36 480 32.9 294.6 Yang et al(2002) Zhaogezhuang area carbonates,604,32.9,294.6,circle,3.4117,0,490,470,black,byPlateId,0.798422392
+38,36 480 32.9 294.6 Yang et al(2002) Zhaogezhuang area carbonates,604,-32.9,114.6,circle,3.4117,0,490,470,black,byPlateId,0.798422392
+39,11 483 35.2 307.2 Cocks&Torsvik(2007) Uigur Nizhneiltyk fm,401,35.2,307.2,circle,3.4117,0,493,473,black,byPlateId,0.798422392
+39,11 483 35.2 307.2 Cocks&Torsvik(2007) Uigur Nizhneiltyk fm,401,-35.2,127.2,circle,3.4117,0,493,473,black,byPlateId,0.798422392
+40,12 483 40 318 Cocks&Torsvik(2007) Moyero River sediments,401,40,318,circle,3.4117,0,493,473,black,byPlateId,0.798422392
+40,12 483 40 318 Cocks&Torsvik(2007) Moyero River sediments,401,-40,138,circle,3.4117,0,493,473,black,byPlateId,0.798422392
+41,52 485 -26.9 255.5 Metelkinetal(2005) Kruzhilikhinskaya Kurchavinskaya fm,401,-26.9,255.5,circle,3.4117,0,495,475,black,byPlateId,0.798422392
+41,52 485 -26.9 255.5 Metelkinetal(2005) Kruzhilikhinskaya Kurchavinskaya fm,401,26.9,75.5,circle,3.4117,0,495,475,black,byPlateId,0.798422392
+42,37 491 31.7 329.6 Huangetal(1999)b Late Cambrian carbonates,604,31.7,329.6,circle,3.4117,0,501,481,black,byPlateId,0.798422392
+42,37 491 31.7 329.6 Huangetal(1999)b Late Cambrian carbonates,604,-31.7,149.6,circle,3.4117,0,501,481,black,byPlateId,0.798422392
+43,13 500 36.1 310.7 Cocks&Torsvik(2007) Kulubinskaya fm,401,36.1,310.7,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+43,13 500 36.1 310.7 Cocks&Torsvik(2007) Kulubinskaya fm,401,-36.1,130.7,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+44,14 500 37 318 Cocks&Torsvik(2007) Moyero River sediments,401,37,318,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+44,14 500 37 318 Cocks&Torsvik(2007) Moyero River sediments,401,-37,138,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+45,29 501 37.69 304 Cocks&Torsvik(2007) Verkholensk fm,401,37.69,304,circle,3.4117,0,511,491,black,byPlateId,0.798422392
+45,29 501 37.69 304 Cocks&Torsvik(2007) Verkholensk fm,401,-37.69,124,circle,3.4117,0,511,491,black,byPlateId,0.798422392
+46,38 503 37 326.7 Huangetal(1999)b Middle Cambrian sediments,604,37,326.7,circle,3.4117,0,513,493,black,byPlateId,0.798422392
+46,38 503 37 326.7 Huangetal(1999)b Middle Cambrian sediments,604,-37,146.7,circle,3.4117,0,513,493,black,byPlateId,0.798422392
+47,44 503 -39.5 185.1 Lixinetal(1998) Douposi fm Wangcang section,611,-39.5,185.1,circle,3.4117,0,513,493,black,byPlateId,0.798422392
+47,44 503 -39.5 185.1 Lixinetal(1998) Douposi fm Wangcang section,611,39.5,5.1,circle,3.4117,0,513,493,black,byPlateId,0.798422392
+48,45 503 -51.3 166 Yangetal(2004) Douposi fm  Guangyuan area,611,-51.3,166,circle,3.4117,0,513,493,black,byPlateId,0.798422392
+48,45 503 -51.3 166 Yangetal(2004) Douposi fm  Guangyuan area,611,51.3,-14,circle,3.4117,0,513,493,black,byPlateId,0.798422392
+6923,Ainslie Volcanics,1853,66,192,circle,3.028,0,426,423,black,byPlateId,0.733333333
+6923,Ainslie Volcanics,1853,-66,12,circle,3.028,0,426,423,black,byPlateId,0.733333333
+6924,Ainslie Volcanics,1853,71,173,circle,3.159,0,426,423,black,byPlateId,0.755555556
+6924,Ainslie Volcanics,1853,-71,-7,circle,3.159,0,426,423,black,byPlateId,0.755555556
+6925,Mill Cove Formation,315,18.3,129.5,circle,3.5651,0,426,423,black,byPlateId,0.824444444
+6925,Mill Cove Formation,315,-18.3,-50.5,circle,3.5651,0,426,423,black,byPlateId,0.824444444
+6926,Newer Gabbros; Aberdeenshire,313,5.7,152.1,circle,3.9712,0,442,408,black,byPlateId,0.893333333
+6926,Newer Gabbros; Aberdeenshire,313,-5.7,-27.9,circle,3.9712,0,442,408,black,byPlateId,0.893333333
+6927,Arrochar Complex and aureole,313,8.4,143.9,circle,3.9188,0,435,415,black,byPlateId,0.884444444
+6927,Arrochar Complex and aureole,313,-8.4,-36.1,circle,3.9188,0,435,415,black,byPlateId,0.884444444
+6928,Ravenswood Batholith and Aureole,1820,-17.5,232.7,circle,3.6699,0,428,422,black,byPlateId,0.842222222
+6928,Ravenswood Batholith and Aureole,1820,17.5,52.7,circle,3.6699,0,428,422,black,byPlateId,0.842222222
+6929,Mt Leyshon Silurian Dykes,1820,-21.7,231.9,circle,3.5127,0,428,422,black,byPlateId,0.815555556
+6929,Mt Leyshon Silurian Dykes,1820,21.7,51.9,circle,3.5127,0,428,422,black,byPlateId,0.815555556
+6930,La Ojota formation dyke,2021,6,312,circle,3.683,0,428,423,black,byPlateId,0.844444444
+6930,La Ojota formation dyke,2021,-6,132,circle,3.683,0,428,423,black,byPlateId,0.844444444
+6931,Rose Hill Formation,101,19,129.1,circle,3.8402,0,428,423,black,byPlateId,0.871111111
+6931,Rose Hill Formation,101,-19,-50.9,circle,3.8402,0,428,423,black,byPlateId,0.871111111
+6932,Salrock Formation,313,1.6,107.7,circle,4.0367,0,428,423,black,byPlateId,0.904444444
+6932,Salrock Formation,313,-1.6,-72.3,circle,4.0367,0,428,423,black,byPlateId,0.904444444
+6933,Redbeds; Clare Island,313,27.9,154.3,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6933,Redbeds; Clare Island,313,-27.9,-25.7,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6934,Duro Porphyry,1853,32.4,76.4,circle,3.4117,0,428,423,black,byPlateId,0.798422392
+6934,Duro Porphyry,1853,-32.4,-103.6,circle,3.4117,0,428,423,black,byPlateId,0.798422392
+6935,Rose Hill Formation,101,26,116,circle,2.766,0,428,423,black,byPlateId,0.688888889
+6935,Rose Hill Formation,101,-26,-64,circle,2.766,0,428,423,black,byPlateId,0.688888889
+6936,Knockhaven Group,313,3,323,circle,0.539,0,428,423,black,byPlateId,0.311111111
+6936,Knockhaven Group,313,-3,143,circle,0.539,0,428,423,black,byPlateId,0.311111111
+6937,Salrock Group,313,23,115,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6937,Salrock Group,313,-23,-65,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6938,Clinton iron ore,101,34,139,circle,3.028,0,428,423,black,byPlateId,0.733333333
+6938,Clinton iron ore,101,-34,-41,circle,3.028,0,428,423,black,byPlateId,0.733333333
+6939,Kansu Sediments,5012,39,25,circle,3.421,0,428,423,black,byPlateId,0.8
+6939,Kansu Sediments,5012,-39,-155,circle,3.421,0,428,423,black,byPlateId,0.8
+6940,Dneister River Sediments,301,4,128,circle,2.242,0,428,423,black,byPlateId,0.6
+6940,Dneister River Sediments,301,-4,-52,circle,2.242,0,428,423,black,byPlateId,0.6
+6941,South Urals Shales,301,27,168,circle,2.373,0,428,423,black,byPlateId,0.622222222
+6941,South Urals Shales,301,-27,-12,circle,2.373,0,428,423,black,byPlateId,0.622222222
+6942,Voroninsk Beds,301,32,184,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6942,Voroninsk Beds,301,-32,4,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6943,Polyakovka Group,301,-2,172,circle,2.242,0,428,423,black,byPlateId,0.6
+6943,Polyakovka Group,301,2,-8,circle,2.242,0,428,423,black,byPlateId,0.6
+6944,South Mugojary Tuffs and Sediments,301,-4.9,165,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6944,South Mugojary Tuffs and Sediments,301,4.9,-15,circle,3.29,0,428,423,black,byPlateId,0.777777778
+6945,Gotland Limestones,301,-19,352,circle,3.9319,0,428,423,black,byPlateId,0.886666667
+6945,Gotland Limestones,301,19,172,circle,3.9319,0,428,423,black,byPlateId,0.886666667
+6946,North Caucasus Sediments,301,30,159,circle,3.814,0,428,423,black,byPlateId,0.866666667
+6946,North Caucasus Sediments,301,-30,-21,circle,3.814,0,428,423,black,byPlateId,0.866666667
+6947,Rosales Horizon; Sierra Grande Formation,291,-3.4,58,circle,3.028,0,428,423,black,byPlateId,0.733333333
+6947,Rosales Horizon; Sierra Grande Formation,291,3.4,-122,circle,3.028,0,428,423,black,byPlateId,0.733333333
+6948,Big Indian Pond Formation; site 10,101,12.9,163.1,circle,3.6175,0,428,423,black,byPlateId,0.833333333
+6948,Big Indian Pond Formation; site 10,101,-12.9,-16.9,circle,3.6175,0,428,423,black,byPlateId,0.833333333
+6949,Ross of Mull Granite Complex,303,-1.1,12,circle,3.8664,0,429,423,black,byPlateId,0.875555556
+6949,Ross of Mull Granite Complex,303,1.1,-168,circle,3.8664,0,429,423,black,byPlateId,0.875555556
+6950,Rosehill Formation,101,20,136,circle,2.897,0,428,425,black,byPlateId,0.711111111
+6950,Rosehill Formation,101,-20,-44,circle,2.897,0,428,425,black,byPlateId,0.711111111
+6951,East Mendips Volcanics,315,12.9,271,circle,3.3555,0,428,425,black,byPlateId,0.788888889
+6951,East Mendips Volcanics,315,-12.9,91,circle,3.3555,0,428,425,black,byPlateId,0.788888889
+6952,Lamprophyre dykes; Jersey,305,16,322,circle,1.456,0,440,414,black,byPlateId,0.466666667
+6952,Lamprophyre dykes; Jersey,305,-16,142,circle,1.456,0,440,414,black,byPlateId,0.466666667
+6953,Shemakha and Kubinsk Beds,301,-11,162,circle,2.766,0,436,419,black,byPlateId,0.688888889
+6953,Shemakha and Kubinsk Beds,301,11,-18,circle,2.766,0,436,419,black,byPlateId,0.688888889
+6954,Gotland Limestones,301,20.8,167.8,circle,4.0629,0,436,421,black,byPlateId,0.908888889
+6954,Gotland Limestones,301,-20.8,-12.2,circle,4.0629,0,436,421,black,byPlateId,0.908888889
+6955,Ennerdale Basic Intrusions,315,-21.9,2,circle,3.4472,0,433,425,black,byPlateId,0.804444444
+6955,Ennerdale Basic Intrusions,315,21.9,-178,circle,3.4472,0,433,425,black,byPlateId,0.804444444
+6956,Mereenie Sandstone,8011,41.5,220.5,circle,3.4117,0,461,398,black,byPlateId,0.798422392
+6956,Mereenie Sandstone,8011,-41.5,40.5,circle,3.4117,0,461,398,black,byPlateId,0.798422392
+6957,Mereenie Sandstone,8011,15.7,62.7,circle,1.2464,0,461,398,black,byPlateId,0.431111111
+6957,Mereenie Sandstone,8011,-15.7,-117.3,circle,1.2464,0,461,398,black,byPlateId,0.431111111
+6958,Springdale Group Volcanics,101,7,100,circle,0.8927,0,434,425,black,byPlateId,0.371111111
+6958,Springdale Group Volcanics,101,-7,-80,circle,0.8927,0,434,425,black,byPlateId,0.371111111
+6959,Springdale Group Redbeds,101,24,98,circle,1.5477,0,434,425,black,byPlateId,0.482222222
+6959,Springdale Group Redbeds,101,-24,-82,circle,1.5477,0,434,425,black,byPlateId,0.482222222
+6960,Kosistekskaya suite,301,-6,235,circle,1.849,0,461,398,black,byPlateId,0.533333333
+6960,Kosistekskaya suite,301,6,55,circle,1.849,0,461,398,black,byPlateId,0.533333333
+6961,Tortworth Volcanics,315,6.6,124.2,circle,3.9843,0,431,428,black,byPlateId,0.895555556
+6961,Tortworth Volcanics,315,-6.6,-55.8,circle,3.9843,0,431,428,black,byPlateId,0.895555556
+6962,Borrolan syenite,303,18.4,146.9,circle,3.6175,0,444,416,black,byPlateId,0.833333333
+6962,Borrolan syenite,303,-18.4,-33.1,circle,3.6175,0,444,416,black,byPlateId,0.833333333
+6963,Loch Ailsh complex,303,15.6,141.3,circle,3.6044,0,444,416,black,byPlateId,0.831111111
+6963,Loch Ailsh complex,303,-15.6,-38.7,circle,3.6044,0,444,416,black,byPlateId,0.831111111
+6964,Achmelvich dyke,303,16.5,150.6,circle,3.159,0,444,416,black,byPlateId,0.755555556
+6964,Achmelvich dyke,303,-16.5,-29.4,circle,3.159,0,444,416,black,byPlateId,0.755555556
+6965,Lamprophyre dykes,303,15.5,144.5,circle,3.3293,0,444,416,black,byPlateId,0.784444444
+6965,Lamprophyre dykes,303,-15.5,-35.5,circle,3.3293,0,444,416,black,byPlateId,0.784444444
+6966,Walli and Mt Pleasant Andesites,1853,31.6,219.4,circle,2.2027,0,444,416,black,byPlateId,0.593333333
+6966,Walli and Mt Pleasant Andesites,1853,-31.6,39.4,circle,2.2027,0,444,416,black,byPlateId,0.593333333
+6967,La Lombardiere Volcanics,305,28,141,circle,1.718,0,444,416,black,byPlateId,0.511111111
+6967,La Lombardiere Volcanics,305,-28,-39,circle,1.718,0,444,416,black,byPlateId,0.511111111
+6968,Urucum Formation,201,34,344,circle,3.421,0,444,416,black,byPlateId,0.8
+6968,Urucum Formation,201,-34,164,circle,3.421,0,444,416,black,byPlateId,0.8
+6969,Black diabases,305,27,133,circle,3.814,0,444,416,black,byPlateId,0.866666667
+6969,Black diabases,305,-27,-47,circle,3.814,0,444,416,black,byPlateId,0.866666667
+6970,Jacadigo Series,201,18.7,359.8,circle,2.0586,0,444,416,black,byPlateId,0.568888889
+6970,Jacadigo Series,201,-18.7,179.8,circle,2.0586,0,444,416,black,byPlateId,0.568888889
+6971,Zmeimiy Island Redbeds,301,6,128,circle,3.814,0,444,416,black,byPlateId,0.866666667
+6971,Zmeimiy Island Redbeds,301,-6,-52,circle,3.814,0,444,416,black,byPlateId,0.866666667
+6972,Yarsk Group,401,67,162,circle,3.683,0,444,416,black,byPlateId,0.844444444
+6972,Yarsk Group,401,-67,-18,circle,3.683,0,444,416,black,byPlateId,0.844444444
+6973,Dneister Limestones and Dolomites,301,43,165,circle,3.683,0,437,423,black,byPlateId,0.844444444
+6973,Dneister Limestones and Dolomites,301,-43,-15,circle,3.683,0,437,423,black,byPlateId,0.844444444
+6974,Sette Daban Limestones,401,-11,62,circle,2.111,0,444,416,black,byPlateId,0.577777778
+6974,Sette Daban Limestones,401,11,-118,circle,2.111,0,444,416,black,byPlateId,0.577777778
+6975,South Mugojary Igneous Rocks and Sediments,514,14.3,150.4,circle,3.945,0,444,416,black,byPlateId,0.888888889
+6975,South Mugojary Igneous Rocks and Sediments,514,-14.3,-29.6,circle,3.945,0,444,416,black,byPlateId,0.888888889
+6976,South Mugojary Sediments,514,13.4,140.8,circle,3.683,0,444,416,black,byPlateId,0.844444444
+6976,South Mugojary Sediments,514,-13.4,-39.2,circle,3.683,0,444,416,black,byPlateId,0.844444444
+6977,North Mugojary Volcanics and Sediments,301,0.1,159.7,circle,2.111,0,444,416,black,byPlateId,0.577777778
+6977,North Mugojary Volcanics and Sediments,301,-0.1,-20.3,circle,2.111,0,444,416,black,byPlateId,0.577777778
+6978,North Mugojary Volcanics and Sediments,301,-2.8,169.6,circle,3.159,0,444,416,black,byPlateId,0.755555556
+6978,North Mugojary Volcanics and Sediments,301,2.8,-10.4,circle,3.159,0,444,416,black,byPlateId,0.755555556
+6979,North Mugojary Volcanics and Sediments,301,-1.9,165.1,circle,3.29,0,444,416,black,byPlateId,0.777777778
+6979,North Mugojary Volcanics and Sediments,301,1.9,-14.9,circle,3.29,0,444,416,black,byPlateId,0.777777778
+6980,Primorye Sediments and Tuff-sediments,628,44.2,5.7,circle,3.2638,0,444,416,black,byPlateId,0.773333333
+6980,Primorye Sediments and Tuff-sediments,628,-44.2,-174.3,circle,3.2638,0,444,416,black,byPlateId,0.773333333
+6981,Hanxia and Zhaohuajing Groups,604,60.1,339,circle,3.1721,0,444,416,black,byPlateId,0.757777778
+6981,Hanxia and Zhaohuajing Groups,604,-60.1,159,circle,3.1721,0,444,416,black,byPlateId,0.757777778
+6982,Tarim sediments,5012,12.1,158.4,circle,3.5389,0,444,416,black,byPlateId,0.82
+6982,Tarim sediments,5012,-12.1,-21.6,circle,3.5389,0,444,416,black,byPlateId,0.82
+6983,Sediments; Sichuan and Yunnan,611,4.9,194.7,circle,3.814,0,444,417,black,byPlateId,0.866666667
+6983,Sediments; Sichuan and Yunnan,611,-4.9,14.7,circle,3.814,0,444,417,black,byPlateId,0.866666667
+6984,Llandovery traps; Tortworth Inlier,315,9,287,circle,2.766,0,433,428,black,byPlateId,0.688888889
+6984,Llandovery traps; Tortworth Inlier,315,-9,107,circle,2.766,0,433,428,black,byPlateId,0.688888889
+6985,Intrusions and Baked Sediments,402,-26,16,circle,3.683,0,444,417,black,byPlateId,0.844444444
+6985,Intrusions and Baked Sediments,402,26,-164,circle,3.683,0,444,417,black,byPlateId,0.844444444
+6986,Alaysky Sediments,402,13,340,circle,2.766,0,444,417,black,byPlateId,0.688888889
+6986,Alaysky Sediments,402,-13,160,circle,2.766,0,444,417,black,byPlateId,0.688888889
+6987,Lavas of ophiolitic association,402,18,354,circle,3.29,0,444,417,black,byPlateId,0.777777778
+6987,Lavas of ophiolitic association,402,-18,174,circle,3.29,0,444,417,black,byPlateId,0.777777778
+6988,King George IV Volcanics and Redbeds,108,35.9,84.6,circle,3.1197,0,436,426,black,byPlateId,0.748888889
+6988,King George IV Volcanics and Redbeds,108,-35.9,-95.4,circle,3.1197,0,436,426,black,byPlateId,0.748888889
+6989,Silurian lavas,315,8.1,303.7,circle,2.8184,0,436,428,black,byPlateId,0.697777778
+6989,Silurian lavas,315,-8.1,123.7,circle,2.8184,0,436,428,black,byPlateId,0.697777778
+6990,Lough Mask Formation Lavas,313,5.3,243,circle,0.4997,0,436,428,black,byPlateId,0.304444444
+6990,Lough Mask Formation Lavas,313,-5.3,63,circle,0.4997,0,436,428,black,byPlateId,0.304444444
+6991,Lough Mask Formation Redbeds,313,-12.3,93,circle,3.552,0,436,428,black,byPlateId,0.822222222
+6991,Lough Mask Formation Redbeds,313,12.3,-87,circle,3.552,0,436,428,black,byPlateId,0.822222222
+6992,Browgill Formation,315,-13.6,313.9,circle,2.9756,0,436,428,black,byPlateId,0.724444444
+6992,Browgill Formation,315,13.6,133.9,circle,2.9756,0,436,428,black,byPlateId,0.724444444
+6993,Sediments of Tekturmasskaya Zone,402,-10.9,130,circle,2.635,0,438,428,black,byPlateId,0.666666667
+6993,Sediments of Tekturmasskaya Zone,402,10.9,-50,circle,2.635,0,438,428,black,byPlateId,0.666666667
+6994,Cowra Trough-Molong High Sediments,1853,40,211.7,circle,2.8053,0,444,423,black,byPlateId,0.695555556
+6994,Cowra Trough-Molong High Sediments,1853,-40,31.7,circle,2.8053,0,444,423,black,byPlateId,0.695555556
+6995,Wig Wam Formation,101,25,110,circle,2.7267,0,444,423,black,byPlateId,0.682222222
+6995,Wig Wam Formation,101,-25,-70,circle,2.7267,0,444,423,black,byPlateId,0.682222222
+6996,Tungus Synclise Limestones,401,40,138,circle,3.683,0,444,423,black,byPlateId,0.844444444
+6996,Tungus Synclise Limestones,401,-40,-42,circle,3.683,0,444,423,black,byPlateId,0.844444444
+6997,Tungus Synclise Limestones,401,33,156,circle,3.945,0,444,423,black,byPlateId,0.888888889
+6997,Tungus Synclise Limestones,401,-33,-24,circle,3.945,0,444,423,black,byPlateId,0.888888889
+6998,Tungus Synclise Limestones,401,36,148,circle,4.076,0,444,423,black,byPlateId,0.911111111
+6998,Tungus Synclise Limestones,401,-36,-32,circle,4.076,0,444,423,black,byPlateId,0.911111111
+6999,Belyaya River Sediments,301,1,170,circle,4.076,0,444,423,black,byPlateId,0.911111111
+6999,Belyaya River Sediments,301,-1,-10,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7000,Belyaya River Sediments,301,8,176,circle,2.635,0,444,423,black,byPlateId,0.666666667
+7000,Belyaya River Sediments,301,-8,-4,circle,2.635,0,444,423,black,byPlateId,0.666666667
+7001,Belyaya River Sediments,301,1,171,circle,4.207,0,444,423,black,byPlateId,0.933333333
+7001,Belyaya River Sediments,301,-1,-9,circle,4.207,0,444,423,black,byPlateId,0.933333333
+7002,South Urals Volcanics,301,13,191,circle,3.945,0,444,423,black,byPlateId,0.888888889
+7002,South Urals Volcanics,301,-13,11,circle,3.945,0,444,423,black,byPlateId,0.888888889
+7003,South Urals Volcanics,301,13,193,circle,3.945,0,444,423,black,byPlateId,0.888888889
+7003,South Urals Volcanics,301,-13,13,circle,3.945,0,444,423,black,byPlateId,0.888888889
+7004,South Urals Volcanics,301,11,192,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7004,South Urals Volcanics,301,-11,12,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7005,Sakmarsk Group,301,16,182,circle,3.683,0,444,423,black,byPlateId,0.844444444
+7005,Sakmarsk Group,301,-16,2,circle,3.683,0,444,423,black,byPlateId,0.844444444
+7006,Sakmarsk Group,301,14,188,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7006,Sakmarsk Group,301,-14,8,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7007,Sakmarsk Group,301,14,185,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7007,Sakmarsk Group,301,-14,5,circle,4.076,0,444,423,black,byPlateId,0.911111111
+7008,Almaden Volcanics,304,8,118,circle,2.766,0,444,423,black,byPlateId,0.688888889
+7008,Almaden Volcanics,304,-8,-62,circle,2.766,0,444,423,black,byPlateId,0.688888889
+7009,Springdale and Wigwam Formations,101,12.7,89.5,circle,2.9756,0,444,423,black,byPlateId,0.724444444
+7009,Springdale and Wigwam Formations,101,-12.7,-90.5,circle,2.9756,0,444,423,black,byPlateId,0.724444444
+7010,Tabinzurtinskaya Suite,401,-5.3,284.2,circle,4.0891,0,444,423,black,byPlateId,0.913333333
+7010,Tabinzurtinskaya Suite,401,5.3,104.2,circle,4.0891,0,444,423,black,byPlateId,0.913333333
+7011,Alay Sediments and Lavas,402,24.5,329.5,circle,3.6306,0,444,423,black,byPlateId,0.835555556
+7011,Alay Sediments and Lavas,402,-24.5,149.5,circle,3.6306,0,444,423,black,byPlateId,0.835555556
+7012,Kuray Ophiolites,401,45.7,226,circle,2.6743,0,444,423,black,byPlateId,0.673333333
+7012,Kuray Ophiolites,401,-45.7,46,circle,2.6743,0,444,423,black,byPlateId,0.673333333
+7013,South China sediments,611,-39.6,61.1,circle,3.4996,0,444,423,black,byPlateId,0.813333333
+7013,South China sediments,611,39.6,-118.9,circle,3.4996,0,444,423,black,byPlateId,0.813333333
+7014,Lawrenceton Formation,101,25,107.7,circle,3.5389,0,444,423,black,byPlateId,0.82
+7014,Lawrenceton Formation,101,-25,-72.3,circle,3.5389,0,444,423,black,byPlateId,0.82
+7015,Microdiorite Appinite Suite,303,16.5,166.4,circle,3.7878,0,450,420,black,byPlateId,0.862222222
+7015,Microdiorite Appinite Suite,303,-16.5,-13.6,circle,3.7878,0,450,420,black,byPlateId,0.862222222
+7016,Dolerite Intrusions,303,14.7,167.5,circle,3.2769,0,450,420,black,byPlateId,0.775555556
+7016,Dolerite Intrusions,303,-14.7,-12.5,circle,3.2769,0,450,420,black,byPlateId,0.775555556
+7017,Microdiorite-Dolerite Suite WNW/ENE Directions,303,4.9,235.6,circle,3.4734,0,450,420,black,byPlateId,0.808888889
+7017,Microdiorite-Dolerite Suite WNW/ENE Directions,303,-4.9,55.6,circle,3.4734,0,450,420,black,byPlateId,0.808888889
+7018,Lawrenceton Formation,101,13,125,circle,3.3948,0,444,428,black,byPlateId,0.795555556
+7018,Lawrenceton Formation,101,-13,-55,circle,3.3948,0,444,428,black,byPlateId,0.795555556
+7019,Wigwam Formation,108,32.3,129.2,circle,3.3948,0,444,428,black,byPlateId,0.795555556
+7019,Wigwam Formation,108,-32.3,-50.8,circle,3.3948,0,444,428,black,byPlateId,0.795555556
+7020,Corndon Hill Phacolith; Shelve Inlier,315,15.3,69,circle,3.3555,0,444,428,black,byPlateId,0.788888889
+7020,Corndon Hill Phacolith; Shelve Inlier,315,-15.3,-111,circle,3.3555,0,444,428,black,byPlateId,0.788888889
+7021,Moel-y-Golfa Andesite; Breidden Hill Inlier,315,16,62,circle,3.4117,0,444,428,black,byPlateId,0.798422392
+7021,Moel-y-Golfa Andesite; Breidden Hill Inlier,315,-16,-118,circle,3.4117,0,444,428,black,byPlateId,0.798422392
+7022,Shelve-Longmynd; E-W dykes combined,315,16.4,49.6,circle,3.7616,0,444,428,black,byPlateId,0.857777778
+7022,Shelve-Longmynd; E-W dykes combined,315,-16.4,-130.4,circle,3.7616,0,444,428,black,byPlateId,0.857777778
+7023,Snead Phacolith; Shelve Inlier,315,18.4,45.8,circle,2.5433,0,444,428,black,byPlateId,0.651111111
+7023,Snead Phacolith; Shelve Inlier,315,-18.4,-134.2,circle,2.5433,0,444,428,black,byPlateId,0.651111111
+7024,South Urals Dolomites,301,38,166,circle,3.028,0,444,428,black,byPlateId,0.733333333
+7024,South Urals Dolomites,301,-38,-14,circle,3.028,0,444,428,black,byPlateId,0.733333333
+7025,Chineta Group,401,-3,138,circle,3.421,0,444,428,black,byPlateId,0.8
+7025,Chineta Group,401,3,-42,circle,3.421,0,444,428,black,byPlateId,0.8
+7026,Chineta Group,401,-4,144,circle,4.338,0,444,428,black,byPlateId,0.955555556
+7026,Chineta Group,401,4,-36,circle,4.338,0,444,428,black,byPlateId,0.955555556
+7027,Chineta Group,401,-3,139,circle,3.945,0,444,428,black,byPlateId,0.888888889
+7027,Chineta Group,401,3,-41,circle,3.945,0,444,428,black,byPlateId,0.888888889
+7028,North Caucasus Volcanics and Tuffs,513,18,139,circle,3.552,0,444,428,black,byPlateId,0.822222222
+7028,North Caucasus Volcanics and Tuffs,513,-18,-41,circle,3.552,0,444,428,black,byPlateId,0.822222222
+7029,North Caucasus Volcanics and Tuffs,513,24,145,circle,2.635,0,444,428,black,byPlateId,0.666666667
+7029,North Caucasus Volcanics and Tuffs,513,-24,-35,circle,2.635,0,444,428,black,byPlateId,0.666666667
+7030,North Caucasus Volcanics and Tuffs,513,20,140,circle,3.421,0,444,428,black,byPlateId,0.8
+7030,North Caucasus Volcanics and Tuffs,513,-20,-40,circle,3.421,0,444,428,black,byPlateId,0.8
+7031,Polyakovka Group,301,-6,164,circle,3.683,0,444,428,black,byPlateId,0.844444444
+7031,Polyakovka Group,301,6,-16,circle,3.683,0,444,428,black,byPlateId,0.844444444
+7032,South Urals Intrusions and Sediments,301,30,170,circle,2.111,0,444,428,black,byPlateId,0.577777778
+7032,South Urals Intrusions and Sediments,301,-30,-10,circle,2.111,0,444,428,black,byPlateId,0.577777778
+7033,Lena River Sediments,401,-3,102,circle,3.421,0,444,428,black,byPlateId,0.8
+7033,Lena River Sediments,401,3,-78,circle,3.421,0,444,428,black,byPlateId,0.8
+7034,Uphimsk Sediments,301,-5,168,circle,3.945,0,444,428,black,byPlateId,0.888888889
+7034,Uphimsk Sediments,301,5,-12,circle,3.945,0,444,428,black,byPlateId,0.888888889
+7035,Polar Urals Limestones,301,-21,184,circle,2.373,0,444,428,black,byPlateId,0.622222222
+7035,Polar Urals Limestones,301,21,4,circle,2.373,0,444,428,black,byPlateId,0.622222222
+7036,North Mugojary Tuffs and Sediments,301,-5.3,171.5,circle,2.897,0,444,428,black,byPlateId,0.711111111
+7036,North Mugojary Tuffs and Sediments,301,5.3,-8.5,circle,2.897,0,444,428,black,byPlateId,0.711111111
+7037,North Caucasus Sediments,301,25,154,circle,3.028,0,444,428,black,byPlateId,0.733333333
+7037,North Caucasus Sediments,301,-25,-26,circle,3.028,0,444,428,black,byPlateId,0.733333333
+7038,Suryuktyakhskaya suite,405,4,84,circle,3.552,0,444,428,black,byPlateId,0.822222222
+7038,Suryuktyakhskaya suite,405,-4,-96,circle,3.552,0,444,428,black,byPlateId,0.822222222
+7039,Blyavinskaya suite,301,13,184,circle,3.29,0,444,428,black,byPlateId,0.777777778
+7039,Blyavinskaya suite,301,-13,4,circle,3.29,0,444,428,black,byPlateId,0.777777778
+7040,Kokpatas complex; Formation II,402,64.8,225.3,circle,3.3162,0,444,428,black,byPlateId,0.782222222
+7040,Kokpatas complex; Formation II,402,-64.8,45.3,circle,3.3162,0,444,428,black,byPlateId,0.782222222
+7041,Lipeon Formation,202,74.9,34.8,circle,2.9232,0,444,428,black,byPlateId,0.715555556
+7041,Lipeon Formation,202,-74.9,-145.2,circle,2.9232,0,444,428,black,byPlateId,0.715555556
+7042,Chatswood Limestone and Ninmaroo Formation,8011,57.2,359.3,circle,3.1066,0,444,428,black,byPlateId,0.746666667
+7042,Chatswood Limestone and Ninmaroo Formation,8011,-57.2,179.3,circle,3.1066,0,444,428,black,byPlateId,0.746666667
+7043,Chingiz Range Silurian Volcanics and Red Beds,402,-33.6,32.7,circle,2.8577,0,444,428,black,byPlateId,0.704444444
+7043,Chingiz Range Silurian Volcanics and Red Beds,402,33.6,-147.3,circle,2.8577,0,444,428,black,byPlateId,0.704444444
+7044,Thelkeld-St.John's Granite,315,20.3,317.6,circle,3.9843,0,444,432,black,byPlateId,0.895555556
+7044,Thelkeld-St.John's Granite,315,-20.3,137.6,circle,3.9843,0,444,432,black,byPlateId,0.895555556
+7045,Marhaum Formation,5011,-11.5,200,circle,3.29,0,461,416,black,byPlateId,0.777777778
+7045,Marhaum Formation,5011,11.5,20,circle,3.29,0,461,416,black,byPlateId,0.777777778
+7046,Dunn Point Volcanics,108,-2,136,circle,4.0498,0,449,428,black,byPlateId,0.906666667
+7046,Dunn Point Volcanics,108,2,-44,circle,4.0498,0,449,428,black,byPlateId,0.906666667
+7047,Polar Urals Pillow-Lavas,301,-41.8,87,circle,3.028,0,450,428,black,byPlateId,0.733333333
+7047,Polar Urals Pillow-Lavas,301,41.8,-93,circle,3.028,0,450,428,black,byPlateId,0.733333333
+7048,Dunn Point Volcanics,108,2,130,circle,4.0629,0,449,430,black,byPlateId,0.908888889
+7048,Dunn Point Volcanics,108,-2,-50,circle,4.0629,0,449,430,black,byPlateId,0.908888889
+7049,Wissahickon gneiss and amphibolite,109,48.1,288.3,circle,2.5171,0,445,435,black,byPlateId,0.646666667
+7049,Wissahickon gneiss and amphibolite,109,-48.1,108.3,circle,2.5171,0,445,435,black,byPlateId,0.646666667
+7050,Arden Pluton,109,-16.2,123.1,circle,2.8184,0,450,430,black,byPlateId,0.697777778
+7050,Arden Pluton,109,16.2,-56.9,circle,2.8184,0,450,430,black,byPlateId,0.697777778
+7051,Table Head Group,101,10.7,142.1,circle,3.1721,0,461,420,black,byPlateId,0.757777778
+7051,Table Head Group,101,-10.7,-37.9,circle,3.1721,0,461,420,black,byPlateId,0.757777778
+7052,St. Mary's Sills,108,10.3,140,circle,3.421,0,443,439,black,byPlateId,0.8
+7052,St. Mary's Sills,108,-10.3,-40,circle,3.421,0,443,439,black,byPlateId,0.8
+7053,Agadyr Basalts and Jaspers,402,-20.5,52.8,circle,4.076,0,461,423,black,byPlateId,0.911111111
+7053,Agadyr Basalts and Jaspers,402,20.5,-127.2,circle,4.076,0,461,423,black,byPlateId,0.911111111
+7054,Midlands Minor Intrusions,315,62.2,231.1,circle,3.2376,0,445,439,black,byPlateId,0.768888889
+7054,Midlands Minor Intrusions,315,-62.2,51.1,circle,3.2376,0,445,439,black,byPlateId,0.768888889
+7055,Pre-Devonian Plutons,2021,0,271,circle,3.6044,0,455,430,black,byPlateId,0.831111111
+7055,Pre-Devonian Plutons,2021,0,91,circle,3.6044,0,455,430,black,byPlateId,0.831111111
+7056,Unicoi Basalts; Blue Ridge Province,101,13.7,142.5,circle,3.4079,0,458,428,black,byPlateId,0.797777778
+7056,Unicoi Basalts; Blue Ridge Province,101,-13.7,-37.5,circle,3.4079,0,458,428,black,byPlateId,0.797777778
+7057,Thouars Massif,305,34.4,5.1,circle,3.683,0,453,435,black,byPlateId,0.844444444
+7057,Thouars Massif,305,-34.4,-174.9,circle,3.683,0,453,435,black,byPlateId,0.844444444
+7058,Borrolan Ledmorite,303,10,189.7,circle,3.7092,0,461,428,black,byPlateId,0.848888889
+7058,Borrolan Ledmorite,303,-10,9.7,circle,3.7092,0,461,428,black,byPlateId,0.848888889
+7059,Borrolan pseudoleucite,303,23.6,178,circle,2.5564,0,461,428,black,byPlateId,0.653333333
+7059,Borrolan pseudoleucite,303,-23.6,-2,circle,2.5564,0,461,428,black,byPlateId,0.653333333
+7060,Ben Loyal syenite complex,303,4.2,178,circle,2.5564,0,461,428,black,byPlateId,0.653333333
+7060,Ben Loyal syenite complex,303,-4.2,-2,circle,2.5564,0,461,428,black,byPlateId,0.653333333
+7061,Pakhuis; Cedarberg Formations,7013,25,343,circle,2.242,0,461,428,black,byPlateId,0.6
+7061,Pakhuis; Cedarberg Formations,7013,-25,163,circle,2.242,0,461,428,black,byPlateId,0.6
+7062,Bratsk Group,401,-17,108,circle,3.814,0,461,428,black,byPlateId,0.866666667
+7062,Bratsk Group,401,17,-72,circle,3.814,0,461,428,black,byPlateId,0.866666667
+7063,Agadyrskaya Zone Lavas and Jaspers,402,-21,63,circle,4.076,0,461,428,black,byPlateId,0.911111111
+7063,Agadyrskaya Zone Lavas and Jaspers,402,21,-117,circle,4.076,0,461,428,black,byPlateId,0.911111111
+7064,Moyero River Sediments,401,-13.9,124.1,circle,3.5389,0,450,439,black,byPlateId,0.82
+7064,Moyero River Sediments,401,13.9,-55.9,circle,3.5389,0,450,439,black,byPlateId,0.82
+7065,Mascot-Jefferson City District; Limestone,101,10.3,131.1,circle,3.8271,0,461,428,black,byPlateId,0.868888889
+7065,Mascot-Jefferson City District; Limestone,101,-10.3,-48.9,circle,3.8271,0,461,428,black,byPlateId,0.868888889
+7066,Georgina Basin Carbonates,8011,-8,216.8,circle,3.9057,0,461,428,black,byPlateId,0.882222222
+7066,Georgina Basin Carbonates,8011,8,36.8,circle,3.9057,0,461,428,black,byPlateId,0.882222222
+7067,Campo-Alegre Formation,2011,43,20,circle,4.076,0,460,430,black,byPlateId,0.911111111
+7067,Campo-Alegre Formation,2011,-43,-160,circle,4.076,0,460,430,black,byPlateId,0.911111111
+7068,Cape Breton Island Younger Granites,108,-16,139,circle,4.076,0,460,430,black,byPlateId,0.911111111
+7068,Cape Breton Island Younger Granites,108,16,-41,circle,4.076,0,460,430,black,byPlateId,0.911111111
+7069,Juniata Formation,101,21,105,circle,3.2638,0,450,440,black,byPlateId,0.773333333
+7069,Juniata Formation,101,-21,-75,circle,3.2638,0,450,440,black,byPlateId,0.773333333
+7070,Juniata Formation,101,19,128,circle,2.2289,0,450,440,black,byPlateId,0.597777778
+7070,Juniata Formation,101,-19,-52,circle,2.2289,0,450,440,black,byPlateId,0.597777778
+7071,Juniata Formation,101,22,110,circle,3.4117,0,450,440,black,byPlateId,0.798422392
+7071,Juniata Formation,101,-22,-70,circle,3.4117,0,450,440,black,byPlateId,0.798422392
+7072,Threlkeld-St.Johns Granodiorite,315,68.3,88,circle,2.635,0,460,430,black,byPlateId,0.666666667
+7072,Threlkeld-St.Johns Granodiorite,315,-68.3,-92,circle,2.635,0,460,430,black,byPlateId,0.666666667
+7073,Scandinavian Intrusions and Metamorphics,301,9,2,circle,3.4996,0,460,430,black,byPlateId,0.813333333
+7073,Scandinavian Intrusions and Metamorphics,301,-9,-178,circle,3.4996,0,460,430,black,byPlateId,0.813333333
+7074,Karmoy Ophiolite,301,51.9,105.8,circle,3.9712,0,455,435,black,byPlateId,0.893333333
+7074,Karmoy Ophiolite,301,-51.9,-74.2,circle,3.9712,0,455,435,black,byPlateId,0.893333333
+7075,Karmoy Ophiolite,301,17.1,31.2,circle,3.6699,0,455,435,black,byPlateId,0.842222222
+7075,Karmoy Ophiolite,301,-17.1,-148.8,circle,3.6699,0,455,435,black,byPlateId,0.842222222
+7076,Karmoy Ophiolite,301,63.6,244.7,circle,3.5782,0,455,435,black,byPlateId,0.826666667
+7076,Karmoy Ophiolite,301,-63.6,64.7,circle,3.5782,0,455,435,black,byPlateId,0.826666667
+7077,Kattnakken Ignimbrite,301,18.1,286.7,circle,3.5258,0,450,440,black,byPlateId,0.817777778
+7077,Kattnakken Ignimbrite,301,-18.1,106.7,circle,3.5258,0,450,440,black,byPlateId,0.817777778
+7078,Borrowdale Volcanic Group,315,8.1,6.2,circle,3.6961,0,450,440,black,byPlateId,0.846666667
+7078,Borrowdale Volcanic Group,315,-8.1,-173.8,circle,3.6961,0,450,440,black,byPlateId,0.846666667
+7079,Wekach Lake Gabbro,101,25,137,circle,1.849,0,460,430,black,byPlateId,0.533333333
+7079,Wekach Lake Gabbro,101,-25,-43,circle,1.849,0,460,430,black,byPlateId,0.533333333
+7080,Canisp Porphyry and Contact,303,9.7,152.6,circle,4.0236,0,460,430,black,byPlateId,0.902222222
+7080,Canisp Porphyry and Contact,303,-9.7,-27.4,circle,4.0236,0,460,430,black,byPlateId,0.902222222
+7081,Upper Makarovo Formation,401,3.1,118.1,circle,2.8839,0,447,444,black,byPlateId,0.708888889
+7081,Upper Makarovo Formation,401,-3.1,-61.9,circle,2.8839,0,447,444,black,byPlateId,0.708888889
+7082,Lena River Sediments,401,-21,127,circle,3.945,0,450,444,black,byPlateId,0.888888889
+7082,Lena River Sediments,401,21,-53,circle,3.945,0,450,444,black,byPlateId,0.888888889
+7083,Slyudyankinskaya suite,401,-4.8,151.6,circle,2.504,0,464,430,black,byPlateId,0.644444444
+7083,Slyudyankinskaya suite,401,4.8,-28.4,circle,2.504,0,464,430,black,byPlateId,0.644444444
+7084,Dobra Sandstone,305,-2.8,168.6,circle,2.1765,0,450,444,black,byPlateId,0.588888889
+7084,Dobra Sandstone,305,2.8,-11.4,circle,2.1765,0,450,444,black,byPlateId,0.588888889
+7085,Komstad Limestone; Scania,301,4,192,circle,4.0105,0,450,444,black,byPlateId,0.9
+7085,Komstad Limestone; Scania,301,-4,12,circle,4.0105,0,450,444,black,byPlateId,0.9
+7086,Ashgillian Minor Intrusives; Builth Inlier,315,2,182,circle,3.1328,0,450,447,black,byPlateId,0.751111111
+7086,Ashgillian Minor Intrusives; Builth Inlier,315,-2,2,circle,3.1328,0,450,447,black,byPlateId,0.751111111
+7087,Middle Makarovo Formation,401,-21.1,109,circle,2.3337,0,450,447,black,byPlateId,0.615555556
+7087,Middle Makarovo Formation,401,21.1,-71,circle,2.3337,0,450,447,black,byPlateId,0.615555556
+7088,Descon Formation sediments,128,19.9,118.9,circle,3.5127,0,461,438,black,byPlateId,0.815555556
+7088,Descon Formation sediments,128,-19.9,-61.1,circle,3.5127,0,461,438,black,byPlateId,0.815555556
+7089,Cordova Gabbro,101,31,102,circle,3.2245,0,480,420,black,byPlateId,0.766666667
+7089,Cordova Gabbro,101,-31,-78,circle,3.2245,0,480,420,black,byPlateId,0.766666667
+7090,Ordovician-Silurian sediments,101,27.7,141.6,circle,3.6437,0,472,428,black,byPlateId,0.837777778
+7090,Ordovician-Silurian sediments,101,-27.7,-38.4,circle,3.6437,0,472,428,black,byPlateId,0.837777778
+7091,Vosistek Group,301,6.5,55.2,circle,1.849,0,472,428,black,byPlateId,0.533333333
+7091,Vosistek Group,301,-6.5,-124.8,circle,1.849,0,472,428,black,byPlateId,0.533333333
+7092,Tkenekty massif,402,-16,44.8,circle,2.6219,0,472,428,black,byPlateId,0.664444444
+7092,Tkenekty massif,402,16,-135.2,circle,2.6219,0,472,428,black,byPlateId,0.664444444
+7093,Catoctin Basalts,101,18.7,133.6,circle,3.421,0,460,440,black,byPlateId,0.8
+7093,Catoctin Basalts,101,-18.7,-46.4,circle,3.421,0,460,440,black,byPlateId,0.8
+7094,Mt. Keinath Monzogranite,802,31,209,circle,2.7529,0,454,446,black,byPlateId,0.686666667
+7094,Mt. Keinath Monzogranite,802,-31,29,circle,2.7529,0,454,446,black,byPlateId,0.686666667
+7095,Cautley rhyolite,315,51,162,circle,2.9232,0,458,444,black,byPlateId,0.715555556
+7095,Cautley rhyolite,315,-51,-18,circle,2.9232,0,458,444,black,byPlateId,0.715555556
+7096,Urucum Formation,201,17.4,346.8,circle,3.2245,0,488,416,black,byPlateId,0.766666667
+7096,Urucum Formation,201,-17.4,166.8,circle,3.2245,0,488,416,black,byPlateId,0.766666667
+7097,Buyanki Siltstone,628,-36.6,96.9,circle,3.0411,0,488,416,black,byPlateId,0.735555556
+7097,Buyanki Siltstone,628,36.6,-83.1,circle,3.0411,0,488,416,black,byPlateId,0.735555556
+7098,Kremovo Sandstone,628,-39.7,72.7,circle,3.6699,0,488,416,black,byPlateId,0.842222222
+7098,Kremovo Sandstone,628,39.7,-107.3,circle,3.6699,0,488,416,black,byPlateId,0.842222222
+7099,Ordovician dolerites,305,3,179.4,circle,3.5258,0,461,444,black,byPlateId,0.817777778
+7099,Ordovician dolerites,305,-3,-0.6,circle,3.5258,0,461,444,black,byPlateId,0.817777778
+7100,Caradocian Tuffs; Welsh Borderlands,315,23.4,178.4,circle,2.2027,0,461,444,black,byPlateId,0.593333333
+7100,Caradocian Tuffs; Welsh Borderlands,315,-23.4,-1.6,circle,2.2027,0,461,444,black,byPlateId,0.593333333
+7101,Juniata Formation,101,31.5,114.4,circle,3.9581,0,461,444,black,byPlateId,0.891111111
+7101,Juniata Formation,101,-31.5,-65.6,circle,3.9581,0,461,444,black,byPlateId,0.891111111
+7102,Coimbra Volcanics,304,3,248,circle,3.4117,0,461,444,black,byPlateId,0.798422392
+7102,Coimbra Volcanics,304,-3,68,circle,3.4117,0,461,444,black,byPlateId,0.798422392
+7103,Beemerville Alkaline Complex,101,35,126,circle,1.98,0,461,444,black,byPlateId,0.555555556
+7103,Beemerville Alkaline Complex,101,-35,-54,circle,1.98,0,461,444,black,byPlateId,0.555555556
+7104,Sediments,305,20,72,circle,1.718,0,461,444,black,byPlateId,0.511111111
+7104,Sediments,305,-20,-108,circle,1.718,0,461,444,black,byPlateId,0.511111111
+7105,Juniata Formation,101,20,153,circle,3.552,0,461,444,black,byPlateId,0.822222222
+7105,Juniata Formation,101,-20,-27,circle,3.552,0,461,444,black,byPlateId,0.822222222
+7106,Zahoramy layers,305,9,62,circle,3.4117,0,461,444,black,byPlateId,0.798422392
+7106,Zahoramy layers,305,-9,-118,circle,3.4117,0,461,444,black,byPlateId,0.798422392
+7107,Lower Bratsk Group,401,-20,120,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7107,Lower Bratsk Group,401,20,-60,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7108,Bratsk Group Combined,401,-19,131,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7108,Bratsk Group Combined,401,19,-49,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7109,Bratsk Group Combined,401,-18,134,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7109,Bratsk Group Combined,401,18,-46,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7110,Bratsk Group Combined,401,-23,131,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7110,Bratsk Group Combined,401,23,-49,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7111,Bratsk Group Combined,401,-19,133,circle,4.207,0,461,444,black,byPlateId,0.933333333
+7111,Bratsk Group Combined,401,19,-47,circle,4.207,0,461,444,black,byPlateId,0.933333333
+7112,Richmond Group,101,33,105,circle,3.4603,0,461,444,black,byPlateId,0.806666667
+7112,Richmond Group,101,-33,-75,circle,3.4603,0,461,444,black,byPlateId,0.806666667
+7113,Richmond Group,101,54,116,circle,3.5127,0,461,444,black,byPlateId,0.815555556
+7113,Richmond Group,101,-54,-64,circle,3.5127,0,461,444,black,byPlateId,0.815555556
+7114,Embleton Diorites,315,14,16,circle,2.635,0,461,444,black,byPlateId,0.666666667
+7114,Embleton Diorites,315,-14,-164,circle,2.635,0,461,444,black,byPlateId,0.666666667
+7115,Carrock Dykes,315,67.7,124.3,circle,3.0673,0,461,444,black,byPlateId,0.74
+7115,Carrock Dykes,315,-67.7,-55.7,circle,3.0673,0,461,444,black,byPlateId,0.74
+7116,Shap Granite,315,36,148,circle,1.8097,0,461,444,black,byPlateId,0.526666667
+7116,Shap Granite,315,-36,-32,circle,1.8097,0,461,444,black,byPlateId,0.526666667
+7117,Tregor Dolerites,305,11,182,circle,3.421,0,461,444,black,byPlateId,0.8
+7117,Tregor Dolerites,305,-11,2,circle,3.421,0,461,444,black,byPlateId,0.8
+7118,Srednejarlykskaya suite,405,-11,174,circle,2.635,0,461,444,black,byPlateId,0.666666667
+7118,Srednejarlykskaya suite,405,11,-6,circle,2.635,0,461,444,black,byPlateId,0.666666667
+7119,Jarlykskaya suite,405,-17,218,circle,3.159,0,461,444,black,byPlateId,0.755555556
+7119,Jarlykskaya suite,405,17,38,circle,3.159,0,461,444,black,byPlateId,0.755555556
+7120,Martinsburg Formation,101,20,119,circle,3.814,0,461,444,black,byPlateId,0.866666667
+7120,Martinsburg Formation,101,-20,-61,circle,3.814,0,461,444,black,byPlateId,0.866666667
+7121,Agyrek rocks,402,-8,146,circle,2.111,0,461,444,black,byPlateId,0.577777778
+7121,Agyrek rocks,402,8,-34,circle,2.111,0,461,444,black,byPlateId,0.577777778
+7122,Mayljen sediments,402,38,264,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7122,Mayljen sediments,402,-38,84,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7123,Barrandian Basin Sediments and Volcanics,305,80,180,circle,3.3555,0,461,444,black,byPlateId,0.788888889
+7123,Barrandian Basin Sediments and Volcanics,305,-80,0,circle,3.3555,0,461,444,black,byPlateId,0.788888889
+7124,Pyerara Dyke Swarm,301,-12.4,340.5,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7124,Pyerara Dyke Swarm,301,12.4,160.5,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7125,Izshora Dyke Swarm,301,-17.4,359.5,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7125,Izshora Dyke Swarm,301,17.4,179.5,circle,3.29,0,461,444,black,byPlateId,0.777777778
+7126,Carrock Fell Dyke Swarm,315,67.2,128.3,circle,3.0673,0,461,444,black,byPlateId,0.74
+7126,Carrock Fell Dyke Swarm,315,-67.2,-51.7,circle,3.0673,0,461,444,black,byPlateId,0.74
+7127,Round Knott Dolerite,315,-4.3,338.9,circle,3.6437,0,461,444,black,byPlateId,0.837777778
+7127,Round Knott Dolerite,315,4.3,158.9,circle,3.6437,0,461,444,black,byPlateId,0.837777778
+7128,Eycott NE-SW Dykes,315,-14.1,326.5,circle,1.9669,0,461,444,black,byPlateId,0.553333333
+7128,Eycott NE-SW Dykes,315,14.1,146.5,circle,1.9669,0,461,444,black,byPlateId,0.553333333
+7129,Severnaya Zemlya Ordovician Sediments,401,-9.9,212,circle,2.6481,0,461,444,black,byPlateId,0.668888889
+7129,Severnaya Zemlya Ordovician Sediments,401,9.9,32,circle,2.6481,0,461,444,black,byPlateId,0.668888889
+7130,North Tien Shan Sediments; Almaly,402,31.1,214.7,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7130,North Tien Shan Sediments; Almaly,402,-31.1,34.7,circle,4.076,0,461,444,black,byPlateId,0.911111111
+7131,North Tien Shan Sediments; Botmoynak,402,37.4,281.1,circle,3.4472,0,461,444,black,byPlateId,0.804444444
+7131,North Tien Shan Sediments; Botmoynak,402,-37.4,101.1,circle,3.4472,0,461,444,black,byPlateId,0.804444444
+7132,Zebrak-Tocnik Silicified Lava,305,64.6,163.1,circle,3.5389,0,461,444,black,byPlateId,0.82
+7132,Zebrak-Tocnik Silicified Lava,305,-64.6,-16.9,circle,3.5389,0,461,444,black,byPlateId,0.82
+7133,Newer Gabbros; Aberdeenshire,313,8.1,177,circle,2.9756,0,467,443,black,byPlateId,0.724444444
+7133,Newer Gabbros; Aberdeenshire,313,-8.1,-3,circle,2.9756,0,467,443,black,byPlateId,0.724444444
+7134,Metamorphic rocks; Caroline slate belt,109,20.1,60,circle,2.7398,0,460,450,black,byPlateId,0.684444444
+7134,Metamorphic rocks; Caroline slate belt,109,-20.1,-120,circle,2.7398,0,460,450,black,byPlateId,0.684444444
+7135,Barrovian Schists,313,3,202,circle,3.683,0,460,450,black,byPlateId,0.844444444
+7135,Barrovian Schists,313,-3,22,circle,3.683,0,460,450,black,byPlateId,0.844444444
+7136,Askoy Mafic Pluton,301,25,233,circle,3.29,0,480,430,black,byPlateId,0.777777778
+7136,Askoy Mafic Pluton,301,-25,53,circle,3.29,0,480,430,black,byPlateId,0.777777778
+7137,Cid Formation; Albemarle Group,109,29.6,122.1,circle,3.9319,0,460,450,black,byPlateId,0.886666667
+7137,Cid Formation; Albemarle Group,109,-29.6,-57.9,circle,3.9319,0,460,450,black,byPlateId,0.886666667
+7138,Descon Formation lavas,128,-6.5,148.7,circle,-0.3518,0,461,450,black,byPlateId,0.16
+7138,Descon Formation lavas,128,6.5,-31.3,circle,-0.3518,0,461,450,black,byPlateId,0.16
+7139,Stockdale Rhyolite,315,82.3,312.5,circle,2.7791,0,461,450,black,byPlateId,0.691111111
+7139,Stockdale Rhyolite,315,-82.3,132.5,circle,2.7791,0,461,450,black,byPlateId,0.691111111
+7140,Alcaparrosa Formation,291,56.2,212.8,circle,2.1634,0,461,450,black,byPlateId,0.586666667
+7140,Alcaparrosa Formation,291,-56.2,32.8,circle,2.1634,0,461,450,black,byPlateId,0.586666667
+7141,Volcanics and tuffs; Breidden Inlier,315,0.9,17.1,circle,3.0411,0,461,450,black,byPlateId,0.735555556
+7141,Volcanics and tuffs; Breidden Inlier,315,-0.9,-162.9,circle,3.0411,0,461,450,black,byPlateId,0.735555556
+7142,Ordovician Andesites; Lambay Island,315,42,221,circle,3.683,0,461,450,black,byPlateId,0.844444444
+7142,Ordovician Andesites; Lambay Island,315,-42,41,circle,3.683,0,461,450,black,byPlateId,0.844444444
+7143,Lena River Sediments,401,-22,134,circle,4.076,0,461,450,black,byPlateId,0.911111111
+7143,Lena River Sediments,401,22,-46,circle,4.076,0,461,450,black,byPlateId,0.911111111
+7144,Haweswater Dolerite,315,-11.8,212.1,circle,1.7442,0,461,450,black,byPlateId,0.515555556
+7144,Haweswater Dolerite,315,11.8,32.1,circle,1.7442,0,461,450,black,byPlateId,0.515555556
+7145,Mjosa Limestone,301,-4,143,circle,1.325,0,461,450,black,byPlateId,0.444444444
+7145,Mjosa Limestone,301,4,-37,circle,1.325,0,461,450,black,byPlateId,0.444444444
+7146,Karaulcheku allochton,402,-21,95,circle,4.207,0,461,450,black,byPlateId,0.933333333
+7146,Karaulcheku allochton,402,21,-85,circle,4.207,0,461,450,black,byPlateId,0.933333333
+7147,Bluffer Pond Formation,101,26,134,circle,3.0411,0,461,450,black,byPlateId,0.735555556
+7147,Bluffer Pond Formation,101,-26,-46,circle,3.0411,0,461,450,black,byPlateId,0.735555556
+7148,Lower Makarovsk Group,401,-25,128,circle,3.814,0,468,444,black,byPlateId,0.866666667
+7148,Lower Makarovsk Group,401,25,-52,circle,3.814,0,468,444,black,byPlateId,0.866666667
+7149,Bratsk and Makarovsk Groups,401,-18,130,circle,3.945,0,468,444,black,byPlateId,0.888888889
+7149,Bratsk and Makarovsk Groups,401,18,-50,circle,3.945,0,468,444,black,byPlateId,0.888888889
+7150,Bratsk and Makarovsk Groups,401,-22,135,circle,3.945,0,468,444,black,byPlateId,0.888888889
+7150,Bratsk and Makarovsk Groups,401,22,-45,circle,3.945,0,468,444,black,byPlateId,0.888888889
+7151,Bratsk and Makarovsk Groups,401,-21,132,circle,4.076,0,468,444,black,byPlateId,0.911111111
+7151,Bratsk and Makarovsk Groups,401,21,-48,circle,4.076,0,468,444,black,byPlateId,0.911111111
+7152,Makarovsk Group,401,-23,142,circle,4.207,0,468,444,black,byPlateId,0.933333333
+7152,Makarovsk Group,401,23,-38,circle,4.207,0,468,444,black,byPlateId,0.933333333
+7153,Makarovsk Group,401,-22,124,circle,4.207,0,468,444,black,byPlateId,0.933333333
+7153,Makarovsk Group,401,22,-56,circle,4.207,0,468,444,black,byPlateId,0.933333333
+7154,Makarovsk Group,401,-24,133,circle,3.945,0,468,444,black,byPlateId,0.888888889
+7154,Makarovsk Group,401,24,-47,circle,3.945,0,468,444,black,byPlateId,0.888888889
+7155,Molong High Formations,1853,9.6,23.9,circle,3.7878,0,472,444,black,byPlateId,0.862222222
+7155,Molong High Formations,1853,-9.6,-156.1,circle,3.7878,0,472,444,black,byPlateId,0.862222222
+7156,Glensaul Felsite,313,7,155,circle,1.456,0,472,444,black,byPlateId,0.466666667
+7156,Glensaul Felsite,313,-7,-25,circle,1.456,0,472,444,black,byPlateId,0.466666667
+7157,Glensaul Felsite,313,43,205,circle,2.897,0,472,444,black,byPlateId,0.711111111
+7157,Glensaul Felsite,313,-43,25,circle,2.897,0,472,444,black,byPlateId,0.711111111
+7158,Middle Urals Intrusions,301,16,184,circle,3.159,0,472,444,black,byPlateId,0.755555556
+7158,Middle Urals Intrusions,301,-16,4,circle,3.159,0,472,444,black,byPlateId,0.755555556
+7159,Lower Bardym Group,301,14,189,circle,2.897,0,472,444,black,byPlateId,0.711111111
+7159,Lower Bardym Group,301,-14,9,circle,2.897,0,472,444,black,byPlateId,0.711111111
+7160,Bardym Group,301,15,187,circle,3.552,0,472,444,black,byPlateId,0.822222222
+7160,Bardym Group,301,-15,7,circle,3.552,0,472,444,black,byPlateId,0.822222222
+7161,Belyaya River Sediments,301,3,178,circle,3.814,0,472,444,black,byPlateId,0.866666667
+7161,Belyaya River Sediments,301,-3,-2,circle,3.814,0,472,444,black,byPlateId,0.866666667
+7162,Belyaya River Sediments,301,1,145,circle,1.587,0,472,444,black,byPlateId,0.488888889
+7162,Belyaya River Sediments,301,-1,-35,circle,1.587,0,472,444,black,byPlateId,0.488888889
+7163,Belyaya River Sediments,301,-8,159,circle,1.98,0,472,444,black,byPlateId,0.555555556
+7163,Belyaya River Sediments,301,8,-21,circle,1.98,0,472,444,black,byPlateId,0.555555556
+7164,Belyaya River Sediments,301,2,170,circle,3.814,0,472,444,black,byPlateId,0.866666667
+7164,Belyaya River Sediments,301,-2,-10,circle,3.814,0,472,444,black,byPlateId,0.866666667
+7165,Kurgansk Group,301,-15,58,circle,2.897,0,472,444,black,byPlateId,0.711111111
+7165,Kurgansk Group,301,15,-122,circle,2.897,0,472,444,black,byPlateId,0.711111111
+7166,Kurgansk Group,301,-14,96,circle,2.766,0,472,444,black,byPlateId,0.688888889
+7166,Kurgansk Group,301,14,-84,circle,2.766,0,472,444,black,byPlateId,0.688888889
+7167,Kurgansk Group,301,-20,75,circle,2.373,0,472,444,black,byPlateId,0.622222222
+7167,Kurgansk Group,301,20,-105,circle,2.373,0,472,444,black,byPlateId,0.622222222
+7168,Kurgansk Group Combined,301,-19,80,circle,3.552,0,472,444,black,byPlateId,0.822222222
+7168,Kurgansk Group Combined,301,19,-100,circle,3.552,0,472,444,black,byPlateId,0.822222222
+7169,Bail Hill Volcanics,313,32.5,167.5,circle,3.0411,0,461,455,black,byPlateId,0.735555556
+7169,Bail Hill Volcanics,313,-32.5,-12.5,circle,3.0411,0,461,455,black,byPlateId,0.735555556
+7170,Kokpatas complex; Formation I,402,38.1,319,circle,1.7835,0,472,444,black,byPlateId,0.522222222
+7170,Kokpatas complex; Formation I,402,-38.1,139,circle,1.7835,0,472,444,black,byPlateId,0.522222222
+7171,Kazakhstan Basalts and Sediments,402,-11.1,149,circle,3.028,0,472,444,black,byPlateId,0.733333333
+7171,Kazakhstan Basalts and Sediments,402,11.1,-31,circle,3.028,0,472,444,black,byPlateId,0.733333333
+7172,Igneous allochtoneous and terrigeneous autochtoneous rocks,402,-39,78.3,circle,3.5258,0,472,444,black,byPlateId,0.817777778
+7172,Igneous allochtoneous and terrigeneous autochtoneous rocks,402,39,-101.7,circle,3.5258,0,472,444,black,byPlateId,0.817777778
+7173,Sakmar Sandstones,301,42.4,283.3,circle,3.4117,0,472,444,black,byPlateId,0.798422392
+7173,Sakmar Sandstones,301,-42.4,103.3,circle,3.4117,0,472,444,black,byPlateId,0.798422392
+7174,Great Cockup Picrite,315,-9.3,315.2,circle,3.5913,0,472,444,black,byPlateId,0.828888889
+7174,Great Cockup Picrite,315,9.3,135.2,circle,3.5913,0,472,444,black,byPlateId,0.828888889
+7175,Carrock Fell Gabbros,315,4.6,343.5,circle,3.9712,0,472,444,black,byPlateId,0.893333333
+7175,Carrock Fell Gabbros,315,-4.6,163.5,circle,3.9712,0,472,444,black,byPlateId,0.893333333
+7176,Theresa Creek Volcanics,1820,4.1,188.9,circle,3.9974,0,488,428,black,byPlateId,0.897777778
+7176,Theresa Creek Volcanics,1820,-4.1,8.9,circle,3.9974,0,488,428,black,byPlateId,0.897777778
+7177,Dalby Limestone,301,5,34,circle,3.9712,0,465,455,black,byPlateId,0.893333333
+7177,Dalby Limestone,301,-5,-146,circle,3.9712,0,465,455,black,byPlateId,0.893333333
+7178,Polar Urals Sediments,301,-13,193,circle,1.98,0,472,450,black,byPlateId,0.555555556
+7178,Polar Urals Sediments,301,13,13,circle,1.98,0,472,450,black,byPlateId,0.555555556
+7179,Polar Urals Sediments,301,-14,161,circle,3.683,0,472,450,black,byPlateId,0.844444444
+7179,Polar Urals Sediments,301,14,-19,circle,3.683,0,472,450,black,byPlateId,0.844444444
+7180,Polar Urals Sediments,301,-14,175,circle,3.945,0,472,450,black,byPlateId,0.888888889
+7180,Polar Urals Sediments,301,14,-5,circle,3.945,0,472,450,black,byPlateId,0.888888889
+7181,Winterville Formation,101,26,148,circle,3.3817,0,472,450,black,byPlateId,0.793333333
+7181,Winterville Formation,101,-26,-32,circle,3.3817,0,472,450,black,byPlateId,0.793333333
+7182,Salala Ring Complex,7151,-39.6,149.5,circle,3.3948,0,466,460,black,byPlateId,0.795555556
+7182,Salala Ring Complex,7151,39.6,-30.5,circle,3.3948,0,466,460,black,byPlateId,0.795555556
+7183,Karaulchekinskaya and Akozerskaya Suites,402,-21.4,95.5,circle,4.2332,0,476,450,black,byPlateId,0.937777778
+7183,Karaulchekinskaya and Akozerskaya Suites,402,21.4,-84.5,circle,4.2332,0,476,450,black,byPlateId,0.937777778
+7184,Borrowdale Volcanic Series,315,17.5,208.2,circle,3.1066,0,479,450,black,byPlateId,0.746666667
+7184,Borrowdale Volcanic Series,315,-17.5,28.2,circle,3.1066,0,479,450,black,byPlateId,0.746666667
+7185,Mweelrea Ignimbrites,313,11,218,circle,1.98,0,466,463,black,byPlateId,0.555555556
+7185,Mweelrea Ignimbrites,313,-11,38,circle,1.98,0,466,463,black,byPlateId,0.555555556
+7186,Lena River Sediments,401,-23,131,circle,2.897,0,468,461,black,byPlateId,0.711111111
+7186,Lena River Sediments,401,23,-49,circle,2.897,0,468,461,black,byPlateId,0.711111111
+7187,Lena River Sediments,401,-22,134,circle,3.683,0,468,461,black,byPlateId,0.844444444
+7187,Lena River Sediments,401,22,-46,circle,3.683,0,468,461,black,byPlateId,0.844444444
+7188,Tetagouche Group,101,52,352,circle,2.897,0,472,457,black,byPlateId,0.711111111
+7188,Tetagouche Group,101,-52,172,circle,2.897,0,472,457,black,byPlateId,0.711111111
+7189,Moyero River Sediments,401,-22.7,157.6,circle,4.1153,0,468,461,black,byPlateId,0.917777778
+7189,Moyero River Sediments,401,22.7,-22.4,circle,4.1153,0,468,461,black,byPlateId,0.917777778
+7190,Krivaya Luka Formation,401,-25.6,117.9,circle,3.9319,0,468,461,black,byPlateId,0.886666667
+7190,Krivaya Luka Formation,401,25.6,-62.1,circle,3.9319,0,468,461,black,byPlateId,0.886666667
+7191,Krivaya Luka Formation,401,-28.2,127.1,circle,4.2725,0,468,461,black,byPlateId,0.944444444
+7191,Krivaya Luka Formation,401,28.2,-52.9,circle,4.2725,0,468,461,black,byPlateId,0.944444444
+7192,Ukrainian Volcanics and Tuffs,301,15,206,circle,3.945,0,470,460,black,byPlateId,0.888888889
+7192,Ukrainian Volcanics and Tuffs,301,-15,26,circle,3.945,0,470,460,black,byPlateId,0.888888889
+7193,Ukrainian Volcanics and Tuffs,301,29,206,circle,3.552,0,470,460,black,byPlateId,0.822222222
+7193,Ukrainian Volcanics and Tuffs,301,-29,26,circle,3.552,0,470,460,black,byPlateId,0.822222222
+7194,Ukrainian Volcanics and Tuffs,301,23,206,circle,3.945,0,470,460,black,byPlateId,0.888888889
+7194,Ukrainian Volcanics and Tuffs,301,-23,26,circle,3.945,0,470,460,black,byPlateId,0.888888889
+7195,Cap de la Chevre Formation,305,12.2,299.2,circle,2.766,0,470,460,black,byPlateId,0.688888889
+7195,Cap de la Chevre Formation,305,-12.2,119.2,circle,2.766,0,470,460,black,byPlateId,0.688888889
+7196,Stairway Sandstone,8011,2,230.5,circle,3.29,0,470,461,black,byPlateId,0.777777778
+7196,Stairway Sandstone,8011,-2,50.5,circle,3.29,0,470,461,black,byPlateId,0.777777778
+7197,Borrowdale Volcanic Series,315,71,334,circle,2.504,0,470,461,black,byPlateId,0.644444444
+7197,Borrowdale Volcanic Series,315,-71,154,circle,2.504,0,470,461,black,byPlateId,0.644444444
+7198,Borrowdale Volcanic Series,315,0,203,circle,3.683,0,470,461,black,byPlateId,0.844444444
+7198,Borrowdale Volcanic Series,315,0,23,circle,3.683,0,470,461,black,byPlateId,0.844444444
+7199,Borrowdale Volcanic Series,315,6.2,198.8,circle,3.6044,0,470,461,black,byPlateId,0.831111111
+7199,Borrowdale Volcanic Series,315,-6.2,18.8,circle,3.6044,0,470,461,black,byPlateId,0.831111111
+7200,Ordovician volcanics,304,21.9,345.1,circle,3.814,0,488,444,black,byPlateId,0.866666667
+7200,Ordovician volcanics,304,-21.9,165.1,circle,3.814,0,488,444,black,byPlateId,0.866666667
+7201,Lower Setul Limestone,1695,46,76,circle,3.0673,0,488,444,black,byPlateId,0.74
+7201,Lower Setul Limestone,1695,-46,-104,circle,3.0673,0,488,444,black,byPlateId,0.74
+7202,Cabo de Penas Volcanics,304,22.6,342.8,circle,3.814,0,488,444,black,byPlateId,0.866666667
+7202,Cabo de Penas Volcanics,304,-22.6,162.8,circle,3.814,0,488,444,black,byPlateId,0.866666667
+7203,Leading Tickles Dunite,101,19,98,circle,0.801,0,488,444,black,byPlateId,0.355555556
+7203,Leading Tickles Dunite,101,-19,-82,circle,0.801,0,488,444,black,byPlateId,0.355555556
+7204,PMH Dykes,101,-10,137.7,circle,3.4117,0,488,444,black,byPlateId,0.798422392
+7204,PMH Dykes,101,10,-42.3,circle,3.4117,0,488,444,black,byPlateId,0.798422392
+7205,Ordovician Intrusives,315,68,288,circle,3.945,0,488,444,black,byPlateId,0.888888889
+7205,Ordovician Intrusives,315,-68,108,circle,3.945,0,488,444,black,byPlateId,0.888888889
+7206,Kildare Inlier Volcanics,315,21,176,circle,1.456,0,488,444,black,byPlateId,0.466666667
+7206,Kildare Inlier Volcanics,315,-21,-4,circle,1.456,0,488,444,black,byPlateId,0.466666667
+7207,Volcanics,315,29,111,circle,0.408,0,488,444,black,byPlateId,0.288888889
+7207,Volcanics,315,-29,-69,circle,0.408,0,488,444,black,byPlateId,0.288888889
+7208,Portrane Volcanics,315,32,146,circle,0.67,0,488,444,black,byPlateId,0.333333333
+7208,Portrane Volcanics,315,-32,-34,circle,0.67,0,488,444,black,byPlateId,0.333333333
+7209,Ordovician sediments; Salta,202,31,13,circle,-1.295,0,488,444,black,byPlateId,0
+7209,Ordovician sediments; Salta,202,-31,-167,circle,-1.295,0,488,444,black,byPlateId,0
+7210,Trenton Limestone,101,36,114,circle,3.9188,0,471,461,black,byPlateId,0.884444444
+7210,Trenton Limestone,101,-36,-66,circle,3.9188,0,471,461,black,byPlateId,0.884444444
+7211,Claystones; East Germany,305,12.9,150.4,circle,3.4117,0,488,444,black,byPlateId,0.798422392
+7211,Claystones; East Germany,305,-12.9,-29.6,circle,3.4117,0,488,444,black,byPlateId,0.798422392
+7212,Sediments,201,12,121,circle,1.718,0,488,444,black,byPlateId,0.511111111
+7212,Sediments,201,-12,-59,circle,1.718,0,488,444,black,byPlateId,0.511111111
+7213,Jujuy Redbeds,202,11,333.3,circle,3.4472,0,488,444,black,byPlateId,0.804444444
+7213,Jujuy Redbeds,202,-11,153.3,circle,3.4472,0,488,444,black,byPlateId,0.804444444
+7214,Presque Isles Volcanics,101,3.7,12.7,circle,3.945,0,488,444,black,byPlateId,0.888888889
+7214,Presque Isles Volcanics,101,-3.7,-167.3,circle,3.945,0,488,444,black,byPlateId,0.888888889
+7215,Tumblagooda Sandstone,8012,-26.7,33.7,circle,4.207,0,488,444,black,byPlateId,0.933333333
+7215,Tumblagooda Sandstone,8012,26.7,-146.3,circle,4.207,0,488,444,black,byPlateId,0.933333333
+7216,Krivaya Luka Formation,401,-32,139.4,circle,4.1939,0,468,464,black,byPlateId,0.931111111
+7216,Krivaya Luka Formation,401,32,-40.6,circle,4.1939,0,468,464,black,byPlateId,0.931111111
+7217,Suri Formation,2021,8.5,185.9,circle,3.6306,0,472,461,black,byPlateId,0.835555556
+7217,Suri Formation,2021,-8.5,5.9,circle,3.6306,0,472,461,black,byPlateId,0.835555556
+7218,Bays and Moccasin Formation,101,33.1,146.6,circle,3.6961,0,472,461,black,byPlateId,0.846666667
+7218,Bays and Moccasin Formation,101,-33.1,-33.4,circle,3.6961,0,472,461,black,byPlateId,0.846666667
+7219,Round Knott dolerite,315,-19.6,352.8,circle,3.2507,0,472,461,black,byPlateId,0.771111111
+7219,Round Knott dolerite,315,19.6,172.8,circle,3.2507,0,472,461,black,byPlateId,0.771111111
+7220,Tramore Volcanics,315,-10.9,197.9,circle,3.4865,0,472,461,black,byPlateId,0.811111111
+7220,Tramore Volcanics,315,10.9,17.9,circle,3.4865,0,472,461,black,byPlateId,0.811111111
+7221,Orwell Limestone/Hatch Hill Formation,101,26,161,circle,3.6044,0,472,461,black,byPlateId,0.831111111
+7221,Orwell Limestone/Hatch Hill Formation,101,-26,-19,circle,3.6044,0,472,461,black,byPlateId,0.831111111
+7222,Orwell Limestone/Hatch Hill Formation,101,39,142,circle,3.159,0,472,461,black,byPlateId,0.755555556
+7222,Orwell Limestone/Hatch Hill Formation,101,-39,-38,circle,3.159,0,472,461,black,byPlateId,0.755555556
+7223,Dolerite Intrusions; Shelve Inlier,315,8.1,41.9,circle,3.2376,0,472,461,black,byPlateId,0.768888889
+7223,Dolerite Intrusions; Shelve Inlier,315,-8.1,-138.1,circle,3.2376,0,472,461,black,byPlateId,0.768888889
+7224,Andesite Intrusions; Shelve Inlier,315,12.9,51,circle,2.2551,0,472,461,black,byPlateId,0.602222222
+7224,Andesite Intrusions; Shelve Inlier,315,-12.9,-129,circle,2.2551,0,472,461,black,byPlateId,0.602222222
+7225,Quebec Group Volcanics,101,-6,191,circle,2.111,0,472,461,black,byPlateId,0.577777778
+7225,Quebec Group Volcanics,101,6,11,circle,2.111,0,472,461,black,byPlateId,0.577777778
+7226,Killary Harbour ignimbrites,313,9,214,circle,1.98,0,472,461,black,byPlateId,0.555555556
+7226,Killary Harbour ignimbrites,313,-9,34,circle,1.98,0,472,461,black,byPlateId,0.555555556
+7227,Borrowdale Volcanics,315,14,165,circle,3.4117,0,472,461,black,byPlateId,0.798422392
+7227,Borrowdale Volcanics,315,-14,-15,circle,3.4117,0,472,461,black,byPlateId,0.798422392
+7228,Arenig Lavas,313,11,168,circle,3.4734,0,472,461,black,byPlateId,0.808888889
+7228,Arenig Lavas,313,-11,-12,circle,3.4734,0,472,461,black,byPlateId,0.808888889
+7229,Trenton Limestone,101,27,285,circle,3.945,0,472,461,black,byPlateId,0.888888889
+7229,Trenton Limestone,101,-27,105,circle,3.945,0,472,461,black,byPlateId,0.888888889
+7230,Trenton Limestone Conglomerate,101,9,286,circle,3.814,0,472,461,black,byPlateId,0.866666667
+7230,Trenton Limestone Conglomerate,101,-9,106,circle,3.814,0,472,461,black,byPlateId,0.866666667
+7231,South Urals Intrusions and Sediments,402,30,166,circle,3.552,0,472,461,black,byPlateId,0.822222222
+7231,South Urals Intrusions and Sediments,402,-30,-14,circle,3.552,0,472,461,black,byPlateId,0.822222222
+7232,Moyero River Sediments,401,-22,153,circle,3.29,0,472,461,black,byPlateId,0.777777778
+7232,Moyero River Sediments,401,22,-27,circle,3.29,0,472,461,black,byPlateId,0.777777778
+7233,Moyero River Sediments,401,-31,155,circle,4.076,0,472,461,black,byPlateId,0.911111111
+7233,Moyero River Sediments,401,31,-25,circle,4.076,0,472,461,black,byPlateId,0.911111111
+7234,Moyero River Sediments,401,-26,154,circle,3.945,0,472,461,black,byPlateId,0.888888889
+7234,Moyero River Sediments,401,26,-26,circle,3.945,0,472,461,black,byPlateId,0.888888889
+7235,Uphimsk Sediments,301,-1,171,circle,3.29,0,472,461,black,byPlateId,0.777777778
+7235,Uphimsk Sediments,301,1,-9,circle,3.29,0,472,461,black,byPlateId,0.777777778
+7236,Chaunceport Group,108,10,131,circle,3.683,0,472,461,black,byPlateId,0.844444444
+7236,Chaunceport Group,108,-10,-49,circle,3.683,0,472,461,black,byPlateId,0.844444444
+7237,Builth Inlier Volcanics and Sediments,315,-17.9,192.9,circle,3.29,0,472,461,black,byPlateId,0.777777778
+7237,Builth Inlier Volcanics and Sediments,315,17.9,12.9,circle,3.29,0,472,461,black,byPlateId,0.777777778
+7238,Builth Inlier Volcanics and Sediments,315,12.8,183.2,circle,4.0105,0,472,461,black,byPlateId,0.9
+7238,Builth Inlier Volcanics and Sediments,315,-12.8,3.2,circle,4.0105,0,472,461,black,byPlateId,0.9
+7239,Stacyville Volcanics,101,-14,180,circle,2.9756,0,472,461,black,byPlateId,0.724444444
+7239,Stacyville Volcanics,101,14,0,circle,2.9756,0,472,461,black,byPlateId,0.724444444
+7240,Ophiolites of Zhangystal; Itmurundy and Ushtogan Mountains,402,-25,49,circle,3.421,0,472,461,black,byPlateId,0.8
+7240,Ophiolites of Zhangystal; Itmurundy and Ushtogan Mountains,402,25,-131,circle,3.421,0,472,461,black,byPlateId,0.8
+7241,Arkharsu allochton gabbros,402,-24,79,circle,2.635,0,472,461,black,byPlateId,0.666666667
+7241,Arkharsu allochton gabbros,402,24,-101,circle,2.635,0,472,461,black,byPlateId,0.666666667
+7242,Oboly allochton basalts,402,-14,28,circle,3.028,0,472,461,black,byPlateId,0.733333333
+7242,Oboly allochton basalts,402,14,-152,circle,3.028,0,472,461,black,byPlateId,0.733333333
+7243,Igneous rocks combined,402,-22,51,circle,3.4117,0,472,461,black,byPlateId,0.798422392
+7243,Igneous rocks combined,402,22,-129,circle,3.4117,0,472,461,black,byPlateId,0.798422392
+7244,Teabeateyskaya suite,405,-6,87,circle,2.242,0,472,461,black,byPlateId,0.6
+7244,Teabeateyskaya suite,405,6,-93,circle,2.242,0,472,461,black,byPlateId,0.6
+7245,Bazarbaysky allochton volcanics,402,-29,57,circle,2.897,0,472,461,black,byPlateId,0.711111111
+7245,Bazarbaysky allochton volcanics,402,29,-123,circle,2.897,0,472,461,black,byPlateId,0.711111111
+7246,Bazarbaysky allochton metamorphics,402,-30,63,circle,3.421,0,472,461,black,byPlateId,0.8
+7246,Bazarbaysky allochton metamorphics,402,30,-117,circle,3.421,0,472,461,black,byPlateId,0.8
+7247,Bazarbaysky allochton combined,402,-30,60,circle,3.4117,0,472,461,black,byPlateId,0.798422392
+7247,Bazarbaysky allochton combined,402,30,-120,circle,3.4117,0,472,461,black,byPlateId,0.798422392
+7248,Tolpak massif,402,-18,103,circle,3.028,0,472,461,black,byPlateId,0.733333333
+7248,Tolpak massif,402,18,-77,circle,3.028,0,472,461,black,byPlateId,0.733333333
+7249,Mayljen sediments,402,39,251,circle,2.897,0,472,461,black,byPlateId,0.711111111
+7249,Mayljen sediments,402,-39,71,circle,2.897,0,472,461,black,byPlateId,0.711111111
+7250,Agyrek basalts,402,-14,150,circle,2.635,0,472,461,black,byPlateId,0.666666667
+7250,Agyrek basalts,402,14,-30,circle,2.635,0,472,461,black,byPlateId,0.666666667
+7251,Pillow-basalts of Itmurundin slabe,402,-24.7,50.1,circle,3.421,0,472,461,black,byPlateId,0.8
+7251,Pillow-basalts of Itmurundin slabe,402,24.7,-129.9,circle,3.421,0,472,461,black,byPlateId,0.8
+7252,Middle Ordovician Limestones,604,-31.5,147.7,circle,3.6568,0,472,461,black,byPlateId,0.84
+7252,Middle Ordovician Limestones,604,31.5,-32.3,circle,3.6568,0,472,461,black,byPlateId,0.84
+7253,Zebrak-Tocnik Pillow Lava,305,60.8,282.1,circle,1.1547,0,472,461,black,byPlateId,0.415555556
+7253,Zebrak-Tocnik Pillow Lava,305,-60.8,102.1,circle,1.1547,0,472,461,black,byPlateId,0.415555556
+7254,Komarov-Jivina Red Greywacke,305,67.3,175.1,circle,3.5782,0,472,461,black,byPlateId,0.826666667
+7254,Komarov-Jivina Red Greywacke,305,-67.3,-4.9,circle,3.5782,0,472,461,black,byPlateId,0.826666667
+7255,Baltoscandian Ordovician Carbonates,301,14,49,circle,4.0236,0,472,465,black,byPlateId,0.902222222
+7255,Baltoscandian Ordovician Carbonates,301,-14,-131,circle,4.0236,0,472,465,black,byPlateId,0.902222222
+7256,Newer Gabbros; Aberdeenshire,313,15.5,212,circle,3.29,0,470,468,black,byPlateId,0.777777778
+7256,Newer Gabbros; Aberdeenshire,313,-15.5,32,circle,3.29,0,470,468,black,byPlateId,0.777777778
+7257,Table Head Group,101,13.4,149.2,circle,4.0891,0,470,468,black,byPlateId,0.913333333
+7257,Table Head Group,101,-13.4,-30.8,circle,4.0891,0,470,468,black,byPlateId,0.913333333
+7258,Builth Volcanics,315,16,179,circle,3.4603,0,470,468,black,byPlateId,0.806666667
+7258,Builth Volcanics,315,-16,-1,circle,3.4603,0,470,468,black,byPlateId,0.806666667
+7259,Builth Volcanics,315,15,162,circle,3.4117,0,470,468,black,byPlateId,0.798422392
+7259,Builth Volcanics,315,-15,-18,circle,3.4117,0,470,468,black,byPlateId,0.798422392
+7260,Lena River Sediments,401,-27,134,circle,2.897,0,470,468,black,byPlateId,0.711111111
+7260,Lena River Sediments,401,27,-46,circle,2.897,0,470,468,black,byPlateId,0.711111111
+7261,Lena River Redbeds,401,-25,137,circle,3.421,0,470,468,black,byPlateId,0.8
+7261,Lena River Redbeds,401,25,-43,circle,3.421,0,470,468,black,byPlateId,0.8
+7262,High Ireby Formation,315,12,177,circle,3.552,0,470,468,black,byPlateId,0.822222222
+7262,High Ireby Formation,315,-12,-3,circle,3.552,0,470,468,black,byPlateId,0.822222222
+7263,Chapman Ridge Formation,101,26.9,110.1,circle,2.6743,0,472,468,black,byPlateId,0.673333333
+7263,Chapman Ridge Formation,101,-26.9,-69.9,circle,2.6743,0,472,468,black,byPlateId,0.673333333
+7264,Builth Volcanic Series,315,2.8,175.2,circle,4.0236,0,472,468,black,byPlateId,0.902222222
+7264,Builth Volcanic Series,315,-2.8,-4.8,circle,4.0236,0,472,468,black,byPlateId,0.902222222
+7265,Table Head Group,101,14.8,156.2,circle,3.4117,0,472,468,black,byPlateId,0.798422392
+7265,Table Head Group,101,-14.8,-23.8,circle,3.4117,0,472,468,black,byPlateId,0.798422392
+7266,Stapely Volcanic Group; Shelve Inlier,315,20,190,circle,3.0542,0,472,468,black,byPlateId,0.737777778
+7266,Stapely Volcanic Group; Shelve Inlier,315,-20,10,circle,3.0542,0,472,468,black,byPlateId,0.737777778
+7267,Grangegeeth Volcanics,313,22,160,circle,3.421,0,472,468,black,byPlateId,0.8
+7267,Grangegeeth Volcanics,313,-22,-20,circle,3.421,0,472,468,black,byPlateId,0.8
+7268,Carrock Fell Gabbro Complex,315,-17,211,circle,2.897,0,472,468,black,byPlateId,0.711111111
+7268,Carrock Fell Gabbro Complex,315,17,31,circle,2.897,0,472,468,black,byPlateId,0.711111111
+7269,Bisney Formation,315,3,165,circle,3.29,0,472,468,black,byPlateId,0.777777778
+7269,Bisney Formation,315,-3,-15,circle,3.29,0,472,468,black,byPlateId,0.777777778
+7270,Port Askaig Formation,313,17,309,circle,3.2114,0,500,440,black,byPlateId,0.764444444
+7270,Port Askaig Formation,313,-17,129,circle,3.2114,0,500,440,black,byPlateId,0.764444444
+7271,Antarctic gneiss,8021,14,206,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+7271,Antarctic gneiss,8021,-14,26,circle,3.4117,0,480,460,black,byPlateId,0.798422392
+7272,Lena River Sediments,401,-23,127,circle,3.421,0,472,468,black,byPlateId,0.8
+7272,Lena River Sediments,401,23,-53,circle,3.421,0,472,468,black,byPlateId,0.8
+7273,Chertovsk Group,401,-23,137,circle,4.207,0,472,468,black,byPlateId,0.933333333
+7273,Chertovsk Group,401,23,-43,circle,4.207,0,472,468,black,byPlateId,0.933333333
+7274,Polar Urals Volcanics and Sediments,301,-10,170,circle,3.552,0,472,468,black,byPlateId,0.822222222
+7274,Polar Urals Volcanics and Sediments,301,10,-10,circle,3.552,0,472,468,black,byPlateId,0.822222222
+7275,Summerford Group,108,8,140,circle,3.421,0,472,468,black,byPlateId,0.8
+7275,Summerford Group,108,-8,-40,circle,3.421,0,472,468,black,byPlateId,0.8
+7276,Builth Volcanics and Intrusions,315,-3,4,circle,3.6437,0,472,468,black,byPlateId,0.837777778
+7276,Builth Volcanics and Intrusions,315,3,-176,circle,3.6437,0,472,468,black,byPlateId,0.837777778
+7277,Swedish Orthoceras Limestones,301,-5,223,circle,2.8446,0,472,468,black,byPlateId,0.702222222
+7277,Swedish Orthoceras Limestones,301,5,43,circle,2.8446,0,472,468,black,byPlateId,0.702222222
+7278,Stapeley Volcanic Formation,315,26.6,36.1,circle,3.9581,0,472,468,black,byPlateId,0.891111111
+7278,Stapeley Volcanic Formation,315,-26.6,-143.9,circle,3.9581,0,472,468,black,byPlateId,0.891111111
+7279,Uralian pillow-lavas and jaspers,402,41,265,circle,1.849,0,479,461,black,byPlateId,0.533333333
+7279,Uralian pillow-lavas and jaspers,402,-41,85,circle,1.849,0,479,461,black,byPlateId,0.533333333
+7280,Moyero River Sediments,401,-29.8,156.6,circle,4.0891,0,472,468,black,byPlateId,0.913333333
+7280,Moyero River Sediments,401,29.8,-23.4,circle,4.0891,0,472,468,black,byPlateId,0.913333333
+7281,Orthoceras Limestone,301,34.7,59.1,circle,4.1284,0,472,468,black,byPlateId,0.92
+7281,Orthoceras Limestone,301,-34.7,-120.9,circle,4.1284,0,472,468,black,byPlateId,0.92
+7282,Guragirskaya Formation,401,-30.9,152.7,circle,4.1808,0,472,468,black,byPlateId,0.928888889
+7282,Guragirskaya Formation,401,30.9,-27.3,circle,4.1808,0,472,468,black,byPlateId,0.928888889
+7283,Mweelrea Ignimbrites,313,9.9,216.4,circle,2.2551,0,472,468,black,byPlateId,0.602222222
+7283,Mweelrea Ignimbrites,313,-9.9,36.4,circle,2.2551,0,472,468,black,byPlateId,0.602222222
+7284,Guragir Formation,401,-30.9,152.7,circle,4.1808,0,472,468,black,byPlateId,0.928888889
+7284,Guragir Formation,401,30.9,-27.3,circle,4.1808,0,472,468,black,byPlateId,0.928888889
+7285,Tumblagooda Sandstone,8012,30,211,circle,3.4117,0,513,428,black,byPlateId,0.798422392
+7285,Tumblagooda Sandstone,8012,-30,31,circle,3.4117,0,513,428,black,byPlateId,0.798422392
+7286,Blaubeker Formation,7013,51,353,circle,2.111,0,497,445,black,byPlateId,0.577777778
+7286,Blaubeker Formation,7013,-51,173,circle,2.111,0,497,445,black,byPlateId,0.577777778
+7287,Vanda lamprophyre and porphyry,802,2.5,203.8,circle,3.9188,0,480,463,black,byPlateId,0.884444444
+7287,Vanda lamprophyre and porphyry,802,-2.5,23.8,circle,3.9188,0,480,463,black,byPlateId,0.884444444
+7288,Mayachnaya suite,402,35,258,circle,2.897,0,479,465,black,byPlateId,0.711111111
+7288,Mayachnaya suite,402,-35,78,circle,2.897,0,479,465,black,byPlateId,0.711111111
+7289,Lawrence Head Volcanics,108,30.9,54.9,circle,2.1765,0,476,468,black,byPlateId,0.588888889
+7289,Lawrence Head Volcanics,108,-30.9,-125.1,circle,2.1765,0,476,468,black,byPlateId,0.588888889
+7290,Tianjinshan and Miboshan Formations,604,31.8,326.5,circle,2.9756,0,476,468,black,byPlateId,0.724444444
+7290,Tianjinshan and Miboshan Formations,604,-31.8,146.5,circle,2.9756,0,476,468,black,byPlateId,0.724444444
+7291,Barrendian Basin Volcanics and Sediments,305,-58,175,circle,2.6874,0,475,470,black,byPlateId,0.675555556
+7291,Barrendian Basin Volcanics and Sediments,305,58,-5,circle,2.6874,0,475,470,black,byPlateId,0.675555556
+7292,Uralian basalts and jaspers,402,47,241,circle,3.683,0,475,470,black,byPlateId,0.844444444
+7292,Uralian basalts and jaspers,402,-47,61,circle,3.683,0,475,470,black,byPlateId,0.844444444
+7293,Gullhogen Formation,301,-18.7,234,circle,3.7092,0,475,470,black,byPlateId,0.848888889
+7293,Gullhogen Formation,301,18.7,54,circle,3.7092,0,475,470,black,byPlateId,0.848888889
+7294,Robert's Arm Group,101,6,140,circle,3.159,0,475,471,black,byPlateId,0.755555556
+7294,Robert's Arm Group,101,-6,-40,circle,3.159,0,475,471,black,byPlateId,0.755555556
+7295,Slockenray Formation; Ballantrae Ophiolite,313,12.2,298.6,circle,3.9712,0,479,468,black,byPlateId,0.893333333
+7295,Slockenray Formation; Ballantrae Ophiolite,313,-12.2,118.6,circle,3.9712,0,479,468,black,byPlateId,0.893333333
+7296,Swedish limestones,301,30,46,circle,4.3118,0,479,468,black,byPlateId,0.951111111
+7296,Swedish limestones,301,-30,-134,circle,4.3118,0,479,468,black,byPlateId,0.951111111
+7297,Swedish Orthoceras Limestones,301,18,46,circle,3.9319,0,479,468,black,byPlateId,0.886666667
+7297,Swedish Orthoceras Limestones,301,-18,-134,circle,3.9319,0,479,468,black,byPlateId,0.886666667
+7298,Orthoceras Limestone,301,30,55,circle,3.9188,0,479,468,black,byPlateId,0.884444444
+7298,Orthoceras Limestone,301,-30,-125,circle,3.9188,0,479,468,black,byPlateId,0.884444444
+7299,Hongshiya Formation,611,-38.9,235.7,circle,2.3861,0,476,472,black,byPlateId,0.624444444
+7299,Hongshiya Formation,611,38.9,55.7,circle,2.3861,0,476,472,black,byPlateId,0.624444444
+7300,Komstad Limestone; Scania,301,-18,224,circle,4.0236,0,476,472,black,byPlateId,0.902222222
+7300,Komstad Limestone; Scania,301,18,44,circle,4.0236,0,476,472,black,byPlateId,0.902222222
+7301,Komstad Limestone; Bornholm,301,-22,261,circle,3.4341,0,476,472,black,byPlateId,0.802222222
+7301,Komstad Limestone; Bornholm,301,22,81,circle,3.4341,0,476,472,black,byPlateId,0.802222222
+7302,Komstad Limestone; Combined,301,-19,231,circle,3.3948,0,476,472,black,byPlateId,0.795555556
+7302,Komstad Limestone; Combined,301,19,51,circle,3.3948,0,476,472,black,byPlateId,0.795555556
+7303,Trahagaum Formation,5011,-79,173,circle,4.076,0,488,461,black,byPlateId,0.911111111
+7303,Trahagaum Formation,5011,79,-7,circle,4.076,0,488,461,black,byPlateId,0.911111111
+7304,Moreton's Harbour Group,108,32.2,130,circle,2.504,0,488,461,black,byPlateId,0.644444444
+7304,Moreton's Harbour Group,108,-32.2,-50,circle,2.504,0,488,461,black,byPlateId,0.644444444
+7305,Sulitjelma Gabbro,301,14,180,circle,0.932,0,488,461,black,byPlateId,0.377777778
+7305,Sulitjelma Gabbro,301,-14,0,circle,0.932,0,488,461,black,byPlateId,0.377777778
+7306,South Urals Sediments,301,-20,75,circle,2.373,0,488,461,black,byPlateId,0.622222222
+7306,South Urals Sediments,301,20,-105,circle,2.373,0,488,461,black,byPlateId,0.622222222
+7307,South Urals Sediments,301,-36,55,circle,1.98,0,488,461,black,byPlateId,0.555555556
+7307,South Urals Sediments,301,36,-125,circle,1.98,0,488,461,black,byPlateId,0.555555556
+7308,South Urals Sediments,301,-30,64,circle,3.814,0,488,461,black,byPlateId,0.866666667
+7308,South Urals Sediments,301,30,-116,circle,3.814,0,488,461,black,byPlateId,0.866666667
+7309,Kundass and Volkhovsk Horizons,301,-31.4,79.8,circle,1.849,0,488,461,black,byPlateId,0.533333333
+7309,Kundass and Volkhovsk Horizons,301,31.4,-100.2,circle,1.849,0,488,461,black,byPlateId,0.533333333
+7310,Kundass and Volkhovsk Horizons,301,-9.5,107.3,circle,2.766,0,488,461,black,byPlateId,0.688888889
+7310,Kundass and Volkhovsk Horizons,301,9.5,-72.7,circle,2.766,0,488,461,black,byPlateId,0.688888889
+7311,Kundass and Volkhovsk Horizons,301,-19.1,96.2,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7311,Kundass and Volkhovsk Horizons,301,19.1,-83.8,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7312,Kuragan Group,301,-15.4,65.6,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7312,Kuragan Group,301,15.4,-114.4,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7313,Sediments,405,-34.2,193.1,circle,3.159,0,488,461,black,byPlateId,0.755555556
+7313,Sediments,405,34.2,13.1,circle,3.159,0,488,461,black,byPlateId,0.755555556
+7314,Basarbay allochton intrusions,402,-22,61,circle,3.159,0,488,461,black,byPlateId,0.755555556
+7314,Basarbay allochton intrusions,402,22,-119,circle,3.159,0,488,461,black,byPlateId,0.755555556
+7315,Duana-Karasu allochton basalts,402,9,347,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7315,Duana-Karasu allochton basalts,402,-9,167,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7316,Kupinskaya suite,301,39,200,circle,3.552,0,488,461,black,byPlateId,0.822222222
+7316,Kupinskaya suite,301,-39,20,circle,3.552,0,488,461,black,byPlateId,0.822222222
+7317,Upper Kulkuduk ophiolite complex,402,-54.7,126.7,circle,3.4996,0,488,461,black,byPlateId,0.813333333
+7317,Upper Kulkuduk ophiolite complex,402,54.7,-53.3,circle,3.4996,0,488,461,black,byPlateId,0.813333333
+7318,Middle Kulkuduk ophiolite complex,402,-66.7,54.9,circle,3.4341,0,488,461,black,byPlateId,0.802222222
+7318,Middle Kulkuduk ophiolite complex,402,66.7,-125.1,circle,3.4341,0,488,461,black,byPlateId,0.802222222
+7319,Lower Kulkuduk ophiolite complex,402,-22,325,circle,3.5782,0,488,461,black,byPlateId,0.826666667
+7319,Lower Kulkuduk ophiolite complex,402,22,145,circle,3.5782,0,488,461,black,byPlateId,0.826666667
+7320,Tolpak Cover,402,-18.1,103,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7320,Tolpak Cover,402,18.1,-77,circle,3.028,0,488,461,black,byPlateId,0.733333333
+7321,South China sediments,611,-38.4,154.9,circle,2.8053,0,488,461,black,byPlateId,0.695555556
+7321,South China sediments,611,38.4,-25.1,circle,2.8053,0,488,461,black,byPlateId,0.695555556
+7322,Port Askaid Tillite,313,30,195.6,circle,3.3948,0,500,450,black,byPlateId,0.795555556
+7322,Port Askaid Tillite,313,-30,15.6,circle,3.3948,0,500,450,black,byPlateId,0.795555556
+7323,Ballantrae Complex,313,-11.5,26.2,circle,3.5127,0,483,467,black,byPlateId,0.815555556
+7323,Ballantrae Complex,313,11.5,-153.8,circle,3.5127,0,483,467,black,byPlateId,0.815555556
+7324,Moulin de Chateaupanne Formation,305,34,343,circle,3.814,0,479,472,black,byPlateId,0.866666667
+7324,Moulin de Chateaupanne Formation,305,-34,163,circle,3.814,0,479,472,black,byPlateId,0.866666667
+7325,Wabana and Bell Island Groups,108,33,102,circle,3.8533,0,479,472,black,byPlateId,0.873333333
+7325,Wabana and Bell Island Groups,108,-33,-78,circle,3.8533,0,479,472,black,byPlateId,0.873333333
+7326,Trefgarn Andesite Series,315,5,172,circle,1.98,0,479,472,black,byPlateId,0.555555556
+7326,Trefgarn Andesite Series,315,-5,-8,circle,1.98,0,479,472,black,byPlateId,0.555555556
+7327,Polar Urals Sediments,301,-11,174,circle,3.814,0,479,472,black,byPlateId,0.866666667
+7327,Polar Urals Sediments,301,11,-6,circle,3.814,0,479,472,black,byPlateId,0.866666667
+7328,Manitanyrd Group Combined,301,-7,173,circle,3.945,0,479,472,black,byPlateId,0.888888889
+7328,Manitanyrd Group Combined,301,7,-7,circle,3.945,0,479,472,black,byPlateId,0.888888889
+7329,Manitanyrd Group Combined,301,-2,192,circle,3.552,0,479,472,black,byPlateId,0.822222222
+7329,Manitanyrd Group Combined,301,2,12,circle,3.552,0,479,472,black,byPlateId,0.822222222
+7330,Manitanyrd Group Combined,301,-5,156,circle,3.683,0,479,472,black,byPlateId,0.844444444
+7330,Manitanyrd Group Combined,301,5,-24,circle,3.683,0,479,472,black,byPlateId,0.844444444
+7331,Manitanyrd Group Combined,301,-2,187,circle,3.29,0,479,472,black,byPlateId,0.777777778
+7331,Manitanyrd Group Combined,301,2,7,circle,3.29,0,479,472,black,byPlateId,0.777777778
+7332,Manitanyrd Group Combined,301,11,188,circle,3.421,0,479,472,black,byPlateId,0.8
+7332,Manitanyrd Group Combined,301,-11,8,circle,3.421,0,479,472,black,byPlateId,0.8
+7333,Manitanyrd Group Combined,301,-1,179,circle,2.766,0,479,472,black,byPlateId,0.688888889
+7333,Manitanyrd Group Combined,301,1,-1,circle,2.766,0,479,472,black,byPlateId,0.688888889
+7334,Toguzak-Ayatskaya suite,402,39,215,circle,3.29,0,479,472,black,byPlateId,0.777777778
+7334,Toguzak-Ayatskaya suite,402,-39,35,circle,3.29,0,479,472,black,byPlateId,0.777777778
+7335,Garshinskaya suite,402,29,275,circle,2.242,0,479,472,black,byPlateId,0.6
+7335,Garshinskaya suite,402,-29,95,circle,2.242,0,479,472,black,byPlateId,0.6
+7336,Garshinskaya suite,402,22.5,246.3,circle,3.421,0,479,472,black,byPlateId,0.8
+7336,Garshinskaya suite,402,-22.5,66.3,circle,3.421,0,479,472,black,byPlateId,0.8
+7337,Moyero River Sediments,401,-33.9,151.7,circle,4.3118,0,479,472,black,byPlateId,0.951111111
+7337,Moyero River Sediments,401,33.9,-28.3,circle,4.3118,0,479,472,black,byPlateId,0.951111111
+7338,ZebrakñTocn?k Pillow Lava,305,11.9,345.2,circle,3.1197,0,479,472,black,byPlateId,0.748888889
+7338,ZebrakñTocn?k Pillow Lava,305,-11.9,165.2,circle,3.1197,0,479,472,black,byPlateId,0.748888889
+7339,Klabava Formation Mineralized Layers,305,61.3,271.9,circle,3.7485,0,479,472,black,byPlateId,0.855555556
+7339,Klabava Formation Mineralized Layers,305,-61.3,91.9,circle,3.7485,0,479,472,black,byPlateId,0.855555556
+7340,Pont-Rean Formation,305,28.3,331.4,circle,3.7485,0,485,470,black,byPlateId,0.855555556
+7340,Pont-Rean Formation,305,-28.3,151.4,circle,3.7485,0,485,470,black,byPlateId,0.855555556
+7341,Moshaneng Dolerites; site JP11,301,31,55.4,circle,4.3511,0,485,470,black,byPlateId,0.957777778
+7341,Moshaneng Dolerites; site JP11,301,-31,-124.6,circle,4.3511,0,485,470,black,byPlateId,0.957777778
+7342,Younger Gabbros; Aberdeenshire,313,11,189,circle,3.4734,0,491,465,black,byPlateId,0.808888889
+7342,Younger Gabbros; Aberdeenshire,313,-11,9,circle,3.4734,0,491,465,black,byPlateId,0.808888889
+7343,Saxothuringian Ignimbrites,305,-24,187,circle,3.0804,0,480,476,black,byPlateId,0.742222222
+7343,Saxothuringian Ignimbrites,305,24,7,circle,3.0804,0,480,476,black,byPlateId,0.742222222
+7344,Treffgarne Volcanic Formation,315,56,306,circle,3.8795,0,482,475,black,byPlateId,0.877777778
+7344,Treffgarne Volcanic Formation,315,-56,126,circle,3.8795,0,482,475,black,byPlateId,0.877777778
+7345,Teall Nunatak,802,11,201,circle,3.6568,0,483,475,black,byPlateId,0.84
+7345,Teall Nunatak,802,-11,21,circle,3.6568,0,483,475,black,byPlateId,0.84
+7346,Tourmakeady Volcanic succession,313,31,169,circle,4.0498,0,488,472,black,byPlateId,0.906666667
+7346,Tourmakeady Volcanic succession,313,-31,-11,circle,4.0498,0,488,472,black,byPlateId,0.906666667
+7347,Graafwater Formation,7014,28,14,circle,3.421,0,488,472,black,byPlateId,0.8
+7347,Graafwater Formation,7014,-28,-166,circle,3.421,0,488,472,black,byPlateId,0.8
+7348,Martinsburg Formation,101,35.8,159.8,circle,2.8184,0,488,472,black,byPlateId,0.697777778
+7348,Martinsburg Formation,101,-35.8,-20.2,circle,2.8184,0,488,472,black,byPlateId,0.697777778
+7349,Walli and Mt Pleasant Andesites,1853,12.2,183.3,circle,3.1983,0,488,472,black,byPlateId,0.762222222
+7349,Walli and Mt Pleasant Andesites,1853,-12.2,3.3,circle,3.1983,0,488,472,black,byPlateId,0.762222222
+7350,Wooltana Volcanics,8013,36,87,circle,1.325,0,510,450,black,byPlateId,0.444444444
+7350,Wooltana Volcanics,8013,-36,-93,circle,1.325,0,510,450,black,byPlateId,0.444444444
+7351,Merinjina Tillite,8013,1,245,circle,2.897,0,510,450,black,byPlateId,0.711111111
+7351,Merinjina Tillite,8013,-1,65,circle,2.897,0,510,450,black,byPlateId,0.711111111
+7352,Ordovician sediments,305,48.1,271.8,circle,4.1153,0,488,472,black,byPlateId,0.917777778
+7352,Ordovician sediments,305,-48.1,91.8,circle,4.1153,0,488,472,black,byPlateId,0.917777778
+7353,La Meilleraie Formation,305,15,110,circle,2.766,0,488,472,black,byPlateId,0.688888889
+7353,La Meilleraie Formation,305,-15,-70,circle,2.766,0,488,472,black,byPlateId,0.688888889
+7354,St.George Group,101,17.5,152.3,circle,4.0367,0,488,472,black,byPlateId,0.904444444
+7354,St.George Group,101,-17.5,-27.7,circle,4.0367,0,488,472,black,byPlateId,0.904444444
+7355,Jinduckin Formation,8011,15.7,209.5,circle,1.9014,0,488,472,black,byPlateId,0.542222222
+7355,Jinduckin Formation,8011,-15.7,29.5,circle,1.9014,0,488,472,black,byPlateId,0.542222222
+7356,Jinduckin Formation,8011,13,205,circle,2.897,0,488,472,black,byPlateId,0.711111111
+7356,Jinduckin Formation,8011,-13,25,circle,2.897,0,488,472,black,byPlateId,0.711111111
+7357,St.George Group; Port-aux-Port,101,30,119,circle,4.2725,0,488,472,black,byPlateId,0.944444444
+7357,St.George Group; Port-aux-Port,101,-30,-61,circle,4.2725,0,488,472,black,byPlateId,0.944444444
+7358,St.George Group; Port Norman,101,28.2,126.3,circle,3.683,0,488,472,black,byPlateId,0.844444444
+7358,St.George Group; Port Norman,101,-28.2,-53.7,circle,3.683,0,488,472,black,byPlateId,0.844444444
+7359,Fishguard Volcanic Series,315,2,119,circle,1.325,0,488,472,black,byPlateId,0.444444444
+7359,Fishguard Volcanic Series,315,-2,-61,circle,1.325,0,488,472,black,byPlateId,0.444444444
+7360,St. George Group,101,26,126,circle,3.6961,0,488,472,black,byPlateId,0.846666667
+7360,St. George Group,101,-26,-54,circle,3.6961,0,488,472,black,byPlateId,0.846666667
+7361,Redbeds and Diabases,305,9,48,circle,2.766,0,488,472,black,byPlateId,0.688888889
+7361,Redbeds and Diabases,305,-9,-132,circle,2.766,0,488,472,black,byPlateId,0.688888889
+7362,Oolitic ores,305,16,179,circle,3.4117,0,488,472,black,byPlateId,0.798422392
+7362,Oolitic ores,305,-16,-1,circle,3.4117,0,488,472,black,byPlateId,0.798422392
+7363,Krusne Hory layers,305,13,72,circle,3.4117,0,488,472,black,byPlateId,0.798422392
+7363,Krusne Hory layers,305,-13,-108,circle,3.4117,0,488,472,black,byPlateId,0.798422392
+7364,Oolitic ores,305,21,74,circle,3.4117,0,488,472,black,byPlateId,0.798422392
+7364,Oolitic ores,305,-21,-106,circle,3.4117,0,488,472,black,byPlateId,0.798422392
+7365,St.Petersburg Region Sediments,301,34,135,circle,2.504,0,488,472,black,byPlateId,0.644444444
+7365,St.Petersburg Region Sediments,301,-34,-45,circle,2.504,0,488,472,black,byPlateId,0.644444444
+7366,Ustkutsk Group,401,-42,131,circle,3.028,0,488,472,black,byPlateId,0.733333333
+7366,Ustkutsk Group,401,42,-49,circle,3.028,0,488,472,black,byPlateId,0.733333333
+7367,Ustkutsk and Kazimirovsk Groups,401,-41,123,circle,2.897,0,488,472,black,byPlateId,0.711111111
+7367,Ustkutsk and Kazimirovsk Groups,401,41,-57,circle,2.897,0,488,472,black,byPlateId,0.711111111
+7368,Ustkutsk Group,401,-34,155,circle,4.076,0,488,472,black,byPlateId,0.911111111
+7368,Ustkutsk Group,401,34,-25,circle,4.076,0,488,472,black,byPlateId,0.911111111
+7369,Ustkutsk Group,401,-42,128,circle,3.552,0,488,472,black,byPlateId,0.822222222
+7369,Ustkutsk Group,401,42,-52,circle,3.552,0,488,472,black,byPlateId,0.822222222
+7370,Ustkutsk Group,401,-38,144,circle,3.552,0,488,472,black,byPlateId,0.822222222
+7370,Ustkutsk Group,401,38,-36,circle,3.552,0,488,472,black,byPlateId,0.822222222
+7371,Ustkutsk Group,401,-41,122,circle,3.814,0,488,472,black,byPlateId,0.866666667
+7371,Ustkutsk Group,401,41,-58,circle,3.814,0,488,472,black,byPlateId,0.866666667
+7372,Ustkutsk Group Combined,401,-40,138,circle,2.897,0,488,472,black,byPlateId,0.711111111
+7372,Ustkutsk Group Combined,401,40,-42,circle,2.897,0,488,472,black,byPlateId,0.711111111
+7373,Kurachan Group,301,-14,96,circle,2.766,0,488,472,black,byPlateId,0.688888889
+7373,Kurachan Group,301,14,-84,circle,2.766,0,488,472,black,byPlateId,0.688888889
+7374,Moyero River Sediments,401,-37,155,circle,4.207,0,488,472,black,byPlateId,0.933333333
+7374,Moyero River Sediments,401,37,-25,circle,4.207,0,488,472,black,byPlateId,0.933333333
+7375,Narva and Popovka River Sediments,301,37,137,circle,3.552,0,488,472,black,byPlateId,0.822222222
+7375,Narva and Popovka River Sediments,301,-37,-43,circle,3.552,0,488,472,black,byPlateId,0.822222222
+7376,Narva and Popovka River,301,-13,133,circle,2.111,0,488,472,black,byPlateId,0.577777778
+7376,Narva and Popovka River,301,13,-47,circle,2.111,0,488,472,black,byPlateId,0.577777778
+7377,Moreton's Harbour Group,101,29,135,circle,3.7485,0,488,472,black,byPlateId,0.855555556
+7377,Moreton's Harbour Group,101,-29,-45,circle,3.7485,0,488,472,black,byPlateId,0.855555556
+7378,St.George Group; Port-au-Port,101,21,138,circle,3.6699,0,488,472,black,byPlateId,0.842222222
+7378,St.George Group; Port-au-Port,101,-21,-42,circle,3.6699,0,488,472,black,byPlateId,0.842222222
+7379,Krushnogorsky beds,305,47.6,246.8,circle,3.6961,0,488,472,black,byPlateId,0.846666667
+7379,Krushnogorsky beds,305,-47.6,66.8,circle,3.6961,0,488,472,black,byPlateId,0.846666667
+7380,Krushnogorsky beds,305,49.9,267.9,circle,3.9712,0,488,472,black,byPlateId,0.893333333
+7380,Krushnogorsky beds,305,-49.9,87.9,circle,3.9712,0,488,472,black,byPlateId,0.893333333
+7381,Puna Oriental-Famatina Rocks,202,21.8,178.7,circle,3.814,0,488,472,black,byPlateId,0.866666667
+7381,Puna Oriental-Famatina Rocks,202,-21.8,-1.3,circle,3.814,0,488,472,black,byPlateId,0.866666667
+7382,Lower Ordovician Limestones,604,-37.4,144.3,circle,3.3948,0,488,472,black,byPlateId,0.795555556
+7382,Lower Ordovician Limestones,604,37.4,-35.7,circle,3.3948,0,488,472,black,byPlateId,0.795555556
+7383,Tarim sediments,5012,-20.4,180.6,circle,2.8839,0,488,472,black,byPlateId,0.708888889
+7383,Tarim sediments,5012,20.4,0.6,circle,2.8839,0,488,472,black,byPlateId,0.708888889
+7384,Surinsk Formation,401,-42.2,128.1,circle,3.8402,0,488,472,black,byPlateId,0.871111111
+7384,Surinsk Formation,401,42.2,-51.9,circle,3.8402,0,488,472,black,byPlateId,0.871111111
+7385,Smirnov Formation and Dykes,401,-44,129.6,circle,3.7223,0,488,472,black,byPlateId,0.851111111
+7385,Smirnov Formation and Dykes,401,44,-50.4,circle,3.7223,0,488,472,black,byPlateId,0.851111111
+7386,Chingiz Range Ordovician Sediments,402,-43.9,127.8,circle,2.6612,0,488,472,black,byPlateId,0.671111111
+7386,Chingiz Range Ordovician Sediments,402,43.9,-52.2,circle,2.6612,0,488,472,black,byPlateId,0.671111111
+7387,Gnowangerup-Frased Dykes,8013,46,229.6,circle,3.8664,0,500,460,black,byPlateId,0.875555556
+7387,Gnowangerup-Frased Dykes,8013,-46,49.6,circle,3.8664,0,500,460,black,byPlateId,0.875555556
+7388,Cambro-Ordovician Sediments,604,28.8,310.9,circle,3.2245,0,501,461,black,byPlateId,0.766666667
+7388,Cambro-Ordovician Sediments,604,-28.8,130.9,circle,3.2245,0,501,461,black,byPlateId,0.766666667
+7389,Rocky Mountains Limestone,124,24.3,141,circle,2.9756,0,505,458,black,byPlateId,0.724444444
+7389,Rocky Mountains Limestone,124,-24.3,-39,circle,2.9756,0,505,458,black,byPlateId,0.724444444
+7390,Cap de la Chevre Formation,305,33.7,313.2,circle,3.159,0,488,475,black,byPlateId,0.755555556
+7390,Cap de la Chevre Formation,305,-33.7,133.2,circle,3.159,0,488,475,black,byPlateId,0.755555556
+7391,Ivan-Gorod Sediments,301,33,137,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7391,Ivan-Gorod Sediments,301,-33,-43,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7392,St.Petersburg Region Sediments,301,42,162,circle,3.159,0,488,479,black,byPlateId,0.755555556
+7392,St.Petersburg Region Sediments,301,-42,-18,circle,3.159,0,488,479,black,byPlateId,0.755555556
+7393,Ustkutsk Group,401,-41,122,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7393,Ustkutsk Group,401,41,-58,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7394,Alakit River Limestones,401,-42,134,circle,3.945,0,488,479,black,byPlateId,0.888888889
+7394,Alakit River Limestones,401,42,-46,circle,3.945,0,488,479,black,byPlateId,0.888888889
+7395,South Urals Sediments,301,31,164,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7395,South Urals Sediments,301,-31,-16,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7396,South Urals Sediments,301,31,162,circle,3.028,0,488,479,black,byPlateId,0.733333333
+7396,South Urals Sediments,301,-31,-18,circle,3.028,0,488,479,black,byPlateId,0.733333333
+7397,South Urals Sediments,301,31,163,circle,3.945,0,488,479,black,byPlateId,0.888888889
+7397,South Urals Sediments,301,-31,-17,circle,3.945,0,488,479,black,byPlateId,0.888888889
+7398,South Urals Sediments,301,-21,126,circle,1.849,0,488,479,black,byPlateId,0.533333333
+7398,South Urals Sediments,301,21,-54,circle,1.849,0,488,479,black,byPlateId,0.533333333
+7399,South Urals Sediments,301,15,113,circle,2.635,0,488,479,black,byPlateId,0.666666667
+7399,South Urals Sediments,301,-15,-67,circle,2.635,0,488,479,black,byPlateId,0.666666667
+7400,South Urals Sediments,301,-7,123,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7400,South Urals Sediments,301,7,-57,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7401,South Urals Intrusions and Sediments,301,-7,123,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7401,South Urals Intrusions and Sediments,301,7,-57,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7402,South Urals Intrusions and Sediments,301,-2,83,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7402,South Urals Intrusions and Sediments,301,2,-97,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7403,South Urals Intrusions and Sediments,301,-19,86,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7403,South Urals Intrusions and Sediments,301,19,-94,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7404,South Urals Intrusions and Sediments,301,4,76,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7404,South Urals Intrusions and Sediments,301,-4,-104,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7405,South Urals Intrusions and Sediments,301,-36,55,circle,1.98,0,488,479,black,byPlateId,0.555555556
+7405,South Urals Intrusions and Sediments,301,36,-125,circle,1.98,0,488,479,black,byPlateId,0.555555556
+7406,South Urals Intrusions and Sediments,301,-15,85,circle,1.456,0,488,479,black,byPlateId,0.466666667
+7406,South Urals Intrusions and Sediments,301,15,-95,circle,1.456,0,488,479,black,byPlateId,0.466666667
+7407,Uphimsk Sediments,301,-3,164,circle,2.242,0,488,479,black,byPlateId,0.6
+7407,Uphimsk Sediments,301,3,-16,circle,2.242,0,488,479,black,byPlateId,0.6
+7408,Manitanyrd Group Combined,301,-1,187,circle,3.552,0,488,479,black,byPlateId,0.822222222
+7408,Manitanyrd Group Combined,301,1,7,circle,3.552,0,488,479,black,byPlateId,0.822222222
+7409,Manitanyrd Group Combined,301,-6,183,circle,2.766,0,488,479,black,byPlateId,0.688888889
+7409,Manitanyrd Group Combined,301,6,3,circle,2.766,0,488,479,black,byPlateId,0.688888889
+7410,Manitanyrd Group Combined,301,0,200,circle,1.98,0,488,479,black,byPlateId,0.555555556
+7410,Manitanyrd Group Combined,301,0,20,circle,1.98,0,488,479,black,byPlateId,0.555555556
+7411,Manitanyrd Group Combined,301,-18,167,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7411,Manitanyrd Group Combined,301,18,-13,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7412,Manitanyrd Group Combined,301,-10,175,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7412,Manitanyrd Group Combined,301,10,-5,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7413,Manitanyrd Group Combined,301,-7,182,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7413,Manitanyrd Group Combined,301,7,2,circle,3.29,0,488,479,black,byPlateId,0.777777778
+7414,Manitanyrd Group Combined,301,1,178,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7414,Manitanyrd Group Combined,301,-1,-2,circle,3.814,0,488,479,black,byPlateId,0.866666667
+7415,Manitanyrd Group Combined,301,-10,175,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7415,Manitanyrd Group Combined,301,10,-5,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7416,Manitanyrd Group Combined,301,2,187,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7416,Manitanyrd Group Combined,301,-2,7,circle,3.683,0,488,479,black,byPlateId,0.844444444
+7417,Manitanyrd Group Combined,301,-0.4,162,circle,4.207,0,488,479,black,byPlateId,0.933333333
+7417,Manitanyrd Group Combined,301,0.4,-18,circle,4.207,0,488,479,black,byPlateId,0.933333333
+7418,Manitanyrd Group Combined,301,-2,175,circle,2.897,0,488,479,black,byPlateId,0.711111111
+7418,Manitanyrd Group Combined,301,2,-5,circle,2.897,0,488,479,black,byPlateId,0.711111111
+7419,South Urals Sediments,301,-15.8,76.4,circle,1.325,0,488,479,black,byPlateId,0.444444444
+7419,South Urals Sediments,301,15.8,-103.6,circle,1.325,0,488,479,black,byPlateId,0.444444444
+7420,North Mugojary Volcanics and Sediments,301,-34,88.9,circle,1.98,0,488,479,black,byPlateId,0.555555556
+7420,North Mugojary Volcanics and Sediments,301,34,-91.1,circle,1.98,0,488,479,black,byPlateId,0.555555556
+7421,Bulatsk Group,301,12.3,192.9,circle,3.421,0,488,479,black,byPlateId,0.8
+7421,Bulatsk Group,301,-12.3,12.9,circle,3.421,0,488,479,black,byPlateId,0.8
+7422,Oldondinskaya Suite,401,-25.9,143.5,circle,2.8839,0,488,479,black,byPlateId,0.708888889
+7422,Oldondinskaya Suite,401,25.9,-36.5,circle,2.8839,0,488,479,black,byPlateId,0.708888889
+7423,Moyero River Sediments,401,-40.3,137.5,circle,3.5913,0,488,479,black,byPlateId,0.828888889
+7423,Moyero River Sediments,401,40.3,-42.5,circle,3.5913,0,488,479,black,byPlateId,0.828888889
+7424,Kulumbe River Sediments,401,-35.2,127.2,circle,3.9581,0,488,479,black,byPlateId,0.891111111
+7424,Kulumbe River Sediments,401,35.2,-52.8,circle,3.9581,0,488,479,black,byPlateId,0.891111111
+7425,Uigur and Nizhneiltyk Formations,401,-35.2,127.2,circle,3.9581,0,488,479,black,byPlateId,0.891111111
+7425,Uigur and Nizhneiltyk Formations,401,35.2,-52.8,circle,3.9581,0,488,479,black,byPlateId,0.891111111
+7426,Winter Coast Sediments,301,-40,259,circle,4.4166,0,488,479,black,byPlateId,0.968888889
+7426,Winter Coast Sediments,301,40,79,circle,4.4166,0,488,479,black,byPlateId,0.968888889
+7427,Klabava Formation Tuffite,305,78.9,210.2,circle,4.1415,0,488,479,black,byPlateId,0.922222222
+7427,Klabava Formation Tuffite,305,-78.9,30.2,circle,4.1415,0,488,479,black,byPlateId,0.922222222
+7428,Oneota dolomite,101,10.4,166.4,circle,3.0411,0,488,480,black,byPlateId,0.735555556
+7428,Oneota dolomite,101,-10.4,-13.6,circle,3.0411,0,488,480,black,byPlateId,0.735555556
+7429,Lamprophyre Dykes,802,9.3,206.7,circle,3.1721,0,491,477,black,byPlateId,0.757777778
+7429,Lamprophyre Dykes,802,-9.3,26.7,circle,3.1721,0,491,477,black,byPlateId,0.757777778
+7430,Lake Vanda Feldspar Porphyry Dykes,802,3.9,207.2,circle,3.4865,0,491,477,black,byPlateId,0.811111111
+7430,Lake Vanda Feldspar Porphyry Dykes,802,-3.9,27.2,circle,3.4865,0,491,477,black,byPlateId,0.811111111
+7431,Kempirsai Volcanics and Sediments,301,-39,20,circle,3.552,0,488,484,black,byPlateId,0.822222222
+7431,Kempirsai Volcanics and Sediments,301,39,-160,circle,3.552,0,488,484,black,byPlateId,0.822222222
+7432,Vicunas Volcanoclastics,2021,-45.1,283.4,circle,3.8271,0,488,484,black,byPlateId,0.868888889
+7432,Vicunas Volcanoclastics,2021,45.1,103.4,circle,3.8271,0,488,484,black,byPlateId,0.868888889
+7433,Redbeds; Paimpol-Brehec,305,50.4,234.4,circle,2.0193,0,501,472,black,byPlateId,0.562222222
+7433,Redbeds; Paimpol-Brehec,305,-50.4,54.4,circle,2.0193,0,501,472,black,byPlateId,0.562222222
+7434,Bucaco Redbeds,304,-23.5,181.6,circle,3.814,0,501,472,black,byPlateId,0.866666667
+7434,Bucaco Redbeds,304,23.5,1.6,circle,3.814,0,501,472,black,byPlateId,0.866666667
+7435,Cambrian sediments; Flinders Ranges,8013,26,75.3,circle,2.9887,0,501,472,black,byPlateId,0.726666667
+7435,Cambrian sediments; Flinders Ranges,8013,-26,-104.7,circle,2.9887,0,501,472,black,byPlateId,0.726666667
+7436,Lower Cambrian sediments; Kangaroo Island,8013,17.4,75.8,circle,3.6175,0,501,472,black,byPlateId,0.833333333
+7436,Lower Cambrian sediments; Kangaroo Island,8013,-17.4,-104.2,circle,3.6175,0,501,472,black,byPlateId,0.833333333
+7437,Quartzites and Rhyolites,305,7,270,circle,2.504,0,501,472,black,byPlateId,0.644444444
+7437,Quartzites and Rhyolites,305,-7,90,circle,2.504,0,501,472,black,byPlateId,0.644444444
+7438,Group des Plateau d'Oujeft,714,44.8,43.8,circle,-0.64,0,501,472,black,byPlateId,0.111111111
+7438,Group des Plateau d'Oujeft,714,-44.8,-136.2,circle,-0.64,0,501,472,black,byPlateId,0.111111111
+7439,Hasi-Messaud Sediments,7141,53,26,circle,4.207,0,501,472,black,byPlateId,0.933333333
+7439,Hasi-Messaud Sediments,7141,-53,-154,circle,4.207,0,501,472,black,byPlateId,0.933333333
+7440,Red Sandstones,5031,36.7,323.4,circle,3.6175,0,501,472,black,byPlateId,0.833333333
+7440,Red Sandstones,5031,-36.7,143.4,circle,3.6175,0,501,472,black,byPlateId,0.833333333
+7441,Barrandian porphyrites (C;D;E and F),305,40.2,157.3,circle,0.6962,0,501,472,black,byPlateId,0.337777778
+7441,Barrandian porphyrites (C;D;E and F),305,-40.2,-22.7,circle,0.6962,0,501,472,black,byPlateId,0.337777778
+7442,Gornaya Altai Group,401,-19,110,circle,3.945,0,501,472,black,byPlateId,0.888888889
+7442,Gornaya Altai Group,401,19,-70,circle,3.945,0,501,472,black,byPlateId,0.888888889
+7443,Lena River Sills,401,-33,121,circle,3.29,0,501,472,black,byPlateId,0.777777778
+7443,Lena River Sills,401,33,-59,circle,3.29,0,501,472,black,byPlateId,0.777777778
+7444,Fourchu Gabbro,108,63,196,circle,3.7616,0,501,472,black,byPlateId,0.857777778
+7444,Fourchu Gabbro,108,-63,16,circle,3.7616,0,501,472,black,byPlateId,0.857777778
+7445,Batyrbay section,402,43.9,225.1,circle,3.4117,0,501,472,black,byPlateId,0.798422392
+7445,Batyrbay section,402,-43.9,45.1,circle,3.4117,0,501,472,black,byPlateId,0.798422392
+7446,Severnaya Zemlya Early Paleozoic Sediments,401,-25.5,258.2,circle,3.4603,0,501,472,black,byPlateId,0.806666667
+7446,Severnaya Zemlya Early Paleozoic Sediments,401,25.5,78.2,circle,3.4603,0,501,472,black,byPlateId,0.806666667
+7447,Zhaogezhuang Carbonates,604,32.9,294.6,circle,3.9843,0,501,472,black,byPlateId,0.895555556
+7447,Zhaogezhuang Carbonates,604,-32.9,114.6,circle,3.9843,0,501,472,black,byPlateId,0.895555556
+7448,Chatswood Limestone and Ninmaroo Formation,8011,-3.1,234.1,circle,3.6306,0,495,479,black,byPlateId,0.835555556
+7448,Chatswood Limestone and Ninmaroo Formation,8011,3.1,54.1,circle,3.6306,0,495,479,black,byPlateId,0.835555556
+7449,Pertaoorta Group; Areyonga Gorge,8011,37.3,68.6,circle,3.9974,0,501,476,black,byPlateId,0.897777778
+7449,Pertaoorta Group; Areyonga Gorge,8011,-37.3,-111.4,circle,3.9974,0,501,476,black,byPlateId,0.897777778
+7450,Giles Creek dolomite; Ross River,8011,29.9,53.7,circle,3.421,0,501,476,black,byPlateId,0.8
+7450,Giles Creek dolomite; Ross River,8011,-29.9,-126.3,circle,3.421,0,501,476,black,byPlateId,0.8
+7451,Younger Gabbros Aberdeenshire,313,27.8,189.6,circle,3.421,0,506,472,black,byPlateId,0.8
+7451,Younger Gabbros Aberdeenshire,313,-27.8,9.6,circle,3.421,0,506,472,black,byPlateId,0.8
+7452,Younger Gabbros Aberdeenshire,313,25.5,151.6,circle,3.4472,0,506,472,black,byPlateId,0.804444444
+7452,Younger Gabbros Aberdeenshire,313,-25.5,-28.4,circle,3.4472,0,506,472,black,byPlateId,0.804444444
+7453,Sor Rondane Intrusives,8021,28.5,189.5,circle,4.0105,0,496,482,black,byPlateId,0.9
+7453,Sor Rondane Intrusives,8021,-28.5,9.5,circle,4.0105,0,496,482,black,byPlateId,0.9
+7454,Younger Gabbros Aberdeenshire,313,1,176,circle,3.421,0,506,472,black,byPlateId,0.8
+7454,Younger Gabbros Aberdeenshire,313,-1,-4,circle,3.421,0,506,472,black,byPlateId,0.8
+7455,Black Hill Norite,8013,37.5,214.4,circle,4.1022,0,502,482,black,byPlateId,0.915555556
+7455,Black Hill Norite,8013,-37.5,34.4,circle,4.1022,0,502,482,black,byPlateId,0.915555556
+7456,Morgan Creek; Welge Members; Wilberns Formation,101,24,151,circle,4.076,0,495,490,black,byPlateId,0.911111111
+7456,Morgan Creek; Welge Members; Wilberns Formation,101,-24,-29,circle,4.076,0,495,490,black,byPlateId,0.911111111
+7457,Point Peak Member; Wilberns Formation,101,6,166,circle,3.421,0,495,490,black,byPlateId,0.8
+7457,Point Peak Member; Wilberns Formation,101,-6,-14,circle,3.421,0,495,490,black,byPlateId,0.8
+7458,Georgina Basin Carbonates,8011,48.6,186,circle,4.0105,0,513,472,black,byPlateId,0.9
+7458,Georgina Basin Carbonates,8011,-48.6,6,circle,4.0105,0,513,472,black,byPlateId,0.9
+7459,Dykes of the Frontenac Axis,101,-5,140,circle,1.718,0,542,444,black,byPlateId,0.511111111
+7459,Dykes of the Frontenac Axis,101,5,-40,circle,1.718,0,542,444,black,byPlateId,0.511111111
+7460,Kingston Dyke 12,101,20,197,circle,3.159,0,545,443,black,byPlateId,0.755555556
+7460,Kingston Dyke 12,101,-20,17,circle,3.159,0,545,443,black,byPlateId,0.755555556
+7461,Bright Angel shale,132,30,141.2,circle,1.0499,0,501,488,black,byPlateId,0.397777778
+7461,Bright Angel shale,132,-30,-38.8,circle,1.0499,0,501,488,black,byPlateId,0.397777778
+7462,Chateauguay Formation,101,35.7,157.3,circle,3.8795,0,501,488,black,byPlateId,0.877777778
+7462,Chateauguay Formation,101,-35.7,-22.7,circle,3.8795,0,501,488,black,byPlateId,0.877777778
+7463,Upper Heritage Group,805,4,296,circle,3.159,0,501,488,black,byPlateId,0.755555556
+7463,Upper Heritage Group,805,-4,116,circle,3.159,0,501,488,black,byPlateId,0.755555556
+7464,Quartzites and Rhyolites,305,40,222,circle,2.111,0,501,488,black,byPlateId,0.577777778
+7464,Quartzites and Rhyolites,305,-40,42,circle,2.111,0,501,488,black,byPlateId,0.577777778
+7465,Andesites; Barrandian region,305,-28.6,131.2,circle,3.8402,0,501,488,black,byPlateId,0.871111111
+7465,Andesites; Barrandian region,305,28.6,-48.8,circle,3.8402,0,501,488,black,byPlateId,0.871111111
+7466,Upper Lake Frome Group,8013,16,205,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7466,Upper Lake Frome Group,8013,-16,25,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7467,Dundas Group; tuffs and sandtsones,101,23,193,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7467,Dundas Group; tuffs and sandtsones,101,-23,13,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7468,Wilberns Formation,101,6.4,158.8,circle,3.9974,0,501,488,black,byPlateId,0.897777778
+7468,Wilberns Formation,101,-6.4,-21.2,circle,3.9974,0,501,488,black,byPlateId,0.897777778
+7469,Bonneterre dolostone and galena ore,101,35,6,circle,4.0105,0,501,488,black,byPlateId,0.9
+7469,Bonneterre dolostone and galena ore,101,-35,-174,circle,4.0105,0,501,488,black,byPlateId,0.9
+7470,Lamotte Formation,101,11.5,335,circle,3.4079,0,501,488,black,byPlateId,0.797777778
+7470,Lamotte Formation,101,-11.5,155,circle,3.4079,0,501,488,black,byPlateId,0.797777778
+7471,Lamotte Formation,101,38,12,circle,3.6044,0,501,488,black,byPlateId,0.831111111
+7471,Lamotte Formation,101,-38,-168,circle,3.6044,0,501,488,black,byPlateId,0.831111111
+7472,Porphyry and sediments,305,34,193,circle,0.408,0,501,488,black,byPlateId,0.288888889
+7472,Porphyry and sediments,305,-34,13,circle,0.408,0,501,488,black,byPlateId,0.288888889
+7473,Wilberns Formation,101,0,158,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7473,Wilberns Formation,101,0,-22,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7474,Porphyrites,305,10,248,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7474,Porphyrites,305,-10,68,circle,3.4117,0,501,488,black,byPlateId,0.798422392
+7475,Evenkiisk Group,401,-37,140,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7475,Evenkiisk Group,401,37,-40,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7476,Verkholensk Group,401,-40,124,circle,3.552,0,501,488,black,byPlateId,0.822222222
+7476,Verkholensk Group,401,40,-56,circle,3.552,0,501,488,black,byPlateId,0.822222222
+7477,Verkholensk Group,401,-33,130,circle,3.028,0,501,488,black,byPlateId,0.733333333
+7477,Verkholensk Group,401,33,-50,circle,3.028,0,501,488,black,byPlateId,0.733333333
+7478,Verkholensk Group Combined,401,-35,136,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7478,Verkholensk Group Combined,401,35,-44,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7479,Verkholensk Group Combined,401,-40,142,circle,3.159,0,501,488,black,byPlateId,0.755555556
+7479,Verkholensk Group Combined,401,40,-38,circle,3.159,0,501,488,black,byPlateId,0.755555556
+7480,Verkholensk Group Combined,401,-25,118,circle,3.028,0,501,488,black,byPlateId,0.733333333
+7480,Verkholensk Group Combined,401,25,-62,circle,3.028,0,501,488,black,byPlateId,0.733333333
+7481,Verkholensk Group Combined,401,-34,134,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7481,Verkholensk Group Combined,401,34,-46,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7482,Verkholensk Group,401,-39,125,circle,3.421,0,501,488,black,byPlateId,0.8
+7482,Verkholensk Group,401,39,-55,circle,3.421,0,501,488,black,byPlateId,0.8
+7483,Verkholensk Group,401,-37,125,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7483,Verkholensk Group,401,37,-55,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7484,Verkholensk Group,401,-36,119,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7484,Verkholensk Group,401,36,-61,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7485,Verkholensk Group,401,-38,124,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7485,Verkholensk Group,401,38,-56,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7486,Verkholensk Group,401,-36,134,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7486,Verkholensk Group,401,36,-46,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7487,Verkholensk Group,401,-36,128,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7487,Verkholensk Group,401,36,-52,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7488,Ilginsk Group,401,-38,124,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7488,Ilginsk Group,401,38,-56,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7489,Chukuk and Markha Groups,401,-35,130,circle,2.504,0,501,488,black,byPlateId,0.644444444
+7489,Chukuk and Markha Groups,401,35,-50,circle,2.504,0,501,488,black,byPlateId,0.644444444
+7490,Verkholensk Group,401,-34,103,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7490,Verkholensk Group,401,34,-77,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7491,Verkholensk Group,401,-34,122,circle,3.421,0,501,488,black,byPlateId,0.8
+7491,Verkholensk Group,401,34,-58,circle,3.421,0,501,488,black,byPlateId,0.8
+7492,Middle Verkholensk Group,401,-39,129,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7492,Middle Verkholensk Group,401,39,-51,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7493,Igla Group,401,-38,124,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7493,Igla Group,401,38,-56,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7494,Verkholensk Group,401,-39,135,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7494,Verkholensk Group,401,39,-45,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7495,Verkholensk Group,401,-38,118,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7495,Verkholensk Group,401,38,-62,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7496,Verkholensk Group,401,-36,121,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7496,Verkholensk Group,401,36,-59,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7497,Verkholensk Group Combined,401,-38,125,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7497,Verkholensk Group Combined,401,38,-55,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7498,Verkholensk Group,401,-29,129,circle,3.159,0,501,488,black,byPlateId,0.755555556
+7498,Verkholensk Group,401,29,-51,circle,3.159,0,501,488,black,byPlateId,0.755555556
+7499,Upper and Middle Verkholensk Group,401,-30,119,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7499,Upper and Middle Verkholensk Group,401,30,-61,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7500,Upper Verkholensk Group,401,-40,114,circle,4.338,0,501,488,black,byPlateId,0.955555556
+7500,Upper Verkholensk Group,401,40,-66,circle,4.338,0,501,488,black,byPlateId,0.955555556
+7501,Verkholensk Group Combined,401,-32,133,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7501,Verkholensk Group Combined,401,32,-47,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7502,Lena River Sediments Combined,401,-36,126,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7502,Lena River Sediments Combined,401,36,-54,circle,4.076,0,501,488,black,byPlateId,0.911111111
+7503,Irkutz Sediments Combined,401,-34,120,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7503,Irkutz Sediments Combined,401,34,-60,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7504,Manitanyrd Group Combined,301,-3,198,circle,2.897,0,501,488,black,byPlateId,0.711111111
+7504,Manitanyrd Group Combined,301,3,18,circle,2.897,0,501,488,black,byPlateId,0.711111111
+7505,Manitanyrd Group Combined,301,-8,183,circle,2.766,0,501,488,black,byPlateId,0.688888889
+7505,Manitanyrd Group Combined,301,8,3,circle,2.766,0,501,488,black,byPlateId,0.688888889
+7506,Manitanyrd Group Combined,301,-1,200,circle,2.766,0,501,488,black,byPlateId,0.688888889
+7506,Manitanyrd Group Combined,301,1,20,circle,2.766,0,501,488,black,byPlateId,0.688888889
+7507,Manitanyrd Group Combined,301,-22,142,circle,1.587,0,501,488,black,byPlateId,0.488888889
+7507,Manitanyrd Group Combined,301,22,-38,circle,1.587,0,501,488,black,byPlateId,0.488888889
+7508,Manitanyrd Group Combined,301,-9,182,circle,1.718,0,501,488,black,byPlateId,0.511111111
+7508,Manitanyrd Group Combined,301,9,2,circle,1.718,0,501,488,black,byPlateId,0.511111111
+7509,Manitanyrd Group Combined,301,-10,165,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7509,Manitanyrd Group Combined,301,10,-15,circle,3.945,0,501,488,black,byPlateId,0.888888889
+7510,Manitanyrd Group Combined,301,-13,174,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7510,Manitanyrd Group Combined,301,13,-6,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7511,Manitanyrd Group Combined,301,1,199,circle,2.373,0,501,488,black,byPlateId,0.622222222
+7511,Manitanyrd Group Combined,301,-1,19,circle,2.373,0,501,488,black,byPlateId,0.622222222
+7512,Manitanyrd Group Combined,301,-14,160,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7512,Manitanyrd Group Combined,301,14,-20,circle,3.683,0,501,488,black,byPlateId,0.844444444
+7513,Manitanyrd Group Combined,301,-9,162,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7513,Manitanyrd Group Combined,301,9,-18,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7514,Manitanyrd Group Combined,301,-8,155,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7514,Manitanyrd Group Combined,301,8,-25,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7515,Manitanyrd Group Combined,301,-7,165,circle,3.421,0,501,488,black,byPlateId,0.8
+7515,Manitanyrd Group Combined,301,7,-15,circle,3.421,0,501,488,black,byPlateId,0.8
+7516,Manitanyrd Group Combined,301,-9,168,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7516,Manitanyrd Group Combined,301,9,-12,circle,3.29,0,501,488,black,byPlateId,0.777777778
+7517,Royer Dolomite,101,12.6,157.3,circle,4.0367,0,501,488,black,byPlateId,0.904444444
+7517,Royer Dolomite,101,-12.6,-22.7,circle,4.0367,0,501,488,black,byPlateId,0.904444444
+7518,Morgan Creek Limestone,101,10.8,158.2,circle,3.3293,0,501,488,black,byPlateId,0.784444444
+7518,Morgan Creek Limestone,101,-10.8,-21.8,circle,3.3293,0,501,488,black,byPlateId,0.784444444
+7519,Moore Hollow Group,101,-0.6,163,circle,3.4865,0,501,488,black,byPlateId,0.811111111
+7519,Moore Hollow Group,101,0.6,-17,circle,3.4865,0,501,488,black,byPlateId,0.811111111
+7520,Moyero River Sediments,401,-37,138.4,circle,3.8533,0,501,488,black,byPlateId,0.873333333
+7520,Moyero River Sediments,401,37,-41.6,circle,3.8533,0,501,488,black,byPlateId,0.873333333
+7521,Kulumbinskaya Formation,401,-36.1,130.7,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7521,Kulumbinskaya Formation,401,36.1,-49.3,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7522,Upper Cambrian Limestones,604,-31.7,149.6,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7522,Upper Cambrian Limestones,604,31.7,-30.4,circle,3.814,0,501,488,black,byPlateId,0.866666667
+7523,Alum Shale Formation,301,52,111,circle,3.7092,0,501,488,black,byPlateId,0.848888889
+7523,Alum Shale Formation,301,-52,-69,circle,3.7092,0,501,488,black,byPlateId,0.848888889
+7524,Kulumbe Formations,401,-36.1,130.7,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7524,Kulumbe Formations,401,36.1,-49.3,circle,4.207,0,501,488,black,byPlateId,0.933333333
+7525,Chingiz Range Cambrian Volcanics,402,-27,168.2,circle,3.3162,0,501,488,black,byPlateId,0.782222222
+7525,Chingiz Range Cambrian Volcanics,402,27,-11.8,circle,3.3162,0,501,488,black,byPlateId,0.782222222
+7526,Connemara Gabbro,313,-6.2,122.2,circle,2.5433,0,510,480,black,byPlateId,0.651111111
+7526,Connemara Gabbro,313,6.2,-57.8,circle,2.5433,0,510,480,black,byPlateId,0.651111111
+7527,Old Radnor sediments,315,21.7,248.6,circle,3.4117,0,510,480,black,byPlateId,0.798422392
+7527,Old Radnor sediments,315,-21.7,68.6,circle,3.4117,0,510,480,black,byPlateId,0.798422392
+7528,Nahant gabbro and tonalite,108,53.5,273.4,circle,3.4079,0,510,480,black,byPlateId,0.797777778
+7528,Nahant gabbro and tonalite,108,-53.5,93.4,circle,3.4079,0,510,480,black,byPlateId,0.797777778
+7529,Nahant gabbro and tonalite,108,16.6,250.1,circle,2.3075,0,510,480,black,byPlateId,0.611111111
+7529,Nahant gabbro and tonalite,108,-16.6,70.1,circle,2.3075,0,510,480,black,byPlateId,0.611111111
+7530,Nahant gabbro and tonalite,108,31.8,277.4,circle,3.3293,0,510,480,black,byPlateId,0.784444444
+7530,Nahant gabbro and tonalite,108,-31.8,97.4,circle,3.3293,0,510,480,black,byPlateId,0.784444444
+7531,Nahant gabbro and tonalite,108,34.7,324.4,circle,4.0105,0,510,480,black,byPlateId,0.9
+7531,Nahant gabbro and tonalite,108,-34.7,144.4,circle,4.0105,0,510,480,black,byPlateId,0.9
+7532,Nahant gabbro and tonalite,108,0.4,8,circle,0.8534,0,510,480,black,byPlateId,0.364444444
+7532,Nahant gabbro and tonalite,108,-0.4,-172,circle,0.8534,0,510,480,black,byPlateId,0.364444444
+7533,NE Shetland ophiolite complex,303,47.2,64.2,circle,3.8402,0,517,475,black,byPlateId,0.871111111
+7533,NE Shetland ophiolite complex,303,-47.2,-115.8,circle,3.8402,0,517,475,black,byPlateId,0.871111111
+7534,Dykes; Colorado,133,37,102.3,circle,3.421,0,513,481,black,byPlateId,0.8
+7534,Dykes; Colorado,133,-37,-77.7,circle,3.421,0,513,481,black,byPlateId,0.8
+7535,Buckingham Dyke,101,-3,123,circle,3.683,0,511,483,black,byPlateId,0.844444444
+7535,Buckingham Dyke,101,3,-57,circle,3.683,0,511,483,black,byPlateId,0.844444444
+7536,Hickory Member; Riley Formation,101,34,140,circle,4.076,0,501,494,black,byPlateId,0.911111111
+7536,Hickory Member; Riley Formation,101,-34,-40,circle,4.076,0,501,494,black,byPlateId,0.911111111
+7537,Cap Mountain member; Riley Formation,101,33,140,circle,3.552,0,501,494,black,byPlateId,0.822222222
+7537,Cap Mountain member; Riley Formation,101,-33,-40,circle,3.552,0,501,494,black,byPlateId,0.822222222
+7538,Lion Mountain Member; Riley Formation,101,32,142,circle,3.29,0,501,494,black,byPlateId,0.777777778
+7538,Lion Mountain Member; Riley Formation,101,-32,-38,circle,3.29,0,501,494,black,byPlateId,0.777777778
+7539,Taum Sauk Limestone,101,-3.6,175.6,circle,3.6699,0,501,494,black,byPlateId,0.842222222
+7539,Taum Sauk Limestone,101,3.6,-4.4,circle,3.6699,0,501,494,black,byPlateId,0.842222222
+7540,Nolichuky Formation; Site 1,101,41,109,circle,4.338,0,501,494,black,byPlateId,0.955555556
+7540,Nolichuky Formation; Site 1,101,-41,-71,circle,4.338,0,501,494,black,byPlateId,0.955555556
+7541,Nolichuky Formation; Site 2,101,39,131,circle,3.683,0,501,494,black,byPlateId,0.844444444
+7541,Nolichuky Formation; Site 2,101,-39,-49,circle,3.683,0,501,494,black,byPlateId,0.844444444
+7542,NW Tasmanian Sediments,101,19.4,208.9,circle,3.2376,0,501,495,black,byPlateId,0.768888889
+7542,NW Tasmanian Sediments,101,-19.4,28.9,circle,3.2376,0,501,495,black,byPlateId,0.768888889
+7543,Granite Harbour Pink Granite,802,3.4,196.7,circle,3.5127,0,502,494,black,byPlateId,0.815555556
+7543,Granite Harbour Pink Granite,802,-3.4,16.7,circle,3.5127,0,502,494,black,byPlateId,0.815555556
+7544,Granite Harbour Mafic Dykes,802,-0.8,195,circle,3.4734,0,501,495,black,byPlateId,0.808888889
+7544,Granite Harbour Mafic Dykes,802,0.8,15,circle,3.4734,0,501,495,black,byPlateId,0.808888889
+7545,Granite Harbour Grey Granite,802,3.6,201.6,circle,3.7616,0,501,495,black,byPlateId,0.857777778
+7545,Granite Harbour Grey Granite,802,-3.6,21.6,circle,3.7616,0,501,495,black,byPlateId,0.857777778
+7546,Killer Ridge/Mt Loke Diorites,802,7,201.4,circle,3.028,0,502,496,black,byPlateId,0.733333333
+7546,Killer Ridge/Mt Loke Diorites,802,-7,21.4,circle,3.028,0,502,496,black,byPlateId,0.733333333
+7547,Lake Vanda Bonny Pluton,802,8.3,207.9,circle,2.8839,0,502,496,black,byPlateId,0.708888889
+7547,Lake Vanda Bonny Pluton,802,-8.3,27.9,circle,2.8839,0,502,496,black,byPlateId,0.708888889
+7548,Dokhan Volcanic Formation,715,-53.5,147,circle,2.5957,0,550,450,black,byPlateId,0.66
+7548,Dokhan Volcanic Formation,715,53.5,-33,circle,2.5957,0,550,450,black,byPlateId,0.66
+7549,Granitic rocks; Wright Valley,802,5.4,198.5,circle,3.5389,0,543,457,black,byPlateId,0.82
+7549,Granitic rocks; Wright Valley,802,-5.4,18.5,circle,3.5389,0,543,457,black,byPlateId,0.82
+7550,Lower Nama Group,7013,-2,344,circle,2.766,0,550,450,black,byPlateId,0.688888889
+7550,Lower Nama Group,7013,2,164,circle,2.766,0,550,450,black,byPlateId,0.688888889
+7551,Hook Intrusives,701,14,336.5,circle,0.408,0,517,483,black,byPlateId,0.288888889
+7551,Hook Intrusives,701,-14,156.5,circle,0.408,0,517,483,black,byPlateId,0.288888889
+7552,Nama Group,7013,-73,228,circle,2.242,0,550,450,black,byPlateId,0.6
+7552,Nama Group,7013,73,48,circle,2.242,0,550,450,black,byPlateId,0.6
+7553,Nama Group,7013,-1,271,circle,1.456,0,550,450,black,byPlateId,0.466666667
+7553,Nama Group,7013,1,91,circle,1.456,0,550,450,black,byPlateId,0.466666667
+7554,Nama Group,7013,30,14,circle,2.111,0,550,450,black,byPlateId,0.577777778
+7554,Nama Group,7013,-30,-166,circle,2.111,0,550,450,black,byPlateId,0.577777778
+7555,Nama Group,7013,50,327,circle,2.242,0,550,450,black,byPlateId,0.6
+7555,Nama Group,7013,-50,147,circle,2.242,0,550,450,black,byPlateId,0.6
+7556,Nama Group,7013,-28,303,circle,2.766,0,550,450,black,byPlateId,0.688888889
+7556,Nama Group,7013,28,123,circle,2.766,0,550,450,black,byPlateId,0.688888889
+7557,Covey Hill Formation,101,46.4,148.6,circle,3.9974,0,513,488,black,byPlateId,0.897777778
+7557,Covey Hill Formation,101,-46.4,-31.4,circle,3.9974,0,513,488,black,byPlateId,0.897777778
+7558,Mount Ham-Asbestos Ophiolite,101,24.5,178.2,circle,3.814,0,513,488,black,byPlateId,0.866666667
+7558,Mount Ham-Asbestos Ophiolite,101,-24.5,-1.8,circle,3.814,0,513,488,black,byPlateId,0.866666667
+7559,Abrigo Formation,133,58.5,88.9,circle,4.2332,0,513,488,black,byPlateId,0.937777778
+7559,Abrigo Formation,133,-58.5,-91.1,circle,4.2332,0,513,488,black,byPlateId,0.937777778
+7560,Sayanian Island Arc Complex,401,38.4,307.9,circle,4.0367,0,513,488,black,byPlateId,0.904444444
+7560,Sayanian Island Arc Complex,401,-38.4,127.9,circle,4.0367,0,513,488,black,byPlateId,0.904444444
+7561,Sayanian Island Arc Complex,401,38.2,310.9,circle,3.159,0,513,488,black,byPlateId,0.755555556
+7561,Sayanian Island Arc Complex,401,-38.2,130.9,circle,3.159,0,513,488,black,byPlateId,0.755555556
+7562,Verkholensk Formation,401,-37.7,124,circle,4.0105,0,513,488,black,byPlateId,0.9
+7562,Verkholensk Formation,401,37.7,-56,circle,4.0105,0,513,488,black,byPlateId,0.9
+7563,Frazier Ridge Formation,805,9,292.7,circle,3.6044,0,513,488,black,byPlateId,0.831111111
+7563,Frazier Ridge Formation,805,-9,112.7,circle,3.6044,0,513,488,black,byPlateId,0.831111111
+7564,Choschas Plutons and Lavas,2021,58.1,309.3,circle,3.6306,0,512,492,black,byPlateId,0.835555556
+7564,Choschas Plutons and Lavas,2021,-58.1,129.3,circle,3.6306,0,512,492,black,byPlateId,0.835555556
+7565,Qena-Safaga dykes,715,-87.3,124.2,circle,3.9712,0,527,480,black,byPlateId,0.893333333
+7565,Qena-Safaga dykes,715,87.3,-55.8,circle,3.9712,0,527,480,black,byPlateId,0.893333333
+7566,Um Rus dykes,7151,85.1,165.7,circle,3.8533,0,527,480,black,byPlateId,0.873333333
+7566,Um Rus dykes,7151,-85.1,-14.3,circle,3.8533,0,527,480,black,byPlateId,0.873333333
+7567,Metaigneous Contact Rocks,134,-6,169,circle,3.29,0,514,494,black,byPlateId,0.777777778
+7567,Metaigneous Contact Rocks,134,6,-11,circle,3.29,0,514,494,black,byPlateId,0.777777778
+7568,Liberty Hills Formation,805,7.3,326.3,circle,3.4734,0,507,501,black,byPlateId,0.808888889
+7568,Liberty Hills Formation,805,-7.3,146.3,circle,3.4734,0,507,501,black,byPlateId,0.808888889
+7569,Briggs Hill Bonny Pluton,802,-2.7,221.4,circle,2.7005,0,507,503,black,byPlateId,0.677777778
+7569,Briggs Hill Bonny Pluton,802,2.7,41.4,circle,2.7005,0,507,503,black,byPlateId,0.677777778
+9941,D1+S2,301,35,160,circle,3.159,0,435,415,black,byPlateId,0.755555556
+9941,D1+S2,301,-35,-20,circle,3.159,0,435,415,black,byPlateId,0.755555556
+9942,Silurian,401,-10,104,circle,3.4117,0,445,415,black,byPlateId,0.798422392
+9942,Silurian,401,10,-76,circle,3.4117,0,445,415,black,byPlateId,0.798422392
+9943,S1,401,-7,103,circle,3.4117,0,445,425,black,byPlateId,0.798422392
+9943,S1,401,7,-77,circle,3.4117,0,445,425,black,byPlateId,0.798422392
+9944,O3,401,-21,131,circle,3.814,0,460,440,black,byPlateId,0.866666667
+9944,O3,401,21,-49,circle,3.814,0,460,440,black,byPlateId,0.866666667
+9945,late Ordovician,401,-21,131,circle,3.4117,0,465,445,black,byPlateId,0.798422392
+9945,late Ordovician,401,21,-49,circle,3.4117,0,465,445,black,byPlateId,0.798422392
+9946,midd Ordovician,401,-24,132,circle,3.4117,0,475,455,black,byPlateId,0.798422392
+9946,midd Ordovician,401,24,-48,circle,3.4117,0,475,455,black,byPlateId,0.798422392
+9947,O2,401,-24,132,circle,4.076,0,475,455,black,byPlateId,0.911111111
+9947,O2,401,24,-48,circle,4.076,0,475,455,black,byPlateId,0.911111111
+9948,O,301,30,143,circle,3.421,0,475,455,black,byPlateId,0.8
+9948,O,301,-30,-37,circle,3.421,0,475,455,black,byPlateId,0.8
+9949,O1,401,-42,127,circle,3.814,0,485,465,black,byPlateId,0.866666667
+9949,O1,401,42,-53,circle,3.814,0,485,465,black,byPlateId,0.866666667
+9950,early Ordovician,401,-42,127,circle,3.4117,0,490,470,black,byPlateId,0.798422392
+9950,early Ordovician,401,42,-53,circle,3.4117,0,490,470,black,byPlateId,0.798422392
+9951,O-Cmb,301,-13,135,circle,3.4117,0,495,475,black,byPlateId,0.798422392
+9951,O-Cmb,301,13,-45,circle,3.4117,0,495,475,black,byPlateId,0.798422392
+9952,late Cambrian,401,-36,126,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+9952,late Cambrian,401,36,-54,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+9953,late Cambrian,401,-35,130,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+9953,late Cambrian,401,35,-50,circle,3.4117,0,510,490,black,byPlateId,0.798422392
+9954,Cmb3,401,-36,126,circle,4.207,0,510,490,black,byPlateId,0.933333333
+9954,Cmb3,401,36,-54,circle,4.207,0,510,490,black,byPlateId,0.933333333
+14117,Rose Hill Formation,101,-19.1,308.3,circle,3.8402,0,428,423,black,byPlateId,0.871111111
+14117,Rose Hill Formation,101,19.1,128.3,circle,3.8402,0,428,423,black,byPlateId,0.871111111
+14118,Pakhuis  Cedarberg Formations  Cape Province  South Africa,7013,17,-11,circle,2.242,0,461,428,black,byPlateId,0.6
+14118,Pakhuis  Cedarberg Formations  Cape Province  South Africa,7013,-17,-191,circle,2.242,0,461,428,black,byPlateId,0.6
+14119,Vestergotland (N3)  Sweden,301,5,34,circle,3.9712,0,465,455,black,byPlateId,0.893333333
+14119,Vestergotland (N3)  Sweden,301,-5,-146,circle,3.9712,0,465,455,black,byPlateId,0.893333333
+14120,Vestergotland (N1  N2 and R13)  Sweden,301,14,49,circle,4.0236,0,466,455,black,byPlateId,0.902222222
+14120,Vestergotland (N1  N2 and R13)  Sweden,301,-14,-131,circle,4.0236,0,466,455,black,byPlateId,0.902222222
+14121,Salala Ring Complex  Sudan,715,39.6,329.5,circle,3.3948,0,466,460,black,byPlateId,0.795555556
+14121,Salala Ring Complex  Sudan,715,-39.6,149.5,circle,3.3948,0,466,460,black,byPlateId,0.795555556
+14122,Tumblagooda Sandstone  Carnarvon Basin,8011,-30.4,46,circle,4.207,0,513,428,black,byPlateId,0.933333333
+14122,Tumblagooda Sandstone  Carnarvon Basin,8011,30.4,-134,circle,4.207,0,513,428,black,byPlateId,0.933333333
+14123,Komstad Limestone  Sweden,301,19,51,circle,3.3948,0,472,470,black,byPlateId,0.795555556
+14123,Komstad Limestone  Sweden,301,-19,-129,circle,3.3948,0,472,470,black,byPlateId,0.795555556
+14124,Vanda lamprophyre and porphyry  Wright Valley,802,-2.5,23.8,circle,3.9188,0,480,463,black,byPlateId,0.884444444
+14124,Vanda lamprophyre and porphyry  Wright Valley,802,2.5,-156.2,circle,3.9188,0,480,463,black,byPlateId,0.884444444
+14125,Gullhogen (R1 + R2)  Sweden,301,18.7,54,circle,3.7092,0,475,470,black,byPlateId,0.848888889
+14125,Gullhogen (R1 + R2)  Sweden,301,-18.7,-126,circle,3.7092,0,475,470,black,byPlateId,0.848888889
+14126,Swedish Limestones I(R),301,18,46,circle,3.9319,0,479,468,black,byPlateId,0.886666667
+14126,Swedish Limestones I(R),301,-18,-134,circle,3.9319,0,479,468,black,byPlateId,0.886666667
+14127,South Victoria Land intrusives,802,-3.5,22.7,circle,3.6044,0,485,465,black,byPlateId,0.831111111
+14127,South Victoria Land intrusives,802,3.5,-157.3,circle,3.6044,0,485,465,black,byPlateId,0.831111111
+14128,Teall Nunatak  Victoria Land,802,-11,21,circle,3.6568,0,483,475,black,byPlateId,0.84
+14128,Teall Nunatak  Victoria Land,802,11,-159,circle,3.6568,0,483,475,black,byPlateId,0.84
+14129,Graafwater Formation  Cape Province  South Africa,7013,13.9,13.8,circle,3.421,0,488,472,black,byPlateId,0.8
+14129,Graafwater Formation  Cape Province  South Africa,7013,-13.9,-166.2,circle,3.421,0,488,472,black,byPlateId,0.8
+14130,Jinduckin Formation  Northern Territory,8011,-13,25,circle,2.897,0,493,472,black,byPlateId,0.711111111
+14130,Jinduckin Formation  Northern Territory,8011,13,-155,circle,2.897,0,493,472,black,byPlateId,0.711111111
+14131,Lamprophyre dykes  Taylor Valley,802,-9.3,26.7,circle,3.1721,0,491,477,black,byPlateId,0.757777778
+14131,Lamprophyre dykes  Taylor Valley,802,9.3,-153.3,circle,3.1721,0,491,477,black,byPlateId,0.757777778
+14132,Oneota Dolomite,101,-10.3,346.5,circle,3.0411,0,490,480,black,byPlateId,0.735555556
+14132,Oneota Dolomite,101,10.3,166.5,circle,3.0411,0,490,480,black,byPlateId,0.735555556
+14133,Chatswood limestone and Ninmaroo Formation  Queensland,8011,3.1,54.1,circle,3.6306,0,495,479,black,byPlateId,0.835555556
+14133,Chatswood limestone and Ninmaroo Formation  Queensland,8011,-3.1,-125.9,circle,3.6306,0,495,479,black,byPlateId,0.835555556
+14134,Narva Ordovician limestone  Russia,301,18,55,circle,4.076,0,500,480,black,byPlateId,0.911111111
+14134,Narva Ordovician limestone  Russia,301,-18,-125,circle,4.076,0,500,480,black,byPlateId,0.911111111
+14135,Black Hill Norite  South Australia,8011,-37.5,34.4,circle,4.1022,0,502,482,black,byPlateId,0.915555556
+14135,Black Hill Norite  South Australia,8011,37.5,-145.6,circle,4.1022,0,502,482,black,byPlateId,0.915555556
+14136,Royer Dolomite,101,-12.6,337.3,circle,4.0367,0,501,488,black,byPlateId,0.904444444
+14136,Royer Dolomite,101,12.6,157.3,circle,4.0367,0,501,488,black,byPlateId,0.904444444
+14137,Sor Rondane intrusives  Queen Maud Land,802,-28.5,9.5,circle,4.0105,0,515,482,black,byPlateId,0.9
+14137,Sor Rondane intrusives  Queen Maud Land,802,28.5,-170.5,circle,4.0105,0,515,482,black,byPlateId,0.9
+14138,Killer Ridge/Mount Lok,802,-7,21.4,circle,3.5913,0,502,496,black,byPlateId,0.828888889
+14138,Killer Ridge/Mount Lok,802,7,-158.6,circle,3.5913,0,502,496,black,byPlateId,0.828888889
+14139,Granitic rocks  Wright Valley,802,-5.4,18.5,circle,3.5389,0,543,457,black,byPlateId,0.82
+14139,Granitic rocks  Wright Valley,802,5.4,-161.5,circle,3.5389,0,543,457,black,byPlateId,0.82
+14721,6       Rose Hill Formation  Maryland  West Virginia  U.S.A.  sediments  423-428Ma(SM) French A.N.  Van der Voo R.  1979 Ref 1218,101,-19.1,308.3,circle,3.8402,0,435,415,black,byPlateId,0.871111111
+14721,6       Rose Hill Formation  Maryland  West Virginia  U.S.A.  sediments  423-428Ma(SM) French A.N.  Van der Voo R.  1979 Ref 1218,101,19.1,128.3,circle,3.8402,0,435,415,black,byPlateId,0.871111111
+14722,5       Ratagen Complex 425+/-3 Ma U/Pb Rogers & Dunning,303,-15,347,circle,3.5651,0,435,415,black,byPlateId,0.824444444
+14722,5       Ratagen Complex 425+/-3 Ma U/Pb Rogers & Dunning,303,15,167,circle,3.5651,0,435,415,black,byPlateId,0.824444444
+14723,3N      Gotland Follingbo Limestone,301,-21,344,circle,3.814,0,435,415,black,byPlateId,0.866666667
+14723,3N      Gotland Follingbo Limestone,301,21,164,circle,3.814,0,435,415,black,byPlateId,0.866666667
+14724,4N      Gotland Dacker Limestone,301,-19,349,circle,4.338,0,436,416,black,byPlateId,0.955555556
+14724,4N      Gotland Dacker Limestone,301,19,169,circle,4.338,0,436,416,black,byPlateId,0.955555556
+14725,5N      Gotland Visby Limestone (HB),301,-19,352,circle,3.9319,0,437,417,black,byPlateId,0.886666667
+14725,5N      Gotland Visby Limestone (HB),301,19,172,circle,3.9319,0,437,417,black,byPlateId,0.886666667
+14726,3       Strontian Granite 428+/-7 and 430+/-7 Ar/Ar Torsvik et al 2002,303,-21,344,circle,3.945,0,440,420,black,byPlateId,0.888888889
+14726,3       Strontian Granite 428+/-7 and 430+/-7 Ar/Ar Torsvik et al 2002,303,21,164,circle,3.945,0,440,420,black,byPlateId,0.888888889
+14727,4       Peterhead Granite 431+/-7 Torsvik et al. 2002,313,-21,358,circle,3.9188,0,442,422,black,byPlateId,0.884444444
+14727,4       Peterhead Granite 431+/-7 Torsvik et al. 2002,313,21,178,circle,3.9188,0,442,422,black,byPlateId,0.884444444
+14728,4 NEW   Ringgold Gap sediments  GA; Morrison & Ellwood (1986) GEL v. 13  189-192.,101,-24,326.6,circle,3.6437,0,448,428,black,byPlateId,0.837777778
+14728,4 NEW   Ringgold Gap sediments  GA; Morrison & Ellwood (1986) GEL v. 13  189-192.,101,24,146.6,circle,3.6437,0,448,428,black,byPlateId,0.837777778
+14729,5       Pakhuis  Cedarberg Formations  Cape Province  South Africa  435-458Ma(OU-SL) Bachtadse V.  Van der Voo R.  Halbich I.W.  1987 Ref 1416,7013,25,343,circle,2.242,0,456.5,436.5,black,byPlateId,0.6
+14729,5       Pakhuis  Cedarberg Formations  Cape Province  South Africa  435-458Ma(OU-SL) Bachtadse V.  Van der Voo R.  Halbich I.W.  1987 Ref 1416,7013,-25,163,circle,2.242,0,456.5,436.5,black,byPlateId,0.6
+14730,5N      Swedish Limestone I(N),301,3,35,circle,2.8446,0,468,448,black,byPlateId,0.702222222
+14730,5N      Swedish Limestone I(N),301,-3,-145,circle,2.8446,0,468,448,black,byPlateId,0.702222222
+14731,6N      Vestergotland (N3),301,5,34,circle,3.9712,0,469,449,black,byPlateId,0.893333333
+14731,6N      Vestergotland (N3),301,-5,-146,circle,3.9712,0,469,449,black,byPlateId,0.893333333
+14732,5N NEW  Llandeilian age  St.Petersburg  Pavlov et al 2008 EPSL,301,12,41.9,circle,3.9581,0,473,453,black,byPlateId,0.891111111
+14732,5N NEW  Llandeilian age  St.Petersburg  Pavlov et al 2008 EPSL,301,-12,-138.1,circle,3.9581,0,473,453,black,byPlateId,0.891111111
+14733,6       Salala Ring Complex  Sudan  460-466Ma(OM) Bachtdse V.  Briden J.C.  1989 Ref 2715,7151,39.6,329.5,circle,3.3948,0,473,453,black,byPlateId,0.795555556
+14733,6       Salala Ring Complex  Sudan  460-466Ma(OM) Bachtdse V.  Briden J.C.  1989 Ref 2715,7151,-39.6,149.5,circle,3.3948,0,473,453,black,byPlateId,0.795555556
+14734,5       Tumblagooda Sandstone  Carnarvon Basin  Western Australia  470-495Ma(OL) Schmidt P.W.  Embleton B.J.J.  1990,8012,-26.7,33.7,circle,4.207,0,475,455,black,byPlateId,0.933333333
+14734,5       Tumblagooda Sandstone  Carnarvon Basin  Western Australia  470-495Ma(OL) Schmidt P.W.  Embleton B.J.J.  1990,8012,26.7,-146.3,circle,4.207,0,475,455,black,byPlateId,0.933333333
+14735,6M      Vestergotland (N1N2 and R13),301,14,49,circle,4.0236,0,476,456,black,byPlateId,0.902222222
+14735,6M      Vestergotland (N1N2 and R13),301,-14,-131,circle,4.0236,0,476,456,black,byPlateId,0.902222222
+14736,4 NEW   Ordovician (Dapingian-Darriwilian) limestone Estonia_Plado et al. 2010 GJI 180,301,11.3,39.1,circle,3.7223,0,477,457,black,byPlateId,0.851111111
+14736,4 NEW   Ordovician (Dapingian-Darriwilian) limestone Estonia_Plado et al. 2010 GJI 180,301,-11.3,-140.9,circle,3.7223,0,477,457,black,byPlateId,0.851111111
+14737,4       Tablehead Group (limestones),101,-13.4,329.3,circle,4.0891,0,480,460,black,byPlateId,0.913333333
+14737,4       Tablehead Group (limestones),101,13.4,149.3,circle,4.0891,0,480,460,black,byPlateId,0.913333333
+14738,6R      Komstad Limestone - Torsvik and Rehnstrom (2000),301,19,51,circle,3.3948,0,481,461,black,byPlateId,0.795555556
+14738,6R      Komstad Limestone - Torsvik and Rehnstrom (2000),301,-19,-129,circle,3.3948,0,481,461,black,byPlateId,0.795555556
+14739,5       Vanda lamprophyre and porphyry  Wright Valley  East Antarctica  463-480Ma(OL-M) Funaki M.  1984 Ref 1599,802,-2.5,23.8,circle,3.9188,0,481.5,461.5,black,byPlateId,0.884444444
+14739,5       Vanda lamprophyre and porphyry  Wright Valley  East Antarctica  463-480Ma(OL-M) Funaki M.  1984 Ref 1599,802,2.5,-156.2,circle,3.9188,0,481.5,461.5,black,byPlateId,0.884444444
+14740,6R      Gullh¯gen (R1+R2),301,18.7,54,circle,3.7092,0,482,462,black,byPlateId,0.848888889
+14740,6R      Gullh¯gen (R1+R2),301,-18.7,-126,circle,3.7092,0,482,462,black,byPlateId,0.848888889
+14741,4 NEW   Ordovician (Floian) limestone Estonia_Plado et al. 2010 GJI 180,301,25,50.9,circle,3.6699,0,482,462,black,byPlateId,0.842222222
+14741,4 NEW   Ordovician (Floian) limestone Estonia_Plado et al. 2010 GJI 180,301,-25,-129.1,circle,3.6699,0,482,462,black,byPlateId,0.842222222
+14742,5R      Swedish Limestones,301,30,55,circle,3.421,0,485,465,black,byPlateId,0.8
+14742,5R      Swedish Limestones,301,-30,-125,circle,3.421,0,485,465,black,byPlateId,0.8
+14743,6R      Swedish Limestones I(R),301,18,46,circle,3.9319,0,485,465,black,byPlateId,0.886666667
+14743,6R      Swedish Limestones I(R),301,-18,-134,circle,3.9319,0,485,465,black,byPlateId,0.886666667
+14744,5       South Victoria Land Intrusives  South Victoria Land  Antarctica  465-485Ma(OL-M) Grunow A.M.  1995 Ref 2966,802,-3.5,22.7,circle,3.6044,0,485,465,black,byPlateId,0.831111111
+14744,5       South Victoria Land Intrusives  South Victoria Land  Antarctica  465-485Ma(OL-M) Grunow A.M.  1995 Ref 2966,802,3.5,-157.3,circle,3.6044,0,485,465,black,byPlateId,0.831111111
+14745,6M NEW  Narva Limestone  Russia  Lower Ordovician  Khramov and Iosifidi 2008,301,18,55,circle,4.076,0,487,467,black,byPlateId,0.911111111
+14745,6M NEW  Narva Limestone  Russia  Lower Ordovician  Khramov and Iosifidi 2008,301,-18,-125,circle,4.076,0,487,467,black,byPlateId,0.911111111
+14746,5M      St Petersburg Limestone,301,34.7,59.1,circle,4.1284,0,488,468,black,byPlateId,0.92
+14746,5M      St Petersburg Limestone,301,-34.7,-120.9,circle,4.1284,0,488,468,black,byPlateId,0.92
+14747,5       Teall Nunatak  Victoria Land  Antarctica  475-483Ma(OL) Lanza R.  Tonarini S.  1998 Ref 3187,802,-11,21,circle,3.6568,0,489,469,black,byPlateId,0.84
+14747,5       Teall Nunatak  Victoria Land  Antarctica  475-483Ma(OL) Lanza R.  Tonarini S.  1998 Ref 3187,802,11,-159,circle,3.6568,0,489,469,black,byPlateId,0.84
+14748,4       St. George Group (limestones),101,-17.5,332.4,circle,4.0367,0,490,470,black,byPlateId,0.904444444
+14748,4       St. George Group (limestones),101,17.5,152.4,circle,4.0367,0,490,470,black,byPlateId,0.904444444
+14749,6       Graafwater Formation  Cape Province  South Africa  470-495Ma(OL) Bachtadse V.  Van der Voo R.  Halbich I.W.  1987 Ref 1416,7014,28,14,circle,3.421,0,492.5,472.5,black,byPlateId,0.8
+14749,6       Graafwater Formation  Cape Province  South Africa  470-495Ma(OL) Bachtadse V.  Van der Voo R.  Halbich I.W.  1987 Ref 1416,7014,-28,-166,circle,3.421,0,492.5,472.5,black,byPlateId,0.8
+14750,4       Lamprophyre Dykes  Taylor Valley  Antarctica  440-500Ma(O) Manzoni.M.  Nanni T.  1977 Ref 1079,802,-9.3,26.7,circle,3.1721,0,494,474,black,byPlateId,0.757777778
+14750,4       Lamprophyre Dykes  Taylor Valley  Antarctica  440-500Ma(O) Manzoni.M.  Nanni T.  1977 Ref 1079,802,9.3,-153.3,circle,3.1721,0,494,474,black,byPlateId,0.757777778
+14751,6       Oneota Dolomite,101,-10.3,346.5,circle,3.0411,0,500,480,black,byPlateId,0.735555556
+14751,6       Oneota Dolomite,101,10.3,166.5,circle,3.0411,0,500,480,black,byPlateId,0.735555556
+14752,4       Jinduckin Formation  Northern Territory  Australia  470-495Ma(OL) Luck G.R.  1972,8011,-13,25,circle,2.897,0,503,483,black,byPlateId,0.711111111
+14752,4       Jinduckin Formation  Northern Territory  Australia  470-495Ma(OL) Luck G.R.  1972,8011,13,-155,circle,2.897,0,503,483,black,byPlateId,0.711111111
+14753,5       Point Peak,101,-5.2,345.8,circle,3.421,0,505,485,black,byPlateId,0.8
+14753,5       Point Peak,101,5.2,165.8,circle,3.421,0,505,485,black,byPlateId,0.8
+14754,5       Morgan Creek,101,-10.6,338,circle,3.3293,0,505,485,black,byPlateId,0.784444444
+14754,5       Morgan Creek,101,10.6,158,circle,3.3293,0,505,485,black,byPlateId,0.784444444
+14755,5       Moore Hollow sediments; Farr & Gose (1991) JGR v. 96(B6)  9895-9907.,101,0.6,343,circle,3.4865,0,505,485,black,byPlateId,0.811111111
+14755,5       Moore Hollow sediments; Farr & Gose (1991) JGR v. 96(B6)  9895-9907.,101,-0.6,163,circle,3.4865,0,505,485,black,byPlateId,0.811111111
+14756,6       Chatswood Limestone and Ninmaroo Formation  Western Queensland  Australia  485-500Ma(CBU-OL) Ripperdan R.L.  Kirschvink J.L.  1992 Ref 3082,8011,3.1,54.1,circle,3.6306,0,505,485,black,byPlateId,0.835555556
+14756,6       Chatswood Limestone and Ninmaroo Formation  Western Queensland  Australia  485-500Ma(CBU-OL) Ripperdan R.L.  Kirschvink J.L.  1992 Ref 3082,8011,-3.1,-125.9,circle,3.6306,0,505,485,black,byPlateId,0.835555556
+14757,4       Killer Ridge/Mt. Lok  499+-3  Grunow & Encarnacion 2000,802,-7,21.4,circle,3.028,0,509,489,black,byPlateId,0.733333333
+14757,4       Killer Ridge/Mt. Lok  499+-3  Grunow & Encarnacion 2000,802,7,-158.6,circle,3.028,0,509,489,black,byPlateId,0.733333333
+14758,5       Taum sauk (limestone),101,3.4,355.1,circle,3.6699,0,510,490,black,byPlateId,0.842222222
+14758,5       Taum sauk (limestone),101,-3.4,175.1,circle,3.6699,0,510,490,black,byPlateId,0.842222222
+14759,6       Royer Dolomite,101,-12.6,337.3,circle,4.0367,0,510,490,black,byPlateId,0.904444444
+14759,6       Royer Dolomite,101,12.6,157.3,circle,4.0367,0,510,490,black,byPlateId,0.904444444
+14760,5M      Late Cambrian Narva Sandstone Russia Khramov and Iosifidi 2008,301,22,87,circle,3.945,0,510,490,black,byPlateId,0.888888889
+14760,5M      Late Cambrian Narva Sandstone Russia Khramov and Iosifidi 2008,301,-22,-93,circle,3.945,0,510,490,black,byPlateId,0.888888889
+14761,3R      Andrarum Lst. 99,301,52,111,circle,3.7092,0,510,490,black,byPlateId,0.848888889
+14761,3R      Andrarum Lst. 99,301,-52,-69,circle,3.7092,0,510,490,black,byPlateId,0.848888889
+14762,3       Black Hill Norite  South Australia  482-492Ma(OL) Schmidt P.W.  Clark D.A.  Rajagopalan S.  1993 Ref 2971,8013,-37.5,34.4,circle,4.1022,0,510,490,black,byPlateId,0.915555556
+14762,3       Black Hill Norite  South Australia  482-492Ma(OL) Schmidt P.W.  Clark D.A.  Rajagopalan S.  1993 Ref 2971,8013,37.5,-145.6,circle,4.1022,0,510,490,black,byPlateId,0.915555556
+14763,4       Granitic rocks  Wright Valley  East Antarctica  457-543Ma(CBL-OM) Funaki M.  1984 Ref 1599,802,-5.4,18.5,circle,3.5389,0,510,490,black,byPlateId,0.82
+14763,4       Granitic rocks  Wright Valley  East Antarctica  457-543Ma(CBL-OM) Funaki M.  1984 Ref 1599,802,5.4,-161.5,circle,3.5389,0,510,490,black,byPlateId,0.82
+14764,6       Florida Mountains 503+-10 Ma,134,5.4,348.7,circle,3.29,0,513,493,black,byPlateId,0.777777778
+14764,6       Florida Mountains 503+-10 Ma,134,-5.4,168.7,circle,3.29,0,513,493,black,byPlateId,0.777777778
+17169,A11.3.015,315,26,169,circle,3.421,0,542,307,black,byPlateId,0.8
+17169,A11.3.015,315,-26,-11,circle,3.421,0,542,307,black,byPlateId,0.8
+17170,A2.1.176,313,28,154,circle,3.29,0,428,423,black,byPlateId,0.777777778
+17170,A2.1.176,313,-28,-26,circle,3.29,0,428,423,black,byPlateId,0.777777778
+17171,A11.6.112,101,-63,125,circle,2.766,0,469,384,black,byPlateId,0.688888889
+17171,A11.6.112,101,63,-55,circle,2.766,0,469,384,black,byPlateId,0.688888889
+17172,A2.1.174,313,5,151,circle,3.945,0,444,410,black,byPlateId,0.888888889
+17172,A2.1.174,313,-5,-29,circle,3.945,0,444,410,black,byPlateId,0.888888889
+17173,A2.1.178,303,16,168,circle,2.111,0,444,411,black,byPlateId,0.577777778
+17173,A2.1.178,303,-16,-12,circle,2.111,0,444,411,black,byPlateId,0.577777778
+17174,A2.1.179,303,27,167,circle,3.814,0,444,411,black,byPlateId,0.866666667
+17174,A2.1.179,303,-27,-13,circle,3.814,0,444,411,black,byPlateId,0.866666667
+17175,A2.1.180,303,23,175,circle,3.814,0,444,411,black,byPlateId,0.866666667
+17175,A2.1.180,303,-23,-5,circle,3.814,0,444,411,black,byPlateId,0.866666667
+17176,A11.4.058,305,-16,142,circle,1.456,0,445,411,black,byPlateId,0.466666667
+17176,A11.4.058,305,16,-38,circle,1.456,0,445,411,black,byPlateId,0.466666667
+17177,A2.1.185,313,-3,143,circle,0.539,0,431,425,black,byPlateId,0.311111111
+17177,A2.1.185,313,3,-37,circle,0.539,0,431,425,black,byPlateId,0.311111111
+17178,A2.1.181,303,18,147,circle,3.552,0,444,416,black,byPlateId,0.822222222
+17178,A2.1.181,303,-18,-33,circle,3.552,0,444,416,black,byPlateId,0.822222222
+17179,A2.1.183,303,16,141,circle,3.552,0,444,416,black,byPlateId,0.822222222
+17179,A2.1.183,303,-16,-39,circle,3.552,0,444,416,black,byPlateId,0.822222222
+17180,A2.1.184,303,16,148,circle,3.945,0,444,416,black,byPlateId,0.888888889
+17180,A2.1.184,303,-16,-32,circle,3.945,0,444,416,black,byPlateId,0.888888889
+17181,A4.2.174,201,-34,164,circle,3.421,0,444,416,black,byPlateId,0.8
+17181,A4.2.174,201,34,-16,circle,3.421,0,444,416,black,byPlateId,0.8
+17182,A6.2.078,611,5,-165,circle,3.814,0,444,416,black,byPlateId,0.866666667
+17182,A6.2.078,611,-5,-345,circle,3.814,0,444,416,black,byPlateId,0.866666667
+17183,A8.2.089,511,7,-79,circle,3.814,0,444,416,black,byPlateId,0.866666667
+17183,A8.2.089,511,-7,-259,circle,3.814,0,444,416,black,byPlateId,0.866666667
+17184,A11.3.019,315,-8,122,circle,2.766,0,434,427,black,byPlateId,0.688888889
+17184,A11.3.019,315,8,-58,circle,2.766,0,434,427,black,byPlateId,0.688888889
+17185,A11.5.094,108,-16,139,circle,4.076,0,469,392,black,byPlateId,0.911111111
+17185,A11.5.094,108,16,-41,circle,4.076,0,469,392,black,byPlateId,0.911111111
+17186,A11.6.109,108,16,133,circle,3.683,0,439,423,black,byPlateId,0.844444444
+17186,A11.6.109,108,-16,-47,circle,3.683,0,439,423,black,byPlateId,0.844444444
+17187,A11.6.110,101,25,110,circle,2.766,0,439,423,black,byPlateId,0.688888889
+17187,A11.6.110,101,-25,-70,circle,2.766,0,439,423,black,byPlateId,0.688888889
+17188,A2.1.177,313,21,178,circle,3.945,0,444,419,black,byPlateId,0.888888889
+17188,A2.1.177,313,-21,-2,circle,3.945,0,444,419,black,byPlateId,0.888888889
+17189,A5.6.178,1853,38,-145,circle,3.552,0,444,419,black,byPlateId,0.822222222
+17189,A5.6.178,1853,-38,-325,circle,3.552,0,444,419,black,byPlateId,0.822222222
+17190,A11.3.018,315,-9,107,circle,4.6,0,444,423,black,byPlateId,1
+17190,A11.3.018,315,9,-73,circle,4.6,0,444,423,black,byPlateId,1
+17191,A11.4.059,304,8,118,circle,2.766,0,444,423,black,byPlateId,0.688888889
+17191,A11.4.059,304,-8,-62,circle,2.766,0,444,423,black,byPlateId,0.688888889
+17192,A2.1.187,303,10,-171,circle,3.683,0,445,422,black,byPlateId,0.844444444
+17192,A2.1.187,303,-10,-351,circle,3.683,0,445,422,black,byPlateId,0.844444444
+17193,A7.2.051,304,8,118,circle,2.766,0,444,423,black,byPlateId,0.688888889
+17193,A7.2.051,304,-8,-62,circle,2.766,0,444,423,black,byPlateId,0.688888889
+17194,A11.6.111,108,36,85,circle,3.159,0,441,427,black,byPlateId,0.755555556
+17194,A11.6.111,108,-36,-95,circle,3.159,0,441,427,black,byPlateId,0.755555556
+17195,A11.5.095,108,2,130,circle,4.076,0,452,422,black,byPlateId,0.911111111
+17195,A11.5.095,108,-2,-50,circle,4.076,0,452,422,black,byPlateId,0.911111111
+17196,A11.5.096,108,0,118,circle,3.159,0,452,422,black,byPlateId,0.755555556
+17196,A11.5.096,108,0,-62,circle,3.159,0,452,422,black,byPlateId,0.755555556
+17197,A2.1.188,303,15,168,circle,3.29,0,453,422,black,byPlateId,0.777777778
+17197,A2.1.188,303,-15,-12,circle,3.29,0,453,422,black,byPlateId,0.777777778
+17198,A2.1.189,303,17,166,circle,3.814,0,453,422,black,byPlateId,0.866666667
+17198,A2.1.189,303,-17,-14,circle,3.814,0,453,422,black,byPlateId,0.866666667
+17199,A11.6.113,101,-15,68,circle,3.29,0,469,408,black,byPlateId,0.777777778
+17199,A11.6.113,101,15,-112,circle,3.29,0,469,408,black,byPlateId,0.777777778
+17200,A2.1.190,313,31,169,circle,4.076,0,461,416,black,byPlateId,0.911111111
+17200,A2.1.190,313,-31,-11,circle,4.076,0,461,416,black,byPlateId,0.911111111
+17201,A9.1.034,5011,-12,-160,circle,3.29,0,461,416,black,byPlateId,0.777777778
+17201,A9.1.034,5011,12,-340,circle,3.29,0,461,416,black,byPlateId,0.777777778
+17202,A1.180,101,35,126,circle,1.98,0,458,420,black,byPlateId,0.555555556
+17202,A1.180,101,-35,-54,circle,1.98,0,458,420,black,byPlateId,0.555555556
+17203,A2.1.186,303,21,164,circle,3.945,0,462,416,black,byPlateId,0.888888889
+17203,A2.1.186,303,-21,-16,circle,3.945,0,462,416,black,byPlateId,0.888888889
+17204,A1.181,101,28,142,circle,3.683,0,451,428,black,byPlateId,0.844444444
+17204,A1.181,101,-28,-38,circle,3.683,0,451,428,black,byPlateId,0.844444444
+17205,A1.182,101,19,129,circle,2.242,0,451,428,black,byPlateId,0.6
+17205,A1.182,101,-19,-51,circle,2.242,0,451,428,black,byPlateId,0.6
+17206,A4.2.175,202,61,158,circle,2.373,0,572,307,black,byPlateId,0.622222222
+17206,A4.2.175,202,-61,-22,circle,2.373,0,572,307,black,byPlateId,0.622222222
+17207,A11.3.020,315,0,-163,circle,3.028,0,461,423,black,byPlateId,0.733333333
+17207,A11.3.020,315,0,-343,circle,3.028,0,461,423,black,byPlateId,0.733333333
+17208,A4.1.088,7013,-25,163,circle,2.242,0,461,423,black,byPlateId,0.6
+17208,A4.1.088,7013,25,-17,circle,2.242,0,461,423,black,byPlateId,0.6
+17209,A11.2.005,313,20,173,circle,3.29,0,464,421,black,byPlateId,0.777777778
+17209,A11.2.005,313,-20,-7,circle,3.29,0,464,421,black,byPlateId,0.777777778
+17210,A11.2.007,315,-17,-149,circle,2.897,0,464,422,black,byPlateId,0.711111111
+17210,A11.2.007,315,17,-329,circle,2.897,0,464,422,black,byPlateId,0.711111111
+17211,A4.2.176,291,56,-147,circle,2.504,0,466,422,black,byPlateId,0.644444444
+17211,A4.2.176,291,-56,-327,circle,2.504,0,466,422,black,byPlateId,0.644444444
+17212,A2.1.191,303,24,178,circle,3.552,0,461,428,black,byPlateId,0.822222222
+17212,A2.1.191,303,-24,-2,circle,3.552,0,461,428,black,byPlateId,0.822222222
+17213,A2.1.192,303,4,178,circle,2.504,0,461,428,black,byPlateId,0.644444444
+17213,A2.1.192,303,-4,-2,circle,2.504,0,461,428,black,byPlateId,0.644444444
+17214,A11.2.006,315,51,162,circle,2.897,0,450,444,black,byPlateId,0.711111111
+17214,A11.2.006,315,-51,-18,circle,2.897,0,450,444,black,byPlateId,0.711111111
+17215,A11.4.060,305,-34,-175,circle,3.945,0,456,439,black,byPlateId,0.888888889
+17215,A11.4.060,305,34,-355,circle,3.945,0,456,439,black,byPlateId,0.888888889
+17216,A1.187,101,23,139,circle,2.897,0,476,420,black,byPlateId,0.711111111
+17216,A1.187,101,-23,-41,circle,2.897,0,476,420,black,byPlateId,0.711111111
+17217,A2.1.193,313,8,178,circle,2.766,0,451,450,black,byPlateId,0.688888889
+17217,A2.1.193,313,-8,-2,circle,2.766,0,451,450,black,byPlateId,0.688888889
+17218,A1.183,101,31,102,circle,3.159,0,453,449,black,byPlateId,0.755555556
+17218,A1.183,101,-31,-78,circle,3.159,0,453,449,black,byPlateId,0.755555556
+17219,A4.1.089,715,-40,150,circle,3.421,0,466,438,black,byPlateId,0.8
+17219,A4.1.089,715,40,-30,circle,3.421,0,466,438,black,byPlateId,0.8
+17220,A1.184,101,21,105,circle,2.897,0,461,444,black,byPlateId,0.711111111
+17220,A1.184,101,-21,-75,circle,2.897,0,461,444,black,byPlateId,0.711111111
+17221,A1.185,101,19,128,circle,1.849,0,461,444,black,byPlateId,0.533333333
+17221,A1.185,101,-19,-52,circle,1.849,0,461,444,black,byPlateId,0.533333333
+17222,A1.186,101,32,114,circle,3.945,0,461,444,black,byPlateId,0.888888889
+17222,A1.186,101,-32,-66,circle,3.945,0,461,444,black,byPlateId,0.888888889
+17223,A11.3.021,315,-2,-178,circle,3.159,0,461,444,black,byPlateId,0.755555556
+17223,A11.3.021,315,2,-358,circle,3.159,0,461,444,black,byPlateId,0.755555556
+17224,A11.4.061,305,3,178,circle,3.552,0,461,444,black,byPlateId,0.822222222
+17224,A11.4.061,305,-3,-2,circle,3.552,0,461,444,black,byPlateId,0.822222222
+17225,A11.6.114,101,-48,108,circle,2.504,0,461,444,black,byPlateId,0.644444444
+17225,A11.6.114,101,48,-72,circle,2.504,0,461,444,black,byPlateId,0.644444444
+17226,A11.6.115,109,-16,123,circle,2.766,0,461,444,black,byPlateId,0.688888889
+17226,A11.6.115,109,16,-57,circle,2.766,0,461,444,black,byPlateId,0.688888889
+17227,A5.6.179,1853,-6,-161,circle,3.814,0,464,444,black,byPlateId,0.866666667
+17227,A5.6.179,1853,6,-341,circle,3.814,0,464,444,black,byPlateId,0.866666667
+17228,A2.165,301,-4,143,circle,1.325,0,458,451,black,byPlateId,0.444444444
+17228,A2.165,301,4,-37,circle,1.325,0,458,451,black,byPlateId,0.444444444
+17229,A1.192,101,11,142,circle,3.159,0,466,444,black,byPlateId,0.755555556
+17229,A1.192,101,-11,-38,circle,3.159,0,466,444,black,byPlateId,0.755555556
+17230,A1.193,101,15,156,circle,3.29,0,466,444,black,byPlateId,0.777777778
+17230,A1.193,101,-15,-24,circle,3.29,0,466,444,black,byPlateId,0.777777778
+17231,A1.194,101,13,149,circle,3.945,0,466,444,black,byPlateId,0.888888889
+17231,A1.194,101,-13,-31,circle,3.945,0,466,444,black,byPlateId,0.888888889
+17232,A11.4.062,304,-22,165,circle,3.814,0,466,444,black,byPlateId,0.866666667
+17232,A11.4.062,304,22,-15,circle,3.814,0,466,444,black,byPlateId,0.866666667
+17233,A2.1.194,313,3,-158,circle,3.683,0,466,444,black,byPlateId,0.844444444
+17233,A2.1.194,313,-3,-338,circle,3.683,0,466,444,black,byPlateId,0.844444444
+17234,A2.1.196,315,12,-153,circle,3.552,0,466,444,black,byPlateId,0.822222222
+17234,A2.1.196,315,-12,-333,circle,3.552,0,466,444,black,byPlateId,0.822222222
+17235,A7.2.052,304,-22,165,circle,3.814,0,466,444,black,byPlateId,0.866666667
+17235,A7.2.052,304,22,-15,circle,3.814,0,466,444,black,byPlateId,0.866666667
+17236,A11.3.022,315,23,178,circle,4.6,0,466,445,black,byPlateId,1
+17236,A11.3.022,315,-23,-2,circle,4.6,0,466,445,black,byPlateId,1
+17237,A11.6.117,101,26,161,circle,3.552,0,466,445,black,byPlateId,0.822222222
+17237,A11.6.117,101,-26,-19,circle,3.552,0,466,445,black,byPlateId,0.822222222
+17238,A11.2.008,315,-82,123,circle,2.766,0,461,451,black,byPlateId,0.688888889
+17238,A11.2.008,315,82,-57,circle,2.766,0,461,451,black,byPlateId,0.688888889
+17239,A11.5.098,108,-32,83,circle,4.076,0,503,411,black,byPlateId,0.911111111
+17239,A11.5.098,108,32,-97,circle,4.076,0,503,411,black,byPlateId,0.911111111
+17240,A11.6.116,109,20,60,circle,2.766,0,462,453,black,byPlateId,0.688888889
+17240,A11.6.116,109,-20,-120,circle,2.766,0,462,453,black,byPlateId,0.688888889
+17241,A1.188,101,27,112,circle,2.635,0,466,451,black,byPlateId,0.666666667
+17241,A1.188,101,-27,-68,circle,2.635,0,466,451,black,byPlateId,0.666666667
+17242,A1.189,101,36,160,circle,2.766,0,466,451,black,byPlateId,0.688888889
+17242,A1.189,101,-36,-20,circle,2.766,0,466,451,black,byPlateId,0.688888889
+17243,A1.190,101,33,147,circle,3.814,0,466,451,black,byPlateId,0.866666667
+17243,A1.190,101,-33,-33,circle,3.814,0,466,451,black,byPlateId,0.866666667
+17244,A1.191,101,6,-169,circle,2.111,0,466,451,black,byPlateId,0.577777778
+17244,A1.191,101,-6,-349,circle,2.111,0,466,451,black,byPlateId,0.577777778
+17245,A11.2.009,313,18,-152,circle,3.159,0,462,456,black,byPlateId,0.755555556
+17245,A11.2.009,313,-18,-332,circle,3.159,0,462,456,black,byPlateId,0.755555556
+17246,A11.2.010,315,0,-157,circle,3.683,0,462,456,black,byPlateId,0.844444444
+17246,A11.2.010,315,0,-337,circle,3.683,0,462,456,black,byPlateId,0.844444444
+17247,A5.3.093,8011,2,-129,circle,3.29,0,466,453,black,byPlateId,0.777777778
+17247,A5.3.093,8011,-2,-309,circle,3.29,0,466,453,black,byPlateId,0.777777778
+17248,A11.3.023,315,-11,-162,circle,3.421,0,464,457,black,byPlateId,0.8
+17248,A11.3.023,315,11,-342,circle,3.421,0,464,457,black,byPlateId,0.8
+17249,A11.2.011,315,12,177,circle,3.552,0,464,458,black,byPlateId,0.822222222
+17249,A11.2.011,315,-12,-3,circle,3.552,0,464,458,black,byPlateId,0.822222222
+17250,A11.6.119,101,6,140,circle,3.159,0,466,458,black,byPlateId,0.755555556
+17250,A11.6.119,101,-6,-40,circle,3.159,0,466,458,black,byPlateId,0.755555556
+17251,A2.2.200,313,9,-146,circle,1.98,0,464,461,black,byPlateId,0.555555556
+17251,A2.2.200,313,-9,-326,circle,1.98,0,464,461,black,byPlateId,0.555555556
+17252,A11.2.012,315,3,165,circle,3.29,0,465,462,black,byPlateId,0.777777778
+17252,A11.2.012,315,-3,-15,circle,3.29,0,465,462,black,byPlateId,0.777777778
+17253,A6.1.027,604,43,-27,circle,3.159,0,466,461,black,byPlateId,0.755555556
+17253,A6.1.027,604,-43,-207,circle,3.159,0,466,461,black,byPlateId,0.755555556
+17254,A11.3.024,315,3,175,circle,4.076,0,465,463,black,byPlateId,0.911111111
+17254,A11.3.024,315,-3,-5,circle,4.076,0,465,463,black,byPlateId,0.911111111
+17255,A11.3.025,315,3,-176,circle,3.683,0,465,463,black,byPlateId,0.844444444
+17255,A11.3.025,315,-3,-356,circle,3.683,0,465,463,black,byPlateId,0.844444444
+17256,A11.6.120,108,8,140,circle,3.421,0,475,453,black,byPlateId,0.8
+17256,A11.6.120,108,-8,-40,circle,3.421,0,475,453,black,byPlateId,0.8
+17257,A11.6.121,101,10,131,circle,3.683,0,475,453,black,byPlateId,0.844444444
+17257,A11.6.121,101,-10,-49,circle,3.683,0,475,453,black,byPlateId,0.844444444
+17258,A5.3.094,8013,-26,-105,circle,3.683,0,508,421,black,byPlateId,0.844444444
+17258,A5.3.094,8013,26,-285,circle,3.683,0,508,421,black,byPlateId,0.844444444
+17259,A5.3.095,8013,-17,-104,circle,3.552,0,508,421,black,byPlateId,0.822222222
+17259,A5.3.095,8013,17,-284,circle,3.552,0,508,421,black,byPlateId,0.822222222
+17260,A5.3.096,8011,-37,-111,circle,3.945,0,508,421,black,byPlateId,0.888888889
+17260,A5.3.096,8011,37,-291,circle,3.945,0,508,421,black,byPlateId,0.888888889
+17261,A5.3.097,8012,30,-149,circle,3.421,0,508,421,black,byPlateId,0.8
+17261,A5.3.097,8012,-30,-329,circle,3.421,0,508,421,black,byPlateId,0.8
+17262,A11.3.027,315,-27,-144,circle,3.945,0,466,464,black,byPlateId,0.888888889
+17262,A11.3.027,315,27,-324,circle,3.945,0,466,464,black,byPlateId,0.888888889
+17263,A11.6.118,101,-14,-172,circle,3.028,0,469,461,black,byPlateId,0.733333333
+17263,A11.6.118,101,14,-352,circle,3.028,0,469,461,black,byPlateId,0.733333333
+17264,A11.3.026,315,-10,-134,circle,3.421,0,469,462,black,byPlateId,0.8
+17264,A11.3.026,315,10,-314,circle,3.421,0,469,462,black,byPlateId,0.8
+17265,A5.2.039,802,3,-156,circle,3.945,0,469,462,black,byPlateId,0.888888889
+17265,A5.2.039,802,-3,-336,circle,3.945,0,469,462,black,byPlateId,0.888888889
+17266,A1.195,101,21,138,circle,3.683,0,488,444,black,byPlateId,0.844444444
+17266,A1.195,101,-21,-42,circle,3.683,0,488,444,black,byPlateId,0.844444444
+17267,A1.196,101,18,152,circle,3.421,0,488,444,black,byPlateId,0.8
+17267,A1.196,101,-18,-28,circle,3.421,0,488,444,black,byPlateId,0.8
+17268,A10.2.037,1695,-49,-102,circle,3.028,0,488,444,black,byPlateId,0.733333333
+17268,A10.2.037,1695,49,-282,circle,3.028,0,488,444,black,byPlateId,0.733333333
+17269,A11.3.028,315,-73,-131,circle,2.766,0,488,444,black,byPlateId,0.688888889
+17269,A11.3.028,315,73,-311,circle,2.766,0,488,444,black,byPlateId,0.688888889
+17270,A11.3.029,315,-68,108,circle,3.945,0,488,444,black,byPlateId,0.888888889
+17270,A11.3.029,315,68,-72,circle,3.945,0,488,444,black,byPlateId,0.888888889
+17271,A11.4.063,305,13,150,circle,4.6,0,488,444,black,byPlateId,1
+17271,A11.4.063,305,-13,-30,circle,4.6,0,488,444,black,byPlateId,1
+17272,A11.5.099,101,-34,102,circle,4.6,0,488,444,black,byPlateId,1
+17272,A11.5.099,101,34,-78,circle,4.6,0,488,444,black,byPlateId,1
+17273,A2.1.195,313,28,-162,circle,3.028,0,488,444,black,byPlateId,0.733333333
+17273,A2.1.195,313,-28,-342,circle,3.028,0,488,444,black,byPlateId,0.733333333
+17274,A4.2.177,201,-4,122,circle,1.718,0,488,444,black,byPlateId,0.511111111
+17274,A4.2.177,201,4,-58,circle,1.718,0,488,444,black,byPlateId,0.511111111
+17275,A4.2.178,202,-31,-167,circle,-1.295,0,488,444,black,byPlateId,0
+17275,A4.2.178,202,31,-347,circle,-1.295,0,488,444,black,byPlateId,0
+17276,A4.2.179,202,-11,153,circle,3.421,0,488,444,black,byPlateId,0.8
+17276,A4.2.179,202,11,-27,circle,3.421,0,488,444,black,byPlateId,0.8
+17277,A4.1.090,7013,-51,172,circle,1.98,0,484,449,black,byPlateId,0.555555556
+17277,A4.1.090,7013,51,-8,circle,1.98,0,484,449,black,byPlateId,0.555555556
+17278,A5.2.038,802,9,-153,circle,3.159,0,480,453,black,byPlateId,0.755555556
+17278,A5.2.038,802,-9,-333,circle,3.159,0,480,453,black,byPlateId,0.755555556
+17279,A11.6.122,101,19,98,circle,0.801,0,493,445,black,byPlateId,0.355555556
+17279,A11.6.122,101,-19,-82,circle,0.801,0,493,445,black,byPlateId,0.355555556
+17280,A11.1.001,313,-12,120,circle,4.076,0,479,464,black,byPlateId,0.911111111
+17280,A11.1.001,313,12,-60,circle,4.076,0,479,464,black,byPlateId,0.911111111
+17281,A2.166,301,-18,-134,circle,3.945,0,479,464,black,byPlateId,0.888888889
+17281,A2.166,301,18,-314,circle,3.945,0,479,464,black,byPlateId,0.888888889
+17282,A2.2.201,313,-12,120,circle,4.076,0,479,464,black,byPlateId,0.911111111
+17282,A2.2.201,313,12,-60,circle,4.076,0,479,464,black,byPlateId,0.911111111
+17283,A11.1.002,303,-47,-116,circle,3.814,0,500,444,black,byPlateId,0.866666667
+17283,A11.1.002,303,47,-296,circle,3.814,0,500,444,black,byPlateId,0.866666667
+17284,A11.4.064,305,-28,151,circle,3.683,0,479,466,black,byPlateId,0.844444444
+17284,A11.4.064,305,28,-29,circle,3.683,0,479,466,black,byPlateId,0.844444444
+17285,A11.4.065,305,-34,163,circle,3.814,0,476,469,black,byPlateId,0.866666667
+17285,A11.4.065,305,34,-17,circle,3.814,0,476,469,black,byPlateId,0.866666667
+17286,A11.4.067,305,-22,-171,circle,3.29,0,479,466,black,byPlateId,0.777777778
+17286,A11.4.067,305,22,-351,circle,3.29,0,479,466,black,byPlateId,0.777777778
+17287,A11.6.123,101,29,135,circle,3.683,0,479,466,black,byPlateId,0.844444444
+17287,A11.6.123,101,-29,-45,circle,3.683,0,479,466,black,byPlateId,0.844444444
+17288,A11.6.124,101,32,130,circle,2.504,0,479,466,black,byPlateId,0.644444444
+17288,A11.6.124,101,-32,-50,circle,2.504,0,479,466,black,byPlateId,0.644444444
+17289,A2.167,301,-30,-125,circle,3.421,0,480,466,black,byPlateId,0.8
+17289,A2.167,301,30,-305,circle,3.421,0,480,466,black,byPlateId,0.8
+17290,A11.4.066,305,-35,164,circle,3.159,0,482,465,black,byPlateId,0.755555556
+17290,A11.4.066,305,35,-16,circle,3.159,0,482,465,black,byPlateId,0.755555556
+17291,A2.1.197,313,16,-148,circle,3.552,0,488,461,black,byPlateId,0.822222222
+17291,A2.1.197,313,-16,-328,circle,3.552,0,488,461,black,byPlateId,0.822222222
+17292,A2.168,301,16,-176,circle,3.159,0,488,461,black,byPlateId,0.755555556
+17292,A2.168,301,-16,-356,circle,3.159,0,488,461,black,byPlateId,0.755555556
+17293,A4.2.180,202,9,-174,circle,3.814,0,488,461,black,byPlateId,0.866666667
+17293,A4.2.180,202,-9,-354,circle,3.814,0,488,461,black,byPlateId,0.866666667
+17294,A9.1.035,5011,-79,173,circle,4.076,0,488,461,black,byPlateId,0.911111111
+17294,A9.1.035,5011,79,-7,circle,4.076,0,488,461,black,byPlateId,0.911111111
+17295,A6.2.079,611,-39,-124,circle,2.373,0,485,466,black,byPlateId,0.622222222
+17295,A6.2.079,611,39,-304,circle,2.373,0,485,466,black,byPlateId,0.622222222
+17296,A11.3.030,315,-56,126,circle,3.814,0,483,470,black,byPlateId,0.866666667
+17296,A11.3.030,315,56,-54,circle,3.814,0,483,470,black,byPlateId,0.866666667
+17297,A11.4.070,305,-73,173,circle,3.814,0,488,465,black,byPlateId,0.866666667
+17297,A11.4.070,305,73,-7,circle,3.814,0,488,465,black,byPlateId,0.866666667
+17298,A1.197,101,10,166,circle,3.028,0,488,466,black,byPlateId,0.733333333
+17298,A1.197,101,-10,-14,circle,3.028,0,488,466,black,byPlateId,0.733333333
+17299,A11.3.031,315,2,119,circle,2.242,0,488,466,black,byPlateId,0.6
+17299,A11.3.031,315,-2,-61,circle,2.242,0,488,466,black,byPlateId,0.6
+17300,A11.4.068,305,-48,92,circle,4.207,0,488,466,black,byPlateId,0.933333333
+17300,A11.4.068,305,48,-88,circle,4.207,0,488,466,black,byPlateId,0.933333333
+17301,A11.5.097,108,33,102,circle,3.814,0,488,466,black,byPlateId,0.866666667
+17301,A11.5.097,108,-33,-78,circle,3.814,0,488,466,black,byPlateId,0.866666667
+17302,A4.1.091,7014,-28,-166,circle,3.421,0,488,466,black,byPlateId,0.8
+17302,A4.1.091,7014,28,-346,circle,3.421,0,488,466,black,byPlateId,0.8
+17303,A5.3.098,8011,13,-155,circle,2.897,0,488,466,black,byPlateId,0.711111111
+17303,A5.3.098,8011,-13,-335,circle,2.897,0,488,466,black,byPlateId,0.711111111
+17304,A5.6.180,1853,11,-177,circle,4.6,0,488,466,black,byPlateId,1
+17304,A5.6.180,1853,-11,-357,circle,4.6,0,488,466,black,byPlateId,1
+17305,A6.1.028,604,26,17,circle,3.159,0,488,466,black,byPlateId,0.755555556
+17305,A6.1.028,604,-26,-163,circle,3.159,0,488,466,black,byPlateId,0.755555556
+17306,A5.2.040,8021,28,-170,circle,3.945,0,493,462,black,byPlateId,0.888888889
+17306,A5.2.040,8021,-28,-350,circle,3.945,0,493,462,black,byPlateId,0.888888889
+17307,A2.2.202,313,-6,122,circle,2.504,0,493,469,black,byPlateId,0.644444444
+17307,A2.2.202,313,6,-58,circle,2.504,0,493,469,black,byPlateId,0.644444444
+17308,A1.199,133,37,102,circle,3.421,0,496,470,black,byPlateId,0.8
+17308,A1.199,133,-37,-78,circle,3.421,0,496,470,black,byPlateId,0.8
+17309,A8.3.104,508,37,-37,circle,3.552,0,500,466,black,byPlateId,0.822222222
+17309,A8.3.104,508,-37,-217,circle,3.552,0,500,466,black,byPlateId,0.822222222
+17310,A1.198,101,-3,123,circle,3.683,0,494,473,black,byPlateId,0.844444444
+17310,A1.198,101,3,-57,circle,3.683,0,494,473,black,byPlateId,0.844444444
+17311,A11.4.069,304,-23,-178,circle,3.814,0,506,461,black,byPlateId,0.866666667
+17311,A11.4.069,304,23,-358,circle,3.814,0,506,461,black,byPlateId,0.866666667
+17312,A7.2.053,304,-23,-178,circle,3.814,0,506,461,black,byPlateId,0.866666667
+17312,A7.2.053,304,23,-358,circle,3.814,0,506,461,black,byPlateId,0.866666667
+17313,A11.4.071,305,-50,63,circle,1.98,0,506,466,black,byPlateId,0.555555556
+17313,A11.4.071,305,50,-117,circle,1.98,0,506,466,black,byPlateId,0.555555556
+17314,A4.1.092,7141,-53,-154,circle,4.207,0,506,466,black,byPlateId,0.933333333
+17314,A4.1.092,7141,53,-334,circle,4.207,0,506,466,black,byPlateId,0.933333333
+17315,A5.2.042,8022,2,-151,circle,2.635,0,509,466,black,byPlateId,0.666666667
+17315,A5.2.042,8022,-2,-331,circle,2.635,0,509,466,black,byPlateId,0.666666667
+17316,A4.1.093,709,-28,165,circle,4.338,0,509,470,black,byPlateId,0.955555556
+17316,A4.1.093,709,28,-15,circle,4.338,0,509,470,black,byPlateId,0.955555556
+17317,A5.2.041,802,5,-161,circle,3.945,0,526,460,black,byPlateId,0.888888889
+17317,A5.2.041,802,-5,-341,circle,3.945,0,526,460,black,byPlateId,0.888888889
+17318,A1.200,101,20,-163,circle,3.159,0,542,445,black,byPlateId,0.755555556
+17318,A1.200,101,-20,-343,circle,3.159,0,542,445,black,byPlateId,0.755555556
+17319,A1.201,101,-5,130,circle,1.718,0,542,445,black,byPlateId,0.511111111
+17319,A1.201,101,5,-50,circle,1.718,0,542,445,black,byPlateId,0.511111111
+17320,A4.2.181,2011,-57,-137,circle,3.29,0,557,431,black,byPlateId,0.777777778
+17320,A4.2.181,2011,57,-317,circle,3.29,0,557,431,black,byPlateId,0.777777778
+17321,A1.202,101,13,157,circle,4.076,0,503,488,black,byPlateId,0.911111111
+17321,A1.202,101,-13,-23,circle,4.076,0,503,488,black,byPlateId,0.911111111
+17322,A5.3.099,8013,38,-154,circle,3.028,0,548,444,black,byPlateId,0.733333333
+17322,A5.3.099,8013,-38,-334,circle,3.028,0,548,444,black,byPlateId,0.733333333
+17323,A11.4.072,305,-29,131,circle,3.814,0,500,493,black,byPlateId,0.866666667
+17323,A11.4.072,305,29,-49,circle,3.814,0,500,493,black,byPlateId,0.866666667
+17324,A4.1.094,7151,-86,13,circle,3.814,0,530,463,black,byPlateId,0.866666667
+17324,A4.1.094,7151,86,-167,circle,3.814,0,530,463,black,byPlateId,0.866666667
+17325,A1.203,101,1,168,circle,4.6,0,506,488,black,byPlateId,1
+17325,A1.203,101,-1,-12,circle,4.6,0,506,488,black,byPlateId,1
+17326,A1.204,101,6,159,circle,3.945,0,506,488,black,byPlateId,0.888888889
+17326,A1.204,101,-6,-21,circle,3.945,0,506,488,black,byPlateId,0.888888889
+17327,A1.205,101,-4,176,circle,3.683,0,506,488,black,byPlateId,0.844444444
+17327,A1.205,101,4,-4,circle,3.683,0,506,488,black,byPlateId,0.844444444
+17328,A1.206,101,27,146,circle,3.29,0,506,488,black,byPlateId,0.777777778
+17328,A1.206,101,-27,-34,circle,3.29,0,506,488,black,byPlateId,0.777777778
+17329,A1.207,101,33,140,circle,3.552,0,506,488,black,byPlateId,0.822222222
+17329,A1.207,101,-33,-40,circle,3.552,0,506,488,black,byPlateId,0.822222222
+17330,A1.208,101,24,151,circle,4.076,0,506,488,black,byPlateId,0.911111111
+17330,A1.208,101,-24,-29,circle,4.076,0,506,488,black,byPlateId,0.911111111
+17331,A1.209,101,11,158,circle,3.29,0,506,488,black,byPlateId,0.777777778
+17331,A1.209,101,-11,-22,circle,3.29,0,506,488,black,byPlateId,0.777777778
+17332,A1.210,101,46,149,circle,3.945,0,506,488,black,byPlateId,0.888888889
+17332,A1.210,101,-46,-31,circle,3.945,0,506,488,black,byPlateId,0.888888889
+17333,A1.211,101,37,156,circle,3.945,0,506,488,black,byPlateId,0.888888889
+17333,A1.211,101,-37,-24,circle,3.945,0,506,488,black,byPlateId,0.888888889
+17334,A5.1.025,805,4,-64,circle,3.159,0,506,488,black,byPlateId,0.755555556
+17334,A5.1.025,805,-4,-244,circle,3.159,0,506,488,black,byPlateId,0.755555556
+17335,A5.3.100,8011,-15,-145,circle,3.814,0,506,488,black,byPlateId,0.866666667
+17335,A5.3.100,8011,15,-325,circle,3.814,0,506,488,black,byPlateId,0.866666667
+17336,A5.6.181,801,23,-167,circle,3.028,0,506,488,black,byPlateId,0.733333333
+17336,A5.6.181,801,-23,-347,circle,3.028,0,506,488,black,byPlateId,0.733333333
+17337,A4.2.182,2011,-76,4,circle,3.028,0,572,426,black,byPlateId,0.733333333
+17337,A4.2.182,2011,76,-176,circle,3.028,0,572,426,black,byPlateId,0.733333333
+17338,A4.1.095,715,-87,124,circle,3.945,0,530,469,black,byPlateId,0.888888889
+17338,A4.1.095,715,87,-56,circle,3.945,0,530,469,black,byPlateId,0.888888889
+17339,A4.2.183,202,-44,165,circle,-0.902,0,513,487,black,byPlateId,0.066666667
+17339,A4.2.183,202,44,-15,circle,-0.902,0,513,487,black,byPlateId,0.066666667
+17340,A4.1.096,715,-89,-38,circle,3.028,0,552,449,black,byPlateId,0.733333333
+17340,A4.1.096,715,89,-218,circle,3.028,0,552,449,black,byPlateId,0.733333333
+17341,A4.1.097,701,-14,156,circle,0.146,0,519,485,black,byPlateId,0.244444444
+17341,A4.1.097,701,14,-24,circle,0.146,0,519,485,black,byPlateId,0.244444444
+17342,A11.4.073,305,-77,157,circle,3.814,0,507,499,black,byPlateId,0.866666667
+17342,A11.4.073,305,77,-23,circle,3.814,0,507,499,black,byPlateId,0.866666667
