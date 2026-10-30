@@ -3,6 +3,6 @@ Executables
 local_storage
 */*.DS_Store
 .DS_Store
-Data_Archive/shapefiles
-working
+Data_Archive/*
+PaleoMapper_projects/*
 */Cont_Ocean_Polygons_v3a.gpml
