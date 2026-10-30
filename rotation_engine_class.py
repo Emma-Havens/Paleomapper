@@ -390,32 +390,32 @@ class RotationEngine:
         rlon = 0.0
         rang = 0.0
 
-        i = int(self.plate_id_to_index[fixed_id])
-        print("hold fixed value for i = ", i)
-        rotlat1 = self.rotation_data[i][1]
-        rotlo1 = self.rotation_data[i][2]
-        rotan1 = -self.rotation_data[i][3]
-        print("rotlat1, rotlo1, rotan1 = ", rotlat1, rotlo1, rotan1)
+        fixed_i = int(self.plate_id_to_index[fixed_id])
+        # print("hold fixed value for i = ", i)
+        rotlat1 = self.rotation_data[fixed_i][1]
+        rotlo1 = self.rotation_data[fixed_i][2]
+        rotan1 = -self.rotation_data[fixed_i][3]
+        # print("rotlat1, rotlo1, rotan1 = ", rotlat1, rotlo1, rotan1)
 
-        for i in range(0, 2000):
+        for (id, i) in self.plate_id_to_index.items():
 
-            id = self.rot_list[i]
+            # id = self.rot_list[i]
             plat = self.rotation_data[i][1]
             plon = self.rotation_data[i][2]
             pang = self.rotation_data[i][3]
-            if ((id == 0) and (i > 1)):
-                break
-            if (pang != 0.0):
-                qlat = rotlat1
-                qlon = rotlo1
-                qang = rotan1
-        
-                rlat, rlon, rang = self.adder(plat, plon, pang, qlat, qlon, qang)
+            # if ((id == 0) and (i > 1)):
+            #     break
+            # if (pang != 0.0):
+            qlat = rotlat1
+            qlon = rotlo1
+            qang = rotan1
+    
+            rlat, rlon, rang = self.adder(plat, plon, pang, qlat, qlon, qang)
 
-                self.final_rotation_data[i][1] = rlat
-                self.final_rotation_data[i][2] = rlon
-                self.final_rotation_data[i][3] = rang
-            i = i + 1
+            self.final_rotation_data[i][1] = rlat
+            self.final_rotation_data[i][2] = rlon
+            self.final_rotation_data[i][3] = rang
+    
 
 # rot = RotationEngine()
 # rot.rotfnd("Scotese_forPgeog_v19o_r1c_fixed.rot", 250)

@@ -616,6 +616,7 @@ class PlateTrackerApp(QMainWindow):
             geo_files = self.get_geo_files()
             time_array = self.get_time_bounds(self.start_time_entry.text(), 
                                               self.end_time_entry.text(), self.step_time_entry.text())
+            is_animation = len(time_array) > 1
             fixed_plate = self.fixed_plate_entry.text()
             output_options = [self.outputs_button_group.id(button) for button in self.outputs_button_group.buttons() if button.isChecked()]
             if not os.path.isdir("output"): os.mkdir("output")
@@ -646,6 +647,7 @@ class PlateTrackerApp(QMainWindow):
                 exec_dir = os.path.dirname(sys.executable)
                 output_folder = os.path.join(exec_dir, output_folder)
                 print(output_folder)
+            self.set_up_output_file_handlers(output_options, output_folder, is_animation)
             
             # generate each figure
             for time in time_array:
@@ -673,44 +675,36 @@ class PlateTrackerApp(QMainWindow):
                 # Handle output
                 if 3 in output_options:    # Save DAT
                     try:
-                        dat_name = os.path.join(output_folder, self.dat_file_entry.text())
-                        dat_file = saveDAT(dat_name)
-                        processed_plate_generator = dat_file.save_to_dat(processed_plate_generator, time)
+                        processed_plate_generator = self.dat_file.save_to_dat(processed_plate_generator, time)
                         print("save to dat")
-                        QMessageBox.about(self, "Success", f"DAT output saved to {os.path.basename(dat_name)}")
+                        QMessageBox.about(self, "Success", f"DAT output saved to {os.path.basename(self.dat_name)}")
                     except Exception as e:
                         QMessageBox.warning(self, "An Error occurred:", str(e))
                         self.print_error_to_terminal(e)
                 
                 if 4 in output_options:    # Save KML
                     try:
-                        kml_name = os.path.join(output_folder, self.kml_file_entry.text())
-                        kml_file = saveKML(kml_name)
-                        processed_plate_generator = kml_file.save_to_kml(processed_plate_generator)
+                        processed_plate_generator = self.kml_file.save_to_kml(processed_plate_generator)
                         print("save to kml")
-                        QMessageBox.about(self, "Success", f"KML output saved to {os.path.basename(kml_name)}")
+                        QMessageBox.about(self, "Success", f"KML output saved to {os.path.basename(self.kml_name)}")
                     except Exception as e:
                         QMessageBox.warning(self, "An Error occurred:", str(e))
                         self.print_error_to_terminal(e)
 
                 if 5 in output_options:    # Save GPML
                     try:
-                        gpml_name = os.path.join(output_folder, self.gpml_file_entry.text())
-                        gpml_file = saveFile(gpml_name, ".gpml")
-                        processed_plate_generator = gpml_file.save_to_file(processed_plate_generator, time)
+                        processed_plate_generator = self.gpml_file.save_to_file(processed_plate_generator, time)
                         print("save to gpml")
-                        QMessageBox.about(self, "Success", f"GPML output saved to {os.path.basename(gpml_name)}")
+                        QMessageBox.about(self, "Success", f"GPML output saved to {os.path.basename(self.gpml_name)}")
                     except Exception as e:
                         QMessageBox.warning(self, "An Error occurred:", str(e))
                         self.print_error_to_terminal(e)
 
                 if 6 in output_options:    # Save SHP
                     try:
-                        shp_name = os.path.join(output_folder, self.shp_file_entry.text())
-                        shp_file = saveFile(shp_name, ".shp")
-                        processed_plate_generator = shp_file.save_to_file(processed_plate_generator, time)
+                        processed_plate_generator = self.shp_file.save_to_file(processed_plate_generator, time)
                         print("save to shp")
-                        QMessageBox.about(self, "Success", f"SHP output saved to {os.path.basename(shp_name)}")
+                        QMessageBox.about(self, "Success", f"SHP output saved to {os.path.basename(self.shp_name)}")
                     except Exception as e:
                         QMessageBox.warning(self, "An Error occurred:", str(e))
                         self.print_error_to_terminal(e)
@@ -762,6 +756,10 @@ class PlateTrackerApp(QMainWindow):
                 except Exception as e:
                     QMessageBox.warning(self, "An Error occurred:", str(e))
                     self.print_error_to_terminal(e)
+            if 5 in output_options:
+                self.gpml_file.assemble_animation()
+            if 6 in output_options:
+                self.shp_file.assemble_animation()
 
             self.progress_bar.setValue(5)
             self.progress_bar.repaint()
@@ -859,6 +857,24 @@ class PlateTrackerApp(QMainWindow):
             return figure
         
         return None
+
+    def set_up_output_file_handlers(self, output_options, output_folder, is_animation):
+        if 3 in output_options:    # Save DAT
+            self.dat_name = os.path.join(output_folder, self.dat_file_entry.text())
+            self.dat_file = saveDAT(self.dat_name)
+        
+        if 4 in output_options:    # Save KML
+            self.kml_name = os.path.join(output_folder, self.kml_file_entry.text())
+            self.kml_file = saveKML(self.kml_name)
+
+        if 5 in output_options:    # Save GPML
+            self.gpml_name = os.path.join(output_folder, self.gpml_file_entry.text())
+            self.gpml_file = saveFile(self.gpml_name, ".gpml", is_animation)
+
+        if 6 in output_options:    # Save SHP
+            self.shp_name = os.path.join(output_folder, self.shp_file_entry.text())
+            self.shp_file = saveFile(self.shp_name, ".shp", is_animation)
+
 
     def print_error_to_terminal(self, e):
         print("An Error occured:")

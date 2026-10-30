@@ -167,8 +167,9 @@ def rotate_point(alat,along,rotlat,rotlo, rotan):
 
             if (rz == 1.0):
                 acos1 = 0.0
-            
-            if (rz != 1.0):
+            elif (rz == -1.0):
+                acos1 = 180.0
+            else:
                 asin1=math.atan(rz/math.sqrt(1.0-(rz*rz)))
                 acos1=(((3.14159/2.0)-asin1)*57.29578)
 

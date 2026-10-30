@@ -35,16 +35,16 @@ class Chunk:
     alpha: float
     records: List[Record]
 
-def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, total_alpha):
-
+def load_shape_library():
     # load symbols in memory
-    shape_library = "shape_library.csv"
-    if getattr(sys, 'frozen', False):
-        bundle_dir = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
-        shape_library = os.path.join(bundle_dir, shape_library)
-        # print(shape_library)
-    symbols.load_shape_library(shape_library)
+        shape_library = "shape_library.csv"
+        if getattr(sys, 'frozen', False):
+            bundle_dir = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+            shape_library = os.path.join(bundle_dir, shape_library)
+            # print(shape_library)
+        symbols.load_shape_library(shape_library)
 
+def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, total_alpha):
     csv_wplateid = os.path.splitext(csv_file)[0] + "_wplateid.csv"
     unpartitioned = symbols.assign_plate_ids(csv_file, csv_wplateid)
     if unpartitioned == False:
@@ -89,8 +89,8 @@ def read_csv_in_chunks(csv_file, plot_time, bcolor, fcolor, total_alpha):
             match symbol:
                 case "circle":
                     path = symbols.create_circle(lat, lon, size)
-                # case "dot":
-                #     path = symbols.create_circle(lat, lon, 0.1)
+                case "dot":
+                    path = symbols.create_circle(lat, lon, 0.1)
                 case "urn":
                     path = symbols.create_text(lat, lon, size, azimuth, str(urn))
                 case "label":
@@ -289,27 +289,47 @@ def read_gpml_in_chunks(filename, plot_time, bcolor, fcolor, alpha, file_type="G
             for segment in geometry:
                 chunk.records = []
                 points = list(segment.to_lat_lon_list())
-                if type(segment) is pygplates.PolygonOnSphere:
-                    points.append(points[0])
-                # else:
-                #     print(f"{type(segment)} detected: {points[0][0]} {points[0][1]}")
-                chunk.records.append(Record(points[0][0], points[0][1], 3))
-                for lat, lon in points[1:]:
-                    chunk.records.append(Record(lat, lon, 2))
-        
-                # first_long = round(chunk["records"][0]["along"], 4)
-                # first_lat = round(chunk["records"][0]["alat"], 4)
-                # last_long = round(chunk["records"][-1]["along"], 4)
-                # last_lat = round(chunk["records"][-1]["alat"], 4)
-                # num = len(chunk["records"])
-                # if abs(last_long - first_long) > 0.1:
-                #     print(f"file open  : ({first_long}, {first_lat}) ({last_long}, {last_lat}), {num}")
-                # else:
-                #     print(f"file closed: ({first_long}, {first_lat}) ({last_long}, {last_lat}), {num}")
+
+                # handle points separately
+                if type(segment) is pygplates.PointOnSphere:
+                    chunk.records.append(Record(points[0][0], points[0][1], 3))
+                    path = symbols.create_circle(points[0][0], points[0][1], 0.1)
+                    for i in range(len(path.vertices)):
+                        point = path.vertices[i]
+                        code = path.codes[i]
+                        if code == 0: # legacy ignored codes
+                            continue
+                        elif code == 1:     # MOVETO
+                            pen = 3
+                        else:               # LINETO, CURVE3, CURVE4
+                            pen = 2
+                    
+                        chunk.records.append(Record(point[1], point[0], pen))
+
+                # handle all other geometries
+                else:
+                    if type(segment) is pygplates.PolygonOnSphere:
+                        points.append(points[0])
+                    # else:
+                    #     print(f"{type(segment)} detected: {points[0][0]} {points[0][1]}")
+                    chunk.records.append(Record(points[0][0], points[0][1], 3))
+                    for lat, lon in points[1:]:
+                        chunk.records.append(Record(lat, lon, 2))
+            
+                    # first_long = round(chunk["records"][0]["along"], 4)
+                    # first_lat = round(chunk["records"][0]["alat"], 4)
+                    # last_long = round(chunk["records"][-1]["along"], 4)
+                    # last_lat = round(chunk["records"][-1]["alat"], 4)
+                    # num = len(chunk["records"])
+                    # if abs(last_long - first_long) > 0.1:
+                    #     print(f"file open  : ({first_long}, {first_lat}) ({last_long}, {last_lat}), {num}")
+                    # else:
+                    #     print(f"file closed: ({first_long}, {first_lat}) ({last_long}, {last_lat}), {num}")
 
                 yield chunk
 
 def read_files(files, plot_time):
+    load_shape_library()
     for total_file in files:
         _, _, file, border_color, fill_color, alpha = total_file
         if border_color == "infile": border_color = ""
